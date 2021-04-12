@@ -7,15 +7,15 @@
   
   <title>MySQL学习笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL学习笔记登录和退出MySQL服务器12345&lt;!-- more --&gt;# 登录MySQL$ mysql -u root -p12345612# 退出MySQL数据库服务器exit;  基本语法1234567891011121314151617181920212223242526272829303132333435363738394041&lt;!-- more --&gt;-">
+  <meta name="description" content="MySQL学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL学习笔记">
 <meta property="og:url" content="http://example.com/2021/04/02/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MySQL学习笔记登录和退出MySQL服务器12345&lt;!-- more --&gt;# 登录MySQL$ mysql -u root -p12345612# 退出MySQL数据库服务器exit;  基本语法1234567891011121314151617181920212223242526272829303132333435363738394041&lt;!-- more --&gt;-">
+<meta property="og:description" content="MySQL学习笔记">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-02T12:21:03.370Z">
-<meta property="article:modified_time" content="2021-04-12T00:57:01.700Z">
+<meta property="article:modified_time" content="2021-04-12T01:03:41.404Z">
 <meta property="article:author" content="jinhao-byte">
 <meta name="twitter:card" content="summary">
   
@@ -88,7 +88,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MySQL学习笔记"><a href="#MySQL学习笔记" class="headerlink" title="MySQL学习笔记"></a>MySQL学习笔记</h1><h2 id="登录和退出MySQL服务器"><a href="#登录和退出MySQL服务器" class="headerlink" title="登录和退出MySQL服务器"></a>登录和退出MySQL服务器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录MySQL</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mysql -u root -p12345612</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出MySQL数据库服务器</span></span><br><span class="line">exit;</span><br></pre></td></tr></table></figure>
+        <h1 id="MySQL学习笔记"><a href="#MySQL学习笔记" class="headerlink" title="MySQL学习笔记"></a>MySQL学习笔记</h1><a id="more"></a>
+
+<h2 id="登录和退出MySQL服务器"><a href="#登录和退出MySQL服务器" class="headerlink" title="登录和退出MySQL服务器"></a>登录和退出MySQL服务器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录MySQL</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mysql -u root -p12345612</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出MySQL数据库服务器</span></span><br><span class="line">exit;</span><br></pre></td></tr></table></figure>
 
 <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br><span class="line">-- 显示所有数据库</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">-- 创建数据库</span><br><span class="line">CREATE DATABASE test;</span><br><span class="line"></span><br><span class="line">-- 切换数据库</span><br><span class="line">use test;</span><br><span class="line"></span><br><span class="line">-- 显示数据库中的所有表</span><br><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">-- 创建数据表</span><br><span class="line">CREATE TABLE pet (</span><br><span class="line">    name VARCHAR(20),</span><br><span class="line">    owner VARCHAR(20),</span><br><span class="line">    species VARCHAR(20),</span><br><span class="line">    sex CHAR(1),</span><br><span class="line">    birth DATE,</span><br><span class="line">    death DATE</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">-- 查看数据表结构</span><br><span class="line">-- describe pet;</span><br><span class="line">desc pet;</span><br><span class="line"></span><br><span class="line">-- 查询表</span><br><span class="line">SELECT * from pet;</span><br><span class="line"></span><br><span class="line">-- 插入数据</span><br><span class="line">INSERT INTO pet VALUES (&#39;puffball&#39;, &#39;Diane&#39;, &#39;hamster&#39;, &#39;f&#39;, &#39;1990-03-30&#39;, NULL);</span><br><span class="line"></span><br><span class="line">-- 修改数据</span><br><span class="line">UPDATE pet SET name &#x3D; &#39;squirrel&#39; where owner &#x3D; &#39;Diane&#39;;</span><br><span class="line"></span><br><span class="line">-- 删除数据</span><br><span class="line">DELETE FROM pet where name &#x3D; &#39;squirrel&#39;;</span><br><span class="line"></span><br><span class="line">-- 删除表</span><br><span class="line">DROP TABLE myorder;</span><br></pre></td></tr></table></figure>
 
@@ -408,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/02/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckndw4djh000164vudmr139ug" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/02/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckndw7sb90001tkvu53i9akkv" class="article-share-link">Share</a>
       
       
     </footer>
