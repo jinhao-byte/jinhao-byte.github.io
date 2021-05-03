@@ -763,7 +763,7 @@ html {
   background: hsla(0, 0%, 100%, .3)
 }
 
-/*.left-col {
+.left-col {
   background: #fff;
   width: 300px;
   position: fixed;
@@ -774,8 +774,8 @@ html {
   overflow: hidden;
   overflow-y: auto;
   margin-bottom: 15px
-}/*
-.left-col {
+}
+/* .left-col {
     /* background:#fff; */
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     url('http://bucket836.oss-cn-shenzhen.aliyuncs.com/wallpaper/381535373.jpeg') no-repeat 0% 20%/ cover;
@@ -786,7 +786,7 @@ html {
     -ms-transition: all .3s ease-in;
     height:100%;
     z-index:999
-}
+} */
 
 
 .left-col::-webkit-scrollbar {
