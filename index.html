@@ -210,6 +210,190 @@
             
 
   
+    <article id="post-数据库零碎知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" target="_blank">数据库零碎知识点</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
+        <time datetime="2021-05-17T12:02:07.320Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-17</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p> 一些最重要的 SQL 命令</p>
+<ul>
+<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
+</li>
+<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
+</li>
+<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
+</li>
+<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
+</li>
+<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
+</li>
+<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
+</li>
+<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
+</li>
+<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
+</li>
+<li><p><strong>DROP TABLE</strong> - 删除表</p>
+</li>
+<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
+</li>
+<li><p><strong>DROP INDEX</strong> - 删除索引</p>
+<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
+</li>
+</ul>
+<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
+<p>​        inner join 或者 join      （后加on表示条件）</p>
+<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
+<p>​    外连接</p>
+<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
+<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
+<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
+<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
+<p>union</p>
+<p>select * from person right join card on person.cardId=card.id</p>
+<p>​        </p>
+<p>unique约束，可以为空，但为空只能有一个，</p>
+<p>视图：</p>
+<p>​    虚表，是从一个或多个</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" target="_blank">学习记录</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="archive-article-date">
+        <time datetime="2021-05-13T08:08:25.061Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>2021-5-13</p>
+<p>vue学习：</p>
+<p>​    vue简介，vue挂载点，data数据对象，</p>
+<p>​    本地应用：v-指令,计数器。</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-XML学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
