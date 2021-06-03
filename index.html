@@ -81,7 +81,7 @@
   <script>
     try {
       var typed = new Typed("#subtitle", {
-        strings: ['find your answer', '满身遍野紫金花，回首不见黑曼巴', '四点的洛杉矶很黑，但总冠军奖杯真的很耀眼……'],
+        strings: ['find your answer', '满身遍野紫金花，回首不见黑曼巴', '四点的洛杉矶很黑，但总冠军奖杯真耀眼……'],
         startDelay: 0,
         typeSpeed: 200,
         loop: true,
@@ -169,14 +169,7 @@
   <time datetime="2021-06-02T13:39:58.941Z" itemprop="datePublished">2021-06-02</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-   
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -216,18 +209,7 @@
   <time datetime="2021-05-30T06:28:16.000Z" itemprop="datePublished">2021-05-30</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现<br>    java语言中凡是没有方法体的方法都是抽象方法。<br>            不对，错误的。<br>            Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们<br>            都不是抽象方法，例如：<br>                public native int hashCode();<br>                这个方法底层调用了C++写的动态链接库程序。<br>                前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</p> 
-      <a class="article-more-link" href="/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -267,23 +249,7 @@
   <time datetime="2021-05-26T06:23:49.816Z" itemprop="datePublished">2021-05-26</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p>Git：目前最先进的分布式版本控制系统</p>
-<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
-<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
-<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
-<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
-<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
-<p>暂存区：</p>
-<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
-<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -323,19 +289,7 @@
   <time datetime="2021-05-21T07:57:02.300Z" itemprop="datePublished">2021-05-21</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
-<h1 id="public-class-和class："><a href="#public-class-和class：" class="headerlink" title="public class 和class："></a>public class 和class：</h1><p>​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p> 
-      <a class="article-more-link" href="/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -375,25 +329,7 @@
   <time datetime="2021-05-21T02:33:28.444Z" itemprop="datePublished">2021-05-21</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
-<p>[2] |—src：源码</p>
-<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
-<p>[4] |—|—|—java：java源码文件</p>
-<p>[5] |—|—|—resource：存放框架的配置文件</p>
-<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
-<p>[7] |—pop.xml：maven的核心配置文件</p>
-<p>webapp下存放Web应用相关代码</p> 
-      <a class="article-more-link" href="/2021/05/21/javaee/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -433,54 +369,7 @@
   <time datetime="2021-05-17T12:02:07.320Z" itemprop="datePublished">2021-05-17</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p> 一些最重要的 SQL 命令</p>
-<ul>
-<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
-</li>
-<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
-</li>
-<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
-</li>
-<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
-</li>
-<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
-</li>
-<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
-</li>
-<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
-</li>
-<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
-</li>
-<li><p><strong>DROP TABLE</strong> - 删除表</p>
-</li>
-<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
-</li>
-<li><p><strong>DROP INDEX</strong> - 删除索引</p>
-<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
-</li>
-</ul>
-<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
-<p>​        inner join 或者 join      （后加on表示条件）</p>
-<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
-<p>​    外连接</p>
-<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
-<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
-<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
-<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
-<p>union</p>
-<p>select * from person right join card on person.cardId=card.id</p>
-<p>​        </p>
-<p>unique约束，可以为空，但为空只能有一个，</p>
-<p>视图：</p>
-<p>​    虚表，是从一个或多个</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -520,17 +409,7 @@
   <time datetime="2021-05-13T08:08:25.061Z" itemprop="datePublished">2021-05-13</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
-<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
-<pre><code>错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre> 
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -570,14 +449,7 @@
   <time datetime="2021-05-12T06:15:51.008Z" itemprop="datePublished">2021-05-12</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-   
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -617,14 +489,7 @@
   <time datetime="2021-05-12T03:32:04.361Z" itemprop="datePublished">2021-05-12</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-   
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -664,21 +529,7 @@
   <time datetime="2021-05-11T14:58:05.795Z" itemprop="datePublished">2021-05-11</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
-<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
-3:
-
-提出和假设：
-    指数增长模型，由马尔萨斯在1798年提出
-    基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre> 
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -839,16 +690,6 @@
   <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
   <div class="reward-box">
     
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
     
   </div>
 </div>
@@ -1050,7 +891,9 @@
 </script>
  
 <!-- CanvasBackground -->
-
+ 
+<script src="/js/dz.js"></script>
+ 
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });
