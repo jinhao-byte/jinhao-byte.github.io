@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>vue学习</title>
+    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>XML学习</title>
     <url>/2021/05/12/XML%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[]]></content>
@@ -9,92 +14,6 @@
     <title>python基础</title>
     <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>vue学习</title>
-    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Git</title>
-    <url>/2021/05/26/Git/</url>
-    <content><![CDATA[<p>Git：目前最先进的分布式版本控制系统</p>
-<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
-<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
-<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
-<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
-<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
-<p>暂存区：</p>
-<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
-<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>JavaSE进阶</title>
-    <url>/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[<p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现<br>    java语言中凡是没有方法体的方法都是抽象方法。<br>            不对，错误的。<br>            Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们<br>            都不是抽象方法，例如：<br>                public native int hashCode();<br>                这个方法底层调用了C++写的动态链接库程序。<br>                前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</p>
-<pre><code>接口的基础语法：
-    接口是一种‘引用数据类型’
-    接口是完全抽象的
-    接口的定义：[修饰符列表] interface 接口名{}
-    接口的多继承
-    接口中只有常量+抽象方法
-    接口中所有的元素都是public修饰的
-    接口中的抽象方法的public abstract可以省略
-    接口中常量的public static final可以省略
-    接口中方法不能有方法体
-    一个非抽象的类，实现接口的时候，必须将接口中的所有方法实现
-    一个类可以实现多个接口
-    extends 和 implements可以共存，extends在前，impl在后
-    使用接口，写代码时，可以使用多态
-
-接口在开发中的作用：
-    面向抽象编程---&gt;面向接口编程
-    有了接口就实现拓展
-    调用者面向接口调用，实现者面向接口编写实现
-
-抽象类和接口的区别：
-    抽象类是半抽象的，接口是完全抽象的
-    抽象类中有构造方法，接口中没有
-    接口和接口之间，支持多继承
-    类和类之间只能单继承
-    一个类可以同时实现多个接口，一个抽象类只能继承一个类
-    接口中只允许出现常量和抽象方法
-    接口使用的比抽象类多，抽象类使用少
-    接口一般都是对“行为”的抽象</code></pre><p>import和package：<br>    package：<br>        必须出现在源文件的第一行<br>    import：<br>        java.lang包不需要引入<br>        同包下的java文件不需要引入</p>
-<p>private 表示私有的，只能在本类中访问<br>        public 表示公开的，在任何位置都可以访问<br>        “默认”表示只能在本类，以及同包下访问。<br>        protected表示只能在本类、同包、子类中访问。</p>
-<p>JDK类库根类：Object<br>    需要知道的几个方法：<br>        protected Object clone()   // 负责对象克隆的。<br>         int hashCode()    // 获取对象哈希值的一个方法。<br>        boolean equals(Object obj)  // 判断两个对象是否相等<br>            以后所有类的equals方法也需要重写，因为Object中的equals方法比较的是两个对象的内存地址，我们应该比较内容，所以需要重写。<br>            重写规则：自己定，主要看是什么和什么相等时表示两个对象相等。<br>            基本数据类型比较实用：==<br>            对象和对象比较：调用equals方法<br>            String类是SUN编写的，所以String类的equals方法重写了。<br>            以后判断两个字符串是否相等，最好不要使用==，要调用字符串对象的equals方法。<br>            注意：重写equals方法的时候要彻底。<br>        String toString()  // 将对象转换成字符串形式<br>            以后的所有的类的toString()方法是需要重写的，System.out.println(引用);<br>             这里会自动调用“引用”的toString()方法。String类是SUN写，toString方法已经重写了。<br>        protected void finalize()  // 垃圾回收器负责调用的方法</p>
-<p>数组：<br>    理解：空间存储上，内存地址是连续的，每个元素占用的空间大小形同，知道首元素的内存地址，知道下标可以计算出偏移量，<br>    优点：检索效率高<br>    缺点：随机增删效率较低，数组无法存储大数据量<br>    数组最后一个元素的增删效率不受影响</p>
-<pre><code>一维数组的静态初始化和动态初始化
-    静态初始化：
-        int []arr ={1,2,3,4};
-        Object[] objs = {new Object(), new Object(), new Object()};
-    动态初始化：
-        int[] arr = new int[4]; // 4个长度，每个元素默认值0
-        Object[] objs = new Object[4]; // 4个长度，每个元素默认值null                        
-
-数组的拷贝：System.arraycopy()方法的使用
-    数组的特点：长度一旦确定，不可变
-    数组长度不够的时候，需要扩容，扩容机制：新建一个更大的数组
-    将小数组中数据拷贝到大数组中，小数组对象被垃圾回收</code></pre><p>String类：<br>    理解：<br>        字符串一旦创建，不可修改<br>        双引号括起来的字符串存储在字符串常量池中<br>        字符串的比较使用的是equals方法<br>        String已经重写了toString()和equals()方法<br>    String的构造方法：<br>        String s = “abc”;<br>        String s = new String(“abc”);<br>        String s = new String(byte数组);<br>        String s = new String(byte数组, 起始下标, 长度);<br>        String s = new String(char数组);<br>        String s = new String(char数组, 起始下标, 长度);<br>    采用双引号赋值字符串，在编译期将会放到方法区中的字符串的常量池，如果是运行时对字符串相加或者相减会放到堆中（放之前会验证方法区中是否含有相同的字符串常量，如果存在，把地址返回，如果不存在，先将字符串常量放到池中，然后返回该对象的地址）<br>    String常用方法：<br>        1. endsWith：判断字符串是否以指定的后缀结束<br>        2. startsWith，判断字符串是否以指定的前缀开始<br>        3. equals，字符串相等比较，不忽略大小写<br>        4. equalsIgnoreCase，字符串相等比较，忽略大小写<br>        5. indexOf，取得指定字符在字符串的位置<br>        6. lastIndexOf，返回最后一次字符串出现的位置<br>        7. length，取得字符串的长度<br>        8. replaceAll，替换字符串中指定的内容<br>        9. split，根据指定的表达式拆分字符串<br>        10. substring，截子串<br>        11. trim,去前尾空格<br>        12. valueOf，将其他类型转换成字符串<br>    使用String时注意：<br>        String是不可变对象，如果多个字符串拼接，就会产生多个对象，会造成内存溢出</p>
-<p>StringBuffer和StringBuilder<br>    StringBuffer和StringBuilder可以看做可变长度的字符串<br>    StringBuffer和StringBuilder初始化容量为16<br>    StringBuffer和StringBuilder是完成字符串拼接操作的，方法名：append<br>    频繁进行字符串拼接不建议使用‘+’<br>    StringBuffer（字符串缓冲区）:<br>        工作原理：<br>            预先申请一块内存，存放字符序列，如果字符序列满了，重新改变缓存区的大小，StringBuffer是可变对象，这个是String最大的不同<br>    StringBuilderr：<br>        用法和Buffer一样，区别是StringBuffer方法是同步的，是线程安全的，但速度慢，StringBuilder速度快，线程不安全<br>八中基本数据类型对应的包装类：<br>    包装类存在的作用：方便编程<br>    八种包装类的类名：<br>        Byte<br>        Short<br>        Integer<br>        Long<br>        Float<br>        Double<br>        Boolean<br>        Character<br>    所有的数字的父类Number       </p>
-<p>日期类：<br>    获取系统当前时间：<br>        Date d = new Date();<br>    日期格式化：Date –&gt; String<br>        yyyy-MM-dd HH:mm:ss SSS<br>        SimpleDateFormat sdf = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss SSS”);<br>        String s = sdf.format(new Date());<br>    String –&gt; Date<br>        SimpleDateFormat sdf = new SimpleDate(“yyyy-MM-dd HH:mm:ss”);<br>        Date d = sdf.parse(“2008-08-08 08:08:08”);<br>    获取毫秒数<br>        long begin = System.currentTimeMillis();<br>        Date d = new Date(begin - 1000 * 60 * 60 * 24);</p>
-<p>数字类<br>    DecimalFormat数字格式化<br>        ###,###.## 表示加入千分位，保留两个小数。<br>        ###,###.0000 表示加入千分位，保留4个小数，不够补0<br>    BigDecimal<br>        财务软件中通常使用BigDecimal</p>
-<p>随机数<br>    怎么产生int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt();<br>    怎么产生某个范围之内的int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt(101); // 产生[0-100]的随机数。</p>
-<p>枚举<br>    枚举是一种引用数据类型。<br>    枚举编译之后也是class文件。<br>    枚举类型怎么定义？<br>        enum 枚举类型名{<br>            枚举值,枚举值2,枚举值3<br>        }<br>    当一个方法执行结果超过两种情况，并且是一枚一枚可以列举出来的时候，建议返回值类型设计为枚举类型。</p>
-<p>异常处理机制：<br>    java中异常的作用:增强程序的健壮性<br>    java中的异常以类和对象的形式存在</p>
-<p>java的异常处理机制：<br>    异常在java中以类和对象的形式存在<br>    Object<br>    Object下有Throwable（可抛出的）<br>    Throwable下有两个分支：Error：（不可处理的，直接退出JVM）和Exception（可处理的）<br>    Exception下有两个分支：<br>        Exception的直接子类：编译时异常（要求程序员在编写程序阶段必须预先对这些异常进行处理，如果不处理编译器报错，因此得名编译时异常。）。<br>        RuntimeException：运行时异常。（在编写程序阶段程序员可以预先处理，也可以不管，都行。）<br>    java对异常的处理的两种方式：<br>        使用throws关键字，抛给上一级<br>        使用try……catch语句进行异常的抓捕<br>        java出现异常，如果一直往上抛，最终会抛给main方法，main方法再往上抛给了JVM，JVM知道异常后，终止java程序的执行。<br>    异常捕获的顺序：从小到大<br>    子类方法不能抛出比父类方法更多的异常</p>
-<p>集合：<br>    Java主要有3个重要的集合<br>        List:一个有序的集合，可以放重复的数据<br>        Set:无序的集合，不允许放重复的数据<br>        Map:一个无序的集合，包含一个键对象和一个值对象，键对象不重复，值对象可以重复<br>    Collection和Iterator：<br>        Collection是List和Set的父接口，在Collection中定义一些主要方法<br>        Iterator：迭代接口，通过此接口可以遍历集合中的数据<br>    List接口：<br>        主要实现了ArrayList和LinkedList，都是由顺序的基于线性存储，可以看成是可变数组。<br>        ArrayList：查询数据比较快，添加和删除数据比较慢（基于可变数组）<br>        LinkedList：查询数据比较慢，添加和删除数据比较快（基于链式数据结构）<br>        Vector：不建议使用，方法是同步的，效率慢，已经被ArrayList取代<br>        Stack：是继承Vector实现的一个栈，栈结构是后进先出的，已经被LinkedList取代<br>    Set接口：<br>        哈希表：一种数据结构，用于提供快速存取操作，基于数组。<br>        HashSet：存储的数据是无序的不可重复的，按照哈希算法存取数据，具有很好的性能<br>            工作原理：插入数据的时候，调用对象的hashCode得到对象的哈希吗，根据哈希吗计算出对象插入集合的位置。<br>        equals和hashCode:</p>
-<pre><code>    TreeSet:
-        可以对Set集合进行排序，默认自然升序排序
-Map接口：
-    可以放置键值对，也就是每个元素都包含键对象和值对象，Map实现较为常用的为HashMap，HashMap对键对象的存取和HashSet一样，仍采用哈希算法，所以如果使用自定类作为Map的键对象，必须复写equals和hashCode方法。
-    HashMap：
-
-    TreeMap：</code></pre><p>基本类型的包装类：<br>    作用：提供更多实用的操作，更容易处理基本类型，所有的包装类都是final的，所以不能创建子类，包装类都是不可变对象<br>    byte    Byte<br>    short   Short<br>    char    Character<br>    int     Integer<br>    long    Long<br>    float   Float<br>    double  Double<br>    boolean Boolean</p>
-<p>JDK5.0新特性：<br>    JDK5.0之前包装类和基本类型做运算时，必须将包装类转换为基本类型。JDK5.0提供自动装箱拆箱Auto-boxing/unboxing</p>
-<p>泛型：</p>
-]]></content>
   </entry>
   <entry>
     <title>Java基础复习</title>
@@ -180,12 +99,18 @@ default：如果class不采用public修饰的话，此时的class只能被该包
 ]]></content>
   </entry>
   <entry>
-    <title>学习记录</title>
-    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
-<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
-<pre><code>错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre>]]></content>
+    <title>Git</title>
+    <url>/2021/05/26/Git/</url>
+    <content><![CDATA[<p>Git：目前最先进的分布式版本控制系统</p>
+<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
+<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
+<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
+<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
+<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
+<p>暂存区：</p>
+<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
+<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
+]]></content>
   </entry>
   <entry>
     <title>javaee</title>
@@ -228,6 +153,18 @@ Controller（控制器）：接收用户请求，委托模型进行处理（状�
 
 WebMVC：
     标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>学习资源链接</title>
+    <url>/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
+<h3 id="MYSQL视频学习："><a href="#MYSQL视频学习：" class="headerlink" title="MYSQL视频学习："></a>MYSQL视频学习：</h3><p><a href="https://www.bilibili.com/video/BV1Vt411z7wy" target="_blank" rel="noopener">b站MYSQL基础课</a></p>
+<p><a href="https://www.bilibili.com/video/BV1hE411V7vu" target="_blank" rel="noopener">数据库关系代数</a></p>
+<p><a href="https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" rel="noopener">关系代数操作哈工大</a></p>
+<h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
+<h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
+<p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
+]]></content>
   </entry>
   <entry>
     <title>MySQL学习笔记</title>
@@ -551,16 +488,96 @@ WebMVC：
 ]]></content>
   </entry>
   <entry>
-    <title>学习资源链接</title>
-    <url>/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
-<h3 id="MYSQL视频学习："><a href="#MYSQL视频学习：" class="headerlink" title="MYSQL视频学习："></a>MYSQL视频学习：</h3><p><a href="https://www.bilibili.com/video/BV1Vt411z7wy" target="_blank" rel="noopener">b站MYSQL基础课</a></p>
-<p><a href="https://www.bilibili.com/video/BV1hE411V7vu" target="_blank" rel="noopener">数据库关系代数</a></p>
-<p><a href="https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" rel="noopener">关系代数操作哈工大</a></p>
-<h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
-<h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
-<p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
+    <title>JavaSE进阶</title>
+    <url>/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[<p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现<br>    java语言中凡是没有方法体的方法都是抽象方法。<br>            不对，错误的。<br>            Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们<br>            都不是抽象方法，例如：<br>                public native int hashCode();<br>                这个方法底层调用了C++写的动态链接库程序。<br>                前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</p>
+<pre><code>接口的基础语法：
+    接口是一种‘引用数据类型’
+    接口是完全抽象的
+    接口的定义：[修饰符列表] interface 接口名{}
+    接口的多继承
+    接口中只有常量+抽象方法
+    接口中所有的元素都是public修饰的
+    接口中的抽象方法的public abstract可以省略
+    接口中常量的public static final可以省略
+    接口中方法不能有方法体
+    一个非抽象的类，实现接口的时候，必须将接口中的所有方法实现
+    一个类可以实现多个接口
+    extends 和 implements可以共存，extends在前，impl在后
+    使用接口，写代码时，可以使用多态
+
+接口在开发中的作用：
+    面向抽象编程---&gt;面向接口编程
+    有了接口就实现拓展
+    调用者面向接口调用，实现者面向接口编写实现
+
+抽象类和接口的区别：
+    抽象类是半抽象的，接口是完全抽象的
+    抽象类中有构造方法，接口中没有
+    接口和接口之间，支持多继承
+    类和类之间只能单继承
+    一个类可以同时实现多个接口，一个抽象类只能继承一个类
+    接口中只允许出现常量和抽象方法
+    接口使用的比抽象类多，抽象类使用少
+    接口一般都是对“行为”的抽象</code></pre><p>import和package：<br>    package：<br>        必须出现在源文件的第一行<br>    import：<br>        java.lang包不需要引入<br>        同包下的java文件不需要引入</p>
+<p>private 表示私有的，只能在本类中访问<br>        public 表示公开的，在任何位置都可以访问<br>        “默认”表示只能在本类，以及同包下访问。<br>        protected表示只能在本类、同包、子类中访问。</p>
+<p>JDK类库根类：Object<br>    需要知道的几个方法：<br>        protected Object clone()   // 负责对象克隆的。<br>         int hashCode()    // 获取对象哈希值的一个方法。<br>        boolean equals(Object obj)  // 判断两个对象是否相等<br>            以后所有类的equals方法也需要重写，因为Object中的equals方法比较的是两个对象的内存地址，我们应该比较内容，所以需要重写。<br>            重写规则：自己定，主要看是什么和什么相等时表示两个对象相等。<br>            基本数据类型比较实用：==<br>            对象和对象比较：调用equals方法<br>            String类是SUN编写的，所以String类的equals方法重写了。<br>            以后判断两个字符串是否相等，最好不要使用==，要调用字符串对象的equals方法。<br>            注意：重写equals方法的时候要彻底。<br>        String toString()  // 将对象转换成字符串形式<br>            以后的所有的类的toString()方法是需要重写的，System.out.println(引用);<br>             这里会自动调用“引用”的toString()方法。String类是SUN写，toString方法已经重写了。<br>        protected void finalize()  // 垃圾回收器负责调用的方法</p>
+<p>数组：<br>    理解：空间存储上，内存地址是连续的，每个元素占用的空间大小形同，知道首元素的内存地址，知道下标可以计算出偏移量，<br>    优点：检索效率高<br>    缺点：随机增删效率较低，数组无法存储大数据量<br>    数组最后一个元素的增删效率不受影响</p>
+<pre><code>一维数组的静态初始化和动态初始化
+    静态初始化：
+        int []arr ={1,2,3,4};
+        Object[] objs = {new Object(), new Object(), new Object()};
+    动态初始化：
+        int[] arr = new int[4]; // 4个长度，每个元素默认值0
+        Object[] objs = new Object[4]; // 4个长度，每个元素默认值null                        
+
+数组的拷贝：System.arraycopy()方法的使用
+    数组的特点：长度一旦确定，不可变
+    数组长度不够的时候，需要扩容，扩容机制：新建一个更大的数组
+    将小数组中数据拷贝到大数组中，小数组对象被垃圾回收</code></pre><p>String类：<br>    理解：<br>        字符串一旦创建，不可修改<br>        双引号括起来的字符串存储在字符串常量池中<br>        字符串的比较使用的是equals方法<br>        String已经重写了toString()和equals()方法<br>    String的构造方法：<br>        String s = “abc”;<br>        String s = new String(“abc”);<br>        String s = new String(byte数组);<br>        String s = new String(byte数组, 起始下标, 长度);<br>        String s = new String(char数组);<br>        String s = new String(char数组, 起始下标, 长度);<br>    采用双引号赋值字符串，在编译期将会放到方法区中的字符串的常量池，如果是运行时对字符串相加或者相减会放到堆中（放之前会验证方法区中是否含有相同的字符串常量，如果存在，把地址返回，如果不存在，先将字符串常量放到池中，然后返回该对象的地址）<br>    String常用方法：<br>        1. endsWith：判断字符串是否以指定的后缀结束<br>        2. startsWith，判断字符串是否以指定的前缀开始<br>        3. equals，字符串相等比较，不忽略大小写<br>        4. equalsIgnoreCase，字符串相等比较，忽略大小写<br>        5. indexOf，取得指定字符在字符串的位置<br>        6. lastIndexOf，返回最后一次字符串出现的位置<br>        7. length，取得字符串的长度<br>        8. replaceAll，替换字符串中指定的内容<br>        9. split，根据指定的表达式拆分字符串<br>        10. substring，截子串<br>        11. trim,去前尾空格<br>        12. valueOf，将其他类型转换成字符串<br>    使用String时注意：<br>        String是不可变对象，如果多个字符串拼接，就会产生多个对象，会造成内存溢出</p>
+<p>StringBuffer和StringBuilder<br>    StringBuffer和StringBuilder可以看做可变长度的字符串<br>    StringBuffer和StringBuilder初始化容量为16<br>    StringBuffer和StringBuilder是完成字符串拼接操作的，方法名：append<br>    频繁进行字符串拼接不建议使用‘+’<br>    StringBuffer（字符串缓冲区）:<br>        工作原理：<br>            预先申请一块内存，存放字符序列，如果字符序列满了，重新改变缓存区的大小，StringBuffer是可变对象，这个是String最大的不同<br>    StringBuilderr：<br>        用法和Buffer一样，区别是StringBuffer方法是同步的，是线程安全的，但速度慢，StringBuilder速度快，线程不安全<br>八中基本数据类型对应的包装类：<br>    包装类存在的作用：方便编程<br>    八种包装类的类名：<br>        Byte<br>        Short<br>        Integer<br>        Long<br>        Float<br>        Double<br>        Boolean<br>        Character<br>    所有的数字的父类Number       </p>
+<p>日期类：<br>    获取系统当前时间：<br>        Date d = new Date();<br>    日期格式化：Date –&gt; String<br>        yyyy-MM-dd HH:mm:ss SSS<br>        SimpleDateFormat sdf = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss SSS”);<br>        String s = sdf.format(new Date());<br>    String –&gt; Date<br>        SimpleDateFormat sdf = new SimpleDate(“yyyy-MM-dd HH:mm:ss”);<br>        Date d = sdf.parse(“2008-08-08 08:08:08”);<br>    获取毫秒数<br>        long begin = System.currentTimeMillis();<br>        Date d = new Date(begin - 1000 * 60 * 60 * 24);</p>
+<p>数字类<br>    DecimalFormat数字格式化<br>        ###,###.## 表示加入千分位，保留两个小数。<br>        ###,###.0000 表示加入千分位，保留4个小数，不够补0<br>    BigDecimal<br>        财务软件中通常使用BigDecimal</p>
+<p>随机数<br>    怎么产生int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt();<br>    怎么产生某个范围之内的int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt(101); // 产生[0-100]的随机数。</p>
+<p>枚举<br>    枚举是一种引用数据类型。<br>    枚举编译之后也是class文件。<br>    枚举类型怎么定义？<br>        enum 枚举类型名{<br>            枚举值,枚举值2,枚举值3<br>        }<br>    当一个方法执行结果超过两种情况，并且是一枚一枚可以列举出来的时候，建议返回值类型设计为枚举类型。</p>
+<p>异常处理机制：<br>    java中异常的作用:增强程序的健壮性<br>    java中的异常以类和对象的形式存在</p>
+<p>java的异常处理机制：<br>    异常在java中以类和对象的形式存在<br>    Object<br>    Object下有Throwable（可抛出的）<br>    Throwable下有两个分支：Error：（不可处理的，直接退出JVM）和Exception（可处理的）<br>    Exception下有两个分支：<br>        Exception的直接子类：编译时异常（要求程序员在编写程序阶段必须预先对这些异常进行处理，如果不处理编译器报错，因此得名编译时异常。）。<br>        RuntimeException：运行时异常。（在编写程序阶段程序员可以预先处理，也可以不管，都行。）<br>    java对异常的处理的两种方式：<br>        使用throws关键字，抛给上一级<br>        使用try……catch语句进行异常的抓捕<br>        java出现异常，如果一直往上抛，最终会抛给main方法，main方法再往上抛给了JVM，JVM知道异常后，终止java程序的执行。<br>    异常捕获的顺序：从小到大<br>    子类方法不能抛出比父类方法更多的异常</p>
+<p>集合：<br>    Java主要有3个重要的集合<br>        List:一个有序的集合，可以放重复的数据<br>        Set:无序的集合，不允许放重复的数据<br>        Map:一个无序的集合，包含一个键对象和一个值对象，键对象不重复，值对象可以重复<br>    Collection和Iterator：<br>        Collection是List和Set的父接口，在Collection中定义一些主要方法<br>        Iterator：迭代接口，通过此接口可以遍历集合中的数据<br>    List接口：<br>        主要实现了ArrayList和LinkedList，都是由顺序的基于线性存储，可以看成是可变数组。<br>        ArrayList：查询数据比较快，添加和删除数据比较慢（基于可变数组）<br>        LinkedList：查询数据比较慢，添加和删除数据比较快（基于链式数据结构）<br>        Vector：不建议使用，方法是同步的，效率慢，已经被ArrayList取代<br>        Stack：是继承Vector实现的一个栈，栈结构是后进先出的，已经被LinkedList取代<br>    Set接口：<br>        哈希表：一种数据结构，用于提供快速存取操作，基于数组。<br>        HashSet：存储的数据是无序的不可重复的，按照哈希算法存取数据，具有很好的性能<br>            工作原理：插入数据的时候，调用对象的hashCode得到对象的哈希吗，根据哈希吗计算出对象插入集合的位置。<br>        equals和hashCode:</p>
+<pre><code>    TreeSet:
+        可以对Set集合进行排序，默认自然升序排序
+Map接口：
+    可以放置键值对，也就是每个元素都包含键对象和值对象，Map实现较为常用的为HashMap，HashMap对键对象的存取和HashSet一样，仍采用哈希算法，所以如果使用自定类作为Map的键对象，必须复写equals和hashCode方法。
+    HashMap：
+
+    TreeMap：</code></pre><p>基本类型的包装类：<br>    作用：提供更多实用的操作，更容易处理基本类型，所有的包装类都是final的，所以不能创建子类，包装类都是不可变对象<br>    byte    Byte<br>    short   Short<br>    char    Character<br>    int     Integer<br>    long    Long<br>    float   Float<br>    double  Double<br>    boolean Boolean</p>
+<p>JDK5.0新特性：<br>    JDK5.0之前包装类和基本类型做运算时，必须将包装类转换为基本类型。JDK5.0提供自动装箱拆箱Auto-boxing/unboxing</p>
+<p>泛型：</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>机器学习记录</title>
+    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
+  </entry>
+  <entry>
+    <title>学习记录</title>
+    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
+<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
+<pre><code>错误信息：Error during artifact deployment. See server log for details.
+    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>数学建模比赛</title>
+    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
+    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
+<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
+3:
+
+提出和假设：
+    指数增长模型，由马尔萨斯在1798年提出
+    基本假设：人口（相对）增长率r是常数（r很小）
+    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
   </entry>
   <entry>
     <title>数据库零碎知识点</title>
@@ -606,22 +623,5 @@ WebMVC：
 <p>视图：</p>
 <p>​    虚表，是从一个或多个</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>数学建模比赛</title>
-    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
-    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
-<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
-3:
-
-提出和假设：
-    指数增长模型，由马尔萨斯在1798年提出
-    基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>机器学习记录</title>
-    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
   </entry>
 </search>
