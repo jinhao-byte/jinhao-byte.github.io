@@ -89,26 +89,32 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>path：主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
-<p>public class 和class：<br>    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p>
+  <h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
+<h1 id="public-class-和class："><a href="#public-class-和class：" class="headerlink" title="public class 和class："></a>public class 和class：</h1><p>​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p>
 <a id="more"></a>
-<p>类的命名：<br>    首字母大写，单词之间首字母大写</p>
-<p>标识符和标识符命名：<br>    必须由数字，字母，下划线，和美元符号构成，不能以数字开头，区分大小写，最好见名知意，只用驼峰形式，第一个单词首字母为小写，其他单词首字母为大写，例如：fatherMather()</p>
-<p>关键字：<br>    全部都是小写。</p>
-<p>数据类型：<br>    基本数据类型：<br>        数值类型：<br>            整数：byte，short，int，long<br>            浮点：float，double<br>        字符类型；char<br>        布尔类型：boolean<br>    引用数据类型：<br>        数组<br>        类<br>        接口</p>
-<p>字符编码：<br>    ASCII：采用一个字节编码，主要针对英文编码<br>    ISO-8859-1：(latin-1) ISO制定，主要为西欧语言编码，兼容ASCII<br>    GBK/GB2312/GB18030：主要是汉字编码<br>    unicode：统一全世界所有文字编码，有几种实现：UTF-8，TUF-16，UTF-32<br>    java中的char使用的是utf-16编码，所以一个char类型变量可以存放一个汉字</p>
-<p>java整数常量表示方法：<br>    默认整数型为int，long类型后最好加上大写的L，小写容易混淆<br>    十进制：默认是十进制<br>    八进制：以0开头，如013<br>    十六进制：以0x开头，如0x23</p>
-<p>java浮点类型：<br>    默认是double<br>    double为8个字节，float为4个字节<br>    double向float转换会出现精度丢失<br>    声明float，数值后必须加上f，如:float f = 10.5f;</p>
-<p>基本类型转换：<br>    boolean特殊，不能转换为其他类型<br>    默认转换：<br>        byte–&gt;short(char)–&gt;int–&gt;long–&gt;float–&gt;double<br>        byte,short,char之间不会相互转换，首先先转换为int<br>    强制转换：<br>        容量大类型转换为容量小类型<br>        只要不超过范围，可以直接将整数值赋值给byte，short，char<br>运算符：<br>    短路与和逻辑与：<br>        短路与：从第一个判断数推断结果，只要第一个是false，不计算第二个操作数<br>        逻辑与：两个操作数都计算<br>    短路或和逻辑或：<br>        短路或：从第一个操作数推断结果，只要是true，不计算第二个操作数<br>        逻辑或：两个操作数都计算<br>    条件运算符：<br>        op1？op2：op3<br>            如果操作数op1为true，则输出op2，否则输出op3<br>switch语句：<br>     switch(表达式){<br>         case 值1: 语句 break;<br>         case 值2: 语句 break;<br>         default 语句<br>     }<br>    表达式中的值只能是：char，byte，short，int 类型，boolean ，long，float，double都是非法的<br>    break语句可以省略，但会出现switch穿透<br>    default 语句也可以省略，一般不建议省略</p>
-<p>方法：<br>    方法的修饰符有：public，protected，private，abstract，static，final，synchronized<br>    方法名：符合合法的标识符</p>
-<p>方法重载：<br>    重载条件：<br>        方法名相同<br>        方法的参数类型，个数，顺序至少有一个不同<br>        方法的返回值可以不同也可以相同，（不依靠返回值类型区分重载）<br>        方法的修饰符可以不同，方法重载和修饰符没有关系<br>        方法重载只出现在一个类中<br>面向过程和面向对象：<br>    面向过程：必须了解整个过程，每个步骤的因果关系，每个步骤很难分离<br>    面向对象：将现实世界分割成不同单元(对象),实现每个对象，如果完成某个功能，只需要将每个对象协作起来就可以了</p>
-<p>面向对象的三大特性：<br>    封装<br>    继承<br>    多态</p>
+
+<h1 id="类的命名："><a href="#类的命名：" class="headerlink" title="类的命名："></a>类的命名：</h1><p>首字母大写，单词之间首字母大写</p>
+<h1 id="标识符和标识符命名："><a href="#标识符和标识符命名：" class="headerlink" title="标识符和标识符命名："></a>标识符和标识符命名：</h1><p>​    必须由数字，字母，下划线，和美元符号构成，不能以数字开头，区分大小写，最好见名知意，只用驼峰形式，第一个单词首字母为小写，其他单词首字母为大写，例如：fatherMather()</p>
+<h1 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h1><p>​    全部都是小写。</p>
+<h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><p>​    基本数据类型：<br>​        数值类型：<br>​            整数：byte，short，int，long<br>​            浮点：float，double<br>​        字符类型；char<br>​        布尔类型：boolean<br>​    引用数据类型：<br>​        数组<br>​        类<br>​        接口</p>
+<h1 id="字符编码："><a href="#字符编码：" class="headerlink" title="字符编码："></a>字符编码：</h1><p>​    ASCII：采用一个字节编码，主要针对英文编码<br>​    ISO-8859-1：(latin-1) ISO制定，主要为西欧语言编码，兼容ASCII<br>​    GBK/GB2312/GB18030：主要是汉字编码<br>​    unicode：统一全世界所有文字编码，有几种实现：UTF-8，TUF-16，UTF-32<br>​    java中的char使用的是utf-16编码，所以一个char类型变量可以存放一个汉字</p>
+<h1 id="java整数常量表示方法："><a href="#java整数常量表示方法：" class="headerlink" title="java整数常量表示方法："></a>java整数常量表示方法：</h1><p>​    默认整数型为int，long类型后最好加上大写的L，小写容易混淆<br>​    十进制：默认是十进制<br>​    八进制：以0开头，如013<br>​    十六进制：以0x开头，如0x23</p>
+<h1 id="java浮点类型："><a href="#java浮点类型：" class="headerlink" title="java浮点类型："></a>java浮点类型：</h1><p>​    默认是double<br>​    double为8个字节，float为4个字节<br>​    double向float转换会出现精度丢失<br>​    声明float，数值后必须加上f，如:float f = 10.5f;</p>
+<h1 id="基本类型转换："><a href="#基本类型转换：" class="headerlink" title="基本类型转换："></a>基本类型转换：</h1><p>​    boolean特殊，不能转换为其他类型<br>​    默认转换：<br>​        byte–&gt;short(char)–&gt;int–&gt;long–&gt;float–&gt;double<br>​        byte,short,char之间不会相互转换，首先先转换为int<br>​    强制转换：<br>​        容量大类型转换为容量小类型<br>​        只要不超过范围，可以直接将整数值赋值给byte，short，char</p>
+<h1 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h1><p>​    短路与和逻辑与：<br>​        短路与：从第一个判断数推断结果，只要第一个是false，不计算第二个操作数<br>​        逻辑与：两个操作数都计算<br>​    短路或和逻辑或：<br>​        短路或：从第一个操作数推断结果，只要是true，不计算第二个操作数<br>​        逻辑或：两个操作数都计算<br>​    条件运算符：<br>​        op1？op2：op3<br>​            如果操作数op1为true，则输出op2，否则输出op3</p>
+<h1 id="switch语句："><a href="#switch语句：" class="headerlink" title="switch语句："></a>switch语句：</h1><p>​     switch(表达式){<br>​         case 值1: 语句 break;<br>​         case 值2: 语句 break;<br>​         default 语句<br>​     }<br>​    表达式中的值只能是：char，byte，short，int 类型，boolean ，long，float，double都是非法的<br>​    break语句可以省略，但会出现switch穿透<br>​    default 语句也可以省略，一般不建议省略</p>
+<h1 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h1><p>​    方法的修饰符有：public，protected，private，abstract，static，final，synchronized<br>​    方法名：符合合法的标识符</p>
+<h2 id="方法重载："><a href="#方法重载：" class="headerlink" title="方法重载："></a>方法重载：</h2><p>​    重载条件：<br>​        方法名相同<br>​        方法的参数类型，个数，顺序至少有一个不同<br>​        方法的返回值可以不同也可以相同，（不依靠返回值类型区分重载）<br>​        方法的修饰符可以不同，方法重载和修饰符没有关系<br>​        方法重载只出现在一个类中</p>
+<h1 id="面向过程和面向对象："><a href="#面向过程和面向对象：" class="headerlink" title="面向过程和面向对象："></a>面向过程和面向对象：</h1><p>​    面向过程：必须了解整个过程，每个步骤的因果关系，每个步骤很难分离<br>​    面向对象：将现实世界分割成不同单元(对象),实现每个对象，如果完成某个功能，只需要将每个对象协作起来就可以了</p>
+<h2 id="面向对象的三大特性："><a href="#面向对象的三大特性：" class="headerlink" title="面向对象的三大特性："></a>面向对象的三大特性：</h2><p>​    封装<br>​    继承<br>​    多态</p>
 <p>类和对象：<br>    对象也叫实例，类的具体化就是对象或实例<br>    好处：更符合人的思维模式，更容易分析<br>    面向对象开发的三个阶段：<br>        OOA：面向对象的分析<br>        OOD：面向对象的设计<br>        OOP：面向对象的编程 —–Java是纯面向对象的语言<br>    类 = 属性 ＋ 方法<br>    属性来源于类的状态，方法来自于动作<br>    类中的成员变量和局部变量，成员变量会默认初始化，默认初始化为该变量的默认值，局部变量必须在使用前初始化，</p>
 <p>对象的创建和使用：<br>    必须是new出来，才能用<br>    一个类可以创建N个对象，成员变量只属于当前的对象（只属于对象，不属于类），只能通过对象才能访问成员变量，通过类不能直接访问成员变量</p>
 <p>面向对象封装：<br>    使用private声明成员变量，成员变量只属于对象，属性只能通过方法方法访问<br>    封装属性，暴露方法</p>

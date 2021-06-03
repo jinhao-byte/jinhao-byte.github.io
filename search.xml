@@ -30,9 +30,140 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Java基础复习</title>
+    <url>/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
+<h1 id="public-class-和class："><a href="#public-class-和class：" class="headerlink" title="public class 和class："></a>public class 和class：</h1><p>​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p>
+<a id="more"></a>
+
+<h1 id="类的命名："><a href="#类的命名：" class="headerlink" title="类的命名："></a>类的命名：</h1><p>首字母大写，单词之间首字母大写</p>
+<h1 id="标识符和标识符命名："><a href="#标识符和标识符命名：" class="headerlink" title="标识符和标识符命名："></a>标识符和标识符命名：</h1><p>​    必须由数字，字母，下划线，和美元符号构成，不能以数字开头，区分大小写，最好见名知意，只用驼峰形式，第一个单词首字母为小写，其他单词首字母为大写，例如：fatherMather()</p>
+<h1 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h1><p>​    全部都是小写。</p>
+<h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><p>​    基本数据类型：<br>​        数值类型：<br>​            整数：byte，short，int，long<br>​            浮点：float，double<br>​        字符类型；char<br>​        布尔类型：boolean<br>​    引用数据类型：<br>​        数组<br>​        类<br>​        接口</p>
+<h1 id="字符编码："><a href="#字符编码：" class="headerlink" title="字符编码："></a>字符编码：</h1><p>​    ASCII：采用一个字节编码，主要针对英文编码<br>​    ISO-8859-1：(latin-1) ISO制定，主要为西欧语言编码，兼容ASCII<br>​    GBK/GB2312/GB18030：主要是汉字编码<br>​    unicode：统一全世界所有文字编码，有几种实现：UTF-8，TUF-16，UTF-32<br>​    java中的char使用的是utf-16编码，所以一个char类型变量可以存放一个汉字</p>
+<h1 id="java整数常量表示方法："><a href="#java整数常量表示方法：" class="headerlink" title="java整数常量表示方法："></a>java整数常量表示方法：</h1><p>​    默认整数型为int，long类型后最好加上大写的L，小写容易混淆<br>​    十进制：默认是十进制<br>​    八进制：以0开头，如013<br>​    十六进制：以0x开头，如0x23</p>
+<h1 id="java浮点类型："><a href="#java浮点类型：" class="headerlink" title="java浮点类型："></a>java浮点类型：</h1><p>​    默认是double<br>​    double为8个字节，float为4个字节<br>​    double向float转换会出现精度丢失<br>​    声明float，数值后必须加上f，如:float f = 10.5f;</p>
+<h1 id="基本类型转换："><a href="#基本类型转换：" class="headerlink" title="基本类型转换："></a>基本类型转换：</h1><p>​    boolean特殊，不能转换为其他类型<br>​    默认转换：<br>​        byte–&gt;short(char)–&gt;int–&gt;long–&gt;float–&gt;double<br>​        byte,short,char之间不会相互转换，首先先转换为int<br>​    强制转换：<br>​        容量大类型转换为容量小类型<br>​        只要不超过范围，可以直接将整数值赋值给byte，short，char</p>
+<h1 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h1><p>​    短路与和逻辑与：<br>​        短路与：从第一个判断数推断结果，只要第一个是false，不计算第二个操作数<br>​        逻辑与：两个操作数都计算<br>​    短路或和逻辑或：<br>​        短路或：从第一个操作数推断结果，只要是true，不计算第二个操作数<br>​        逻辑或：两个操作数都计算<br>​    条件运算符：<br>​        op1？op2：op3<br>​            如果操作数op1为true，则输出op2，否则输出op3</p>
+<h1 id="switch语句："><a href="#switch语句：" class="headerlink" title="switch语句："></a>switch语句：</h1><p>​     switch(表达式){<br>​         case 值1: 语句 break;<br>​         case 值2: 语句 break;<br>​         default 语句<br>​     }<br>​    表达式中的值只能是：char，byte，short，int 类型，boolean ，long，float，double都是非法的<br>​    break语句可以省略，但会出现switch穿透<br>​    default 语句也可以省略，一般不建议省略</p>
+<h1 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h1><p>​    方法的修饰符有：public，protected，private，abstract，static，final，synchronized<br>​    方法名：符合合法的标识符</p>
+<h2 id="方法重载："><a href="#方法重载：" class="headerlink" title="方法重载："></a>方法重载：</h2><p>​    重载条件：<br>​        方法名相同<br>​        方法的参数类型，个数，顺序至少有一个不同<br>​        方法的返回值可以不同也可以相同，（不依靠返回值类型区分重载）<br>​        方法的修饰符可以不同，方法重载和修饰符没有关系<br>​        方法重载只出现在一个类中</p>
+<h1 id="面向过程和面向对象："><a href="#面向过程和面向对象：" class="headerlink" title="面向过程和面向对象："></a>面向过程和面向对象：</h1><p>​    面向过程：必须了解整个过程，每个步骤的因果关系，每个步骤很难分离<br>​    面向对象：将现实世界分割成不同单元(对象),实现每个对象，如果完成某个功能，只需要将每个对象协作起来就可以了</p>
+<h2 id="面向对象的三大特性："><a href="#面向对象的三大特性：" class="headerlink" title="面向对象的三大特性："></a>面向对象的三大特性：</h2><p>​    封装<br>​    继承<br>​    多态</p>
+<p>类和对象：<br>    对象也叫实例，类的具体化就是对象或实例<br>    好处：更符合人的思维模式，更容易分析<br>    面向对象开发的三个阶段：<br>        OOA：面向对象的分析<br>        OOD：面向对象的设计<br>        OOP：面向对象的编程 —–Java是纯面向对象的语言<br>    类 = 属性 ＋ 方法<br>    属性来源于类的状态，方法来自于动作<br>    类中的成员变量和局部变量，成员变量会默认初始化，默认初始化为该变量的默认值，局部变量必须在使用前初始化，</p>
+<p>对象的创建和使用：<br>    必须是new出来，才能用<br>    一个类可以创建N个对象，成员变量只属于当前的对象（只属于对象，不属于类），只能通过对象才能访问成员变量，通过类不能直接访问成员变量</p>
+<p>面向对象封装：<br>    使用private声明成员变量，成员变量只属于对象，属性只能通过方法方法访问<br>    封装属性，暴露方法</p>
+<p>构造方法：<br>    声明格式：构造方法修饰词 类名 (参数列表)<br>    构造方法修饰词：public，protected，private<br>    构造方法可重载<br>    特点：<br>        方法名必须和；类名一致<br>        构造方法不具有返回值，也没有void，否则就成为了普通的方法<br>        每个类都有构造方法，没有明显显示，系统会默认的定义一个不含任何参数的构造方法</p>
+<p>this关键字：<br>    this指的是当前调用的对象，有100个对象就有100个this<br>    this的使用：<br>        局部变量和成员变量重名的时候，this指定调用成员变量<br>        通过this调用另一个构造方法<br>        在构造方法中，如果使用this调用构造方法，this语句必须放在第一行，否则会报错<br>    this只能用在构造方法和成员方法内部(声明变量也可以用)，static标识的方法里不能使用this</p>
+<p>static关键字：<br>    可修饰：变量，方法，代码块<br>    用static修饰的变量和方法，可以采用类名访问<br>    用static声明的代码块为静态代码块，jvm加载类的时候，会执行静态代码块的内容<br>    static声明的变量，所有的通过该类new出来的对象，都可以访问该变量，类也可以访问，所以叫类变量。</p>
+<p>静态方法：<br>    静态方法不能直接调用实例变量，实例方法和this，和实例相关的，都不能直接调用。</p>
+<p>静态变量<br>    在类加载的时候就会初始化，就是将类的字节码读取到方法区就初始化了</p>
+<p>main方法：<br>    public：表示全局所有，就是封装性<br>    static：静态的，也就是说它描述的方法只能通过类调用<br>    main：系统规定<br>    String[]args：参数类型也是系统规定的<br>    静态方法，java虚拟机调用方便，直接拿到类就能调用main方法，静态的东西都在方法区，静态方法调用成员属性，在方法区无法找到，就算在堆区找到，对象也没有创建，所以，静态方法不能直接访问成员属性和成员方法。</p>
+<p>类的继承：<br>    关键字：extends<br>    继承是面向对象的重要概念<br>    继承提高软件可重用性<br>    java只支持类的单继承<br>    软件设计原则：重复代码最好不要重复两次或多次</p>
+<p>方法的覆盖（Override）：<br>    方法覆盖的条件：<br>        必须有继承关系<br>        覆盖只能出现在子类中，没有继承关系，不存在覆盖，只存在重载<br>        在子类中被覆盖的方法，必须和父类的方法完全一致，方法名，返回类型，参数列表，完全一样<br>        子类方法的访问权限不能小于父类方法的访问权限</p>
+<p>多态：<br>    重载式多态：<br>        也叫编译时多态，这种多态在编译时就确定好了，在调用这种重载式方法的时候，传入不同的参数，最后得到不同的结果，就是一种多态。<br>    重写式多态：<br>        也叫运行时多态，多态通过动态绑定来实现，在执行期间判断引用对象的实际类型，根据实际类型调用相应方法</p>
+<p>对静态方法的覆盖：<br>    静态方法不存在多态的概念，多态和成员方法相关，静态方法值属于某一个类，声明的是哪一个类，就调用的是哪一个类的静态方法，和子类没有关系。new谁调谁。<br>    为什么覆盖成员方法可以构成多态，主要是运行期间的动态绑定，静态绑定的含义是在编译成class文件的时候已经确定好调用哪个方法。</p>
+<p>super关键字：<br>    调用父类的构造方法和成员方法<br>    super智能应用在成员方法和构造方法中，不能应用在静态方法中，和this一样，如果在构造方法中使用，必须放在第一行。<br>    子类必须要调用父类的构造方法，先把父类构造完成，因为子类依赖于父类，没有父也就没有子<br>    有时需要在子类中显示的调用父类的成员方法</p>
+<p>final关键字：<br>    采用final修饰的类不能被继承<br>    采用final修饰的方法不能被覆盖<br>    采用final修饰的变量不能被修改<br>    final修饰的变量必须显示初始化<br>    如果修饰的是引用，那么这个引用只能指向一个对象，也就是说这个引用不能再次赋值，但被指向的对象可以修改。<br>    构造方法不能被final修饰<br>    final定义的静态变量，调用时不会执行java的类初始化方法，也就是说不会执行static代码块等相关语句。</p>
+<p>抽象类：<br>    采用sbstract关键字定义的类就是抽象类，采用abstract关键字定义的方法就是抽象方法<br>    抽象的方法只需要在抽象类中，提供声明，不需要实现<br>    如果一个类包含抽象方法，那么这个类必须是抽象类<br>    一个类是抽象的，那么这个类被子类继承，抽象方法必须复写，如果在子类中不复写抽象方法，那么必须将此方法声明为抽象方法。<br>    抽象的类是不能被实例化的<br>    抽象类不能被final修饰，因为抽象方法就是被子类实现的，而且final修饰的类不能被继承。<br>    抽象的方法只需在抽象类中，提供声明，不需要实现，起到一个强制的约束作用，要求子类必须实现。<br>    如果一个类是抽象的，那么这个类被子类继承，抽象方法必须被覆盖。如果子类不覆盖该抽象方法，那么必须将方法再次声明为抽象方法，继承的子类也成为了抽象子类。<br>    抽象类不能被final修饰</p>
+<p>接口：<br>    接口可以看做是抽象类的一种特殊情况，在接口中只能定义抽象的方法和变量。<br>    java接口要用interface声明<br>    接口的方法默认就是public abstract的，不能修改<br>    接口的变量时public static final类型的，不能改变，所以必须显示的初始化。<br>    接口不能被实例化，接口没有函数的概念。<br>    接口之间可以继承，接口之间不能实现。<br>    接口的方法只能通过类来实现，通过implements关键字<br>    如果一个类实现了接口，接口里的方法必须全部实现<br>    一个类可以实现多个接口<br>    接口中的方法默认是public abstract的，不能更改<br>    接口中的变量是public static final类型的，不能更改，所以必须显示的初始化。就算是没有关键词final修饰，例如 String y=”yes”; y也是默认加上public static final的<br>    接口不能被实例化，接口没有构造函数的概念</p>
+<p>接口的进一步应用：<br>    在java中接口其实描述了类需要做的事情，类要遵循接口的定义来做事。<br>    使用接口的好处：<br>        采用接口明确的声明了他所能提供的服务<br>        解决了java单继承的问题<br>        实现了可接插性（重要）</p>
+<p>多态：<br>    多种状态的含义。<br>    如方法重载，相同的方法名称考可以完成不同的功能，这就是多态的一种表现，此时成为静态多态。<br>    如将学生数据保存的示例，当调用接口的方法，java就自动调用实现类的方法，如果Oracle实现级调用Oracle的方法，如果是MySql实现的就调用MySql中的方法，这是在运行时决定的，叫做运行时多态。<br>    多态的条件：<br>        有继承或实现，有方法覆盖或实现，父类对象（接口）指向子类对象<br>    接口和抽象类的区别：<br>        接口描述方法的特征，不给出实现，一方面解决了java的单继承问题，实现了可接插性。<br>        抽象类提供了部分实现，抽象类是不能实例化的，抽象类的存在主要是把公共的代码移植到抽象类中。<br>        面向接口编程，不要面向具体编程（面向抽象编程，不面向具体编程）<br>        优先选择接口（因为继承抽象类后，此类将无法再继承，所以丧失了类的灵活性）</p>
+<p>类之间的关系：<br>    泛化关系：类和类之间的继承关系及接口之间的继承关系<br>    实现关系：类对接口的实现<br>    并联关系：类和类之间的连接，一个类可以知道另一个类的属性和方法，在java语言中使用实例变量体现<br>    聚合关系：是关联关系的一种，是较强的关联关系，是整体和部分的关系，如汽车和轮胎，聚合关系的类处在不平等的层次上，一个代表整体，一个代表部分<br>    合成关系：是关系的一种，比聚合关系强的关联关系，如：人和四肢，整体对象决定部分对象的生命周期，部分对象每一时刻只与一个对象发生合成关系<br>    依赖关系：比关联关系弱，在java语言中体现在返回值，参数，局部变量和静态方法调用</p>
+<p>Object类：<br>    Object类是所有Java类的基类<br>    如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类</p>
+<p>toString():<br>    返回该对象的字符串表示，通常toString方法会返回一个”以文本方式表示”此对象的字符串，Object类的toString方法返回一个字符串，该字符串由类名加标记@和此对象的哈希码的无符号十六进制表示组成，</p>
+<p>finalize：<br>    垃圾回收器（Garbage Collection），也叫GC，垃圾回收器的主要特点：<br>        当对象不再被程序使用时，垃圾回收器将其回收<br>        垃圾回收是在后台运行的，无法命令垃圾回收器马上回收资源但是可以告诉它，尽快回收资源（System.gc和Runtime.getRuntime().gc()）<br>        垃圾回收器在回收某个对象的时候，首先会调用该对象的finalize方法<br>        GC主要针对堆内存</p>
+<p>==和equals方法：<br>    等号可以比较基本类型和引用类型，等号比较的是值，特别是比较引用类型，比较的是引用的内存地址<br>    equals方法比较对象的地址，字符串的equals方法是比较的内容</p>
+<p>包和import：<br>    包：其实就是目录，特别是项目比较大的时候，java文件特别多的时候，应该分目录管理，在java中称为分包管理，包的名称通常采用小写<br>        包最好采用小写字母<br>        包的命名要有规则，不能重复，一般采用公司网站的逆序<br>        package必须放在所有语句的第一行，注释除外<br>    import:<br>        采用import引入需要使用的类<br>        可以采用*通配符，引入包下的所有类（方式不明确，效率较低，但简单）<br>        如果都在同一个包下，就不需要import引入了</p>
+<p>JDK常用开发包：<br>    java.lang:语言标准包，使用此包中的内容无需import引入<br>    java.sql:提供JDBC接口类<br>    java.util：提供常用工具类<br>    java.io:提供各种输入输出流</p>
+<p>访问权限控制符：<br>    java访问修饰符主要包括：private，protected，public，可以限定其他类对该类，属性和方法的使用权限。</p>
+<pre><code>修饰符      类的内部        同一个包里      子类（不同包中）        任何地方
+private     Y               N               N                       N
+protected   Y               Y               Y                       N
+public      Y               Y               Y                       Y
+default     Y               Y               N                       N
+对类的修饰只有public和default，内部类除外
+
+private:private声明的变量或方法，只能在同一个类中使用
+protected：采用protected声明的变量或方法只能子类或者同一个包下的类可以调用。
+default：如果class不采用public修饰的话，此时的class只能被该包下的类访问，其他包无法访问</code></pre><p>内部类：<br>    在一个类的内部定义的类，叫做内部类<br>    内部类的分类：<br>        实例内部类<br>            创建实例内部类，外部类的实例必须已经创建<br>            实例内部类会持有外部类的引用<br>            实例内部不能定义static成员，只能定义实例成员<br>        局部内部类<br>            局部内部类是在方法中定义的，只能在当前方法中使用，和局部变量的作用一样，局部内部类和实例内部类一致，不能包含静态成员。局部变量在内部类中使用必须采用final修饰<br>        静态内部类<br>            静态内部类不会持有外部的类的引用，创建时可以不用创建外部类<br>            静态内部类可以访问外部的成员变量，如果访问外部类的成员变量，必须通过外部类的实例访问<br>        匿名内部类<br>            特殊内部类，没有名字。</p>
+<p>JVM的内存结构中三块比较重要的内存空间。<br>    方法区：<br>        存储代码片段，存储xxx.class字节码文件，这个空间是最先有数据的，<br>        类加载器首先将代码加载到这里。<br>    堆内存：<br>        用来存放各种类的实例对象<br>    栈内存：<br>        stack栈当中存储什么？<br>            每个方法执行时所需要的内存空间（局部变量）。</p>
+<p>System.out.println(“Hello World!”)：<br>        System.out 中，out后面没有小括号，说明out是变量名。<br>        另外System是一个类名，直接使用类名System.out，说明out是一个静态变量。<br>        System.out 返回一个对象，然后采用“对象.”的方式访问println()方法。</p>
+<p>java和c++的区别：</p>
+<p>都是面向对象的语言</p>
+<p>java不提供指针直接访问内存，程序内存更安全</p>
+<p>java的类是单继承，c++支持多继承，虽然java的类不可以多继承，但是接口可以多继承</p>
+<p>java有自动内存管理机制，不需要人手动释放无用内存。</p>
+<p>c语言中，字符串或字符数组最后都会有额外的字符‘\0’来表示结束，java里没有结束符的概念。</p>
+<p>import java和javax：</p>
+<p>javax之前是Java的拓展包，后来成为java的标准API的一部分，没啥区别了。</p>
+<p>编译和解释型语言：</p>
+<p>编译型语言：编译器针对指定的操作系统将源代码一次性翻译成可被平台执行的机器码</p>
+<p>解释型语言：解释器对源程序逐行解释成特定平台的机器码并立即执行。</p>
+<p>java程序是要先编译后解释，经过两个步骤。所以java是编译和解释并存。</p>
+<p>字符常量和字符串常量区别：<br>形式上：字符常量使用单引号，字符串常量使用双引号</p>
+<p>含义上：字符常量相当于一个整数值（ASCII），可参加表达式运算，字符串常量代表一个地址值（该字符串在内存中存放的位置）</p>
+<p>内存大小：字符常量只占2个字节，字符串常量占若干个字节。</p>
+<p>泛型：</p>
+<p>==和equals的区别：</p>
+<p>==：判断两个对象的地址是否相等，即判断两个对象是不是一个对象。</p>
+<p>（基本数据类型==比较的是值，引用数据类型==比较的是内存地址）</p>
+<p>因为java只有值传递，所以==，不管是比较基本数据类型，还是引用数据类型的变量，本质都是比较值，只是引用类型变量的值是对象的地址。</p>
+<p>equals()：判断两个对象是否相等，不能用于比较基本数据类型的变量。</p>
+<p>如果没有对equals方法进行重写，则比较的是引用类型的变量所指向的对象的地址；</p>
+<p>诸如String，Date等类对equals方法进行重写的话，比较所指对象的内容。</p>
+<p>为什么重写equals方法必须重写hsahCode方法？（待整理）</p>
+<pre><code>hashCode()：获取哈希值，也称散列码，实际返回的是int整数。哈希码的作用是确定该对象在哈希表的索引位置。hashCode()定义在JDK的Object类中，意味着java中的任何类都包含hashCode()函数。注意：Object的hashCode方法是本地方法，也就是c语言或者c++实现的，该方法会用来将对象的内存地址转换为整数返回。</code></pre><p>Java中的几种基本类型和对应的包装类：（待整理）<br>    基本类型:<br>        6种数字类型：byte，short，int，long，float，double<br>        1种字符类型：char<br>        1种布尔类型：boolean (默认false)<br>        Java里使用long类型的时候，要在数值后面加上L<br>        char类型用单引号，String用双引号。<br>    自动拆箱和装箱：<br>        装箱：将基本类型用他们对应的引用类型包装起来；<br>        拆箱：将包装类型转换为基本类型；</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>javaee</title>
+    <url>/2021/05/21/javaee/</url>
+    <content><![CDATA[<h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
+<p>[2] |—src：源码</p>
+<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
+<p>[4] |—|—|—java：java源码文件</p>
+<p>[5] |—|—|—resource：存放框架的配置文件</p>
+<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
+<p>[7] |—pop.xml：maven的核心配置文件</p>
+<p>webapp下存放Web应用相关代码</p>
+<a id="more"></a>
+<h3 id="常用maven命令"><a href="#常用maven命令" class="headerlink" title="常用maven命令"></a>常用maven命令</h3><p>[1] mvn clean：清理</p>
+<p>[2] mvn compile：编译主程序</p>
+<p>[3] mvn test-compile：编译测试程序</p>
+<p>[4] mvn test：执行测试</p>
+<p>[5] mvn package：打包</p>
+<p>[6] mvn install：安装</p>
+<h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml:"></a>pom.xml:</h3><p><strong>1、modelVersion</strong></p>
+<p>​    指定了当前Maven模型的版本号</p>
+<p><strong>2、groupId</strong></p>
+<p>　　顾名思义，这个应该是公司名或是组织名。一般来说groupId是由三个部分组成，每个部分之间以”.”分隔，第一部分是项目用途，比如用于商业的就是”com”，用于非营利性组织的就　　是”org”；第二部分是公司名，比如”tengxun”、”baidu”、”alibaba”；第三部分是你的项目名</p>
+<p><strong>3、artifactId</strong></p>
+<p>　　可以认为是Maven构建的项目名，比如你的项目中有子项目，就可以使用”项目名-子项目名”的命名方式</p>
+<p><strong>4、version</strong></p>
+<p>　　版本号，SNAPSHOT意为快照，说明该项目还在开发中，是不稳定的版本。在Maven中很重要的一点是，<strong>groupId、artifactId、version三个元素生成了一个Maven项目的基本坐标</strong></p>
+<p><strong>5、packing</strong></p>
+<p>​    项目打包的类型，可以使用jar，war，rar等，默认jar</p>
+<p><strong>6、dependencies和dependency</strong></p>
+<p> 前者包含后者。前面说了，Maven的一个重要作用就是统一管理jar包，为了一个项目可以build或运行，项目中不可避免的，会依赖很多其他的jar包，在Maven中，这些依赖就被称为dependency。 </p>
+<p><strong>7、properties</strong></p>
+<p> properties是用来定义一些配置属性的，例如project.build.sourceEncoding（项目构建源码编码方式），可以设置为UTF-8，防止中文乱码，也可定义相关构建版本号，便于日后统一升级。 </p>
+<h3 id="maven-多模块"><a href="#maven-多模块" class="headerlink" title="maven 多模块"></a>maven 多模块</h3><p>Spring MVC：<br>    web开发中的请求-响应模型：<br>        web客户端如：IE浏览器先发送请求，web服务器接收请求，处理请求，然后产生响应，响应再返回网站首页内容，浏览器接收响应并渲染。<br>    web世界里：<br>        web浏览器（如IE）发送请求：如，访问<a href="http://sishuok.com" target="_blank" rel="noopener">http://sishuok.com</a><br>        web服务器（如tomcat）接收请求，处理请求（比如用户新增，则把用户保存一下），最后产生响应（一般为html）<br>        web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染，展示给客户）<br>        因此，都是web客户端发起请求，web服务器接收，处理并产生响应，一般web服务器不主动通知web客户端更新内容<br>    MVC模型：<br>        一种架构行的模式，本身不引入新的功能，只是将开发的结构组织的更加合理。<br>        展示和模型分离，流程控制逻辑，业务逻辑调用与展示逻辑分离。</p>
+<pre><code>图片------
+
+MVC：Model-View-Controller
+Model（模型）：数据模型，提供要展示的数据，所以包括数据和行为，可以是领域模型或者JavaBean组件（包含数据和行为），不过现在一般分离开：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
+View（视图）：负责进行模型的展示，一般就是看到的用户界面，客户想看到的东西。
+Controller（控制器）：接收用户请求，委托模型进行处理（状态改变），处理完毕后把返回的数据返回给视图，视图进行展示。也就是说Controller作了一个调度的工作。
+
+WebMVC：
+    标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
+  </entry>
+  <entry>
     <title>JavaSE进阶</title>
     <url>/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</url>
     <content><![CDATA[<p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现<br>    java语言中凡是没有方法体的方法都是抽象方法。<br>            不对，错误的。<br>            Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们<br>            都不是抽象方法，例如：<br>                public native int hashCode();<br>                这个方法底层调用了C++写的动态链接库程序。<br>                前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</p>
+<a id="more"></a>
 <pre><code>接口的基础语法：
     接口是一种‘引用数据类型’
     接口是完全抽象的
@@ -103,53 +234,6 @@ Map接口：
 <p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
 <pre><code>错误信息：Error during artifact deployment. See server log for details.
     解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>javaee</title>
-    <url>/2021/05/21/javaee/</url>
-    <content><![CDATA[<h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
-<p>[2] |—src：源码</p>
-<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
-<p>[4] |—|—|—java：java源码文件</p>
-<p>[5] |—|—|—resource：存放框架的配置文件</p>
-<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
-<p>[7] |—pop.xml：maven的核心配置文件</p>
-<p>webapp下存放Web应用相关代码</p>
-<h3 id="常用maven命令"><a href="#常用maven命令" class="headerlink" title="常用maven命令"></a>常用maven命令</h3><p>[1] mvn clean：清理</p>
-<p>[2] mvn compile：编译主程序</p>
-<p>[3] mvn test-compile：编译测试程序</p>
-<p>[4] mvn test：执行测试</p>
-<p>[5] mvn package：打包</p>
-<p>[6] mvn install：安装</p>
-<h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml:"></a>pom.xml:</h3><p><strong>1、modelVersion</strong></p>
-<p>​    指定了当前Maven模型的版本号</p>
-<p><strong>2、groupId</strong></p>
-<p>　　顾名思义，这个应该是公司名或是组织名。一般来说groupId是由三个部分组成，每个部分之间以”.”分隔，第一部分是项目用途，比如用于商业的就是”com”，用于非营利性组织的就　　是”org”；第二部分是公司名，比如”tengxun”、”baidu”、”alibaba”；第三部分是你的项目名</p>
-<p><strong>3、artifactId</strong></p>
-<p>　　可以认为是Maven构建的项目名，比如你的项目中有子项目，就可以使用”项目名-子项目名”的命名方式</p>
-<p><strong>4、version</strong></p>
-<p>　　版本号，SNAPSHOT意为快照，说明该项目还在开发中，是不稳定的版本。在Maven中很重要的一点是，<strong>groupId、artifactId、version三个元素生成了一个Maven项目的基本坐标</strong></p>
-<p><strong>5、packing</strong></p>
-<p>​    项目打包的类型，可以使用jar，war，rar等，默认jar</p>
-<p><strong>6、dependencies和dependency</strong></p>
-<p> 前者包含后者。前面说了，Maven的一个重要作用就是统一管理jar包，为了一个项目可以build或运行，项目中不可避免的，会依赖很多其他的jar包，在Maven中，这些依赖就被称为dependency。 </p>
-<p><strong>7、properties</strong></p>
-<p> properties是用来定义一些配置属性的，例如project.build.sourceEncoding（项目构建源码编码方式），可以设置为UTF-8，防止中文乱码，也可定义相关构建版本号，便于日后统一升级。 </p>
-<h3 id="maven-多模块"><a href="#maven-多模块" class="headerlink" title="maven 多模块"></a>maven 多模块</h3><p>Spring MVC：<br>    web开发中的请求-响应模型：<br>        web客户端如：IE浏览器先发送请求，web服务器接收请求，处理请求，然后产生响应，响应再返回网站首页内容，浏览器接收响应并渲染。<br>    web世界里：<br>        web浏览器（如IE）发送请求：如，访问<a href="http://sishuok.com" target="_blank" rel="noopener">http://sishuok.com</a><br>        web服务器（如tomcat）接收请求，处理请求（比如用户新增，则把用户保存一下），最后产生响应（一般为html）<br>        web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染，展示给客户）<br>        因此，都是web客户端发起请求，web服务器接收，处理并产生响应，一般web服务器不主动通知web客户端更新内容<br>    MVC模型：<br>        一种架构行的模式，本身不引入新的功能，只是将开发的结构组织的更加合理。<br>        展示和模型分离，流程控制逻辑，业务逻辑调用与展示逻辑分离。</p>
-<pre><code>图片------
-
-MVC：Model-View-Controller
-Model（模型）：数据模型，提供要展示的数据，所以包括数据和行为，可以是领域模型或者JavaBean组件（包含数据和行为），不过现在一般分离开：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
-View（视图）：负责进行模型的展示，一般就是看到的用户界面，客户想看到的东西。
-Controller（控制器）：接收用户请求，委托模型进行处理（状态改变），处理完毕后把返回的数据返回给视图，视图进行展示。也就是说Controller作了一个调度的工作。
-
-WebMVC：
-    标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>机器学习记录</title>
-    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
   </entry>
   <entry>
     <title>MySQL学习笔记</title>
@@ -473,6 +557,18 @@ WebMVC：
 ]]></content>
   </entry>
   <entry>
+    <title>数学建模比赛</title>
+    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
+    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
+<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
+3:
+
+提出和假设：
+    指数增长模型，由马尔萨斯在1798年提出
+    基本假设：人口（相对）增长率r是常数（r很小）
+    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
+  </entry>
+  <entry>
     <title>数据库零碎知识点</title>
     <url>/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p> 一些最重要的 SQL 命令</p>
@@ -530,98 +626,8 @@ WebMVC：
 ]]></content>
   </entry>
   <entry>
-    <title>数学建模比赛</title>
-    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
-    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
-<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
-3:
-
-提出和假设：
-    指数增长模型，由马尔萨斯在1798年提出
-    基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>Java基础复习</title>
-    <url>/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<p>path：主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
-<p>public class 和class：<br>    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p>
-<a id="more"></a>
-<p>类的命名：<br>    首字母大写，单词之间首字母大写</p>
-<p>标识符和标识符命名：<br>    必须由数字，字母，下划线，和美元符号构成，不能以数字开头，区分大小写，最好见名知意，只用驼峰形式，第一个单词首字母为小写，其他单词首字母为大写，例如：fatherMather()</p>
-<p>关键字：<br>    全部都是小写。</p>
-<p>数据类型：<br>    基本数据类型：<br>        数值类型：<br>            整数：byte，short，int，long<br>            浮点：float，double<br>        字符类型；char<br>        布尔类型：boolean<br>    引用数据类型：<br>        数组<br>        类<br>        接口</p>
-<p>字符编码：<br>    ASCII：采用一个字节编码，主要针对英文编码<br>    ISO-8859-1：(latin-1) ISO制定，主要为西欧语言编码，兼容ASCII<br>    GBK/GB2312/GB18030：主要是汉字编码<br>    unicode：统一全世界所有文字编码，有几种实现：UTF-8，TUF-16，UTF-32<br>    java中的char使用的是utf-16编码，所以一个char类型变量可以存放一个汉字</p>
-<p>java整数常量表示方法：<br>    默认整数型为int，long类型后最好加上大写的L，小写容易混淆<br>    十进制：默认是十进制<br>    八进制：以0开头，如013<br>    十六进制：以0x开头，如0x23</p>
-<p>java浮点类型：<br>    默认是double<br>    double为8个字节，float为4个字节<br>    double向float转换会出现精度丢失<br>    声明float，数值后必须加上f，如:float f = 10.5f;</p>
-<p>基本类型转换：<br>    boolean特殊，不能转换为其他类型<br>    默认转换：<br>        byte–&gt;short(char)–&gt;int–&gt;long–&gt;float–&gt;double<br>        byte,short,char之间不会相互转换，首先先转换为int<br>    强制转换：<br>        容量大类型转换为容量小类型<br>        只要不超过范围，可以直接将整数值赋值给byte，short，char<br>运算符：<br>    短路与和逻辑与：<br>        短路与：从第一个判断数推断结果，只要第一个是false，不计算第二个操作数<br>        逻辑与：两个操作数都计算<br>    短路或和逻辑或：<br>        短路或：从第一个操作数推断结果，只要是true，不计算第二个操作数<br>        逻辑或：两个操作数都计算<br>    条件运算符：<br>        op1？op2：op3<br>            如果操作数op1为true，则输出op2，否则输出op3<br>switch语句：<br>     switch(表达式){<br>         case 值1: 语句 break;<br>         case 值2: 语句 break;<br>         default 语句<br>     }<br>    表达式中的值只能是：char，byte，short，int 类型，boolean ，long，float，double都是非法的<br>    break语句可以省略，但会出现switch穿透<br>    default 语句也可以省略，一般不建议省略</p>
-<p>方法：<br>    方法的修饰符有：public，protected，private，abstract，static，final，synchronized<br>    方法名：符合合法的标识符</p>
-<p>方法重载：<br>    重载条件：<br>        方法名相同<br>        方法的参数类型，个数，顺序至少有一个不同<br>        方法的返回值可以不同也可以相同，（不依靠返回值类型区分重载）<br>        方法的修饰符可以不同，方法重载和修饰符没有关系<br>        方法重载只出现在一个类中<br>面向过程和面向对象：<br>    面向过程：必须了解整个过程，每个步骤的因果关系，每个步骤很难分离<br>    面向对象：将现实世界分割成不同单元(对象),实现每个对象，如果完成某个功能，只需要将每个对象协作起来就可以了</p>
-<p>面向对象的三大特性：<br>    封装<br>    继承<br>    多态</p>
-<p>类和对象：<br>    对象也叫实例，类的具体化就是对象或实例<br>    好处：更符合人的思维模式，更容易分析<br>    面向对象开发的三个阶段：<br>        OOA：面向对象的分析<br>        OOD：面向对象的设计<br>        OOP：面向对象的编程 —–Java是纯面向对象的语言<br>    类 = 属性 ＋ 方法<br>    属性来源于类的状态，方法来自于动作<br>    类中的成员变量和局部变量，成员变量会默认初始化，默认初始化为该变量的默认值，局部变量必须在使用前初始化，</p>
-<p>对象的创建和使用：<br>    必须是new出来，才能用<br>    一个类可以创建N个对象，成员变量只属于当前的对象（只属于对象，不属于类），只能通过对象才能访问成员变量，通过类不能直接访问成员变量</p>
-<p>面向对象封装：<br>    使用private声明成员变量，成员变量只属于对象，属性只能通过方法方法访问<br>    封装属性，暴露方法</p>
-<p>构造方法：<br>    声明格式：构造方法修饰词 类名 (参数列表)<br>    构造方法修饰词：public，protected，private<br>    构造方法可重载<br>    特点：<br>        方法名必须和；类名一致<br>        构造方法不具有返回值，也没有void，否则就成为了普通的方法<br>        每个类都有构造方法，没有明显显示，系统会默认的定义一个不含任何参数的构造方法</p>
-<p>this关键字：<br>    this指的是当前调用的对象，有100个对象就有100个this<br>    this的使用：<br>        局部变量和成员变量重名的时候，this指定调用成员变量<br>        通过this调用另一个构造方法<br>        在构造方法中，如果使用this调用构造方法，this语句必须放在第一行，否则会报错<br>    this只能用在构造方法和成员方法内部(声明变量也可以用)，static标识的方法里不能使用this</p>
-<p>static关键字：<br>    可修饰：变量，方法，代码块<br>    用static修饰的变量和方法，可以采用类名访问<br>    用static声明的代码块为静态代码块，jvm加载类的时候，会执行静态代码块的内容<br>    static声明的变量，所有的通过该类new出来的对象，都可以访问该变量，类也可以访问，所以叫类变量。</p>
-<p>静态方法：<br>    静态方法不能直接调用实例变量，实例方法和this，和实例相关的，都不能直接调用。</p>
-<p>静态变量<br>    在类加载的时候就会初始化，就是将类的字节码读取到方法区就初始化了</p>
-<p>main方法：<br>    public：表示全局所有，就是封装性<br>    static：静态的，也就是说它描述的方法只能通过类调用<br>    main：系统规定<br>    String[]args：参数类型也是系统规定的<br>    静态方法，java虚拟机调用方便，直接拿到类就能调用main方法，静态的东西都在方法区，静态方法调用成员属性，在方法区无法找到，就算在堆区找到，对象也没有创建，所以，静态方法不能直接访问成员属性和成员方法。</p>
-<p>类的继承：<br>    关键字：extends<br>    继承是面向对象的重要概念<br>    继承提高软件可重用性<br>    java只支持类的单继承<br>    软件设计原则：重复代码最好不要重复两次或多次</p>
-<p>方法的覆盖（Override）：<br>    方法覆盖的条件：<br>        必须有继承关系<br>        覆盖只能出现在子类中，没有继承关系，不存在覆盖，只存在重载<br>        在子类中被覆盖的方法，必须和父类的方法完全一致，方法名，返回类型，参数列表，完全一样<br>        子类方法的访问权限不能小于父类方法的访问权限</p>
-<p>多态：<br>    重载式多态：<br>        也叫编译时多态，这种多态在编译时就确定好了，在调用这种重载式方法的时候，传入不同的参数，最后得到不同的结果，就是一种多态。<br>    重写式多态：<br>        也叫运行时多态，多态通过动态绑定来实现，在执行期间判断引用对象的实际类型，根据实际类型调用相应方法</p>
-<p>对静态方法的覆盖：<br>    静态方法不存在多态的概念，多态和成员方法相关，静态方法值属于某一个类，声明的是哪一个类，就调用的是哪一个类的静态方法，和子类没有关系。new谁调谁。<br>    为什么覆盖成员方法可以构成多态，主要是运行期间的动态绑定，静态绑定的含义是在编译成class文件的时候已经确定好调用哪个方法。</p>
-<p>super关键字：<br>    调用父类的构造方法和成员方法<br>    super智能应用在成员方法和构造方法中，不能应用在静态方法中，和this一样，如果在构造方法中使用，必须放在第一行。<br>    子类必须要调用父类的构造方法，先把父类构造完成，因为子类依赖于父类，没有父也就没有子<br>    有时需要在子类中显示的调用父类的成员方法</p>
-<p>final关键字：<br>    采用final修饰的类不能被继承<br>    采用final修饰的方法不能被覆盖<br>    采用final修饰的变量不能被修改<br>    final修饰的变量必须显示初始化<br>    如果修饰的是引用，那么这个引用只能指向一个对象，也就是说这个引用不能再次赋值，但被指向的对象可以修改。<br>    构造方法不能被final修饰<br>    final定义的静态变量，调用时不会执行java的类初始化方法，也就是说不会执行static代码块等相关语句。</p>
-<p>抽象类：<br>    采用sbstract关键字定义的类就是抽象类，采用abstract关键字定义的方法就是抽象方法<br>    抽象的方法只需要在抽象类中，提供声明，不需要实现<br>    如果一个类包含抽象方法，那么这个类必须是抽象类<br>    一个类是抽象的，那么这个类被子类继承，抽象方法必须复写，如果在子类中不复写抽象方法，那么必须将此方法声明为抽象方法。<br>    抽象的类是不能被实例化的<br>    抽象类不能被final修饰，因为抽象方法就是被子类实现的，而且final修饰的类不能被继承。<br>    抽象的方法只需在抽象类中，提供声明，不需要实现，起到一个强制的约束作用，要求子类必须实现。<br>    如果一个类是抽象的，那么这个类被子类继承，抽象方法必须被覆盖。如果子类不覆盖该抽象方法，那么必须将方法再次声明为抽象方法，继承的子类也成为了抽象子类。<br>    抽象类不能被final修饰</p>
-<p>接口：<br>    接口可以看做是抽象类的一种特殊情况，在接口中只能定义抽象的方法和变量。<br>    java接口要用interface声明<br>    接口的方法默认就是public abstract的，不能修改<br>    接口的变量时public static final类型的，不能改变，所以必须显示的初始化。<br>    接口不能被实例化，接口没有函数的概念。<br>    接口之间可以继承，接口之间不能实现。<br>    接口的方法只能通过类来实现，通过implements关键字<br>    如果一个类实现了接口，接口里的方法必须全部实现<br>    一个类可以实现多个接口<br>    接口中的方法默认是public abstract的，不能更改<br>    接口中的变量是public static final类型的，不能更改，所以必须显示的初始化。就算是没有关键词final修饰，例如 String y=”yes”; y也是默认加上public static final的<br>    接口不能被实例化，接口没有构造函数的概念</p>
-<p>接口的进一步应用：<br>    在java中接口其实描述了类需要做的事情，类要遵循接口的定义来做事。<br>    使用接口的好处：<br>        采用接口明确的声明了他所能提供的服务<br>        解决了java单继承的问题<br>        实现了可接插性（重要）</p>
-<p>多态：<br>    多种状态的含义。<br>    如方法重载，相同的方法名称考可以完成不同的功能，这就是多态的一种表现，此时成为静态多态。<br>    如将学生数据保存的示例，当调用接口的方法，java就自动调用实现类的方法，如果Oracle实现级调用Oracle的方法，如果是MySql实现的就调用MySql中的方法，这是在运行时决定的，叫做运行时多态。<br>    多态的条件：<br>        有继承或实现，有方法覆盖或实现，父类对象（接口）指向子类对象<br>    接口和抽象类的区别：<br>        接口描述方法的特征，不给出实现，一方面解决了java的单继承问题，实现了可接插性。<br>        抽象类提供了部分实现，抽象类是不能实例化的，抽象类的存在主要是把公共的代码移植到抽象类中。<br>        面向接口编程，不要面向具体编程（面向抽象编程，不面向具体编程）<br>        优先选择接口（因为继承抽象类后，此类将无法再继承，所以丧失了类的灵活性）</p>
-<p>类之间的关系：<br>    泛化关系：类和类之间的继承关系及接口之间的继承关系<br>    实现关系：类对接口的实现<br>    并联关系：类和类之间的连接，一个类可以知道另一个类的属性和方法，在java语言中使用实例变量体现<br>    聚合关系：是关联关系的一种，是较强的关联关系，是整体和部分的关系，如汽车和轮胎，聚合关系的类处在不平等的层次上，一个代表整体，一个代表部分<br>    合成关系：是关系的一种，比聚合关系强的关联关系，如：人和四肢，整体对象决定部分对象的生命周期，部分对象每一时刻只与一个对象发生合成关系<br>    依赖关系：比关联关系弱，在java语言中体现在返回值，参数，局部变量和静态方法调用</p>
-<p>Object类：<br>    Object类是所有Java类的基类<br>    如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类</p>
-<p>toString():<br>    返回该对象的字符串表示，通常toString方法会返回一个”以文本方式表示”此对象的字符串，Object类的toString方法返回一个字符串，该字符串由类名加标记@和此对象的哈希码的无符号十六进制表示组成，</p>
-<p>finalize：<br>    垃圾回收器（Garbage Collection），也叫GC，垃圾回收器的主要特点：<br>        当对象不再被程序使用时，垃圾回收器将其回收<br>        垃圾回收是在后台运行的，无法命令垃圾回收器马上回收资源但是可以告诉它，尽快回收资源（System.gc和Runtime.getRuntime().gc()）<br>        垃圾回收器在回收某个对象的时候，首先会调用该对象的finalize方法<br>        GC主要针对堆内存</p>
-<p>==和equals方法：<br>    等号可以比较基本类型和引用类型，等号比较的是值，特别是比较引用类型，比较的是引用的内存地址<br>    equals方法比较对象的地址，字符串的equals方法是比较的内容</p>
-<p>包和import：<br>    包：其实就是目录，特别是项目比较大的时候，java文件特别多的时候，应该分目录管理，在java中称为分包管理，包的名称通常采用小写<br>        包最好采用小写字母<br>        包的命名要有规则，不能重复，一般采用公司网站的逆序<br>        package必须放在所有语句的第一行，注释除外<br>    import:<br>        采用import引入需要使用的类<br>        可以采用*通配符，引入包下的所有类（方式不明确，效率较低，但简单）<br>        如果都在同一个包下，就不需要import引入了</p>
-<p>JDK常用开发包：<br>    java.lang:语言标准包，使用此包中的内容无需import引入<br>    java.sql:提供JDBC接口类<br>    java.util：提供常用工具类<br>    java.io:提供各种输入输出流</p>
-<p>访问权限控制符：<br>    java访问修饰符主要包括：private，protected，public，可以限定其他类对该类，属性和方法的使用权限。</p>
-<pre><code>修饰符      类的内部        同一个包里      子类（不同包中）        任何地方
-private     Y               N               N                       N
-protected   Y               Y               Y                       N
-public      Y               Y               Y                       Y
-default     Y               Y               N                       N
-对类的修饰只有public和default，内部类除外
-
-private:private声明的变量或方法，只能在同一个类中使用
-protected：采用protected声明的变量或方法只能子类或者同一个包下的类可以调用。
-default：如果class不采用public修饰的话，此时的class只能被该包下的类访问，其他包无法访问</code></pre><p>内部类：<br>    在一个类的内部定义的类，叫做内部类<br>    内部类的分类：<br>        实例内部类<br>            创建实例内部类，外部类的实例必须已经创建<br>            实例内部类会持有外部类的引用<br>            实例内部不能定义static成员，只能定义实例成员<br>        局部内部类<br>            局部内部类是在方法中定义的，只能在当前方法中使用，和局部变量的作用一样，局部内部类和实例内部类一致，不能包含静态成员。局部变量在内部类中使用必须采用final修饰<br>        静态内部类<br>            静态内部类不会持有外部的类的引用，创建时可以不用创建外部类<br>            静态内部类可以访问外部的成员变量，如果访问外部类的成员变量，必须通过外部类的实例访问<br>        匿名内部类<br>            特殊内部类，没有名字。</p>
-<p>JVM的内存结构中三块比较重要的内存空间。<br>    方法区：<br>        存储代码片段，存储xxx.class字节码文件，这个空间是最先有数据的，<br>        类加载器首先将代码加载到这里。<br>    堆内存：<br>        用来存放各种类的实例对象<br>    栈内存：<br>        stack栈当中存储什么？<br>            每个方法执行时所需要的内存空间（局部变量）。</p>
-<p>System.out.println(“Hello World!”)：<br>        System.out 中，out后面没有小括号，说明out是变量名。<br>        另外System是一个类名，直接使用类名System.out，说明out是一个静态变量。<br>        System.out 返回一个对象，然后采用“对象.”的方式访问println()方法。</p>
-<p>java和c++的区别：</p>
-<p>都是面向对象的语言</p>
-<p>java不提供指针直接访问内存，程序内存更安全</p>
-<p>java的类是单继承，c++支持多继承，虽然java的类不可以多继承，但是接口可以多继承</p>
-<p>java有自动内存管理机制，不需要人手动释放无用内存。</p>
-<p>c语言中，字符串或字符数组最后都会有额外的字符‘\0’来表示结束，java里没有结束符的概念。</p>
-<p>import java和javax：</p>
-<p>javax之前是Java的拓展包，后来成为java的标准API的一部分，没啥区别了。</p>
-<p>编译和解释型语言：</p>
-<p>编译型语言：编译器针对指定的操作系统将源代码一次性翻译成可被平台执行的机器码</p>
-<p>解释型语言：解释器对源程序逐行解释成特定平台的机器码并立即执行。</p>
-<p>java程序是要先编译后解释，经过两个步骤。所以java是编译和解释并存。</p>
-<p>字符常量和字符串常量区别：<br>形式上：字符常量使用单引号，字符串常量使用双引号</p>
-<p>含义上：字符常量相当于一个整数值（ASCII），可参加表达式运算，字符串常量代表一个地址值（该字符串在内存中存放的位置）</p>
-<p>内存大小：字符常量只占2个字节，字符串常量占若干个字节。</p>
-<p>泛型：</p>
-<p>==和equals的区别：</p>
-<p>==：判断两个对象的地址是否相等，即判断两个对象是不是一个对象。</p>
-<p>（基本数据类型==比较的是值，引用数据类型==比较的是内存地址）</p>
-<p>因为java只有值传递，所以==，不管是比较基本数据类型，还是引用数据类型的变量，本质都是比较值，只是引用类型变量的值是对象的地址。</p>
-<p>equals()：判断两个对象是否相等，不能用于比较基本数据类型的变量。</p>
-<p>如果没有对equals方法进行重写，则比较的是引用类型的变量所指向的对象的地址；</p>
-<p>诸如String，Date等类对equals方法进行重写的话，比较所指对象的内容。</p>
-<p>为什么重写equals方法必须重写hsahCode方法？（待整理）</p>
-<pre><code>hashCode()：获取哈希值，也称散列码，实际返回的是int整数。哈希码的作用是确定该对象在哈希表的索引位置。hashCode()定义在JDK的Object类中，意味着java中的任何类都包含hashCode()函数。注意：Object的hashCode方法是本地方法，也就是c语言或者c++实现的，该方法会用来将对象的内存地址转换为整数返回。</code></pre><p>Java中的几种基本类型和对应的包装类：（待整理）<br>    基本类型:<br>        6种数字类型：byte，short，int，long，float，double<br>        1种字符类型：char<br>        1种布尔类型：boolean (默认false)<br>        Java里使用long类型的时候，要在数值后面加上L<br>        char类型用单引号，String用双引号。<br>    自动拆箱和装箱：<br>        装箱：将基本类型用他们对应的引用类型包装起来；<br>        拆箱：将包装类型转换为基本类型；</p>
-]]></content>
+    <title>机器学习记录</title>
+    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
   </entry>
 </search>

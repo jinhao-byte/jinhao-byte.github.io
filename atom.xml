@@ -34,16 +34,10 @@
     <link href="http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/"/>
     <id>http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</id>
     <published>2021-05-30T06:28:16.000Z</published>
-    <updated>2021-06-02T14:46:26.982Z</updated>
+    <updated>2021-06-03T03:11:20.657Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;抽象类和接口以及抽象类和接口的区别：&lt;br&gt;    抽象类：&lt;br&gt;        抽象类的定义：在class前添加abstract关键字&lt;br&gt;        抽象类是无法实例化的，所以抽象类是用来被子类继承的&lt;br&gt;       </summary>
-        
-      
+    <summary type="html">&lt;p&gt;抽象类和接口以及抽象类和接口的区别：&lt;br&gt;    抽象类：&lt;br&gt;        抽象类的定义：在class前添加abstract关键字&lt;br&gt;        抽象类是无法实例化的，所以抽象类是用来被子类继承的&lt;br&gt;        final和abstract不能联合使用，这两个关键字是对立的&lt;br&gt;        抽象类的子类可以是抽象类，也可以是非抽象类&lt;br&gt;        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。&lt;br&gt;        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。&lt;br&gt;        抽象方法的定义：public abstract void doSome();&lt;br&gt;        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现&lt;br&gt;    java语言中凡是没有方法体的方法都是抽象方法。&lt;br&gt;            不对，错误的。&lt;br&gt;            Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们&lt;br&gt;            都不是抽象方法，例如：&lt;br&gt;                public native int hashCode();&lt;br&gt;                这个方法底层调用了C++写的动态链接库程序。&lt;br&gt;                前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。&lt;/p&gt;</summary>
     
     
     
@@ -78,11 +72,11 @@
     <link href="http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"/>
     <id>http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</id>
     <published>2021-05-21T07:57:02.300Z</published>
-    <updated>2021-06-03T02:04:45.964Z</updated>
+    <updated>2021-06-03T03:09:37.486Z</updated>
     
     
-    <summary type="html">&lt;p&gt;path：主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。&lt;br&gt;Classpath：类路径，java运行查找类文件的路径&lt;/p&gt;
-&lt;p&gt;public class 和class：&lt;br&gt;    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;path：&quot;&gt;&lt;a href=&quot;#path：&quot; class=&quot;headerlink&quot; title=&quot;path：&quot;&gt;&lt;/a&gt;path：&lt;/h1&gt;&lt;p&gt;主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。&lt;br&gt;Classpath：类路径，java运行查找类文件的路径&lt;/p&gt;
+&lt;h1 id=&quot;public-class-和class：&quot;&gt;&lt;a href=&quot;#public-class-和class：&quot; class=&quot;headerlink&quot; title=&quot;public class 和class：&quot;&gt;&lt;/a&gt;public class 和class：&lt;/h1&gt;&lt;p&gt;​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。&lt;/p&gt;</summary>
     
     
     
@@ -94,18 +88,17 @@
     <link href="http://example.com/2021/05/21/javaee/"/>
     <id>http://example.com/2021/05/21/javaee/</id>
     <published>2021-05-21T02:33:28.444Z</published>
-    <updated>2021-05-26T23:57:56.682Z</updated>
+    <updated>2021-06-03T03:10:19.560Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;h3 id=&quot;maven&quot;&gt;&lt;a href=&quot;#maven&quot; class=&quot;headerlink&quot; title=&quot;maven:&quot;&gt;&lt;/a&gt;maven:&lt;/h3&gt;&lt;p&gt;[1] 根目录：工程名&lt;/p&gt;
 &lt;p&gt;[2] |—src：源码&lt;/p&gt;
-&lt;p&gt;[3]</summary>
-        
-      
+&lt;p&gt;[3] |—|—main:存放主程序,目录下是项目的主要代码&lt;/p&gt;
+&lt;p&gt;[4] |—|—|—java：java源码文件&lt;/p&gt;
+&lt;p&gt;[5] |—|—|—resource：存放框架的配置文件&lt;/p&gt;
+&lt;p&gt;[6] |—|—test：存放测试程序,目录下存放测试相关的代码&lt;/p&gt;
+&lt;p&gt;[7] |—pop.xml：maven的核心配置文件&lt;/p&gt;
+&lt;p&gt;webapp下存放Web应用相关代码&lt;/p&gt;</summary>
     
     
     
@@ -252,7 +245,7 @@
     <link href="http://example.com/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-05-04T01:18:17.899Z</published>
-    <updated>2021-05-04T02:10:51.635Z</updated>
+    <updated>2021-06-03T03:11:05.876Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;MySQL学习笔记&quot;&gt;&lt;a href=&quot;#MySQL学习笔记&quot; class=&quot;headerlink&quot; title=&quot;MySQL学习笔记&quot;&gt;&lt;/a&gt;MySQL学习笔记&lt;/h1&gt;&lt;h2 id=&quot;登录和退出MySQL服务器&quot;&gt;&lt;a href=&quot;#登录和退出MySQL服务器&quot; class=&quot;headerlink&quot; title=&quot;登录和退出MySQL服务器&quot;&gt;&lt;/a&gt;登录和退出MySQL服务器&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; 登录MySQL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; mysql -u root -p12345612&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; 退出MySQL数据库服务器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
