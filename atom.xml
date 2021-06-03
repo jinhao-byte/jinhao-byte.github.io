@@ -78,17 +78,11 @@
     <link href="http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"/>
     <id>http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</id>
     <published>2021-05-21T07:57:02.300Z</published>
-    <updated>2021-05-30T06:08:16.408Z</updated>
+    <updated>2021-06-03T02:04:45.964Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;path：主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。&lt;br&gt;Classpath：类路径，java运行查找类文件的路径&lt;/p&gt;
-&lt;p&gt;public class 和class：&lt;br&gt;    public</summary>
-        
-      
+&lt;p&gt;public class 和class：&lt;br&gt;    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。&lt;/p&gt;</summary>
     
     
     
