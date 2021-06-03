@@ -6,13 +6,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>vue学习</title>
-    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
+    <title>python基础</title>
+    <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>python基础</title>
-    <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
+    <title>vue学习</title>
+    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -178,6 +178,56 @@ default：如果class不采用public修饰的话，此时的class只能被该包
 <p>为什么重写equals方法必须重写hsahCode方法？（待整理）</p>
 <pre><code>hashCode()：获取哈希值，也称散列码，实际返回的是int整数。哈希码的作用是确定该对象在哈希表的索引位置。hashCode()定义在JDK的Object类中，意味着java中的任何类都包含hashCode()函数。注意：Object的hashCode方法是本地方法，也就是c语言或者c++实现的，该方法会用来将对象的内存地址转换为整数返回。</code></pre><p>Java中的几种基本类型和对应的包装类：（待整理）<br>    基本类型:<br>        6种数字类型：byte，short，int，long，float，double<br>        1种字符类型：char<br>        1种布尔类型：boolean (默认false)<br>        Java里使用long类型的时候，要在数值后面加上L<br>        char类型用单引号，String用双引号。<br>    自动拆箱和装箱：<br>        装箱：将基本类型用他们对应的引用类型包装起来；<br>        拆箱：将包装类型转换为基本类型；</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>学习记录</title>
+    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
+<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
+<pre><code>错误信息：Error during artifact deployment. See server log for details.
+    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>javaee</title>
+    <url>/2021/05/21/javaee/</url>
+    <content><![CDATA[<h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
+<p>[2] |—src：源码</p>
+<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
+<p>[4] |—|—|—java：java源码文件</p>
+<p>[5] |—|—|—resource：存放框架的配置文件</p>
+<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
+<p>[7] |—pop.xml：maven的核心配置文件</p>
+<p>webapp下存放Web应用相关代码</p>
+<h3 id="常用maven命令"><a href="#常用maven命令" class="headerlink" title="常用maven命令"></a>常用maven命令</h3><p>[1] mvn clean：清理</p>
+<p>[2] mvn compile：编译主程序</p>
+<p>[3] mvn test-compile：编译测试程序</p>
+<p>[4] mvn test：执行测试</p>
+<p>[5] mvn package：打包</p>
+<p>[6] mvn install：安装</p>
+<h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml:"></a>pom.xml:</h3><p><strong>1、modelVersion</strong></p>
+<p>​    指定了当前Maven模型的版本号</p>
+<p><strong>2、groupId</strong></p>
+<p>　　顾名思义，这个应该是公司名或是组织名。一般来说groupId是由三个部分组成，每个部分之间以”.”分隔，第一部分是项目用途，比如用于商业的就是”com”，用于非营利性组织的就　　是”org”；第二部分是公司名，比如”tengxun”、”baidu”、”alibaba”；第三部分是你的项目名</p>
+<p><strong>3、artifactId</strong></p>
+<p>　　可以认为是Maven构建的项目名，比如你的项目中有子项目，就可以使用”项目名-子项目名”的命名方式</p>
+<p><strong>4、version</strong></p>
+<p>　　版本号，SNAPSHOT意为快照，说明该项目还在开发中，是不稳定的版本。在Maven中很重要的一点是，<strong>groupId、artifactId、version三个元素生成了一个Maven项目的基本坐标</strong></p>
+<p><strong>5、packing</strong></p>
+<p>​    项目打包的类型，可以使用jar，war，rar等，默认jar</p>
+<p><strong>6、dependencies和dependency</strong></p>
+<p> 前者包含后者。前面说了，Maven的一个重要作用就是统一管理jar包，为了一个项目可以build或运行，项目中不可避免的，会依赖很多其他的jar包，在Maven中，这些依赖就被称为dependency。 </p>
+<p><strong>7、properties</strong></p>
+<p> properties是用来定义一些配置属性的，例如project.build.sourceEncoding（项目构建源码编码方式），可以设置为UTF-8，防止中文乱码，也可定义相关构建版本号，便于日后统一升级。 </p>
+<h3 id="maven-多模块"><a href="#maven-多模块" class="headerlink" title="maven 多模块"></a>maven 多模块</h3><p>Spring MVC：<br>    web开发中的请求-响应模型：<br>        web客户端如：IE浏览器先发送请求，web服务器接收请求，处理请求，然后产生响应，响应再返回网站首页内容，浏览器接收响应并渲染。<br>    web世界里：<br>        web浏览器（如IE）发送请求：如，访问<a href="http://sishuok.com" target="_blank" rel="noopener">http://sishuok.com</a><br>        web服务器（如tomcat）接收请求，处理请求（比如用户新增，则把用户保存一下），最后产生响应（一般为html）<br>        web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染，展示给客户）<br>        因此，都是web客户端发起请求，web服务器接收，处理并产生响应，一般web服务器不主动通知web客户端更新内容<br>    MVC模型：<br>        一种架构行的模式，本身不引入新的功能，只是将开发的结构组织的更加合理。<br>        展示和模型分离，流程控制逻辑，业务逻辑调用与展示逻辑分离。</p>
+<pre><code>图片------
+
+MVC：Model-View-Controller
+Model（模型）：数据模型，提供要展示的数据，所以包括数据和行为，可以是领域模型或者JavaBean组件（包含数据和行为），不过现在一般分离开：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
+View（视图）：负责进行模型的展示，一般就是看到的用户界面，客户想看到的东西。
+Controller（控制器）：接收用户请求，委托模型进行处理（状态改变），处理完毕后把返回的数据返回给视图，视图进行展示。也就是说Controller作了一个调度的工作。
+
+WebMVC：
+    标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
   </entry>
   <entry>
     <title>MySQL学习笔记</title>
@@ -501,68 +551,6 @@ default：如果class不采用public修饰的话，此时的class只能被该包
 ]]></content>
   </entry>
   <entry>
-    <title>javaee</title>
-    <url>/2021/05/21/javaee/</url>
-    <content><![CDATA[<h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
-<p>[2] |—src：源码</p>
-<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
-<p>[4] |—|—|—java：java源码文件</p>
-<p>[5] |—|—|—resource：存放框架的配置文件</p>
-<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
-<p>[7] |—pop.xml：maven的核心配置文件</p>
-<p>webapp下存放Web应用相关代码</p>
-<h3 id="常用maven命令"><a href="#常用maven命令" class="headerlink" title="常用maven命令"></a>常用maven命令</h3><p>[1] mvn clean：清理</p>
-<p>[2] mvn compile：编译主程序</p>
-<p>[3] mvn test-compile：编译测试程序</p>
-<p>[4] mvn test：执行测试</p>
-<p>[5] mvn package：打包</p>
-<p>[6] mvn install：安装</p>
-<h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml:"></a>pom.xml:</h3><p><strong>1、modelVersion</strong></p>
-<p>​    指定了当前Maven模型的版本号</p>
-<p><strong>2、groupId</strong></p>
-<p>　　顾名思义，这个应该是公司名或是组织名。一般来说groupId是由三个部分组成，每个部分之间以”.”分隔，第一部分是项目用途，比如用于商业的就是”com”，用于非营利性组织的就　　是”org”；第二部分是公司名，比如”tengxun”、”baidu”、”alibaba”；第三部分是你的项目名</p>
-<p><strong>3、artifactId</strong></p>
-<p>　　可以认为是Maven构建的项目名，比如你的项目中有子项目，就可以使用”项目名-子项目名”的命名方式</p>
-<p><strong>4、version</strong></p>
-<p>　　版本号，SNAPSHOT意为快照，说明该项目还在开发中，是不稳定的版本。在Maven中很重要的一点是，<strong>groupId、artifactId、version三个元素生成了一个Maven项目的基本坐标</strong></p>
-<p><strong>5、packing</strong></p>
-<p>​    项目打包的类型，可以使用jar，war，rar等，默认jar</p>
-<p><strong>6、dependencies和dependency</strong></p>
-<p> 前者包含后者。前面说了，Maven的一个重要作用就是统一管理jar包，为了一个项目可以build或运行，项目中不可避免的，会依赖很多其他的jar包，在Maven中，这些依赖就被称为dependency。 </p>
-<p><strong>7、properties</strong></p>
-<p> properties是用来定义一些配置属性的，例如project.build.sourceEncoding（项目构建源码编码方式），可以设置为UTF-8，防止中文乱码，也可定义相关构建版本号，便于日后统一升级。 </p>
-<h3 id="maven-多模块"><a href="#maven-多模块" class="headerlink" title="maven 多模块"></a>maven 多模块</h3><p>Spring MVC：<br>    web开发中的请求-响应模型：<br>        web客户端如：IE浏览器先发送请求，web服务器接收请求，处理请求，然后产生响应，响应再返回网站首页内容，浏览器接收响应并渲染。<br>    web世界里：<br>        web浏览器（如IE）发送请求：如，访问<a href="http://sishuok.com" target="_blank" rel="noopener">http://sishuok.com</a><br>        web服务器（如tomcat）接收请求，处理请求（比如用户新增，则把用户保存一下），最后产生响应（一般为html）<br>        web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染，展示给客户）<br>        因此，都是web客户端发起请求，web服务器接收，处理并产生响应，一般web服务器不主动通知web客户端更新内容<br>    MVC模型：<br>        一种架构行的模式，本身不引入新的功能，只是将开发的结构组织的更加合理。<br>        展示和模型分离，流程控制逻辑，业务逻辑调用与展示逻辑分离。</p>
-<pre><code>图片------
-
-MVC：Model-View-Controller
-Model（模型）：数据模型，提供要展示的数据，所以包括数据和行为，可以是领域模型或者JavaBean组件（包含数据和行为），不过现在一般分离开：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
-View（视图）：负责进行模型的展示，一般就是看到的用户界面，客户想看到的东西。
-Controller（控制器）：接收用户请求，委托模型进行处理（状态改变），处理完毕后把返回的数据返回给视图，视图进行展示。也就是说Controller作了一个调度的工作。
-
-WebMVC：
-    标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>学习记录</title>
-    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
-<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
-<pre><code>错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>数学建模比赛</title>
-    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
-    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
-<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
-3:
-
-提出和假设：
-    指数增长模型，由马尔萨斯在1798年提出
-    基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
-  </entry>
-  <entry>
     <title>学习资源链接</title>
     <url>/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
     <content><![CDATA[<h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
@@ -573,11 +561,6 @@ WebMVC：
 <h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
 <p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>机器学习记录</title>
-    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
   </entry>
   <entry>
     <title>数据库零碎知识点</title>
@@ -623,5 +606,22 @@ WebMVC：
 <p>视图：</p>
 <p>​    虚表，是从一个或多个</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>数学建模比赛</title>
+    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
+    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
+<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
+3:
+
+提出和假设：
+    指数增长模型，由马尔萨斯在1798年提出
+    基本假设：人口（相对）增长率r是常数（r很小）
+    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>机器学习记录</title>
+    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
   </entry>
 </search>
