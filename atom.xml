@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jinhao&#39;s blog</title>
+  
+  <subtitle>Marker &amp; Developer</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-06-02T13:39:58.941Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>jinhao-byte</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python基础</title>
+    <link href="http://example.com/2021/06/02/python%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2021/06/02/python%E5%9F%BA%E7%A1%80/</id>
+    <published>2021-06-02T13:39:58.941Z</published>
+    <updated>2021-06-02T13:39:58.941Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaSE进阶</title>
+    <link href="http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/"/>
+    <id>http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</id>
+    <published>2021-05-30T06:28:16.000Z</published>
+    <updated>2021-06-02T14:46:26.982Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;抽象类和接口以及抽象类和接口的区别：&lt;br&gt;    抽象类：&lt;br&gt;        抽象类的定义：在class前添加abstract关键字&lt;br&gt;        抽象类是无法实例化的，所以抽象类是用来被子类继承的&lt;br&gt;       </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git</title>
+    <link href="http://example.com/2021/05/26/Git/"/>
+    <id>http://example.com/2021/05/26/Git/</id>
+    <published>2021-05-26T06:23:49.816Z</published>
+    <updated>2021-05-30T11:08:14.362Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Git：目前最先进的分布式版本控制系统&lt;/p&gt;
+&lt;p&gt;Workspace：工作区&lt;br&gt;Index/Stage：暂存区&lt;br&gt;Repository：仓库区（本地仓库）&lt;br&gt;Remote：远程仓库&lt;/p&gt;
+&lt;p&gt;SVN/Git区别：&lt;br&gt;   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础复习</title>
+    <link href="http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</id>
+    <published>2021-05-21T07:57:02.300Z</published>
+    <updated>2021-05-30T06:08:16.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;path：主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。&lt;br&gt;Classpath：类路径，java运行查找类文件的路径&lt;/p&gt;
+&lt;p&gt;public class 和class：&lt;br&gt;    public</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>javaee</title>
+    <link href="http://example.com/2021/05/21/javaee/"/>
+    <id>http://example.com/2021/05/21/javaee/</id>
+    <published>2021-05-21T02:33:28.444Z</published>
+    <updated>2021-05-26T23:57:56.682Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;maven&quot;&gt;&lt;a href=&quot;#maven&quot; class=&quot;headerlink&quot; title=&quot;maven:&quot;&gt;&lt;/a&gt;maven:&lt;/h3&gt;&lt;p&gt;[1] 根目录：工程名&lt;/p&gt;
+&lt;p&gt;[2] |—src：源码&lt;/p&gt;
+&lt;p&gt;[3]</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据库零碎知识点</title>
+    <link href="http://example.com/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://example.com/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
+    <published>2021-05-17T12:02:07.320Z</published>
+    <updated>2021-05-20T08:32:36.574Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 一些最重要的 SQL 命令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;SELECT&lt;/strong&gt; - 从数据库中提取数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; -</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学习记录</title>
+    <link href="http://example.com/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-05-13T08:08:25.061Z</published>
+    <updated>2021-05-26T04:19:12.689Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2021-5-25&lt;br&gt;idea启动tomcat，8080端口被占，已解决&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>XML学习</title>
+    <link href="http://example.com/2021/05/12/XML%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2021/05/12/XML%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-05-12T06:15:51.008Z</published>
+    <updated>2021-05-12T06:15:51.008Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue学习</title>
+    <link href="http://example.com/2021/05/12/vue%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-05-12T03:32:04.361Z</published>
+    <updated>2021-05-12T03:32:04.361Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数学建模比赛</title>
+    <link href="http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"/>
+    <id>http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</id>
+    <published>2021-05-11T14:58:05.795Z</published>
+    <updated>2021-05-22T00:23:41.441Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;指数增长(Malthus)模型:&lt;br&gt;    1:&lt;a href=&quot;https://blog.csdn.net/weixin_43441742/article/details/99622081&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习记录</title>
+    <link href="http://example.com/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-05-04T01:44:19.590Z</published>
+    <updated>2021-05-04T02:31:16.416Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;用来记录自己的的ML学习历程&quot;&gt;&lt;a href=&quot;#用来记录自己的的ML学习历程&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学习资源链接</title>
+    <link href="http://example.com/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"/>
+    <id>http://example.com/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</id>
+    <published>2021-05-04T01:18:17.910Z</published>
+    <updated>2021-05-12T13:13:51.294Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;MySQL系列学习目录：&quot;&gt;&lt;a href=&quot;#MySQL系列学习目录：&quot; class=&quot;headerlink&quot; title=&quot;MySQL系列学习目录：&quot;&gt;&lt;/a&gt;MySQL系列学习目录：&lt;/h2&gt;&lt;h3 id=&quot;MYSQL文章学习：&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL学习笔记</title>
+    <link href="http://example.com/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-05-04T01:18:17.899Z</published>
+    <updated>2021-05-04T02:10:51.635Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;MySQL学习笔记&quot;&gt;&lt;a href=&quot;#MySQL学习笔记&quot; class=&quot;headerlink&quot; title=&quot;MySQL学习笔记&quot;&gt;&lt;/a&gt;MySQL学习笔记&lt;/h1&gt;&lt;h2 id=&quot;登录和退出MySQL服务器&quot;&gt;&lt;a href=&quot;#登录和退出MySQL服务器&quot; class=&quot;headerlink&quot; title=&quot;登录和退出MySQL服务器&quot;&gt;&lt;/a&gt;登录和退出MySQL服务器&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; 登录MySQL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; mysql -u root -p12345612&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; 退出MySQL数据库服务器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>
