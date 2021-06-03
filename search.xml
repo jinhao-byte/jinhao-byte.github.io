@@ -6,35 +6,29 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>vue学习</title>
-    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>python基础</title>
     <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Git</title>
-    <url>/2021/05/26/Git/</url>
-    <content><![CDATA[<p>Git：目前最先进的分布式版本控制系统</p>
-<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
-<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
-<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
-<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
-<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
-<p>暂存区：</p>
-<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
-<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
-]]></content>
+    <title>vue学习</title>
+    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>JavaSE进阶</title>
     <url>/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[<p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现<br>    java语言中凡是没有方法体的方法都是抽象方法。<br>            不对，错误的。<br>            Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们<br>            都不是抽象方法，例如：<br>                public native int hashCode();<br>                这个方法底层调用了C++写的动态链接库程序。<br>                前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</p>
+    <content><![CDATA[<p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现</p>
 <a id="more"></a>
-<pre><code>接口的基础语法：
+<pre><code>java语言中凡是没有方法体的方法都是抽象方法。
+        不对，错误的。
+        Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们
+        都不是抽象方法，例如：
+            public native int hashCode();
+            这个方法底层调用了C++写的动态链接库程序。
+            前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。
+
+接口的基础语法：
     接口是一种‘引用数据类型’
     接口是完全抽象的
     接口的定义：[修饰符列表] interface 接口名{}
@@ -95,6 +89,63 @@ Map接口：
     TreeMap：</code></pre><p>基本类型的包装类：<br>    作用：提供更多实用的操作，更容易处理基本类型，所有的包装类都是final的，所以不能创建子类，包装类都是不可变对象<br>    byte    Byte<br>    short   Short<br>    char    Character<br>    int     Integer<br>    long    Long<br>    float   Float<br>    double  Double<br>    boolean Boolean</p>
 <p>JDK5.0新特性：<br>    JDK5.0之前包装类和基本类型做运算时，必须将包装类转换为基本类型。JDK5.0提供自动装箱拆箱Auto-boxing/unboxing</p>
 <p>泛型：</p>
+<p>2021-6-3 </p>
+<p>IO流：要站在内存的角度，看输出和输入<br>    概述：文件通常是一连串的字节和字符构成，组成文件的字节序列称为字节流，组成文件的字符序列称为字符流。java根据流的方向分为输入流和输出流。</p>
+<pre><code>输入流：将文件或其他输入设备的数据加载到内存的过程；
+输出流：将内存中的数据保存到文件或者其他输出设备中
+
+Java语言将IO分为：字节输入\输出流和字符输入\输出流
+
+InputStream（字节输入流）:
+    InputStream是一个抽象类，所有继承InputStream的类都是字节输入流
+OutputStream（字节输出流）：   
+    所有继承OutputStream的类都是字节输出流
+Reader（字符输出流）：
+    所有继承Reader的类都是字符输入流
+Writer（字符输出流）： 
+    所有继承Writer都是字符输出流
+
+文件流：
+    文件流主要分为：文件字节输入流、文件字节输出流、文件字符输入流、文件字符输出流
+
+    FileInputStream(文件字节输入流):
+        主要按照字节方式读取文件
+        注意：如果是读取的是中文，按照字节读入，然后直接打印在控制台的话，会发生乱码，因为汉字是按照两个自己存储的，按照一个字节打印汉字是不完整的。
+    FileOutputStream(文件字节输出流)：
+        按照字节方式写文件，例如文件的复制，首先读取文件，读取文件后将文件保存在另一个磁盘上，就完成了备份。
+    FileReader(文件字符输入流):
+        以字符为单位读取字符，也就是一次读取两个字节，采用字符输入流读取文本文件，汉字就不乱码了。
+    FileWriter(文件字符输出流):
+        输出字符流到文本文件。
+
+缓冲流：
+    目的：为了提升效率，减少物理读取次数。
+    缓冲流主要有：：BufferedInputStream、BufferedOutputStream，BufferedReader、BufferedWriter
+    BufferedReader 提供了实用方法readLine()，可以直接读取一行，BufferWriter 提供了 newLine()可以写换行符。
+
+转换流：   
+    包括InputStreamReader 和 OutputStreamWriter
+    InputStreamReader：将字节流输入流转换为字符输入流
+    OutputStreamWriter：主要是将字节流输出流转换成字符输出流
+
+打印流：
+    包括：PrintStream 字节流和 PrintWriter字符流
+
+
+对象流：</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/2021/05/26/Git/</url>
+    <content><![CDATA[<p>Git：目前最先进的分布式版本控制系统</p>
+<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
+<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
+<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
+<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
+<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
+<p>暂存区：</p>
+<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
+<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
 ]]></content>
   </entry>
   <entry>
@@ -462,14 +513,6 @@ WebMVC：
 ]]></content>
   </entry>
   <entry>
-    <title>学习记录</title>
-    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
-<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
-<pre><code>错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre>]]></content>
-  </entry>
-  <entry>
     <title>Java基础复习</title>
     <url>/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
@@ -557,9 +600,12 @@ default：如果class不采用public修饰的话，此时的class只能被该包
 ]]></content>
   </entry>
   <entry>
-    <title>机器学习记录</title>
-    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
+    <title>学习记录</title>
+    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
+<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
+<pre><code>错误信息：Error during artifact deployment. See server log for details.
+    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre>]]></content>
   </entry>
   <entry>
     <title>数据库零碎知识点</title>
@@ -629,5 +675,10 @@ default：如果class不采用public修饰的话，此时的class只能被该包
     指数增长模型，由马尔萨斯在1798年提出
     基本假设：人口（相对）增长率r是常数（r很小）
     相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>机器学习记录</title>
+    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
   </entry>
 </search>

@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">3k</span>
+            <span class="post-count">3.6k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">11 min</span>
+            <span class="post-count">13 min</span>
         </span>
     </span>
 </div>
@@ -98,9 +98,17 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现<br>    java语言中凡是没有方法体的方法都是抽象方法。<br>            不对，错误的。<br>            Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们<br>            都不是抽象方法，例如：<br>                public native int hashCode();<br>                这个方法底层调用了C++写的动态链接库程序。<br>                前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</p>
+  <p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现</p>
 <a id="more"></a>
-<pre><code>接口的基础语法：
+<pre><code>java语言中凡是没有方法体的方法都是抽象方法。
+        不对，错误的。
+        Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们
+        都不是抽象方法，例如：
+            public native int hashCode();
+            这个方法底层调用了C++写的动态链接库程序。
+            前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。
+
+接口的基础语法：
     接口是一种‘引用数据类型’
     接口是完全抽象的
     接口的定义：[修饰符列表] interface 接口名{}
@@ -161,7 +169,50 @@ Map接口：
     TreeMap：</code></pre><p>基本类型的包装类：<br>    作用：提供更多实用的操作，更容易处理基本类型，所有的包装类都是final的，所以不能创建子类，包装类都是不可变对象<br>    byte    Byte<br>    short   Short<br>    char    Character<br>    int     Integer<br>    long    Long<br>    float   Float<br>    double  Double<br>    boolean Boolean</p>
 <p>JDK5.0新特性：<br>    JDK5.0之前包装类和基本类型做运算时，必须将包装类转换为基本类型。JDK5.0提供自动装箱拆箱Auto-boxing/unboxing</p>
 <p>泛型：</p>
- 
+<p>2021-6-3 </p>
+<p>IO流：要站在内存的角度，看输出和输入<br>    概述：文件通常是一连串的字节和字符构成，组成文件的字节序列称为字节流，组成文件的字符序列称为字符流。java根据流的方向分为输入流和输出流。</p>
+<pre><code>输入流：将文件或其他输入设备的数据加载到内存的过程；
+输出流：将内存中的数据保存到文件或者其他输出设备中
+
+Java语言将IO分为：字节输入\输出流和字符输入\输出流
+
+InputStream（字节输入流）:
+    InputStream是一个抽象类，所有继承InputStream的类都是字节输入流
+OutputStream（字节输出流）：   
+    所有继承OutputStream的类都是字节输出流
+Reader（字符输出流）：
+    所有继承Reader的类都是字符输入流
+Writer（字符输出流）： 
+    所有继承Writer都是字符输出流
+
+文件流：
+    文件流主要分为：文件字节输入流、文件字节输出流、文件字符输入流、文件字符输出流
+
+    FileInputStream(文件字节输入流):
+        主要按照字节方式读取文件
+        注意：如果是读取的是中文，按照字节读入，然后直接打印在控制台的话，会发生乱码，因为汉字是按照两个自己存储的，按照一个字节打印汉字是不完整的。
+    FileOutputStream(文件字节输出流)：
+        按照字节方式写文件，例如文件的复制，首先读取文件，读取文件后将文件保存在另一个磁盘上，就完成了备份。
+    FileReader(文件字符输入流):
+        以字符为单位读取字符，也就是一次读取两个字节，采用字符输入流读取文本文件，汉字就不乱码了。
+    FileWriter(文件字符输出流):
+        输出字符流到文本文件。
+
+缓冲流：
+    目的：为了提升效率，减少物理读取次数。
+    缓冲流主要有：：BufferedInputStream、BufferedOutputStream，BufferedReader、BufferedWriter
+    BufferedReader 提供了实用方法readLine()，可以直接读取一行，BufferWriter 提供了 newLine()可以写换行符。
+
+转换流：   
+    包括InputStreamReader 和 OutputStreamWriter
+    InputStreamReader：将字节流输入流转换为字符输入流
+    OutputStreamWriter：主要是将字节流输出流转换成字符输出流
+
+打印流：
+    包括：PrintStream 字节流和 PrintWriter字符流
+
+
+对象流：</code></pre> 
       <!-- reward -->
       
       <div id="reword-out">
