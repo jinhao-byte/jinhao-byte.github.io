@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-04T13:04:38.277Z</updated>
+  <updated>2021-06-04T14:57:35.766Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,19 @@
     <link href="http://example.com/2021/06/04/SQL%E8%AF%AD%E6%B3%95/"/>
     <id>http://example.com/2021/06/04/SQL%E8%AF%AD%E6%B3%95/</id>
     <published>2021-06-04T06:32:51.453Z</published>
-    <updated>2021-06-04T13:04:38.277Z</updated>
+    <updated>2021-06-04T14:57:35.766Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;SQL语法&quot;&gt;&lt;a href=&quot;#SQL语法&quot; class=&quot;headerlink&quot; title=&quot;SQL语法&quot;&gt;&lt;/a&gt;SQL语法&lt;/h1&gt;&lt;h2 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;SQL语法&quot;&gt;&lt;a href=&quot;#SQL语法&quot; class=&quot;headerlink&quot; title=&quot;SQL语法&quot;&gt;&lt;/a&gt;SQL语法&lt;/h1&gt;&lt;h2 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h2&gt;&lt;p&gt;模式定义了数据如何存储，存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;
+&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋值给新数据行的主键）。&lt;/p&gt;
+&lt;p&gt;SQL（Structured Query Language)，标准SQL由ANSI标准委员会管理，从而称为ANSI SQL。各个DBMS都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
+&lt;p&gt;SQL不区分大小写，但数据库表名，列名和值是否区分依赖于具体的DBMS以及配置&lt;/p&gt;
+&lt;p&gt;SQL支持的注释：&lt;/p&gt;
+&lt;p&gt;注释：&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;FROM&lt;/span&gt; mytable; &lt;span class=&quot;comment&quot;&gt;-- 注释&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* 注释1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;   注释2 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;数据库创建和使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;DATABASE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;test&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;USE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;test&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
