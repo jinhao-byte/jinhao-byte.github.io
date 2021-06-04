@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>python基础 |  Jinhao&#39;s blog</title>
+      <title>SQL语法 |  Jinhao&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -49,7 +49,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-python基础"
+  id="post-SQL语法"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -60,7 +60,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  python基础
+  SQL语法
 </h1>
  
 
@@ -68,15 +68,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/06/02/python%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time datetime="2021-06-02T13:39:58.941Z" itemprop="datePublished">2021-06-02</time>
+      <a href="/2021/06/04/SQL%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time datetime="2021-06-04T06:32:51.453Z" itemprop="datePublished">2021-06-04</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">431</span>
         </span>
     </span>
 
@@ -92,13 +92,55 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <h1 id="SQL语法"><a href="#SQL语法" class="headerlink" title="SQL语法"></a>SQL语法</h1><h2 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h2><p>模式定义了数据如何存储，存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。</p>
+<p>主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋值给新数据行的主键）。</p>
+<p>SQL（Structured Query Language)，标准SQL由ANSI标准委员会管理，从而称为ANSI SQL。各个DBMS都有自己的实现，如 PL/SQL、Transact-SQL 等。</p>
+<p>SQL不区分大小写，但数据库表名，列名和值是否区分依赖于具体的DBMS以及配置</p>
+<p>SQL支持的注释：</p>
+<p>注释：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *</span><br><span class="line"><span class="keyword">FROM</span> mytable; <span class="comment">-- 注释</span></span><br><span class="line"><span class="comment">/* 注释1</span></span><br><span class="line"><span class="comment">   注释2 */</span></span><br></pre></td></tr></table></figure>
+
+<p>数据库创建和使用：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">test</span>;</span><br><span class="line"><span class="keyword">USE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二，创建表"><a href="#二，创建表" class="headerlink" title="二，创建表"></a>二，创建表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">create Table mytable(</span><br><span class="line">	#int 类型 ，不为空，自增</span><br><span class="line">	id INT NOT NULL AUTO_INCREMENT,</span><br><span class="line">	#int 类型，不为空，默认值为1，不为空</span><br><span class="line">	col1 INT NOT NULL DEFAULT1,</span><br><span class="line">	#变长字符串类型，最长为45个字符，可以为空</span><br><span class="line">	col2 VARCHAR(45) NULL,</span><br><span class="line">	#日期类型，不为空</span><br><span class="line">	col3 DATE NULL,</span><br><span class="line">	#设置主键id</span><br><span class="line">	PRIMARY KEY(&#39;id&#39;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="三，修改表"><a href="#三，修改表" class="headerlink" title="三，修改表"></a>三，修改表</h2><p>添加列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE mytable</span><br><span class="line">ADD col CHAR(20);</span><br></pre></td></tr></table></figure>
+
+<p>删除列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE mytable</span><br><span class="line">DROP COLUMN col;</span><br></pre></td></tr></table></figure>
+
+<p>删除表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE mytable;</span><br></pre></td></tr></table></figure>
+
+<h2 id="四，插入"><a href="#四，插入" class="headerlink" title="四，插入"></a>四，插入</h2><p>普通插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO mytable(col1,col2)</span><br><span class="line">VALUE(val1,val2);</span><br></pre></td></tr></table></figure>
+
+<p>插入检索出来的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO mytable(col1,col2)</span><br><span class="line">SELECT col1,col2</span><br><span class="line">FROM mytable;</span><br></pre></td></tr></table></figure>
+
+<p>将一个表的内容插入一个新表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE newtable AS </span><br><span class="line">SELECT *FROM mytable;</span><br></pre></td></tr></table></figure>
+
+<h2 id="五，更新"><a href="#五，更新" class="headerlink" title="五，更新"></a>五，更新</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE mytable</span><br><span class="line">set col &#x3D; val</span><br><span class="line">WHERE ID&#x3D;1;</span><br></pre></td></tr></table></figure>
+
+<h2 id="六，删除"><a href="#六，删除" class="headerlink" title="六，删除"></a>六，删除</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> mytable</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">id</span> = <span class="number">1</span>；</span><br></pre></td></tr></table></figure>
+
+<p> <strong>TRUNCATE TABLE</strong> 可以清空表，也就是删除所有行。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE TABLE mytable;</span><br></pre></td></tr></table></figure>
+
+<p>使用更新和删除操作时一定要用WHERE子句，不然会把整张表的数据都破坏了。</p>
+<p>可以先用SELECT语句进行测试，防止错误删除。</p>
+<h2 id="七，查询"><a href="#七，查询" class="headerlink" title="七，查询"></a>七，查询</h2> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -168,7 +210,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/06/02/python%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/06/04/SQL%E8%AF%AD%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -179,19 +221,10 @@
    
   <nav class="article-nav">
     
+    
       <a href="/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            学习资料链接
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">JavaSE进阶</div>
+        <div class="article-nav-title">学习资料链接</div>
       </a>
     
   </nav>

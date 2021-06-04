@@ -145,6 +145,141 @@
     
     
     <article
+  id="post-SQL语法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/04/SQL%E8%AF%AD%E6%B3%95/"
+    >SQL语法</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/04/SQL%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time datetime="2021-06-04T06:32:51.453Z" itemprop="datePublished">2021-06-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="SQL语法"><a href="#SQL语法" class="headerlink" title="SQL语法"></a>SQL语法</h1><h2 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h2><p>模式定义了数据如何存储，存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。</p>
+<p>主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋值给新数据行的主键）。</p>
+<p>SQL（Structured Query Language)，标准SQL由ANSI标准委员会管理，从而称为ANSI SQL。各个DBMS都有自己的实现，如 PL/SQL、Transact-SQL 等。</p>
+<p>SQL不区分大小写，但数据库表名，列名和值是否区分依赖于具体的DBMS以及配置</p>
+<p>SQL支持的注释：</p>
+<p>注释：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *</span><br><span class="line"><span class="keyword">FROM</span> mytable; <span class="comment">-- 注释</span></span><br><span class="line"><span class="comment">/* 注释1</span></span><br><span class="line"><span class="comment">   注释2 */</span></span><br></pre></td></tr></table></figure>
+
+<p>数据库创建和使用：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">test</span>;</span><br><span class="line"><span class="keyword">USE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二，创建表"><a href="#二，创建表" class="headerlink" title="二，创建表"></a>二，创建表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">create Table mytable(</span><br><span class="line">	#int 类型 ，不为空，自增</span><br><span class="line">	id INT NOT NULL AUTO_INCREMENT,</span><br><span class="line">	#int 类型，不为空，默认值为1，不为空</span><br><span class="line">	col1 INT NOT NULL DEFAULT1,</span><br><span class="line">	#变长字符串类型，最长为45个字符，可以为空</span><br><span class="line">	col2 VARCHAR(45) NULL,</span><br><span class="line">	#日期类型，不为空</span><br><span class="line">	col3 DATE NULL,</span><br><span class="line">	#设置主键id</span><br><span class="line">	PRIMARY KEY(&#39;id&#39;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="三，修改表"><a href="#三，修改表" class="headerlink" title="三，修改表"></a>三，修改表</h2><p>添加列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE mytable</span><br><span class="line">ADD col CHAR(20);</span><br></pre></td></tr></table></figure>
+
+<p>删除列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE mytable</span><br><span class="line">DROP COLUMN col;</span><br></pre></td></tr></table></figure>
+
+<p>删除表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE mytable;</span><br></pre></td></tr></table></figure>
+
+<h2 id="四，插入"><a href="#四，插入" class="headerlink" title="四，插入"></a>四，插入</h2><p>普通插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO mytable(col1,col2)</span><br><span class="line">VALUE(val1,val2);</span><br></pre></td></tr></table></figure>
+
+<p>插入检索出来的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO mytable(col1,col2)</span><br><span class="line">SELECT col1,col2</span><br><span class="line">FROM mytable;</span><br></pre></td></tr></table></figure>
+
+<p>将一个表的内容插入一个新表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE newtable AS </span><br><span class="line">SELECT *FROM mytable;</span><br></pre></td></tr></table></figure>
+
+<h2 id="五，更新"><a href="#五，更新" class="headerlink" title="五，更新"></a>五，更新</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE mytable</span><br><span class="line">set col &#x3D; val</span><br><span class="line">WHERE ID&#x3D;1;</span><br></pre></td></tr></table></figure>
+
+<h2 id="六，删除"><a href="#六，删除" class="headerlink" title="六，删除"></a>六，删除</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> mytable</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">id</span> = <span class="number">1</span>；</span><br></pre></td></tr></table></figure>
+
+<p> <strong>TRUNCATE TABLE</strong> 可以清空表，也就是删除所有行。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE TABLE mytable;</span><br></pre></td></tr></table></figure>
+
+<p>使用更新和删除操作时一定要用WHERE子句，不然会把整张表的数据都破坏了。</p>
+<p>可以先用SELECT语句进行测试，防止错误删除。</p>
+<h2 id="七，查询"><a href="#七，查询" class="headerlink" title="七，查询"></a>七，查询</h2> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-学习资料链接"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/"
+    >学习资料链接</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/" class="article-date">
+  <time datetime="2021-06-04T00:28:44.857Z" itemprop="datePublished">2021-06-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>01 Java基础阶段：<br>链接:<a href="https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw" target="_blank" rel="noopener">https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw</a>  密码:koa9<br>02 数据库阶段：<br>链接:<a href="https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw" target="_blank" rel="noopener">https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw</a>  密码:sbog<br>03 Web前端：<br>链接:<a href="https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ</a>  密码:p0wy<br>04 Javaweb阶段：<br>链接:<a href="https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w" target="_blank" rel="noopener">https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w</a>  密码:njpq<br>05 Web进阶：<br>链接:<a href="https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g" target="_blank" rel="noopener">https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g</a>  密码:9w0s<br>06 Web项目实战：<br>链接:<a href="https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA" target="_blank" rel="noopener">https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA</a>  密码:ekn5<br>07 Java框架阶段：<br>链接:<a href="https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ" target="_blank" rel="noopener">https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ</a>  密码:2jqq<br>08 互联网分布式技术：<br>链接:<a href="https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg" target="_blank" rel="noopener">https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg</a>  密码:6t3d<br>09 项目实战：<br>链接:<a href="https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw" target="_blank" rel="noopener">https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw</a>  密码:gplw<br>10 Java开发工具：<br>链接：<a href="https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA" target="_blank" rel="noopener">https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA</a> 提取码：krpc</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-python基础"
   class="article article-type-post"
   itemscope
@@ -169,7 +304,14 @@
   <time datetime="2021-06-02T13:39:58.941Z" itemprop="datePublished">2021-06-02</time>
 </a>    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+   
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -209,7 +351,18 @@
   <time datetime="2021-05-30T06:28:16.000Z" itemprop="datePublished">2021-05-30</time>
 </a>    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+  <p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现</p> 
+      <a class="article-more-link" href="/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -249,7 +402,23 @@
   <time datetime="2021-05-26T06:23:49.816Z" itemprop="datePublished">2021-05-26</time>
 </a>    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+  <p>Git：目前最先进的分布式版本控制系统</p>
+<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
+<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
+<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
+<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
+<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
+<p>暂存区：</p>
+<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
+<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -289,7 +458,19 @@
   <time datetime="2021-05-21T07:57:02.300Z" itemprop="datePublished">2021-05-21</time>
 </a>    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+  <h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
+<h1 id="public-class-和class："><a href="#public-class-和class：" class="headerlink" title="public class 和class："></a>public class 和class：</h1><p>​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p> 
+      <a class="article-more-link" href="/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -329,7 +510,25 @@
   <time datetime="2021-05-21T02:33:28.444Z" itemprop="datePublished">2021-05-21</time>
 </a>    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+  <h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
+<p>[2] |—src：源码</p>
+<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
+<p>[4] |—|—|—java：java源码文件</p>
+<p>[5] |—|—|—resource：存放框架的配置文件</p>
+<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
+<p>[7] |—pop.xml：maven的核心配置文件</p>
+<p>webapp下存放Web应用相关代码</p> 
+      <a class="article-more-link" href="/2021/05/21/javaee/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -369,7 +568,54 @@
   <time datetime="2021-05-17T12:02:07.320Z" itemprop="datePublished">2021-05-17</time>
 </a>    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+  <p> 一些最重要的 SQL 命令</p>
+<ul>
+<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
+</li>
+<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
+</li>
+<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
+</li>
+<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
+</li>
+<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
+</li>
+<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
+</li>
+<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
+</li>
+<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
+</li>
+<li><p><strong>DROP TABLE</strong> - 删除表</p>
+</li>
+<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
+</li>
+<li><p><strong>DROP INDEX</strong> - 删除索引</p>
+<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
+</li>
+</ul>
+<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
+<p>​        inner join 或者 join      （后加on表示条件）</p>
+<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
+<p>​    外连接</p>
+<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
+<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
+<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
+<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
+<p>union</p>
+<p>select * from person right join card on person.cardId=card.id</p>
+<p>​        </p>
+<p>unique约束，可以为空，但为空只能有一个，</p>
+<p>视图：</p>
+<p>​    虚表，是从一个或多个</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -409,7 +655,17 @@
   <time datetime="2021-05-13T08:08:25.061Z" itemprop="datePublished">2021-05-13</time>
 </a>    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+  <p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
+<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
+<pre><code>错误信息：Error during artifact deployment. See server log for details.
+    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre> 
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -449,87 +705,14 @@
   <time datetime="2021-05-12T06:15:51.008Z" itemprop="datePublished">2021-05-12</time>
 </a>    
     </div>
-       
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-vue学习"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/12/vue%E5%AD%A6%E4%B9%A0/"
-    >vue学习</a> 
-</h2>
- 
-
       
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/12/vue%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time datetime="2021-05-12T03:32:04.361Z" itemprop="datePublished">2021-05-12</time>
-</a>    
-    </div>
+    <div class="article-entry" itemprop="articleBody">
        
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-数学建模比赛"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"
-    >数学建模比赛</a> 
-</h2>
- 
-
+   
+      <!-- reward -->
       
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/" class="article-date">
-  <time datetime="2021-05-11T14:58:05.795Z" itemprop="datePublished">2021-05-11</time>
-</a>    
     </div>
-       
+    
 
     <!-- copyright -->
     
