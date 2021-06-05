@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python基础</title>
+    <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>XML学习</title>
     <url>/2021/05/12/XML%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[]]></content>
@@ -8,11 +13,6 @@
   <entry>
     <title>vue学习</title>
     <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>python基础</title>
-    <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -147,6 +147,49 @@ Writer（字符输出流）：
 <p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
 <p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>javaee</title>
+    <url>/2021/05/21/javaee/</url>
+    <content><![CDATA[<h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
+<p>[2] |—src：源码</p>
+<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
+<p>[4] |—|—|—java：java源码文件</p>
+<p>[5] |—|—|—resource：存放框架的配置文件</p>
+<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
+<p>[7] |—pop.xml：maven的核心配置文件</p>
+<p>webapp下存放Web应用相关代码</p>
+<a id="more"></a>
+<h3 id="常用maven命令"><a href="#常用maven命令" class="headerlink" title="常用maven命令"></a>常用maven命令</h3><p>[1] mvn clean：清理</p>
+<p>[2] mvn compile：编译主程序</p>
+<p>[3] mvn test-compile：编译测试程序</p>
+<p>[4] mvn test：执行测试</p>
+<p>[5] mvn package：打包</p>
+<p>[6] mvn install：安装</p>
+<h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml:"></a>pom.xml:</h3><p><strong>1、modelVersion</strong></p>
+<p>​    指定了当前Maven模型的版本号</p>
+<p><strong>2、groupId</strong></p>
+<p>　　顾名思义，这个应该是公司名或是组织名。一般来说groupId是由三个部分组成，每个部分之间以”.”分隔，第一部分是项目用途，比如用于商业的就是”com”，用于非营利性组织的就　　是”org”；第二部分是公司名，比如”tengxun”、”baidu”、”alibaba”；第三部分是你的项目名</p>
+<p><strong>3、artifactId</strong></p>
+<p>　　可以认为是Maven构建的项目名，比如你的项目中有子项目，就可以使用”项目名-子项目名”的命名方式</p>
+<p><strong>4、version</strong></p>
+<p>　　版本号，SNAPSHOT意为快照，说明该项目还在开发中，是不稳定的版本。在Maven中很重要的一点是，<strong>groupId、artifactId、version三个元素生成了一个Maven项目的基本坐标</strong></p>
+<p><strong>5、packing</strong></p>
+<p>​    项目打包的类型，可以使用jar，war，rar等，默认jar</p>
+<p><strong>6、dependencies和dependency</strong></p>
+<p> 前者包含后者。前面说了，Maven的一个重要作用就是统一管理jar包，为了一个项目可以build或运行，项目中不可避免的，会依赖很多其他的jar包，在Maven中，这些依赖就被称为dependency。 </p>
+<p><strong>7、properties</strong></p>
+<p> properties是用来定义一些配置属性的，例如project.build.sourceEncoding（项目构建源码编码方式），可以设置为UTF-8，防止中文乱码，也可定义相关构建版本号，便于日后统一升级。 </p>
+<h3 id="maven-多模块"><a href="#maven-多模块" class="headerlink" title="maven 多模块"></a>maven 多模块</h3><p>Spring MVC：<br>    web开发中的请求-响应模型：<br>        web客户端如：IE浏览器先发送请求，web服务器接收请求，处理请求，然后产生响应，响应再返回网站首页内容，浏览器接收响应并渲染。<br>    web世界里：<br>        web浏览器（如IE）发送请求：如，访问<a href="http://sishuok.com" target="_blank" rel="noopener">http://sishuok.com</a><br>        web服务器（如tomcat）接收请求，处理请求（比如用户新增，则把用户保存一下），最后产生响应（一般为html）<br>        web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染，展示给客户）<br>        因此，都是web客户端发起请求，web服务器接收，处理并产生响应，一般web服务器不主动通知web客户端更新内容<br>    MVC模型：<br>        一种架构行的模式，本身不引入新的功能，只是将开发的结构组织的更加合理。<br>        展示和模型分离，流程控制逻辑，业务逻辑调用与展示逻辑分离。</p>
+<pre><code>图片------
+
+MVC：Model-View-Controller
+Model（模型）：数据模型，提供要展示的数据，所以包括数据和行为，可以是领域模型或者JavaBean组件（包含数据和行为），不过现在一般分离开：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
+View（视图）：负责进行模型的展示，一般就是看到的用户界面，客户想看到的东西。
+Controller（控制器）：接收用户请求，委托模型进行处理（状态改变），处理完毕后把返回的数据返回给视图，视图进行展示。也就是说Controller作了一个调度的工作。
+
+WebMVC：
+    标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
   </entry>
   <entry>
     <title>SQL语法</title>
@@ -506,25 +549,175 @@ Writer（字符输出流）：
 <p>可以不明确使用 INNER JOIN,而使用不同查询并在 WHERE 中将两张表中要连接的列用等等值方法连接起来。</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.value, B.value</span><br><span class="line"><span class="keyword">FROM</span> tablea <span class="keyword">AS</span> A, tableb <span class="keyword">AS</span> B</span><br><span class="line"><span class="keyword">WHERE</span> A.key = B.key;</span><br></pre></td></tr></table></figure>
 
+<h3 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h3><p>自连接可以看成内连接的一种，只是表是自身而已。</p>
+<p>一张员工表，包含员工姓名和员工所属部门，要找到与Jim处在同一部门的所有员工姓名。</p>
+<p>子查询版本</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span></span><br><span class="line"><span class="keyword">FROM</span> employee</span><br><span class="line"><span class="keyword">WHERE</span> department = (</span><br><span class="line">      <span class="keyword">SELECT</span> department</span><br><span class="line">      <span class="keyword">FROM</span> employee</span><br><span class="line">      <span class="keyword">WHERE</span> <span class="keyword">name</span> = <span class="string">"Jim"</span>);</span><br></pre></td></tr></table></figure>
 
+<p>自连接版本</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> e1.name</span><br><span class="line"><span class="keyword">FROM</span> employee <span class="keyword">AS</span> e1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> employee <span class="keyword">AS</span> e2</span><br><span class="line"><span class="keyword">ON</span> e1.department = e2.department</span><br><span class="line">      <span class="keyword">AND</span> e2.name = <span class="string">"Jim"</span>;</span><br></pre></td></tr></table></figure>
 
+<h3 id="自然连接"><a href="#自然连接" class="headerlink" title="自然连接"></a>自然连接</h3><p>自然连接是把同名列通过等值测试连接起来的，通名列可以有多个。</p>
+<p>内连接和自然连接的区别：内连接提供连接的列，而自然连接自动连接所有同名列。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.value, B.value</span><br><span class="line"><span class="keyword">FROM</span> tablea <span class="keyword">AS</span> A <span class="keyword">NATURAL</span> <span class="keyword">JOIN</span> tableb <span class="keyword">AS</span> B;</span><br></pre></td></tr></table></figure>
 
+<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><p>外连接保留了没有关联的那些行，分为左外连接，右外连接以及全外连接，左外连接就是保留左表没有关联的行。</p>
+<p> 检索所有顾客的订单信息，包括还没有订单信息的顾客。 </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Customers.cust_id, Customer.cust_name, Orders.order_id</span><br><span class="line"><span class="keyword">FROM</span> Customers <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> Orders</span><br><span class="line"><span class="keyword">ON</span> Customers.cust_id = Orders.cust_id;</span><br></pre></td></tr></table></figure>
 
+<p>customers 表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">cust_id</th>
+<th align="center">cust_name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">a</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">b</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">c</td>
+</tr>
+</tbody></table>
+<p>orders 表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">order_id</th>
+<th align="center">cust_id</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<p>结果：</p>
+<table>
+<thead>
+<tr>
+<th align="center">cust_id</th>
+<th align="center">cust_name</th>
+<th align="center">order_id</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">a</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">a</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">c</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">c</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">b</td>
+<td align="center">Null</td>
+</tr>
+</tbody></table>
+<h2 id="十六，组合查询"><a href="#十六，组合查询" class="headerlink" title="十六，组合查询"></a>十六，组合查询</h2><p>使用UNION来组合两个查询，如果第一个查询返回M行，第二个查询返回N行，那么组合查询的结果一般为M+N行。</p>
+<p>每一个查询必须包含相同的列，表达式和聚合函数</p>
+<p>默认会去处相同行，如果需要保留相同行，使用UNION ALL。</p>
+<p>只能包含一个ORDER BY 子句，并且必须位于语句的最后。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">col</span></span><br><span class="line"><span class="keyword">FROM</span> mytable</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">col</span> = <span class="number">1</span></span><br><span class="line"><span class="keyword">UNION</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">col</span></span><br><span class="line"><span class="keyword">FROM</span> mytable</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">col</span> =<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 
+<h2 id="十七，视图"><a href="#十七，视图" class="headerlink" title="十七，视图"></a>十七，视图</h2><p>视图是虚拟的表，本身不包含数据，也就是不能对其进行索引操作。</p>
+<p>对视图的操作和对普通表的操作一样。</p>
+<p>视图的好处：</p>
+<ul>
+<li>简化复杂的 SQL 操作，比如复杂的连接；</li>
+<li>只使用实际表的一部分数据；</li>
+<li>通过只给用户访问视图的权限，保证数据的安全性；</li>
+<li>更改数据格式和表示。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> myview <span class="keyword">AS</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">Concat</span>(col1, col2) <span class="keyword">AS</span> concat_col, col3*col4 <span class="keyword">AS</span> compute_col</span><br><span class="line"><span class="keyword">FROM</span> mytable</span><br><span class="line"><span class="keyword">WHERE</span> col5 = val;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<h2 id="十八，存储过程"><a href="#十八，存储过程" class="headerlink" title="十八，存储过程"></a>十八，存储过程</h2><p>存储过程可以看成是对一系列SQL操作的批处理。</p>
+<p>使用存储过程的好处:</p>
+<ul>
+<li>代码封装，保证了一定的安全性；</li>
+<li>代码复用；</li>
+<li>由于是预先编译，因此具有很高的性能。</li>
+</ul>
+<p>命令行中存储过程需要自定义分隔符，因为命令行是以；为结束符，而存储过程中也包含了分号，因此会错误把这部分分号当成是结束符，造成语法错误。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>学习资料链接</title>
+    <url>/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<p>01 Java基础阶段：<br>链接:<a href="https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw" target="_blank" rel="noopener">https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw</a>  密码:koa9<br>02 数据库阶段：<br>链接:<a href="https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw" target="_blank" rel="noopener">https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw</a>  密码:sbog<br>03 Web前端：<br>链接:<a href="https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ</a>  密码:p0wy<br>04 Javaweb阶段：<br>链接:<a href="https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w" target="_blank" rel="noopener">https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w</a>  密码:njpq<br>05 Web进阶：<br>链接:<a href="https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g" target="_blank" rel="noopener">https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g</a>  密码:9w0s<br>06 Web项目实战：<br>链接:<a href="https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA" target="_blank" rel="noopener">https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA</a>  密码:ekn5<br>07 Java框架阶段：<br>链接:<a href="https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ" target="_blank" rel="noopener">https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ</a>  密码:2jqq<br>08 互联网分布式技术：<br>链接:<a href="https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg" target="_blank" rel="noopener">https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg</a>  密码:6t3d<br>09 项目实战：<br>链接:<a href="https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw" target="_blank" rel="noopener">https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw</a>  密码:gplw<br>10 Java开发工具：<br>链接：<a href="https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA" target="_blank" rel="noopener">https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA</a> 提取码：krpc</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>中原工学院数据库系统概论试题</title>
+    <url>/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="《数据库系统概论》期末考试卷"><a href="#《数据库系统概论》期末考试卷" class="headerlink" title="《数据库系统概论》期末考试卷"></a>《数据库系统概论》期末考试卷</h1><h2 id="一，填空题"><a href="#一，填空题" class="headerlink" title="一，填空题"></a>一，填空题</h2><p>1.实体之间的联系按照联系方式的不同可分为  <u>一对一</u> 、 <u>一对多</u> 和 <u>多对多</u>   。  </p>
+<p>2.数据库系统的核心是  <u>数据库管理系统（DBMS）</u>。</p>
+<p>3.在关系模型中，实体以及实体间的联系都是用  <u>关系</u>  来表示的。</p>
+<p>4.在关系代数中专门的关系运算包括   <u>选择   、投影、   连接    、除</u>等运算。</p>
+<p>5.1975年由IBM公司的M.Zloof提出的QBE语言是一个很有特色的 <u>域关系演算</u>   语言。</p>
+<p>6.SQL语言集<u>数据查询</u>、  <u>数据操作</u>    、  <u>数据定义</u>和  <u>数据控制</u>   功能于一体，充分体现了关系数据语言的特点和优点。</p>
+<p>7.数据库管理系统保证数据安全的主要措施是进行  <u>存取控制</u>     。</p>
+<p>8.人们已经提出了许多种类型的数据依赖，其中最重要的是  <u>函数依赖</u>    和 <u>多值依赖</u>  。</p>
+<p>9.关系模式由3NF转化为BCNF是消除了主属性对码的  <u>部分函数依赖</u>   和 <u>传递函数依赖</u>    。</p>
+<p>10.数据库设计应包括两个方面的内容： <u>结构设计</u>和   <u>行为设计</u>。</p>
+<p>11.CGI规范允许Web服务器执行  <u>外部程序</u>    ，并将它们的输出发送给浏览器。</p>
+<p>12.数据库技术与  <u>面向对象</u>    技术相结合，形成了面向对象数据库系统。</p>
+<h2 id="二，单项选择"><a href="#二，单项选择" class="headerlink" title="二，单项选择"></a>二，单项选择</h2><p>1.数据库类型是按照(  B  )来划分的。</p>
+<p> A.文件形式    B.数据模型  C.记录形式    D.数据存取方法</p>
+<p>2.关系演算的基础是(   C  )</p>
+<p> A.形式逻辑中的逻辑演算   B.形式逻辑中的关系演算 C.数理逻辑中的谓词演算  D.数理逻辑中的形式演算</p>
+<p>3.若要求分解保持函数依赖，那么模式分解一定能够达到(  B   )</p>
+<p> A. 2NF      B. 3NF      C. BCNF      D. 1NF</p>
+<p>4.1级封锁协议加上T要读取的数据R加S锁，这是(   C  )</p>
+<p> A. 3级封锁协议   B. 4级封锁协议   C. 2级封锁协议  D. 1级封锁协议</p>
+<p>5.建立数据字典的时机是(  A  )</p>
+<p> A.需求分析阶段   B.数据库物理设计阶段   C.数据库实施  D.概念结构设计阶段</p>
+<h2 id="三，简答题"><a href="#三，简答题" class="headerlink" title="三，简答题"></a>三，简答题</h2><p>1.简述数据库管理系统的功能。</p>
+<p>DBMS功能包括：</p>
+<p>数据定义，数据操纵，数据库运行管理，数据组织，存储和管理，数据库的建立和维护，数据通信接口。</p>
+<p>2.简述SQL语言的特点。</p>
+<p> SQL语言集数据查询、数据操纵、数据定义和数据控制功能于一体，充分体现了关系数据库语言的特点和优点。其特点如下：</p>
+<p>综合统一，高度非过程化，面向集合的操作方式，以同一种语法结构提供两种操作方式，语言简洁，易学易用</p>
+<p>3、什么是数据库系统?</p>
+<p>答：数据库系统是实现有组织地、动态地存储大量关联数据，方便多用户访问的计算机软、硬资源组成的系统。它包含关联数据的集合，DBMS和用户应用程序等。</p>
+<p>4、试述数据库完整保护的主要任务和措施。</p>
+<p>主要任务是保障数据的正确性，有效性，协调性，提高数据对用户的可用性。</p>
+<p>其措施如下：适时检查完整约束条件，保证语义完整。控制并发操作，使其不破坏完整性。在系统出现故障后，即时恢复系统。</p>
+<p>5、在倒排文件中，如果只建立了部分关键字的辅索引，如何进行查找？</p>
+<p>对询问中涉及的关键字，首先在已建立的辅索引中求指针的交集P，而后对P中所指记录逐个验证其它关键字是否与询问条件匹配，所有匹配的记录即为查询结果。</p>
+<h2 id="四，综合题"><a href="#四，综合题" class="headerlink" title="四，综合题"></a>四，综合题</h2>]]></content>
   </entry>
   <entry>
     <title>Java基础复习</title>
@@ -614,109 +807,17 @@ default：如果class不采用public修饰的话，此时的class只能被该包
 ]]></content>
   </entry>
   <entry>
-    <title>数据库零碎知识点</title>
-    <url>/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p> 一些最重要的 SQL 命令</p>
-<ul>
-<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
-</li>
-<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
-</li>
-<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
-</li>
-<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
-</li>
-<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
-</li>
-<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
-</li>
-<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
-</li>
-<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
-</li>
-<li><p><strong>DROP TABLE</strong> - 删除表</p>
-</li>
-<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
-</li>
-<li><p><strong>DROP INDEX</strong> - 删除索引</p>
-<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
-</li>
-</ul>
-<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
-<p>​        inner join 或者 join      （后加on表示条件）</p>
-<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
-<p>​    外连接</p>
-<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
-<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
-<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
-<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
-<p>union</p>
-<p>select * from person right join card on person.cardId=card.id</p>
-<p>​        </p>
-<p>unique约束，可以为空，但为空只能有一个，</p>
-<p>视图：</p>
-<p>​    虚表，是从一个或多个</p>
+    <title>学习资源链接</title>
+    <url>/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
+<h3 id="MYSQL视频学习："><a href="#MYSQL视频学习：" class="headerlink" title="MYSQL视频学习："></a>MYSQL视频学习：</h3><p><a href="https://www.bilibili.com/video/BV1Vt411z7wy" target="_blank" rel="noopener">b站MYSQL基础课</a></p>
+<p><a href="https://www.bilibili.com/video/BV1hE411V7vu" target="_blank" rel="noopener">数据库关系代数</a></p>
+<p><a href="https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" rel="noopener">关系代数操作哈工大</a></p>
+<h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
+<h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
+<p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
+<p><a href="https://www.yiibai.com/" target="_blank" rel="noopener">易百教程</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>javaee</title>
-    <url>/2021/05/21/javaee/</url>
-    <content><![CDATA[<h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
-<p>[2] |—src：源码</p>
-<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
-<p>[4] |—|—|—java：java源码文件</p>
-<p>[5] |—|—|—resource：存放框架的配置文件</p>
-<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
-<p>[7] |—pop.xml：maven的核心配置文件</p>
-<p>webapp下存放Web应用相关代码</p>
-<a id="more"></a>
-<h3 id="常用maven命令"><a href="#常用maven命令" class="headerlink" title="常用maven命令"></a>常用maven命令</h3><p>[1] mvn clean：清理</p>
-<p>[2] mvn compile：编译主程序</p>
-<p>[3] mvn test-compile：编译测试程序</p>
-<p>[4] mvn test：执行测试</p>
-<p>[5] mvn package：打包</p>
-<p>[6] mvn install：安装</p>
-<h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml:"></a>pom.xml:</h3><p><strong>1、modelVersion</strong></p>
-<p>​    指定了当前Maven模型的版本号</p>
-<p><strong>2、groupId</strong></p>
-<p>　　顾名思义，这个应该是公司名或是组织名。一般来说groupId是由三个部分组成，每个部分之间以”.”分隔，第一部分是项目用途，比如用于商业的就是”com”，用于非营利性组织的就　　是”org”；第二部分是公司名，比如”tengxun”、”baidu”、”alibaba”；第三部分是你的项目名</p>
-<p><strong>3、artifactId</strong></p>
-<p>　　可以认为是Maven构建的项目名，比如你的项目中有子项目，就可以使用”项目名-子项目名”的命名方式</p>
-<p><strong>4、version</strong></p>
-<p>　　版本号，SNAPSHOT意为快照，说明该项目还在开发中，是不稳定的版本。在Maven中很重要的一点是，<strong>groupId、artifactId、version三个元素生成了一个Maven项目的基本坐标</strong></p>
-<p><strong>5、packing</strong></p>
-<p>​    项目打包的类型，可以使用jar，war，rar等，默认jar</p>
-<p><strong>6、dependencies和dependency</strong></p>
-<p> 前者包含后者。前面说了，Maven的一个重要作用就是统一管理jar包，为了一个项目可以build或运行，项目中不可避免的，会依赖很多其他的jar包，在Maven中，这些依赖就被称为dependency。 </p>
-<p><strong>7、properties</strong></p>
-<p> properties是用来定义一些配置属性的，例如project.build.sourceEncoding（项目构建源码编码方式），可以设置为UTF-8，防止中文乱码，也可定义相关构建版本号，便于日后统一升级。 </p>
-<h3 id="maven-多模块"><a href="#maven-多模块" class="headerlink" title="maven 多模块"></a>maven 多模块</h3><p>Spring MVC：<br>    web开发中的请求-响应模型：<br>        web客户端如：IE浏览器先发送请求，web服务器接收请求，处理请求，然后产生响应，响应再返回网站首页内容，浏览器接收响应并渲染。<br>    web世界里：<br>        web浏览器（如IE）发送请求：如，访问<a href="http://sishuok.com" target="_blank" rel="noopener">http://sishuok.com</a><br>        web服务器（如tomcat）接收请求，处理请求（比如用户新增，则把用户保存一下），最后产生响应（一般为html）<br>        web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染，展示给客户）<br>        因此，都是web客户端发起请求，web服务器接收，处理并产生响应，一般web服务器不主动通知web客户端更新内容<br>    MVC模型：<br>        一种架构行的模式，本身不引入新的功能，只是将开发的结构组织的更加合理。<br>        展示和模型分离，流程控制逻辑，业务逻辑调用与展示逻辑分离。</p>
-<pre><code>图片------
-
-MVC：Model-View-Controller
-Model（模型）：数据模型，提供要展示的数据，所以包括数据和行为，可以是领域模型或者JavaBean组件（包含数据和行为），不过现在一般分离开：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
-View（视图）：负责进行模型的展示，一般就是看到的用户界面，客户想看到的东西。
-Controller（控制器）：接收用户请求，委托模型进行处理（状态改变），处理完毕后把返回的数据返回给视图，视图进行展示。也就是说Controller作了一个调度的工作。
-
-WebMVC：
-    标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>数学建模比赛</title>
-    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
-    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
-<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
-3:
-
-提出和假设：
-    指数增长模型，由马尔萨斯在1798年提出
-    基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>机器学习记录</title>
-    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
   </entry>
   <entry>
     <title>MySQL学习笔记</title>
@@ -1040,9 +1141,53 @@ WebMVC：
 ]]></content>
   </entry>
   <entry>
-    <title>学习资料链接</title>
-    <url>/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<p>01 Java基础阶段：<br>链接:<a href="https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw" target="_blank" rel="noopener">https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw</a>  密码:koa9<br>02 数据库阶段：<br>链接:<a href="https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw" target="_blank" rel="noopener">https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw</a>  密码:sbog<br>03 Web前端：<br>链接:<a href="https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ</a>  密码:p0wy<br>04 Javaweb阶段：<br>链接:<a href="https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w" target="_blank" rel="noopener">https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w</a>  密码:njpq<br>05 Web进阶：<br>链接:<a href="https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g" target="_blank" rel="noopener">https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g</a>  密码:9w0s<br>06 Web项目实战：<br>链接:<a href="https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA" target="_blank" rel="noopener">https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA</a>  密码:ekn5<br>07 Java框架阶段：<br>链接:<a href="https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ" target="_blank" rel="noopener">https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ</a>  密码:2jqq<br>08 互联网分布式技术：<br>链接:<a href="https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg" target="_blank" rel="noopener">https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg</a>  密码:6t3d<br>09 项目实战：<br>链接:<a href="https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw" target="_blank" rel="noopener">https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw</a>  密码:gplw<br>10 Java开发工具：<br>链接：<a href="https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA" target="_blank" rel="noopener">https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA</a> 提取码：krpc</p>
+    <title>机器学习记录</title>
+    <url>/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1>]]></content>
+  </entry>
+  <entry>
+    <title>数据库零碎知识点</title>
+    <url>/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p> 一些最重要的 SQL 命令</p>
+<ul>
+<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
+</li>
+<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
+</li>
+<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
+</li>
+<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
+</li>
+<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
+</li>
+<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
+</li>
+<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
+</li>
+<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
+</li>
+<li><p><strong>DROP TABLE</strong> - 删除表</p>
+</li>
+<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
+</li>
+<li><p><strong>DROP INDEX</strong> - 删除索引</p>
+<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
+</li>
+</ul>
+<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
+<p>​        inner join 或者 join      （后加on表示条件）</p>
+<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
+<p>​    外连接</p>
+<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
+<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
+<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
+<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
+<p>union</p>
+<p>select * from person right join card on person.cardId=card.id</p>
+<p>​        </p>
+<p>unique约束，可以为空，但为空只能有一个，</p>
+<p>视图：</p>
+<p>​    虚表，是从一个或多个</p>
 ]]></content>
   </entry>
   <entry>
@@ -1055,16 +1200,15 @@ WebMVC：
 ]]></content>
   </entry>
   <entry>
-    <title>学习资源链接</title>
-    <url>/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
-<h3 id="MYSQL视频学习："><a href="#MYSQL视频学习：" class="headerlink" title="MYSQL视频学习："></a>MYSQL视频学习：</h3><p><a href="https://www.bilibili.com/video/BV1Vt411z7wy" target="_blank" rel="noopener">b站MYSQL基础课</a></p>
-<p><a href="https://www.bilibili.com/video/BV1hE411V7vu" target="_blank" rel="noopener">数据库关系代数</a></p>
-<p><a href="https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" rel="noopener">关系代数操作哈工大</a></p>
-<h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
-<h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
-<p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
-<p><a href="https://www.yiibai.com/" target="_blank" rel="noopener">易百教程</a></p>
-]]></content>
+    <title>数学建模比赛</title>
+    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
+    <content><![CDATA[<p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
+<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
+3:
+
+提出和假设：
+    指数增长模型，由马尔萨斯在1798年提出
+    基本假设：人口（相对）增长率r是常数（r很小）
+    相对增长率 = 出生率 － 死亡率</code></pre>]]></content>
   </entry>
 </search>
