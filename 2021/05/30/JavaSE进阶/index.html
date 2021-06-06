@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">3.6k</span>
+            <span class="post-count">4.6k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">13 min</span>
+            <span class="post-count">16 min</span>
         </span>
     </span>
 </div>
@@ -209,10 +209,52 @@ Writer（字符输出流）：
     OutputStreamWriter：主要是将字节流输出流转换成字符输出流
 
 打印流：
-    包括：PrintStream 字节流和 PrintWriter字符流
+    包括：PrintStream 字节流和 PrintWriter字符流</code></pre><p>对象流：</p>
+<p>​    对象流可以将Java对象转换为二进制写入磁盘，这个过程通常叫做序列化，并且还可以从磁盘里读出完整java对象，而这个过程叫做反序列化。</p>
+<p>对象流主要包括：ObjectInputStream 和 ObjectOutputStream </p>
+<p>实现序列化和反序列化：</p>
+<p>​    实现序列化该类必须实现序列化接口 java.io.Serializable,该接口没有任何方法，该接口只是一种标记接口，标记这个类是可序列化的</p>
+<p>序列化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line"></span><br><span class="line">public class ObjectStreamTest02 &#123; </span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123; </span><br><span class="line"></span><br><span class="line">ObjectOutputStream oos &#x3D; null; </span><br><span class="line"></span><br><span class="line">try &#123; </span><br><span class="line">oos &#x3D; new ObjectOutputStream( new FileOutputStream(&quot;c:&#x2F;Person.dat&quot;)); </span><br><span class="line">Person person &#x3D; new Person(); </span><br><span class="line">person.name &#x3D; &quot;张三&quot;; </span><br><span class="line">oos.writeObject(person); </span><br><span class="line">&#125;catch(FileNotFoundException e) &#123; </span><br><span class="line">e.printStackTrace(); </span><br><span class="line">&#125;catch(IOException e) &#123; </span><br><span class="line">e.printStackTrace(); </span><br><span class="line">&#125;finally &#123; </span><br><span class="line">try &#123; </span><br><span class="line">if (oos !&#x3D; null) &#123; </span><br><span class="line">oos.close(); </span><br><span class="line">&#125; </span><br><span class="line">&#125;catch(IOException e) &#123;&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125;  </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;实现序列化接口 </span><br><span class="line">class Person implements Serializable&#123; </span><br><span class="line">String name; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-对象流：</code></pre> 
+<p>反序列化，过程类似</p>
+<p>关于transient关键字：一个类实现Serializable接口后，类中的某个属性被transient关键字修饰后，序列化时会被忽略</p>
+<p>serialVersionUID ：序列化有关 </p>
+<p>File类：</p>
+<p>​    提供了大量的文件操作：删除文件，修改文件，得到文件的修改日期，建立目录，列表文件。</p>
+<p>zip格式：</p>
+<p>​    参见java.util.zip.*包下的api</p>
+<p>多线程</p>
+<p>多线程概念：线程指的是进程中的一个执行场景，也就是执行流程。</p>
+<p>​    每一个进程是一个应用程序，都有独立的内存空间</p>
+<p>​    同一个进程的线程中的线程共享其进程中的内存和资源（共享的内存是堆内存和方法区内存，栈内存不共享，每个线程有自己的。）</p>
+<p>什么是进程？</p>
+<p>​    一个进程就是一个应用程序。在操作系统中每启动一个应用程序就会启动一个进程。例如：qq进程，word进程……。</p>
+<p>系统引入多进程的作用：最初的计算机是“单进程的”，计算机只能运行一个应用程序，例如第一台计算机只有 </p>
+<p>DOS 窗口。现代的计算机可以满足我们一边听音乐，一边玩游戏。现代的计算给我们人类感 </p>
+<p>觉：多件事情一起运行。感觉是并行的（错觉）。</p>
+<p>对于单核的计算机来讲，在某一个时间点上只能做一件事情，但是由于计算机的处理速度 </p>
+<p>很高，多个进程之间完成频繁的切换执行，这个切换速度使人类产生了错觉，人类的错觉是：多个进程在同时运行。 </p>
+<p>计算机引入多进程的作用：提高 <strong>CPU</strong> <strong>的使用率</strong>。 </p>
+<p><strong>重点：进程和进程之间的内存独立。</strong> </p>
+<p>什么是线程：线程是进程的一个执行场景。一个进程可以启动多个线程。 </p>
+<p><strong>进程引入多线程的作用？</strong></p>
+<p>提高进程的使用率。 </p>
+<p><strong>重点：线程和线程之间栈内存独立，堆内存和方法区内存共享。一个线程一个栈。</strong> </p>
+<p><strong>描述</strong> <strong>java</strong> <strong>程序的执行原理：</strong> </p>
+<p>java 命令执行会启动 JVM，JVM 的启动表示启动一个应用程序，表示启动了一个进程。 </p>
+<p>该进程会自动启动一个“主线程”，然后主线程负责调用某个类的 main 方法。所以 main 方法 </p>
+<p>的执行是在主线程中执行的。然后通过 main 方法代码的执行可以启动其他的“分支线程”。 </p>
+<p>所以，main 方法结束程序不一定结束，因为其他的分支线程有可能还在执行。 </p>
+<p>线程的创建和启动：<br>    java虚拟机的主线程入口是main方法，用户可以自己创建线程，创建方式有两种：</p>
+<p>​    继承Thread类</p>
+<p>​    实现Runnable接口（推荐使用Runnable接口）</p>
+<p>继承Thread类：</p>
+<p>Thread类中创建线程最重要的两个方法：</p>
+<p>public void run()</p>
+<p>public void start()</p>
+<p>采用</p>
+ 
       <!-- reward -->
       
       <div id="reword-out">

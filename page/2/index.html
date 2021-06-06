@@ -320,7 +320,76 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1> 
+  <h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1><p>KNN算法：<br>    参考文章：<a href="https://blog.csdn.net/pengjunlee/article/details/82713047" target="_blank" rel="noopener">https://blog.csdn.net/pengjunlee/article/details/82713047</a><br>    解释：看一个人怎么样，看她身边的朋友是什么样就知道了，寻找最近的K个数据，推测出新数据的分类<br>    指导思想：近朱者赤，近墨者黑<br>    KNN只根据临近的几个样本的类别进行分类，对于一些类域交叉或者重叠较多的待分类样本集来说，KNN方法较为适合。</p>
+<pre><code>原理：
+    通用步骤： 
+        计算距离（常用欧几里得距离或者马氏距离） 
+        升序排列
+        取前K个
+        加权平均
+    K的选取：   
+        K太大：导致分类模糊
+        K太小：受个例影响，波动较大
+    如何选取K:
+        经验
+        均方根误差
+
+关键：
+    样本的所有特征都可以进行量化，一些非数值类型，可以采取手段量化为数值，例如颜色可以进行灰度转换为灰度值，来实现距离计算。
+    样本特征要作归一化处理，样本有很多参数，每个参数都有自己的定义域和取值范围，他们对距离计算的影响不一样，取值较大的类型会盖过较小的参数。所以样本参数必须做一些scale处理，最简单的方式就是所有的特征的数值都采取归一化处理。
+    需要一个距离函数以计算两个样本之间的距离，通常使用的距离函数有：欧氏距离，余弦距离，汉明距离，曼哈顿距离等，一般选取欧式。
+    欧式只适合于连续变量，在文本分类这种非连续变量情况下，汉明距离可以作为度量。
+    通常情况下，如果运用一些特殊的算法来计算度量的话，KNN分类的精度可以显著提高，如：大边缘最近邻法或者近邻成分分析法。
+        欧氏距离：高中的空间距离计算
+        曼哈顿距离：|x1-x2|+|y1-y2|
+    确定K的值：K值得选取，太大会产生欠拟合，太小容易过拟合，需要进行交叉验证确定K值
+    KNN的优点：
+        简单易于理解，易于实现，无需参数估计，无需训练；
+        适合对稀有事件进行分类；
+        特别适合于多分类问题（对象具有多个标签），KNN比SVM表现更好
+    KNN的缺点：
+        样本不平衡的时候， 该算法只计算最近的邻居样本，某一类的样本数量很大，或者这类样本并不接近目标样本，或者这类样本很靠近目标样本。
+        计算量较大。
+KNN算法实现：
+    步骤：
+        算距离：给定待分类样本，计算它与已分类样本中每个样本的距离；
+        找邻居：圈定与待分类样本距离最近的K个已分类样本，作为  待分类样本的近邻 ；
+        做分类：根据这K个近邻中的大部分样本所属的类别来决定待分类样本该属于哪个分类；
+    import math</code></pre><p>import csv<br>import operator<br>import random<br>import numpy as np<br>from sklearn.datasets import make_blobs</p>
+<p>#Python version 3.6.5</p>
+<h1 id="生成样本数据集-samples-样本数量-features-特征向量的维度-centers-类别个数"><a href="#生成样本数据集-samples-样本数量-features-特征向量的维度-centers-类别个数" class="headerlink" title="生成样本数据集 samples(样本数量) features(特征向量的维度) centers(类别个数)"></a>生成样本数据集 samples(样本数量) features(特征向量的维度) centers(类别个数)</h1><p>def createDataSet(samples=100, features=2, centers=2):<br>    return make_blobs(n_samples=samples, n_features=features, centers=centers, cluster_std=1.0, random_state=8)</p>
+<h1 id="加载鸢尾花卉数据集-filename-数据集文件存放路径"><a href="#加载鸢尾花卉数据集-filename-数据集文件存放路径" class="headerlink" title="加载鸢尾花卉数据集 filename(数据集文件存放路径)"></a>加载鸢尾花卉数据集 filename(数据集文件存放路径)</h1><p>def loadIrisDataset(filename):<br>    with open(filename, ‘rt’) as csvfile:<br>        lines = csv.reader(csvfile)<br>        dataset = list(lines)<br>        for x in range(len(dataset)):<br>            for y in range(4):<br>                dataset[x][y] = float(dataset[x][y])<br>        return dataset</p>
+<h1 id="拆分数据集-dataset-要拆分的数据集-split-训练集所占比例-trainingSet-训练集-testSet-测试集"><a href="#拆分数据集-dataset-要拆分的数据集-split-训练集所占比例-trainingSet-训练集-testSet-测试集" class="headerlink" title="拆分数据集 dataset(要拆分的数据集) split(训练集所占比例) trainingSet(训练集) testSet(测试集)"></a>拆分数据集 dataset(要拆分的数据集) split(训练集所占比例) trainingSet(训练集) testSet(测试集)</h1><p>def splitDataSet(dataSet, split, trainingSet=[], testSet=[]):<br>    for x in range(len(dataSet)):<br>        if random.random() &lt;= split:<br>            trainingSet.append(dataSet[x])<br>        else:<br>            testSet.append(dataSet[x])</p>
+<h1 id="计算欧氏距离"><a href="#计算欧氏距离" class="headerlink" title="计算欧氏距离"></a>计算欧氏距离</h1><p>def euclideanDistance(instance1, instance2, length):<br>    distance = 0<br>    for x in range(length):<br>        distance += pow((instance1[x] - instance2[x]), 2)<br>    return math.sqrt(distance)</p>
+<h1 id="选取距离最近的K个实例"><a href="#选取距离最近的K个实例" class="headerlink" title="选取距离最近的K个实例"></a>选取距离最近的K个实例</h1><p>def getNeighbors(trainingSet, testInstance, k):<br>    distances = []<br>    length = len(testInstance) - 1<br>    for x in range(len(trainingSet)):<br>        dist = euclideanDistance(testInstance, trainingSet[x], length)<br>        distances.append((trainingSet[x], dist))<br>    distances.sort(key=operator.itemgetter(1))</p>
+<pre><code>neighbors = []
+for x in range(k):
+    neighbors.append(distances[x][0])
+return neighbors</code></pre><h1 id="获取距离最近的K个实例中占比例较大的分类"><a href="#获取距离最近的K个实例中占比例较大的分类" class="headerlink" title="获取距离最近的K个实例中占比例较大的分类"></a>获取距离最近的K个实例中占比例较大的分类</h1><p>def getResponse(neighbors):<br>    classVotes = {}<br>    for x in range(len(neighbors)):<br>        response = neighbors[x][-1]<br>        if response in classVotes:<br>            classVotes[response] += 1<br>        else:<br>            classVotes[response] = 1<br>    sortedVotes = sorted(classVotes.items(), key=operator.itemgetter(1), reverse=True)<br>    return sortedVotes[0][0]</p>
+<h1 id="计算准确率"><a href="#计算准确率" class="headerlink" title="计算准确率"></a>计算准确率</h1><p>def getAccuracy(testSet, predictions):<br>    correct = 0<br>    for x in range(len(testSet)):<br>        if testSet[x][-1] == predictions[x]:<br>            correct += 1<br>    return (correct / float(len(testSet))) * 100.0</p>
+<p>def main():<br>    # 使用自定义创建的数据集进行分类<br>    # x,y = createDataSet(features=2)<br>    # dataSet= np.c_[x,y]</p>
+<pre><code># 使用鸢尾花卉数据集进行分类
+dataSet = loadIrisDataset(r&apos;C:\DevTolls\eclipse-pureh2b\python\DeepLearning\KNN\iris_dataset.txt&apos;)
+
+print(dataSet)
+trainingSet = []
+testSet = []
+splitDataSet(dataSet, 0.75, trainingSet, testSet)
+print(&apos;Train set:&apos; + repr(len(trainingSet)))
+print(&apos;Test set:&apos; + repr(len(testSet)))
+predictions = []
+k = 7
+for x in range(len(testSet)):
+    neighbors = getNeighbors(trainingSet, testSet[x], k)
+    result = getResponse(neighbors)
+    predictions.append(result)
+    print(&apos;&gt;predicted=&apos; + repr(result) + &apos;,actual=&apos; + repr(testSet[x][-1]))
+accuracy = getAccuracy(testSet, predictions)
+print(&apos;Accuracy: &apos; + repr(accuracy) + &apos;%&apos;)</code></pre><p>main()</p>
+<p>尾花卉数据文件百度网盘下载链接：<a href="https://pan.baidu.com/s/10vI5p_QuM7esc-jkar2zdQ" target="_blank" rel="noopener">https://pan.baidu.com/s/10vI5p_QuM7esc-jkar2zdQ</a> 密码：4und</p>
+<pre><code>KNN算法应用：
+    使用KNN算法处理简单分类任务
+    在scikit-learn中，内置若干玩具数据集，还有API让我们可以自己来生成一些数据集。</code></pre> 
       <!-- reward -->
       
     </div>
