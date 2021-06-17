@@ -145,6 +145,93 @@
     
     
     <article
+  id="post-数据库零碎知识点"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"
+    >数据库零碎知识点</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
+  <time datetime="2021-05-17T12:02:07.320Z" itemprop="datePublished">2021-05-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p> 一些最重要的 SQL 命令</p>
+<ul>
+<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
+</li>
+<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
+</li>
+<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
+</li>
+<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
+</li>
+<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
+</li>
+<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
+</li>
+<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
+</li>
+<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
+</li>
+<li><p><strong>DROP TABLE</strong> - 删除表</p>
+</li>
+<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
+</li>
+<li><p><strong>DROP INDEX</strong> - 删除索引</p>
+<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
+</li>
+</ul>
+<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
+<p>​        inner join 或者 join      （后加on表示条件）</p>
+<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
+<p>​    外连接</p>
+<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
+<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
+<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
+<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
+<p>union</p>
+<p>select * from person right join card on person.cardId=card.id</p>
+<p>​        </p>
+<p>unique约束，可以为空，但为空只能有一个，</p>
+<p>视图：</p>
+<p>​    虚表，是从一个或多个</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-学习记录"
   class="article article-type-post"
   itemscope
@@ -317,14 +404,22 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>指数增长(Malthus)模型:<br>    1:<a href="https://blog.csdn.net/weixin_43441742/article/details/99622081" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43441742/article/details/99622081</a></p>
-<pre><code>2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
+  <h1 id="指数增长-Malthus-模型"><a href="#指数增长-Malthus-模型" class="headerlink" title="指数增长(Malthus)模型:"></a>指数增长(Malthus)模型:</h1><pre><code>1:https://blog.csdn.net/weixin_43441742/article/details/99622081
+
+2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
 3:
 
 提出和假设：
     指数增长模型，由马尔萨斯在1798年提出
     基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre> 
+    相对增长率 = 出生率 － 死亡率</code></pre><p>上课培训：</p>
+<p>中国大学生在线网站，穿越沙漠赛题<br>不要就题论题，寻一个一般性的数学模型，解决特定问题<br>文献查阅能力 把方程拿过来用，不需要搞太清楚</p>
+<p>学习建模能力最重要</p>
+<p>赛题结构：实际问题背景，若干假设条件，要求回答问题</p>
+<p>标题，摘要部分很重要。</p>
+<p>题目：写出比较确切的题目</p>
+<p>论文排版问题</p>
+ 
       <!-- reward -->
       
     </div>

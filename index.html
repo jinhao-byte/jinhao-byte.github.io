@@ -145,6 +145,94 @@
     
     
     <article
+  id="post-Java代码练习"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"
+    >Java代码练习</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/" class="article-date">
+  <time datetime="2021-06-12T11:53:50.957Z" itemprop="datePublished">2021-06-12</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>2021-6-12<br>冒泡排序：<br>import java.util.Scanner;<br>public class bubbleSortTest {<br>    public static void main(String[] args) {<br>        Scanner input = new Scanner(System.in);<br>        int a[] = new int[10];<br>        for(int i = 0;i&lt;a.length;i++){<br>            a[i] = input.nextInt();<br>        }<br>        System.out.println(“冒泡排序未排序前数组：”);<br>        //for each 循环<br>        for (int i:a) {<br>            System.out.print(i+”  “);<br>        }<br>        //冒泡排序：<br>        int d=0;<br>        for (int i=0; i&lt;a.length-1;i++){<br>            for (int j=0;j&lt;a.length-i-1;j++) {<br>                if (a[j] &lt; a[j + 1]) {<br>                    d = a[j];<br>                    a[j] = a[j + 1];<br>                    a[j + 1] = d;<br>                }<br>            }<br>    }<br>        //冒泡排序后的结果<br>        System.out.println(“冒泡排序后”);<br>        for (int i=0;i&lt;a.length;i++){<br>            System.out.print(a[i]+”   “);<br>        }<br>}}</p>
+<p>选择排序：<br>public class selectionSortTest {<br>    public static void main(String[] args) {<br>        int []arr = new int[]{1,2,3,9,8,7,6,5,4,10};<br>        selectSort(arr);<br>        for (int i=0;i&lt;arr.length;i++){<br>            System.out.println(arr[i]+”   “);<br>        }<br>    }<br>    public  static void selectSort(int[] a){<br>        //实现冒泡排序,从小到大排列<br>        //数组要遍历a.length遍<br>        int minIndex=0;<br>        for (int i=0;i&lt;a.length;i++){<br>            minIndex = i;//记录一下最小值的索引<br>            for (int j=i+1;j&lt;a.length;j++){<br>                if (a[minIndex]&gt;a[j]){<br>                    minIndex=j;<br>                }<br>            }<br>            //将最小值和起始值进行交换<br>            int d=a[i];<br>            a[i]=a[minIndex];<br>            a[minIndex]=d;<br>        }</p>
+<pre><code>}
+}</code></pre><p>二分查找：<br>import java.util.Scanner;<br>import java.math.*;<br>public class binarySearch {<br>    public static void main(String[] args) {<br>        Scanner input =new Scanner(System.in);<br>        int[] a = new int[]{1,2,3,4,5,6,7,8,9,10};<br>        System.out.println(“数组：”);<br>        for (int i=0;i&lt;a.length;i++){<br>            System.out.print(a[i]+” “);<br>        }<br>        System.out.println(“输入你想查找的数：”);<br>        int b = input.nextInt();<br>        //递归实现：<br>//        System.out.println(“—————–递归实现———————-“);<br>//        int findnumIndex =find(b,a,0,a.length-1);<br>//        System.out.println(“findnumIndex:”+findnumIndex);<br>        System.out.println(“——————-while实现———————–”);<br>        //循环实现<br>        int first=0;<br>        int last = a.length-1;<br>        int mid = (first+last)/2;<br>        if (b==mid){<br>            System.out.println(“findnumIndex:”+mid);<br>        }<br>        while (b!=a[mid]){<br>           if (b&lt;a[mid]){<br>               last = mid;<br>               mid = (first+last) /2;<br>           }else if(b&gt;a[mid]){<br>                first = mid;<br>                mid = (first+last)/2;<br>           }else if (b==a[mid]){<br>               System.out.println(“findnumIndex:”+mid);<br>           }<br>        }<br>        System.out.println(“findnumIndex:”+mid);<br>    }</p>
+<pre><code>//findNum  想查找的目标数字，a：查找的数组     start:查找数组起始位置    fin:查找的数组的末尾位置
+//返回目标数字所在的索引
+public static int find(int findNum ,int[] a,int start,int fin){
+
+    int mid = a[start]+a[fin];
+    mid = mid/2;
+    if (findNum&lt;a[start] || findNum&gt;a[fin]){
+        System.out.println(&quot;该数不在此数组内&quot;);
+        return -1;
+    }else if (findNum&lt;mid) {
+        fin=mid;
+        return find(findNum,a,start,fin);
+    }
+    else if (findNum&gt;mid){
+        start = mid;
+        return find(findNum,a,start,fin);
+    }else if(findNum==mid) {
+        return mid;
+    }
+        return -1;
+
+}</code></pre><p>}</p>
+<p>2021-6-13<br>比较字符串地址值<br>public class stringPoolTest {<br>    public static void main(String[] args) {<br>        String s1 = “abc”;<br>        String s2 = “abc”;<br>        String s3  = new String(“abc”);<br>        System.out.println(s1==s2);//s1,s2都是来源于一个字符串常量池的停用<br>        System.out.println(s1==s3);//一个是字符串常量池的地址值，一个是字符串对象的地址。<br>        System.out.println(s1.equals(s3));//String重写了toString方法，比较的是内容，所以为true<br>    }<br>}</p>
+<p>2021-6-15</p>
+<p>泛型自动类型推断<br>import java.util.ArrayList;</p>
+<p>public class genericsTest {<br>    public static void main(String[] args) {<br>        //jdk7新特性，后面的尖括号不用填写东西<br>        ArrayList<animal> arrayList = new ArrayList&lt;&gt;();<br>        //普通写法<br>        ArrayList<animal> arrayList1 = new ArrayList<animal>();<br>    }<br>}<br>class animal{</p>
+<p>}</p>
+<p>switch支持String：</p>
+<p>public class switchTest {<br>    public static void main(String[] args) {<br>        //Switch支持String<br>        String name = “cui”;<br>        switch(name){<br>            case “jin”: System.out.println(“jin”);break;<br>            case “cui”: System.out.println(“cui”);break;<br>            case “hao”: System.out.println(“hao”);break;<br>            default:<br>                System.out.println(“没有cui”);break;<br>        }<br>    }<br>}</p>
+<p>Integer的常量池：<br>public class intergerPoolTest {<br>    public static void main(String[] args) {<br>        int a1= 100;<br>        int a2 = 100;<br>        System.out.println(“a1== a2”+(a1== a2));//true<br>        int e1= 100000;<br>        int e2 = 100000;<br>        System.out.println(“e1== e2”+(e1== e2));//true</p>
+<pre><code>    Integer b1 = 100;
+    Integer b2 = 100;
+    System.out.println(&quot;b1==b2:&quot;+(b1==b2));//true
+    Integer c1 = 1000;
+    Integer c2 = 1000;
+    System.out.println(&quot;c1==c2:&quot;+(c1==c2));//false
+}</code></pre><p>}</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-四级英语词汇"
   class="article article-type-post"
   itemscope
@@ -172,7 +260,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>a art.一(个)；每一 (个)<br>abandon vt.丢弃；放弃，抛弃<br>ability n.能力；能耐，本领<br>able a.有能力的；出色的<br>abnormal a.不正常的；变态的<br>aboard ad.在船(车)上；上船<br>about prep.关于；在…周围<br>above prep.在…上面；高于<br>abroad ad.(在)国外；到处<br>absence n.缺席，不在场；缺乏<br>absent a.不在场的；缺乏的<br>absolute a.绝对的；纯粹的<br>absolutely ad.完全地；绝对地<br>absorb vt.吸收；使专心<br>abstract a.抽象的 n.摘要<br>abundant a.丰富的；大量的<br>abuse vt.滥用；虐待 n.滥用<br>academic a.学院的；学术的<br>academy n.私立中学；专科院校<br>accelerate vt.(使)加快；促进<br>acceleration n.加速；加速度<br>accent n.口音，腔调；重音<br>accept vt.vi.接受；同意<br>acceptable a.可接受的，合意的<br>acceptance n.接受，验收；承认<br>access n.接近；通道，入口<br>accessory n.同谋，从犯；附件<br>accident n.意外的；事故<br>accidental a.偶然的；非本质的<br>accommodate vt.容纳；供应，供给<br>accommodation n.招待设备；预定铺位<br>accompany vt.陪伴，陪同；伴随<br>accomplish vt.达到(目的 )；完成<br>accord vt.使一致；给予<br>accordance n.一致；和谐；授予<br>accordingly ad.因此，所以；照着<br>account n.记述；解释；帐目<br>accumulate vt.积累 vi.堆积<br>accuracy n.准确(性)；准确度<br>accurate a.准确的，正确无误的<br>accuse vt.指责；归咎于<br>accustom vt.使习惯<br>accustomed a.惯常的；习惯的<br>ache vi.痛；想念 n.疼痛<br>achieve vt.完成，实现；达到<br>achievement n.完成；成就，成绩<br>acid n.酸；酸的，酸性的<br>acquaintance n.认识；了解；熟人<br>acquire vt.取得；获得；学到<br>acre n.英亩(=6.07 亩)<br>across prep.横过；在…对面<br>act vi.行动；见效 n.行为<br>action n.行动；作用；功能<br>active a.活跃的；积极的<br>activity n.活动；活力；行动<br>actor n.男演员；演剧的人<br>actress n.女演员<br>actual a.实际的；现行的<br>actually ad.实际上；竟然<br>acute a.尖的，锐的；敏锐的<br>ad n.广告<br>adapt vt.使适应；改编<br>add vt.添加，附加，掺加<br>addition n.加，加法；附加物<br>additional a.附加的，追加的<br>address n.地址；演说；谈吐<br>adequate a.足够的；可以胜任的<br>adjective n.形容词 a.形容词的<br>adjust vt.调整，调节；校正<br>administration n.管理；管理部门<br>admire vt.钦佩，羡慕，赞赏<br>admission n.允许进入；承认<br>admit vt.承认；准许…进入<br>adopt vt.收养；采用；采取<br>adult n.成年人 a.成年的<br>advance vi.前进；提高 n.进展<br>advanced a.先进的；高级的<br>advantage n.优点，优势；好处<br>adventure n.冒险；惊险活动<br>adverb n.副词<br>advertisement n.广告；公告；登广告<br>advice n.劝告；忠告；意见<br>advisable n.明智的；可取的<br>advise vt.劝告；建议；通知<br>aeroplane n.飞机<br>affair n.事情，事件；事务<br>affect vt.影响；感动<br>affection n.慈爱，爱；爱慕<br>afford vt.担负得起…；提供<br>afraid a.害怕的；担心的<br>Africa n.非洲<br>African a.非洲的 n.非洲人<br>after prep.在…以后；次于<br>afternoon n.下午，午后<br>afterward ad.后来，以后<br>again ad.又一次；而且<br>against prep.倚在；逆，对着<br>age n.年龄；时代 vt.变老<br>agency n.经办；代理；代理处<br>agent n.代理人，代理商<br>aggressive a.侵略的；好斗的<br>ago ad.以前<br>agony n.极度痛苦<br>agree vi.同意；持相同意见<br>agreement n.协定，协议；同意<br>agriculture n.农业，农艺；农学<br>ahead ad.在前；向前；提前<br>aid n.帮助，救护；助手<br>aim vi.瞄准，针对；致力<br>air n.空气；空中；外观<br>aircraft n.飞机，飞行器<br>airline n.航空公司；航线<br>airplane n.飞机<br>airport n.机场，航空站<br>alarm n.惊恐，忧虑；警报<br>alcohol n.酒精，乙醇<br>alike a.同样的，相同的<br>alive a.活着的；活跃的<br>all a.全部的 prep.全部<br>allow vt.允许，准许；任<br>alloy n.合金； (金属的 )成色<br>almost ad.几乎，差不多<br>alone a.单独的 ad.单独地<br>along prep.沿着 ad.向前<br>aloud ad.出声地，大声地<br>alphabet n.字母表，字母系统<br>already ad.早已，已经<br>also ad.亦，也；而且，还<br>alter vt.改变，变更；改做<br>alternative n.替换物；取舍，抉择<br>although conj.尽管，虽然<br>altitude n.高，高度；高处<br>altogether ad.完全；总而言之<br>aluminium n.铝<br>always ad.总是，一直；永远<br>a.m (缩)上午，午前<br>amaze vt.使惊奇，使惊愕<br>ambition n.雄心，抱负，野心<br>ambulance n.救护车；野战医院<br>America n.美洲；美国<br>American a.美洲的 n.美国人<br>among prep.在…之中<br>amongst prep在…之中 (=among)<br>amount n.总数；数量；和<br>ampere n.安培<br>    amplify vt.放大，增强；扩大<br>amuse vt.逗…乐；给…娱乐<br>analyse vt.分析，分解，解析<br>analysis n.分析，分解，解析<br>ancestor n.祖宗，祖先<br>anchor n.锚 vi.抛锚，停泊<br>ancient a.古代的，古老的<br>and conj.和，又，并，则<br>angel n.天使，神差，安琪儿<br>anger n.怒，愤怒 vt.使发怒<br>angle n.角，角度<br>angry a.愤怒的，生气的<br>animal n.动物，兽 a.动物的<br>ankle n.踝，踝节部<br>announce vt.宣布，宣告，发表<br>announcer n.宣告者；播音员<br>annoy vt.使恼怒；打搅<br>annual a.每年的 n.年报<br>another a.再一个的；别的<br>answer vt.回答；响应；适应<br>ant n.蚂蚁<br>anticipate vt.预料，预期，期望<br>anxiety n.焦虑，忧虑；渴望<br>anxious a.忧虑的；渴望的<br>any a.什么，一些；任何的<br>anybody prep.任何人<br>anyhow ad.无论如何<br>anyone pron.任何人<br>anything pron.任何事物；一切<br>anyway ad.无论如何<br>anywhere ad.在什么地方<br>apart ad.相隔；分开；除去<br>apartment n.一套公寓房间<br>apologize vi.道歉，谢罪，认错<br>apology n.道歉，认错，谢罪<br>apparatus n.器械，仪器；器官<br>apparent a.表面上的；明显的<br>appeal vi.&amp;n.呼吁；申述<br>appear vi.出现；来到；似乎<br>appearance n.出现，来到；外观<br>    appetite n.食欲，胃口；欲望<br>apple n.苹果，苹果树<br>appliance n.用具，器具，器械<br>applicable a.能应用的；适当的<br>application n.请求，申请；施用<br>apply vt.应用，实施，使用<br>appoint vt.任命，委任；约定<br>appointment n.任命；约定，约会<br>appreciate vt.欣赏；领会；感谢<br>approach vt.向…靠近 n.靠近<br>appropriate a.适当的，恰当的<br>approval n.赞成，同意；批准<br>approve vt.赞成，称许；批准<br>approximately ad.近似地，大约<br>April n. 四月<br>Arabian a.阿拉伯的<br>arbitrary a.随心所欲的；专断的<br>architecture n.建筑学；建筑式样<br>area n.面积；地区；领域<br>argue vi.争论，争辩，辩论<br>argument n.争论，辩论；理由<br>arise vi.出现；由…引起<br>arithmetic n.算术，四则运算<br>arm n.臂；臂状物；武器<br>army n.军队；陆军<br>around prep.在…周围<br>arouse vt.引起，唤起；唤醒<br>arrange vt.筹备；整理；调解<br>arrangement n.整理，排列；安排<br>arrest vt.逮捕，拘留；阻止<br>arrival n.到达；到来；到达者<br>arrive vi.到达；来临；达到<br>arrow n.箭；箭状物<br>art n.艺术，美术；技术<br>article n.文章；条款；物品<br>artificial a.人工的；娇揉造作的<br>artist n.艺术家，美术家<br>artistic a.艺术的；艺术家的<br>as conj.当…的时候<br>ash n.灰，灰末；骨灰<br>ashamed a.惭愧(的)；羞耻 (的)<br>Asia n.亚洲<br>Asian a.亚洲的 n.亚洲人<br>aside ad.在旁边，到旁边<br>ask vt.问；要求；邀请<br>asleep a.睡着的，睡熟的<br>aspect n.方面；样子，外表<br>    assemble vt.集合，召集；装配<br>assembly n.集合；集会；装配<br>assess vt.对(财产等 )估价<br>assign vt.指派；分配；指定<br>assignment n.任务，指定的作业<br>assist vt.援助，帮助；搀扶<br>assistant n.助手，助理；助教<br>associate vi.交往 n.伙伴，同事<br>association n.协会，团体；联合<br>assume vt.假定；承担；呈现<br>assure vt.使确信；向…保证<br>    astonish vt.使惊讶，使吃惊<br>astronaut n.宇宙航行员，宇航员<br>at prep.在…里；在…时<br>athlete n.运动员；田径运动员<br>Atlantic a.大西洋的 n.大西洋<br>atmosphere n.大气；空气；气氛<br>atmospheric a.大气的；大气层的<br>atom n.原子；微粒；微量<br>atomic a.原子的；原子能的<br>attach vt.缚，系，贴；附加<br>attack vt.&amp;vi.&amp;n. 攻击，进攻<br>attain vt.达到，获得，完成<br>attempt vt.尝试，试图 n.企图<br>attend vt.出席；照顾，护理<br>attention n.注意，留心；注意力<br>attentive a.注意的；有礼貌的<br>attitude n.态度，看法；姿势<br>attract vt.吸引；引起，诱惑<br>attraction n.吸引；吸引力；引力<br>attractive a.有吸引力的<br>attribute vt.把…归因于 n.属性<br>audience n.听众，观众，读者<br>August n.八月<br>aunt n.伯母，婶母，姑母<br>    aural a.耳的，听觉的<br>Australia n.澳大利亚<br>Australian a.澳大利亚的<br>author n.作者，作家<br>authority n.当局，官方；权力<br>auto n.(口语)汽车<br>automatic a.自动的；机械的<br>automation n.自动，自动化<br>automobile n.汽车，机动车<br>autumn n.秋，秋季<br>    auxiliary a.辅助的；附属的<br>available a.可利用的；通用的<br>    avenue n.林荫道，道路；大街<br>average n.平均数 a.平均的<br>    aviation n.航空，航空学<br>avoid vt.避免，躲开；撤消<br>await vt.等候，期待<br>awake a.醒着的 vt.唤醒<br>award n.奖，奖品；判定<br>aware a.知道的，意识到的<br>away ad.离开，远离；…去<br>    awful a.令人不愉快的<br>awfully ad.令人畏惧的；很<br>    awkward a.笨拙的；尴尬的<br>ax n.斧子<br>axis n.轴，轴线；中心线<br>baby n.婴儿；孩子气的人<br>back ad.在后；回原处；回<br>background n.背景，后景，经历<br>backward a.向后的；倒的 ad.倒<br>    bacteria n.细菌<br>bad a.坏的，恶的；严重的<br>badly ad.坏，差；严重地<br>badminton n.羽毛球<br>bag n.袋，包，钱包，背包<br>    baggage n.行李<br>bake vt.烤，烘，焙；烧硬<br>balance vt.使平衡；称 n.天平<br>ball n.球，球状物；舞会<br>balloon n.气球，玩具气球<br>banana n.香蕉；芭蕉属植物<br>band n.乐队；带；波段<br>bang n.巨响，枪声；猛击<br>bank n.银行；库；岩，堤<br>banner n.旗，旗帜，横幅<br>bar n.酒吧间；条，杆；栅<br>barber n.理发师<br>    bare a.赤裸的；仅仅的<br>bargain n.交易 vi.议价；成交<br>bark n.吠叫声 vi.吠，叫<br>    barn n.谷仓；牲口棚<br>    barrel n.桶；圆筒；枪管<br>    barrier n.栅栏，屏障；障碍<br>base n.基础，底层；基地<br>basic a.基本的，基础的<br>basically ad.基本上<br>basin n.盆，洗脸盆；盆地<br>basis n.基础，根据<br>basket n.篮，篓，筐<br>basketball n.篮球；篮球运动<br>bat n.球拍；短棍；蝙蝠<br>bath n.浴，洗澡；浴缸<br>bathe vt.给…洗澡；弄湿<br>bathroom n.浴室；盥洗室<br>battery n.电池；一套，一组<br>battle n.战役；斗争 vi.作战<br>bay n.湾；山脉中的凹处<br>B.C. (缩)公元前<br>be aux.v.&amp;vi.是，在，做<br>beach n.海滩，湖滩，河滩<br>    beam n.梁；横梁；束，柱<br>bean n.豆，蚕豆<br>bear n.熊；粗鲁的人<br>bear vt.容忍；负担；生育<br>beard n.胡须，络腮胡子<br>beast n.兽，野兽；牲畜<br>beat vt.&amp;vi.打，敲；打败<br>beautiful a.美的，美丽的<br>beauty n.美，美丽；美人<br>because conj.由于，因为<br>become vi.变成；成为，变得<br>bed n.床，床位；圃；河床<br>bee n.蜂，密蜂；忙碌的人<br>beef n.牛肉；菜牛<br>beer n.啤酒<br>before prep.在…以前；向…<br>beg vt.&amp;vi.乞求；请求<br>beggar n.乞丐，穷人<br>begin vi.开始 vt.开始<br>beginner n.初学者，生手<br>beginning n.开始，开端；起源<br>behalf n.利益，维护，支持<br>behave vi.表现，举止；运转<br>behavior n.行为，举止，态度<br>behind prep.在…后面<br>being n.存在；生物；生命<br>belief n.信任，相信；信念<br>believe vt.相信；认为<br>bell n.钟，铃，门铃；钟声<br>belong vi.属于，附属<br>beloved a.为…的爱的 n.爱人<br>below prep.在…下面 (以下)<br>belt n.带，腰带；皮带；区<br>bench n.长凳，条凳；工作台<br>bend vt.使弯曲 vi.弯曲<br>beneath prep.在…下方<br>beneficial a.有利的，有益的<br>benefit n.利益；恩惠；津贴<br>berry n.浆果(如草莓等 )<br>beside prep.在…旁边<br>besides ad.而且 prep.除…之外<br>best a.最好的；最大的<br>bet vt.&amp;vi.&amp;n. 打赌<br>    betray vt.背叛；辜负；泄漏<br>better a.较好的 ad.更好地<br>between prep.在…中间<br>beyond prep.在…的那边<br>Bible n.基督教《圣经》<br>bicycle n.自行车，脚踏车<br>big a.大的，巨大的<br>bike n.自行车 vi.骑自行车<br>bill n.账单；招贴；票据<br>billion num. 万亿(英)<br>bind vt.捆绑；包扎；装钉<br>biology n.生物学；生态学<br>bird n.鸟，禽<br>birthday n.生日，诞生的日期<br>biscuit n.(英)饼干； (美)软饼<br>bit n.一点，一些，小片<br>bite vt.咬，叮，螫；剌穿<br>bitter a.痛苦的；严寒的<br>bitterly ad.苦苦地；悲痛地<br>black a.黑色的；黑暗的<br>blackboard n.黑板<br>    blade n.刀刃，刀片；叶片<br>    blame vt.责备，把…归咎于<br>blank a.空白的 n.空白<br>blanket n.毛毯，毯子，羊毛毯<br>blast n.爆炸，冲击波 vt.炸<br>    blaze n.火；闪光 vi.燃烧<br>bleed vi.出血，流血；泌脂<br>blend vt.&amp;vi.&amp;n. 混和<br>bless vt.为…祝福<br>    blind a.瞎的；盲目的<br>block n.街区 vt.堵塞，拦阻<br>blood n.血，血液；血统<br>bloom n.花；开花，开花期<br>blossom n.花，开花 vi.开花<br>blow vi. 吹，吹动；吹响<br>blue a.蓝色的 n.蓝色<br>board n.板 vt.上(船、车等 )<br>boast vi.自夸 vt.吹嘘<br>boat n.小船，艇；渔船<br>body n.身体；主体；尸体<br>boil vi. 沸腾；汽化 vt.煮沸<br>    bold a.大胆的；冒失的<br>    bolt n.螺栓；插销 vt.闩门<br>    bomb n.BoB!!! vt. 轰炸<br>bond n.联结，联系；公债<br>bone n.骨，骨骼<br>book n.书，书籍 vt.预定<br>boot n.靴子，长统靴<br>booth n.货摊；公用电话亭<br>border n.边，边缘；边界<br>bore vt.使厌烦；钻，挖<br>born a.天生的；出生的<br>borrow vt.借，借用，借人<br>bosom n.胸，胸部；内心<br>boss n.老板，上司 vt.指挥<br>both pron.两者(都)<br>bother vt.烦扰，迷惑 n.麻烦<br>bottle n.瓶，酒瓶；一瓶<br>bottom n.底，底部，根基<br>bough n.树枝<br>bounce vi.反跳，弹起；跳起<br>bound a.一定的；有义务的<br>boundary n.分界线，办界<br>bow n.弓；蝴蝶结；鞠躬<br>bowl n.碗，钵；碗状物<br>box n.箱，盒；包箱<br>box vi.拳击，打拳<br>boy n.男孩，少年；家伙<br>brain n.脑，脑髓；脑力<br>brake n.闸，刹车 vi.制动<br>branch n.树枝；分部；分科<br>brand n.商品；烙印 vt.铭刻<br>    brandy n.白兰地酒<br>    brass n.黄铜；黄铜器<br>brave a.勇敢的，华丽的<br>    bread n.面包；食物，粮食<br>    breadth n.宽度，幅度；幅面<br>break vt.打破；损坏；破坏<br>breakfast n.早饭，早餐<br>breast n.乳房；胸脯，胸膛<br>breath n.气息，呼吸；气味<br>breathe vi.呼吸 vt.呼吸<br>breed n.品种 vt.使繁殖<br>    breeze n.微风，和风<br>brick n.砖，砖块；砖状物<br>    bridge n.桥，桥梁；桥牌<br>brief a.简短的；短暂的<br>bright a.明亮的；聪明的<br>brighten vt.使发光；使快活<br>brilliant a.光辉的；卓越的<br>    brim n.边，边缘；帽沿<br>bring vt.带来；引出；促使<br>brisk a.活泼的；清新的<br>    bristle n.短而硬的毛；鬃毛<br>Britain n.不列颠，英国<br>British a.不列颠的，英联邦的<br>    brittle a.脆的；易损坏的<br>broad a.宽的，阔的；广泛的<br>broadcast n.广播，播音<br>broken a.被打碎的，骨折的<br>    bronze n.青铜；青铜制品<br>    brood n.同窝幼鸟 vt.孵(蛋)<br>    brook n.小河，溪流<br>broom n.扫帚<br>    brother n.兄弟；同事，同胞<br>brow n.额；眉，眉毛<br>brown n.褐色，棕色<br>    bruise n.青肿，伤痕；擦伤<br>    brush n.刷子，毛刷；画笔<br>    brute n.禽兽，畜生<br>    bubble n.泡 vi.冒泡，沸腾<br>    bucket n.水桶；吊桶；铲斗<br>    bud n.芽，萌芽；蓓蕾<br>build vt.建筑；建立；创立<br>building n.建筑物，大楼；建筑<br>bulb n.电灯泡；球状物<br>bulk n.物体，容积，大批<br>bull n.公牛；雄的象<br>bullet n.枪弹，子弹，弹丸<br>bunch n.束，球，串；一群<br>    bundle n.捆，包，束；包袱<br>burden n.担子，重担；装载量<br>    bureau n.局，司，处；社，所<br>burn vi.烧，燃烧 n.烧伤<br>burst vt.使爆裂 vi.&amp;n. 爆炸<br>bury vt.埋葬，葬；埋藏<br>bus n.公共汽车<br>bush n.灌木，灌木丛，矮树<br>business n.商业，生意；事务<br>busy a.忙的，繁忙的<br>but conj.但是，可是<br>    butcher n.屠夫；屠杀者<br>butter n.黄油；奶油<br>butterfly n.蝴蝶<br>button n.扣子；按钮 vt.扣紧<br>buy vt.买，购买 vi.买<br>by prep.在…旁；被，由<br>cabbage n.洋白菜，卷心菜<br>    cabin n.小屋；船舱，机舱<br>    cabinet n.橱，柜；内阁<br>    cable n.缆，索；电缆；电报<br>cafe n.咖啡馆；小餐厅<br>cafeteria n.自助食堂<br>cage n.笼；鸟笼，囚笼<br>cake n.饼，糕，蛋糕<br>    calculate vt.计算；估计；计划<br>calculation n.计算，计算结果<br>calculator n.计算器，计算者<br>calendar n.日历，历书；历法<br>call vt.把…叫做；叫，喊<br>    calm a.静的，平静的<br>camel n.骆驼<br>camera n.照相机，摄影机<br>camp n.野营，营地，兵营<br>campaign n.战役；运动<br>campus n.校园，学校场地<br>can aux.v.能，会，可能<br>can n.罐头，听头；容器<br>Canada n.加拿大<br>Canadian a.加拿大的<br>canal n.运河；沟渠；管<br>cancel vt.取消，撤消；删去<br>cancer n.癌，癌症，肿瘤<br>candidate n.候选人；投考者<br>    candle n.蜡烛；烛形物；烛光<br>candy n.糖果；砂糖结晶<br>cannon n.大炮，火炮；榴弹炮<br>    canoe n.独木舟，皮艇，划子<br>    canteen n.小卖部；临时餐室<br>canvas n.粗帆布；一块油画布<br>cap n.帽子，便帽；帽状物<br>capable a.有能力的，有才能的<br>capacity n.容量；能力；能量<br>capital n.资本，资金；首都<br>captain n.陆军上尉；队长<br>captive n.俘虏，被监禁的人<br>capture vt.捕获，俘获；夺得<br>car n.汽车，小汽车，轿车<br>carbon n.碳<br>card n.卡，卡片，名片<br>care vi.关心，介意 n.小心<br>career n.生涯，职业，经历<br>careful a.仔细的；细致的<br>careless a.粗心的，漫不经心的<br>cargo n.船货，货物<br>carpenter n.木工，木匠<br>carpet n.地毯，毡毯，毛毯<br>carriage n.客车厢；四轮马车<br>carrier n.运输工具；运载工具<br>carrot n.胡罗卜<br>carry vt.携带；运载；传送<br>cart n.二轮运货马车<br>carve vt.刻，雕刻；切开<br>case n.情况；事实；病例<br>case n.箱(子)，盒(子)，套<br>cash n.现金，现款<br>cassette n.盒式录音带；盒子<br>cast vt.投，扔，抛；浇铸<br>    castle n.城堡；巨大建筑物<br>casual a.偶然的；随便的<br>cat n.猫，猫科，猫皮<br>catalog n.目录，目录册<br>catch vt.捉住；赶上；领会<br>    cathedral n.总教堂；大教堂<br>cattle n.牛；牲口，家畜<br>cause n.原因，理由；事业<br>cave n.山洞，洞穴，窑洞<br>    cease vi.&amp;vi.&amp;n.停止，停息<br>ceiling n.天花板，顶蓬<br>celebrate vt.庆祝；歌颂，赞美<br>cell n.细胞；小房间<br>cellar n.地窑，地下室<br>cement n.水泥；胶泥 vt.粘结<br>cent n.分；分币；百<br>centigrade a.百分度的<br>centimetre n.公分，厘米<br>central a.中心的；主要的<br>centre n.中心；中枢 vt.集中<br>century n.世纪，百年<br>ceremony n.典礼，仪式；礼节<br>certain a.确实的；肯定的<br>certainly ad.一定，必定；当然<br>certainty n.必然；肯定<br>certificate n.证书，证件，执照<br>chain n.链，链条，项圈<br>chair n.椅子；主席<br>chairman n.主席；议长，会长<br>    chalk n.白垩；粉笔<br>challenge n.挑战；要求，需要<br>    chamber n.会议室；房间；腔<br>champion n.冠军，得胜者<br>chance n.机会，机遇；可能性<br>change n.改变，变化；零钱<br>channel n.海峡；渠道；频道<br>chapter n.章，回，篇<br>character n.性格；特性；角色<br>characteristic a.特有的 n.特性<br>charge vt.索价；控告 n.费用<br>charity n.施舍；慈善事业<br>charming a.迷人的，可爱的<br>chart n.图，图表；海图<br>chase n.追逐，追赶，追求<br>cheap a.廉价的；劣质的<br>cheat vt.骗取；哄 vi.行骗<br>check vt.检查；制止 n.检查<br>cheek n.面颊，脸蛋<br>cheer vt.使振作；欢呼<br>cheerful a.快乐的，愉快的<br>cheese n.乳酪，干酪<br>chemical a.化学的 n.化学制品<br>chemist n.化学家；药剂师<br>    chemistry n.化学<br>    cheque n.支票<br>    cherry n.樱桃；樱桃树<br>chess n.棋；国际象棋<br>chest n.胸腔，胸膛；箱子<br>    chew vt.咀嚼，嚼碎<br>chicken n.小鸡，小鸟；鸡肉<br>chief a.主要的；首席的<br>child n.小孩，儿童；儿子<br>childhood n.童年，幼年；早期<br>childish a.孩子的；幼稚的</p>
+  <p>a art.一(个)；每一 (个)<br>abandon vt.丢弃；放弃，抛弃<br>ability n.能力；能耐，本领<br>able a.有能力的；出色的<br>abnormal a.不正常的；变态的<br>aboard ad.在船(车)上；上船<br>about prep.关于；在…周围<br>above prep.在…上面；高于<br>abroad ad.(在)国外；到处<br>absence n.缺席，不在场；缺乏<br>absent a.不在场的；缺乏的<br>absolute a.绝对的；纯粹的<br>absolutely ad.完全地；绝对地<br>absorb vt.吸收；使专心<br>abstract a.抽象的 n.摘要<br>abundant a.丰富的；大量的<br>abuse vt.滥用；虐待 n.滥用<br>academic a.学院的；学术的<br>academy n.私立中学；专科院校<br>accelerate vt.(使)加快；促进<br>acceleration n.加速；加速度<br>accent n.口音，腔调；重音<br>accept vt.vi.接受；同意<br>acceptable a.可接受的，合意的<br>acceptance n.接受，验收；承认<br>access n.接近；通道，入口<br>accessory n.同谋，从犯；附件<br>accident n.意外的；事故<br>accidental a.偶然的；非本质的<br>accommodate vt.容纳；供应，供给<br>accommodation n.招待设备；预定铺位<br>accompany vt.陪伴，陪同；伴随<br>accomplish vt.达到(目的 )；完成<br>accord vt.使一致；给予<br>accordance n.一致；和谐；授予<br>accordingly ad.因此，所以；照着<br>account n.记述；解释；帐目<br>accumulate vt.积累 vi.堆积<br>accuracy n.准确(性)；准确度<br>accurate a.准确的，正确无误的<br>accuse vt.指责；归咎于<br>accustom vt.使习惯<br>accustomed a.惯常的；习惯的<br>ache vi.痛；想念 n.疼痛<br>achieve vt.完成，实现；达到<br>achievement n.完成；成就，成绩<br>acid n.酸；酸的，酸性的<br>acquaintance n.认识；了解；熟人<br>acquire vt.取得；获得；学到<br>acre n.英亩(=6.07 亩)<br>across prep.横过；在…对面<br>act vi.行动；见效 n.行为<br>action n.行动；作用；功能<br>active a.活跃的；积极的<br>activity n.活动；活力；行动<br>actor n.男演员；演剧的人<br>actress n.女演员<br>actual a.实际的；现行的<br>actually ad.实际上；竟然<br>acute a.尖的，锐的；敏锐的<br>ad n.广告<br>adapt vt.使适应；改编<br>add vt.添加，附加，掺加<br>addition n.加，加法；附加物<br>additional a.附加的，追加的<br>address n.地址；演说；谈吐<br>adequate a.足够的；可以胜任的<br>adjective n.形容词 a.形容词的<br>adjust vt.调整，调节；校正<br>administration n.管理；管理部门<br>admire vt.钦佩，羡慕，赞赏<br>admission n.允许进入；承认<br>admit vt.承认；准许…进入<br>adopt vt.收养；采用；采取<br>adult n.成年人 a.成年的<br>advance vi.前进；提高 n.进展<br>advanced a.先进的；高级的<br>advantage n.优点，优势；好处<br>adventure n.冒险；惊险活动<br>adverb n.副词<br>advertisement n.广告；公告；登广告<br>advice n.劝告；忠告；意见<br>advisable n.明智的；可取的<br>advise vt.劝告；建议；通知<br>aeroplane n.飞机<br>affair n.事情，事件；事务<br>affect vt.影响；感动<br>affection n.慈爱，爱；爱慕<br>afford vt.担负得起…；提供<br>afraid a.害怕的；担心的<br>Africa n.非洲<br>African a.非洲的 n.非洲人<br>after prep.在…以后；次于<br>afternoon n.下午，午后<br>afterward ad.后来，以后<br>again ad.又一次；而且<br>against prep.倚在；逆，对着<br>age n.年龄；时代 vt.变老<br>agency n.经办；代理；代理处<br>agent n.代理人，代理商<br>aggressive a.侵略的；好斗的<br>ago ad.以前<br>agony n.极度痛苦<br>agree vi.同意；持相同意见<br>agreement n.协定，协议；同意<br>agriculture n.农业，农艺；农学<br>ahead ad.在前；向前；提前<br>aid n.帮助，救护；助手<br>aim vi.瞄准，针对；致力<br>air n.空气；空中；外观<br>aircraft n.飞机，飞行器<br>airline n.航空公司；航线<br>airplane n.飞机<br>airport n.机场，航空站<br>alarm n.惊恐，忧虑；警报<br>alcohol n.酒精，乙醇<br>alike a.同样的，相同的<br>alive a.活着的；活跃的<br>all a.全部的 prep.全部<br>allow vt.允许，准许；任<br>alloy n.合金； (金属的 )成色<br>almost ad.几乎，差不多<br>alone a.单独的 ad.单独地<br>along prep.沿着 ad.向前<br>aloud ad.出声地，大声地<br>alphabet n.字母表，字母系统<br>already ad.早已，已经<br>also ad.亦，也；而且，还<br>alter vt.改变，变更；改做<br>alternative n.替换物；取舍，抉择<br>although conj.尽管，虽然<br>altitude n.高，高度；高处<br>altogether ad.完全；总而言之<br>aluminium n.铝<br>always ad.总是，一直；永远<br>a.m (缩)上午，午前<br>amaze vt.使惊奇，使惊愕<br>ambition n.雄心，抱负，野心<br>ambulance n.救护车；野战医院<br>America n.美洲；美国<br>American a.美洲的 n.美国人<br>among prep.在…之中<br>amongst prep在…之中 (=among)<br>amount n.总数；数量；和<br>ampere n.安培<br>    amplify vt.放大，增强；扩大<br>amuse vt.逗…乐；给…娱乐<br>analyse vt.分析，分解，解析<br>analysis n.分析，分解，解析<br>ancestor n.祖宗，祖先<br>anchor n.锚 vi.抛锚，停泊<br>ancient a.古代的，古老的<br>and conj.和，又，并，则<br>angel n.天使，神差，安琪儿<br>anger n.怒，愤怒 vt.使发怒<br>angle n.角，角度<br>angry a.愤怒的，生气的<br>animal n.动物，兽 a.动物的<br>ankle n.踝，踝节部<br>announce vt.宣布，宣告，发表<br>announcer n.宣告者；播音员<br>annoy vt.使恼怒；打搅<br>annual a.每年的 n.年报<br>another a.再一个的；别的<br>answer vt.回答；响应；适应<br>ant n.蚂蚁<br>anticipate vt.预料，预期，期望<br>anxiety n.焦虑，忧虑；渴望<br>anxious a.忧虑的；渴望的<br>any a.什么，一些；任何的<br>anybody prep.任何人<br>anyhow ad.无论如何<br>anyone pron.任何人<br>anything pron.任何事物；一切<br>anyway ad.无论如何<br>anywhere ad.在什么地方<br>apart ad.相隔；分开；除去<br>apartment n.一套公寓房间<br>apologize vi.道歉，谢罪，认错<br>apology n.道歉，认错，谢罪<br>apparatus n.器械，仪器；器官<br>apparent a.表面上的；明显的<br>appeal vi.&amp;n.呼吁；申述<br>appear vi.出现；来到；似乎<br>appearance n.出现，来到；外观<br>    appetite n.食欲，胃口；欲望<br>apple n.苹果，苹果树<br>appliance n.用具，器具，器械<br>applicable a.能应用的；适当的<br>application n.请求，申请；施用<br>apply vt.应用，实施，使用<br>appoint vt.任命，委任；约定<br>appointment n.任命；约定，约会<br>appreciate vt.欣赏；领会；感谢<br>approach vt.向…靠近 n.靠近<br>appropriate a.适当的，恰当的<br>approval n.赞成，同意；批准<br>approve vt.赞成，称许；批准<br>approximately ad.近似地，大约<br>April n. 四月<br>Arabian a.阿拉伯的<br>arbitrary a.随心所欲的；专断的<br>architecture n.建筑学；建筑式样<br>area n.面积；地区；领域<br>argue vi.争论，争辩，辩论<br>argument n.争论，辩论；理由<br>arise vi.出现；由…引起<br>arithmetic n.算术，四则运算<br>arm n.臂；臂状物；武器<br>army n.军队；陆军<br>around prep.在…周围<br>arouse vt.引起，唤起；唤醒<br>arrange vt.筹备；整理；调解<br>arrangement n.整理，排列；安排<br>arrest vt.逮捕，拘留；阻止<br>arrival n.到达；到来；到达者<br>arrive vi.到达；来临；达到<br>arrow n.箭；箭状物<br>art n.艺术，美术；技术<br>article n.文章；条款；物品<br>artificial a.人工的；娇揉造作的<br>artist n.艺术家，美术家<br>artistic a.艺术的；艺术家的<br>as conj.当…的时候<br>ash n.灰，灰末；骨灰<br>ashamed a.惭愧(的)；羞耻 (的)<br>Asia n.亚洲<br>Asian a.亚洲的 n.亚洲人<br>aside ad.在旁边，到旁边<br>ask vt.问；要求；邀请<br>asleep a.睡着的，睡熟的<br>aspect n.方面；样子，外表<br>    assemble vt.集合，召集；装配<br>assembly n.集合；集会；装配<br>assess vt.对(财产等 )估价<br>assign vt.指派；分配；指定<br>assignment n.任务，指定的作业<br>assist vt.援助，帮助；搀扶<br>assistant n.助手，助理；助教<br>associate vi.交往 n.伙伴，同事<br>association n.协会，团体；联合<br>assume vt.假定；承担；呈现<br>assure vt.使确信；向…保证<br>    astonish vt.使惊讶，使吃惊<br>astronaut n.宇宙航行员，宇航员<br>at prep.在…里；在…时<br>athlete n.运动员；田径运动员<br>Atlantic a.大西洋的 n.大西洋<br>atmosphere n.大气；空气；气氛<br>atmospheric a.大气的；大气层的<br>atom n.原子；微粒；微量<br>atomic a.原子的；原子能的<br>attach vt.缚，系，贴；附加<br>attack vt.&amp;vi.&amp;n. 攻击，进攻<br>attain vt.达到，获得，完成<br>attempt vt.尝试，试图 n.企图<br>attend vt.出席；照顾，护理<br>attention n.注意，留心；注意力<br>attentive a.注意的；有礼貌的<br>attitude n.态度，看法；姿势<br>attract vt.吸引；引起，诱惑<br>attraction n.吸引；吸引力；引力<br>attractive a.有吸引力的<br>attribute vt.把…归因于 n.属性<br>audience n.听众，观众，读者<br>August n.八月<br>aunt n.伯母，婶母，姑母<br>    aural a.耳的，听觉的<br>Australia n.澳大利亚<br>Australian a.澳大利亚的<br>author n.作者，作家<br>authority n.当局，官方；权力<br>auto n.(口语)汽车<br>automatic a.自动的；机械的<br>automation n.自动，自动化<br>automobile n.汽车，机动车<br>autumn n.秋，秋季<br>    auxiliary a.辅助的；附属的<br>available a.可利用的；通用的<br>    avenue n.林荫道，道路；大街<br>average n.平均数 a.平均的<br>    aviation n.航空，航空学<br>avoid vt.避免，躲开；撤消<br>await vt.等候，期待<br>awake a.醒着的 vt.唤醒<br>award n.奖，奖品；判定<br>aware a.知道的，意识到的<br>away ad.离开，远离；…去<br>    awful a.令人不愉快的<br>awfully ad.令人畏惧的；很<br>    awkward a.笨拙的；尴尬的<br>ax n.斧子<br>axis n.轴，轴线；中心线<br>baby n.婴儿；孩子气的人<br>back ad.在后；回原处；回<br>background n.背景，后景，经历<br>backward a.向后的；倒的 ad.倒<br>    bacteria n.细菌<br>bad a.坏的，恶的；严重的<br>badly ad.坏，差；严重地<br>badminton n.羽毛球<br>bag n.袋，包，钱包，背包<br>    baggage n.行李<br>bake vt.烤，烘，焙；烧硬<br>balance vt.使平衡；称 n.天平<br>ball n.球，球状物；舞会<br>balloon n.气球，玩具气球<br>banana n.香蕉；芭蕉属植物<br>band n.乐队；带；波段<br>bang n.巨响，枪声；猛击<br>bank n.银行；库；岩，堤<br>banner n.旗，旗帜，横幅<br>bar n.酒吧间；条，杆；栅<br>barber n.理发师<br>    bare a.赤裸的；仅仅的<br>bargain n.交易 vi.议价；成交<br>bark n.吠叫声 vi.吠，叫<br>    barn n.谷仓；牲口棚<br>    barrel n.桶；圆筒；枪管<br>    barrier n.栅栏，屏障；障碍<br>base n.基础，底层；基地<br>basic a.基本的，基础的<br>basically ad.基本上<br>basin n.盆，洗脸盆；盆地<br>basis n.基础，根据<br>basket n.篮，篓，筐<br>basketball n.篮球；篮球运动<br>bat n.球拍；短棍；蝙蝠<br>bath n.浴，洗澡；浴缸<br>bathe vt.给…洗澡；弄湿<br>bathroom n.浴室；盥洗室<br>battery n.电池；一套，一组<br>battle n.战役；斗争 vi.作战<br>bay n.湾；山脉中的凹处<br>B.C. (缩)公元前<br>be aux.v.&amp;vi.是，在，做<br>beach n.海滩，湖滩，河滩<br>    beam n.梁；横梁；束，柱<br>bean n.豆，蚕豆<br>bear n.熊；粗鲁的人<br>bear vt.容忍；负担；生育<br>beard n.胡须，络腮胡子<br>beast n.兽，野兽；牲畜<br>beat vt.&amp;vi.打，敲；打败<br>beautiful a.美的，美丽的<br>beauty n.美，美丽；美人<br>because conj.由于，因为<br>become vi.变成；成为，变得<br>bed n.床，床位；圃；河床<br>bee n.蜂，密蜂；忙碌的人<br>beef n.牛肉；菜牛<br>beer n.啤酒<br>before prep.在…以前；向…<br>beg vt.&amp;vi.乞求；请求<br>beggar n.乞丐，穷人<br>begin vi.开始 vt.开始<br>beginner n.初学者，生手<br>beginning n.开始，开端；起源<br>behalf n.利益，维护，支持<br>behave vi.表现，举止；运转<br>behavior n.行为，举止，态度<br>behind prep.在…后面<br>being n.存在；生物；生命<br>belief n.信任，相信；信念<br>believe vt.相信；认为<br>bell n.钟，铃，门铃；钟声<br>belong vi.属于，附属<br>beloved a.为…的爱的 n.爱人<br>below prep.在…下面 (以下)<br>belt n.带，腰带；皮带；区<br>bench n.长凳，条凳；工作台<br>bend vt.使弯曲 vi.弯曲<br>beneath prep.在…下方<br>beneficial a.有利的，有益的<br>benefit n.利益；恩惠；津贴<br>berry n.浆果(如草莓等 )<br>beside prep.在…旁边<br>besides ad.而且 prep.除…之外<br>best a.最好的；最大的<br>bet vt.&amp;vi.&amp;n. 打赌<br>    betray vt.背叛；辜负；泄漏<br>better a.较好的 ad.更好地<br>between prep.在…中间<br>beyond prep.在…的那边<br>Bible n.基督教《圣经》<br>bicycle n.自行车，脚踏车<br>big a.大的，巨大的<br>bike n.自行车 vi.骑自行车<br>bill n.账单；招贴；票据<br>billion num. 万亿(英)<br>bind vt.捆绑；包扎；装钉<br>biology n.生物学；生态学<br>bird n.鸟，禽<br>birthday n.生日，诞生的日期<br>biscuit n.(英)饼干； (美)软饼<br>bit n.一点，一些，小片<br>bite vt.咬，叮，螫；剌穿<br>bitter a.痛苦的；严寒的<br>bitterly ad.苦苦地；悲痛地<br>black a.黑色的；黑暗的<br>blackboard n.黑板<br>    blade n.刀刃，刀片；叶片<br>    blame vt.责备，把…归咎于<br>blank a.空白的 n.空白<br>blanket n.毛毯，毯子，羊毛毯<br>blast n.爆炸，冲击波 vt.炸<br>    blaze n.火；闪光 vi.燃烧<br>bleed vi.出血，流血；泌脂<br>blend vt.&amp;vi.&amp;n. 混和<br>bless vt.为…祝福<br>    blind a.瞎的；盲目的<br>block n.街区 vt.堵塞，拦阻<br>blood n.血，血液；血统<br>bloom n.花；开花，开花期<br>blossom n.花，开花 vi.开花<br>blow vi. 吹，吹动；吹响<br>blue a.蓝色的 n.蓝色<br>board n.板 vt.上(船、车等 )<br>boast vi.自夸 vt.吹嘘<br>boat n.小船，艇；渔船<br>body n.身体；主体；尸体<br>boil vi. 沸腾；汽化 vt.煮沸<br>    bold a.大胆的；冒失的<br>    bolt n.螺栓；插销 vt.闩门<br>    bomb n.BoB!!! vt. 轰炸<br>bond n.联结，联系；公债<br>bone n.骨，骨骼<br>book n.书，书籍 vt.预定<br>boot n.靴子，长统靴<br>booth n.货摊；公用电话亭<br>border n.边，边缘；边界<br>bore vt.使厌烦；钻，挖<br>born a.天生的；出生的<br>borrow vt.借，借用，借人<br>bosom n.胸，胸部；内心<br>boss n.老板，上司 vt.指挥<br>both pron.两者(都)<br>bother vt.烦扰，迷惑 n.麻烦<br>bottle n.瓶，酒瓶；一瓶<br>bottom n.底，底部，根基<br>bough n.树枝<br>bounce vi.反跳，弹起；跳起<br>bound a.一定的；有义务的<br>boundary n.分界线，办界<br>bow n.弓；蝴蝶结；鞠躬<br>bowl n.碗，钵；碗状物<br>box n.箱，盒；包箱<br>box vi.拳击，打拳<br>boy n.男孩，少年；家伙<br>brain n.脑，脑髓；脑力<br>brake n.闸，刹车 vi.制动<br>branch n.树枝；分部；分科<br>brand n.商品；烙印 vt.铭刻<br>    brandy n.白兰地酒<br>    brass n.黄铜；黄铜器<br>brave a.勇敢的，华丽的<br>    bread n.面包；食物，粮食<br>    breadth n.宽度，幅度；幅面<br>break vt.打破；损坏；破坏<br>breakfast n.早饭，早餐<br>breast n.乳房；胸脯，胸膛<br>breath n.气息，呼吸；气味<br>breathe vi.呼吸 vt.呼吸<br>breed n.品种 vt.使繁殖<br>    breeze n.微风，和风<br>brick n.砖，砖块；砖状物<br>    bridge n.桥，桥梁；桥牌<br>brief a.简短的；短暂的<br>bright a.明亮的；聪明的<br>brighten vt.使发光；使快活<br>brilliant a.光辉的；卓越的<br>    brim n.边，边缘；帽沿<br>bring vt.带来；引出；促使<br>brisk a.活泼的；清新的<br>    bristle n.短而硬的毛；鬃毛<br>Britain n.不列颠，英国<br>British a.不列颠的，英联邦的<br>    brittle a.脆的；易损坏的<br>broad a.宽的，阔的；广泛的<br>broadcast n.广播，播音<br>broken a.被打碎的，骨折的<br>    bronze n.青铜；青铜制品<br>    brood n.同窝幼鸟 vt.孵(蛋)<br>    brook n.小河，溪流<br>broom n.扫帚<br>    brother n.兄弟；同事，同胞<br>brow n.额；眉，眉毛<br>brown n.褐色，棕色<br>    bruise n.青肿，伤痕；擦伤<br>    brush n.刷子，毛刷；画笔<br>    brute n.禽兽，畜生<br>    bubble n.泡 vi.冒泡，沸腾<br>    bucket n.水桶；吊桶；铲斗<br>    bud n.芽，萌芽；蓓蕾<br>build vt.建筑；建立；创立<br>building n.建筑物，大楼；建筑<br>bulb n.电灯泡；球状物<br>bulk n.物体，容积，大批<br>bull n.公牛；雄的象<br>bullet n.枪弹，子弹，弹丸<br>bunch n.束，球，串；一群<br>    bundle n.捆，包，束；包袱<br>burden n.担子，重担；装载量<br>    bureau n.局，司，处；社，所<br>burn vi.烧，燃烧 n.烧伤<br>burst vt.使爆裂 vi.&amp;n. 爆炸<br>bury vt.埋葬，葬；埋藏<br>bus n.公共汽车<br>bush n.灌木，灌木丛，矮树<br>business n.商业，生意；事务<br>busy a.忙的，繁忙的<br>but conj.但是，可是<br>    butcher n.屠夫；屠杀者<br>butter n.黄油；奶油<br>butterfly n.蝴蝶<br>button n.扣子；按钮 vt.扣紧<br>buy vt.买，购买 vi.买<br>by prep.在…旁；被，由<br>cabbage n.洋白菜，卷心菜<br>    cabin n.小屋；船舱，机舱<br>    cabinet n.橱，柜；内阁<br>    cable n.缆，索；电缆；电报<br>cafe n.咖啡馆；小餐厅<br>cafeteria n.自助食堂<br>cage n.笼；鸟笼，囚笼<br>cake n.饼，糕，蛋糕<br>    calculate vt.计算；估计；计划<br>calculation n.计算，计算结果<br>calculator n.计算器，计算者<br>calendar n.日历，历书；历法<br>call vt.把…叫做；叫，喊<br>    calm a.静的，平静的<br>camel n.骆驼<br>camera n.照相机，摄影机<br>camp n.野营，营地，兵营<br>campaign n.战役；运动<br>campus n.校园，学校场地<br>can aux.v.能，会，可能<br>can n.罐头，听头；容器<br>Canada n.加拿大<br>Canadian a.加拿大的<br>canal n.运河；沟渠；管<br>cancel vt.取消，撤消；删去<br>cancer n.癌，癌症，肿瘤<br>candidate n.候选人；投考者<br>    candle n.蜡烛；烛形物；烛光<br>candy n.糖果；砂糖结晶<br>cannon n.大炮，火炮；榴弹炮<br>    canoe n.独木舟，皮艇，划子<br>    canteen n.小卖部；临时餐室<br>canvas n.粗帆布；一块油画布<br>cap n.帽子，便帽；帽状物<br>capable a.有能力的，有才能的<br>capacity n.容量；能力；能量<br>capital n.资本，资金；首都<br>captain n.陆军上尉；队长<br>captive n.俘虏，被监禁的人<br>capture vt.捕获，俘获；夺得<br>car n.汽车，小汽车，轿车<br>carbon n.碳<br>card n.卡，卡片，名片<br>care vi.关心，介意 n.小心<br>career n.生涯，职业，经历<br>careful a.仔细的；细致的<br>careless a.粗心的，漫不经心的<br>cargo n.船货，货物<br>carpenter n.木工，木匠<br>carpet n.地毯，毡毯，毛毯<br>carriage n.客车厢；四轮马车<br>carrier n.运输工具；运载工具<br>carrot n.胡罗卜<br>carry vt.携带；运载；传送<br>cart n.二轮运货马车<br>carve vt.刻，雕刻；切开<br>case n.情况；事实；病例<br>case n.箱(子)，盒(子)，套<br>cash n.现金，现款<br>cassette n.盒式录音带；盒子<br>cast vt.投，扔，抛；浇铸<br>    castle n.城堡；巨大建筑物<br>casual a.偶然的；随便的<br>cat n.猫，猫科，猫皮<br>catalog n.目录，目录册<br>catch vt.捉住；赶上；领会<br>    cathedral n.总教堂；大教堂<br>cattle n.牛；牲口，家畜<br>cause n.原因，理由；事业<br>cave n.山洞，洞穴，窑洞<br>    cease vi.&amp;vi.&amp;n.停止，停息<br>ceiling n.天花板，顶蓬<br>celebrate vt.庆祝；歌颂，赞美<br>cell n.细胞；小房间<br>cellar n.地窑，地下室<br>cement n.水泥；胶泥 vt.粘结<br>cent n.分；分币；百<br>centigrade a.百分度的<br>centimetre n.公分，厘米<br>central a.中心的；主要的<br>centre n.中心；中枢 vt.集中<br>century n.世纪，百年<br>ceremony n.典礼，仪式；礼节<br>certain a.确实的；肯定的<br>certainly ad.一定，必定；当然<br>certainty n.必然；肯定<br>certificate n.证书，证件，执照<br>chain n.链，链条，项圈<br>chair n.椅子；主席<br>chairman n.主席；议长，会长<br>    chalk n.白垩；粉笔<br>challenge n.挑战；要求，需要<br>    chamber n.会议室；房间；腔<br>champion n.冠军，得胜者<br>chance n.机会，机遇；可能性<br>change n.改变，变化；零钱<br>channel n.海峡；渠道；频道<br>chapter n.章，回，篇<br>character n.性格；特性；角色<br>characteristic a.特有的 n.特性<br>charge vt.索价；控告 n.费用<br>charity n.施舍；慈善事业<br>charming a.迷人的，可爱的<br>chart n.图，图表；海图<br>chase n.追逐，追赶，追求<br>cheap a.廉价的；劣质的<br>cheat vt.骗取；哄 vi.行骗<br>check vt.检查；制止 n.检查<br>cheek n.面颊，脸蛋<br>cheer vt.使振作；欢呼<br>cheerful a.快乐的，愉快的<br>cheese n.乳酪，干酪<br>chemical a.化学的 n.化学制品<br>chemist n.化学家；药剂师<br>    chemistry n.化学<br>    cheque n.支票<br>    cherry n.樱桃；樱桃树<br>chess n.棋；国际象棋<br>chest n.胸腔，胸膛；箱子<br>    chew vt.咀嚼，嚼碎<br>chicken n.小鸡，小鸟；鸡肉<br>chief a.主要的；首席的<br>child n.小孩，儿童；儿子<br>childhood n.童年，幼年；早期<br>childish a.孩子的；幼稚的<br>chill vt. 使变冷 n.寒冷<br>chimney n.烟囱，烟筒；玻璃罩<br>chin n.颏，下巴<br>China n.中国<br>china n.瓷器，瓷料<br>Chinese a.中国的 n.中国人<br>chocolate n.巧克力；巧克力糖<br>choice n.选择，抉择<br>choke vt.使窒息；塞满<br>choose vt.选择，挑选；情愿<br>chop vt.砍，劈；切细 vi.砍<br>Christian n.基督教徒；信徒<br>Christmas n.圣诞节</p>
  
       <!-- reward -->
       
@@ -628,93 +716,6 @@
         >阅读更多...</a
       >
        
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-数据库零碎知识点"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"
-    >数据库零碎知识点</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
-  <time datetime="2021-05-17T12:02:07.320Z" itemprop="datePublished">2021-05-17</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p> 一些最重要的 SQL 命令</p>
-<ul>
-<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
-</li>
-<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
-</li>
-<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
-</li>
-<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
-</li>
-<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
-</li>
-<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
-</li>
-<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
-</li>
-<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
-</li>
-<li><p><strong>DROP TABLE</strong> - 删除表</p>
-</li>
-<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
-</li>
-<li><p><strong>DROP INDEX</strong> - 删除索引</p>
-<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
-</li>
-</ul>
-<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
-<p>​        inner join 或者 join      （后加on表示条件）</p>
-<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
-<p>​    外连接</p>
-<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
-<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
-<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
-<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
-<p>union</p>
-<p>select * from person right join card on person.cardId=card.id</p>
-<p>​        </p>
-<p>unique约束，可以为空，但为空只能有一个，</p>
-<p>视图：</p>
-<p>​    虚表，是从一个或多个</p>
- 
       <!-- reward -->
       
     </div>
