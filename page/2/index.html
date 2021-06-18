@@ -197,22 +197,11 @@
 <li><p><strong>DROP INDEX</strong> - 删除索引</p>
 <p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
 </li>
-</ul>
-<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
-<p>​        inner join 或者 join      （后加on表示条件）</p>
-<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
-<p>​    外连接</p>
-<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
-<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
-<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
-<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
-<p>union</p>
-<p>select * from person right join card on person.cardId=card.id</p>
-<p>​        </p>
-<p>unique约束，可以为空，但为空只能有一个，</p>
-<p>视图：</p>
-<p>​    虚表，是从一个或多个</p>
- 
+</ul> 
+      <a class="article-more-link" href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -262,8 +251,11 @@
   <p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
 <p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
 <pre><code>错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre><p>【cmd命令】‘netstat’不是内部命令：<br><a href="https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187</a></p>
- 
+    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre><p>【cmd命令】‘netstat’不是内部命令：<br><a href="https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187</a></p> 
+      <a class="article-more-link" href="/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -412,14 +404,11 @@
 提出和假设：
     指数增长模型，由马尔萨斯在1798年提出
     基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre><p>上课培训：</p>
-<p>中国大学生在线网站，穿越沙漠赛题<br>不要就题论题，寻一个一般性的数学模型，解决特定问题<br>文献查阅能力 把方程拿过来用，不需要搞太清楚</p>
-<p>学习建模能力最重要</p>
-<p>赛题结构：实际问题背景，若干假设条件，要求回答问题</p>
-<p>标题，摘要部分很重要。</p>
-<p>题目：写出比较确切的题目</p>
-<p>论文排版问题</p>
- 
+    相对增长率 = 出生率 － 死亡率</code></pre> 
+      <a class="article-more-link" href="/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -590,8 +579,11 @@ print(&apos;Accuracy: &apos; + repr(accuracy) + &apos;%&apos;)</code></pre><p>ma
 <h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
 <h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
 <p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
-<p><a href="https://www.yiibai.com/" target="_blank" rel="noopener">易百教程</a></p>
- 
+<p><a href="https://www.yiibai.com/" target="_blank" rel="noopener">易百教程</a></p> 
+      <a class="article-more-link" href="/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>

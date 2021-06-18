@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-17T06:53:16.238Z</updated>
+  <updated>2021-06-18T01:48:15.865Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="http://example.com/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
     <id>http://example.com/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/</id>
     <published>2021-06-12T11:53:50.957Z</published>
-    <updated>2021-06-17T06:53:16.238Z</updated>
+    <updated>2021-06-18T01:48:15.865Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2021-6-12&lt;br&gt;冒泡排序：&lt;br&gt;import java.util.Scanner;&lt;br&gt;public class bubbleSortTest {&lt;br&gt;    public static void main(String[] args) {&lt;br&gt;    </summary>
-        
-      
+    <summary type="html">&lt;p&gt;2021-6-12&lt;br&gt;冒泡排序：&lt;br&gt;import java.util.Scanner;&lt;br&gt;public class bubbleSortTest {&lt;br&gt;    public static void main(String[] args) {&lt;br&gt;        Scanner input = new Scanner(System.in);&lt;br&gt;        int a[] = new int[10];&lt;br&gt;        for(int i = 0;i&amp;lt;a.length;i++){&lt;br&gt;            a[i] = input.nextInt();&lt;br&gt;        }&lt;br&gt;        System.out.println(“冒泡排序未排序前数组：”);&lt;br&gt;        //for each 循环&lt;br&gt;        for (int i:a) {&lt;br&gt;            System.out.print(i+”  “);&lt;br&gt;        }&lt;br&gt;        //冒泡排序：&lt;br&gt;        int d=0;&lt;br&gt;        for (int i=0; i&amp;lt;a.length-1;i++){&lt;br&gt;            for (int j=0;j&amp;lt;a.length-i-1;j++) {&lt;br&gt;                if (a[j] &amp;lt; a[j + 1]) {&lt;br&gt;                    d = a[j];&lt;br&gt;                    a[j] = a[j + 1];&lt;br&gt;                    a[j + 1] = d;&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;    }&lt;br&gt;        //冒泡排序后的结果&lt;br&gt;        System.out.println(“冒泡排序后”);&lt;br&gt;        for (int i=0;i&amp;lt;a.length;i++){&lt;br&gt;            System.out.print(a[i]+”   “);&lt;br&gt;        }&lt;br&gt;}}&lt;/p&gt;
+&lt;p&gt;选择排序：&lt;br&gt;public class selectionSortTest {&lt;br&gt;    public static void main(String[] args) {&lt;br&gt;        int []arr = new int[]{1,2,3,9,8,7,6,5,4,10};&lt;br&gt;        selectSort(arr);&lt;br&gt;        for (int i=0;i&amp;lt;arr.length;i++){&lt;br&gt;            System.out.println(arr[i]+”   “);&lt;br&gt;        }&lt;br&gt;    }&lt;br&gt;    public  static void selectSort(int[] a){&lt;br&gt;        //实现冒泡排序,从小到大排列&lt;br&gt;        //数组要遍历a.length遍&lt;br&gt;        int minIndex=0;&lt;br&gt;        for (int i=0;i&amp;lt;a.length;i++){&lt;br&gt;            minIndex = i;//记录一下最小值的索引&lt;br&gt;            for (int j=i+1;j&amp;lt;a.length;j++){&lt;br&gt;                if (a[minIndex]&amp;gt;a[j]){&lt;br&gt;                    minIndex=j;&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;            //将最小值和起始值进行交换&lt;br&gt;            int d=a[i];&lt;br&gt;            a[i]=a[minIndex];&lt;br&gt;            a[minIndex]=d;&lt;br&gt;        }&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;}
+}&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     
@@ -42,16 +39,10 @@
     <link href="http://example.com/2021/06/07/%E5%9B%9B%E7%BA%A7%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/"/>
     <id>http://example.com/2021/06/07/%E5%9B%9B%E7%BA%A7%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</id>
     <published>2021-06-07T00:23:19.096Z</published>
-    <updated>2021-06-08T15:13:56.627Z</updated>
+    <updated>2021-06-18T01:49:22.356Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;a art.一(个)；每一 (个)&lt;br&gt;abandon vt.丢弃；放弃，抛弃&lt;br&gt;ability n.能力；能耐，本领&lt;br&gt;able a.有能力的；出色的&lt;br&gt;abnormal a.不正常的；变态的&lt;br&gt;aboard ad.在船(车)上；上船&lt;br&gt;about</summary>
-        
-      
+    <summary type="html">&lt;p&gt;a art.一(个)；每一 (个)&lt;br&gt;abandon vt.丢弃；放弃，抛弃&lt;br&gt;ability n.能力；能耐，本领&lt;br&gt;able a.有能力的；出色的&lt;br&gt;abnormal a.不正常的；变态的&lt;br&gt;aboard ad.在船(车)上；上船&lt;br&gt;about prep.关于；在…周围&lt;br&gt;above prep.在…上面；高于&lt;br&gt;abroad ad.(在)国外；到处&lt;br&gt;absence n.缺席，不在场；缺乏&lt;br&gt;absent a.不在场的；缺乏的&lt;br&gt;absolute a.绝对的；纯粹的&lt;br&gt;absolutely ad.完全地；绝对地&lt;br&gt;absorb vt.吸收；使专心&lt;br&gt;abstract a.抽象的 n.摘要&lt;br&gt;abundant a.丰富的；大量的&lt;br&gt;abuse vt.滥用；虐待 n.滥用&lt;br&gt;academic a.学院的；学术的&lt;br&gt;academy n.私立中学；专科院校&lt;/p&gt;</summary>
     
     
     
@@ -63,16 +54,21 @@
     <link href="http://example.com/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/"/>
     <id>http://example.com/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/</id>
     <published>2021-06-05T08:20:23.137Z</published>
-    <updated>2021-06-05T08:39:52.748Z</updated>
+    <updated>2021-06-18T01:49:39.692Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;《数据库系统概论》期末考试卷&quot;&gt;&lt;a href=&quot;#《数据库系统概论》期末考试卷&quot; class=&quot;headerlink&quot; title=&quot;《数据库系统概论》期末考试卷&quot;&gt;&lt;/a&gt;《数据库系统概论》期末考试卷&lt;/h1&gt;&lt;h2 id=&quot;一，填空题&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;《数据库系统概论》期末考试卷&quot;&gt;&lt;a href=&quot;#《数据库系统概论》期末考试卷&quot; class=&quot;headerlink&quot; title=&quot;《数据库系统概论》期末考试卷&quot;&gt;&lt;/a&gt;《数据库系统概论》期末考试卷&lt;/h1&gt;&lt;h2 id=&quot;一，填空题&quot;&gt;&lt;a href=&quot;#一，填空题&quot; class=&quot;headerlink&quot; title=&quot;一，填空题&quot;&gt;&lt;/a&gt;一，填空题&lt;/h2&gt;&lt;p&gt;1.实体之间的联系按照联系方式的不同可分为  &lt;u&gt;一对一&lt;/u&gt; 、 &lt;u&gt;一对多&lt;/u&gt; 和 &lt;u&gt;多对多&lt;/u&gt;   。  &lt;/p&gt;
+&lt;p&gt;2.数据库系统的核心是  &lt;u&gt;数据库管理系统（DBMS）&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;3.在关系模型中，实体以及实体间的联系都是用  &lt;u&gt;关系&lt;/u&gt;  来表示的。&lt;/p&gt;
+&lt;p&gt;4.在关系代数中专门的关系运算包括   &lt;u&gt;选择   、投影、   连接    、除&lt;/u&gt;等运算。&lt;/p&gt;
+&lt;p&gt;5.1975年由IBM公司的M.Zloof提出的QBE语言是一个很有特色的 &lt;u&gt;域关系演算&lt;/u&gt;   语言。&lt;/p&gt;
+&lt;p&gt;6.SQL语言集&lt;u&gt;数据查询&lt;/u&gt;、  &lt;u&gt;数据操作&lt;/u&gt;    、  &lt;u&gt;数据定义&lt;/u&gt;和  &lt;u&gt;数据控制&lt;/u&gt;   功能于一体，充分体现了关系数据语言的特点和优点。&lt;/p&gt;
+&lt;p&gt;7.数据库管理系统保证数据安全的主要措施是进行  &lt;u&gt;存取控制&lt;/u&gt;     。&lt;/p&gt;
+&lt;p&gt;8.人们已经提出了许多种类型的数据依赖，其中最重要的是  &lt;u&gt;函数依赖&lt;/u&gt;    和 &lt;u&gt;多值依赖&lt;/u&gt;  。&lt;/p&gt;
+&lt;p&gt;9.关系模式由3NF转化为BCNF是消除了主属性对码的  &lt;u&gt;部分函数依赖&lt;/u&gt;   和 &lt;u&gt;传递函数依赖&lt;/u&gt;    。&lt;/p&gt;
+&lt;p&gt;10.数据库设计应包括两个方面的内容： &lt;u&gt;结构设计&lt;/u&gt;和   &lt;u&gt;行为设计&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;11.CGI规范允许Web服务器执行  &lt;u&gt;外部程序&lt;/u&gt;    ，并将它们的输出发送给浏览器。&lt;/p&gt;
+&lt;p&gt;12.数据库技术与  &lt;u&gt;面向对象&lt;/u&gt;    技术相结合，形成了面向对象数据库系统。&lt;/p&gt;</summary>
     
     
     
@@ -84,19 +80,14 @@
     <link href="http://example.com/2021/06/04/SQL%E8%AF%AD%E6%B3%95/"/>
     <id>http://example.com/2021/06/04/SQL%E8%AF%AD%E6%B3%95/</id>
     <published>2021-06-04T06:32:51.453Z</published>
-    <updated>2021-06-05T07:56:54.220Z</updated>
+    <updated>2021-06-18T01:49:03.162Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;SQL语法&quot;&gt;&lt;a href=&quot;#SQL语法&quot; class=&quot;headerlink&quot; title=&quot;SQL语法&quot;&gt;&lt;/a&gt;SQL语法&lt;/h1&gt;&lt;h2 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h2&gt;&lt;p&gt;模式定义了数据如何存储，存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;
 &lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋值给新数据行的主键）。&lt;/p&gt;
 &lt;p&gt;SQL（Structured Query Language)，标准SQL由ANSI标准委员会管理，从而称为ANSI SQL。各个DBMS都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
 &lt;p&gt;SQL不区分大小写，但数据库表名，列名和值是否区分依赖于具体的DBMS以及配置&lt;/p&gt;
-&lt;p&gt;SQL支持的注释：&lt;/p&gt;
-&lt;p&gt;注释：&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;FROM&lt;/span&gt; mytable; &lt;span class=&quot;comment&quot;&gt;-- 注释&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* 注释1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;   注释2 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;数据库创建和使用：&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;DATABASE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;test&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;USE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;test&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+&lt;p&gt;SQL支持的注释：&lt;/p&gt;</summary>
     
     
     
@@ -108,16 +99,10 @@
     <link href="http://example.com/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/"/>
     <id>http://example.com/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/</id>
     <published>2021-06-04T00:28:44.857Z</published>
-    <updated>2021-06-04T00:47:24.583Z</updated>
+    <updated>2021-06-18T01:49:29.405Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;01 Java基础阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw&quot; target=&quot;_blank&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;01 Java基础阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw&lt;/a&gt;  密码:koa9&lt;br&gt;02 数据库阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw&lt;/a&gt;  密码:sbog&lt;br&gt;03 Web前端：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ&lt;/a&gt;  密码:p0wy&lt;br&gt;04 Javaweb阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w&lt;/a&gt;  密码:njpq&lt;br&gt;05 Web进阶：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g&lt;/a&gt;  密码:9w0s&lt;br&gt;06 Web项目实战：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA&lt;/a&gt;  密码:ekn5&lt;br&gt;07 Java框架阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ&lt;/a&gt;  密码:2jqq&lt;br&gt;08 互联网分布式技术：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg&lt;/a&gt;  密码:6t3d&lt;br&gt;09 项目实战：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw&lt;/a&gt;  密码:gplw&lt;br&gt;10 Java开发工具：&lt;br&gt;链接：&lt;a href=&quot;https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA&lt;/a&gt; 提取码：krpc&lt;/p&gt;</summary>
     
     
     
@@ -142,7 +127,7 @@
     <link href="http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/"/>
     <id>http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</id>
     <published>2021-05-30T06:28:16.000Z</published>
-    <updated>2021-06-06T03:50:10.473Z</updated>
+    <updated>2021-06-18T01:49:00.956Z</updated>
     
     
     <summary type="html">&lt;p&gt;抽象类和接口以及抽象类和接口的区别：&lt;br&gt;    抽象类：&lt;br&gt;        抽象类的定义：在class前添加abstract关键字&lt;br&gt;        抽象类是无法实例化的，所以抽象类是用来被子类继承的&lt;br&gt;        final和abstract不能联合使用，这两个关键字是对立的&lt;br&gt;        抽象类的子类可以是抽象类，也可以是非抽象类&lt;br&gt;        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。&lt;br&gt;        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。&lt;br&gt;        抽象方法的定义：public abstract void doSome();&lt;br&gt;        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现&lt;/p&gt;</summary>
@@ -157,18 +142,17 @@
     <link href="http://example.com/2021/05/26/Git/"/>
     <id>http://example.com/2021/05/26/Git/</id>
     <published>2021-05-26T06:23:49.816Z</published>
-    <updated>2021-05-30T11:08:14.362Z</updated>
+    <updated>2021-06-18T01:49:42.786Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;Git：目前最先进的分布式版本控制系统&lt;/p&gt;
 &lt;p&gt;Workspace：工作区&lt;br&gt;Index/Stage：暂存区&lt;br&gt;Repository：仓库区（本地仓库）&lt;br&gt;Remote：远程仓库&lt;/p&gt;
-&lt;p&gt;SVN/Git区别：&lt;br&gt;   </summary>
-        
-      
+&lt;p&gt;SVN/Git区别：&lt;br&gt;    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。&lt;br&gt;    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。&lt;/p&gt;
+&lt;p&gt;版本库repository：&lt;br&gt;    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。&lt;/p&gt;
+&lt;p&gt;理解工作区和暂存区：&lt;br&gt;    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴&lt;br&gt;    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st&lt;br&gt;    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。&lt;/p&gt;
+&lt;p&gt;使用Git提交文件到版本库步骤：&lt;br&gt;    1：使用git add把文件添加进去，实际就是把文件添加到暂存区&lt;br&gt;    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。&lt;/p&gt;
+&lt;p&gt;暂存区：&lt;/p&gt;
+&lt;p&gt;远程仓库：&lt;br&gt;    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：&lt;br&gt;        1，&lt;/p&gt;</summary>
     
     
     
@@ -180,7 +164,7 @@
     <link href="http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"/>
     <id>http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</id>
     <published>2021-05-21T07:57:02.300Z</published>
-    <updated>2021-06-18T01:40:39.187Z</updated>
+    <updated>2021-06-18T01:48:28.150Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;path：&quot;&gt;&lt;a href=&quot;#path：&quot; class=&quot;headerlink&quot; title=&quot;path：&quot;&gt;&lt;/a&gt;path：&lt;/h1&gt;&lt;p&gt;主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。&lt;br&gt;Classpath：类路径，java运行查找类文件的路径&lt;/p&gt;
@@ -218,20 +202,35 @@
     <link href="http://example.com/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>http://example.com/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
     <published>2021-05-17T12:02:07.320Z</published>
-    <updated>2021-05-20T08:32:36.574Z</updated>
+    <updated>2021-06-18T01:49:16.028Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt; 一些最重要的 SQL 命令&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;SELECT&lt;/strong&gt; - 从数据库中提取数据&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; -</summary>
-        
-      
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; - 更新数据库中的数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DELETE&lt;/strong&gt; - 从数据库中删除数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;INSERT INTO&lt;/strong&gt; - 向数据库中插入新数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CREATE DATABASE&lt;/strong&gt; - 创建新数据库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;ALTER DATABASE&lt;/strong&gt; - 修改数据库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CREATE TABLE&lt;/strong&gt; - 创建新表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;ALTER TABLE&lt;/strong&gt; - 变更（改变）数据库表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DROP TABLE&lt;/strong&gt; - 删除表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CREATE INDEX&lt;/strong&gt; - 创建索引（搜索键）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DROP INDEX&lt;/strong&gt; - 删除索引&lt;/p&gt;
+&lt;p&gt;SELECT DISTINCT：&lt;br&gt;选取出来列中唯一不同的值（重复的值出现一次）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -243,16 +242,13 @@
     <link href="http://example.com/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     <id>http://example.com/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
     <published>2021-05-13T08:08:25.061Z</published>
-    <updated>2021-06-04T12:33:10.762Z</updated>
+    <updated>2021-06-18T01:49:27.706Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2021-5-25&lt;br&gt;idea启动tomcat，8080端口被占，已解决&lt;br&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;p&gt;2021-5-25&lt;br&gt;idea启动tomcat，8080端口被占，已解决&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;tomcat启动项目报错：&lt;br&gt;    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;错误信息：Error during artifact deployment. See server log for details.
+    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=162192913216780255278525&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;amp;spm=1018.2226.3001.4187&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;【cmd命令】‘netstat’不是内部命令：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162280993916780264039009&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;amp;spm=1018.2226.3001.4187&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162280993916780264039009&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;amp;spm=1018.2226.3001.4187&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -290,16 +286,18 @@
     <link href="http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"/>
     <id>http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</id>
     <published>2021-05-11T14:58:05.795Z</published>
-    <updated>2021-06-16T11:25:42.852Z</updated>
+    <updated>2021-06-18T01:49:20.237Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;指数增长-Malthus-模型&quot;&gt;&lt;a href=&quot;#指数增长-Malthus-模型&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;指数增长-Malthus-模型&quot;&gt;&lt;a href=&quot;#指数增长-Malthus-模型&quot; class=&quot;headerlink&quot; title=&quot;指数增长(Malthus)模型:&quot;&gt;&lt;/a&gt;指数增长(Malthus)模型:&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1:https://blog.csdn.net/weixin_43441742/article/details/99622081
+
+2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162160078716780274133193&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;amp;utm_term=Malthus&amp;amp;spm=1018.2226.3001.4187
+3:
+
+提出和假设：
+    指数增长模型，由马尔萨斯在1798年提出
+    基本假设：人口（相对）增长率r是常数（r很小）
+    相对增长率 = 出生率 － 死亡率&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     
@@ -332,16 +330,17 @@
     <link href="http://example.com/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"/>
     <id>http://example.com/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</id>
     <published>2021-05-04T01:18:17.910Z</published>
-    <updated>2021-06-04T10:25:43.253Z</updated>
+    <updated>2021-06-18T01:49:36.827Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;MySQL系列学习目录：&quot;&gt;&lt;a href=&quot;#MySQL系列学习目录：&quot; class=&quot;headerlink&quot; title=&quot;MySQL系列学习目录：&quot;&gt;&lt;/a&gt;MySQL系列学习目录：&lt;/h2&gt;&lt;h3 id=&quot;MYSQL文章学习：&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;MySQL系列学习目录：&quot;&gt;&lt;a href=&quot;#MySQL系列学习目录：&quot; class=&quot;headerlink&quot; title=&quot;MySQL系列学习目录：&quot;&gt;&lt;/a&gt;MySQL系列学习目录：&lt;/h2&gt;&lt;h3 id=&quot;MYSQL文章学习：&quot;&gt;&lt;a href=&quot;#MYSQL文章学习：&quot; class=&quot;headerlink&quot; title=&quot;MYSQL文章学习：&quot;&gt;&lt;/a&gt;MYSQL文章学习：&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933257&amp;idx=1&amp;sn=0f0086a2465a2fcae13d3fea65064803&amp;chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&amp;token=1876080189&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第一篇:MySQL基础&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933270&amp;idx=1&amp;sn=409080e17352da2035b0bfdf63ccdfde&amp;chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&amp;token=1876080189&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二篇:详解MySQL数据类型&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933279&amp;idx=1&amp;sn=f8591b95362cb3c352d895b1289d665a&amp;chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&amp;token=516655478&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第三篇:管理员必备技能（必须掌握）&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933289&amp;idx=1&amp;sn=c4f212c312ea86e08ad322caddd05e38&amp;chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&amp;token=1484565200&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第四篇:DDL常见操作&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933296&amp;idx=1&amp;sn=1c56256d60c5847a944d87c8cfc9c14d&amp;chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&amp;token=2000571846&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第五篇:DML操作汇总（insert，update，delete）&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933300&amp;idx=1&amp;sn=bedef4d430dc76141e42e42ef6acfaa6&amp;chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&amp;token=1814800041&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第六篇:select查询基础篇&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933305&amp;idx=1&amp;sn=2c5ba0bea6fcdd57d86cecd63541f91a&amp;chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&amp;token=1144227002&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第七篇:玩转select条件查询，避免采坑&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933309&amp;idx=1&amp;sn=0f7dfec8bc70e67daa7159ee219325b8&amp;chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&amp;token=516674265&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第八篇:详解排序和分页(order by &amp;amp; limit)&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933315&amp;idx=1&amp;sn=4abf2b34a53a85cbd4a3b9ee31fcd398&amp;chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&amp;token=1937580929&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第九篇:分组查询详解(group by &amp;amp; having)&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933321&amp;idx=1&amp;sn=110f6cacb90845bf2327fbcd7acd708c&amp;chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&amp;token=1096041061&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十篇:常用的几十个函数详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933325&amp;idx=1&amp;sn=33274227db275a3570e1e43ccdd4f49c&amp;chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&amp;token=1832579722&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十一篇:深入了解连接查询及原理&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933342&amp;idx=2&amp;sn=2e41daa0926a9c32d5fddd23590391aa&amp;chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&amp;token=386795745&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十二篇:子查询&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933349&amp;idx=1&amp;sn=6e81f9046119cda43f8eb602d1139ef0&amp;chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&amp;token=386795745&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十三篇:细说NULL导致的神坑，让人防不胜防&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933355&amp;idx=1&amp;sn=b426ad28dfc2a64bba813df5b7c341a4&amp;chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&amp;token=385335213&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十四篇:详解事务&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933370&amp;idx=1&amp;sn=4fe9b8e2aba766988c503737d34d9836&amp;chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&amp;token=84059034&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十五篇:详解视图&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933374&amp;idx=1&amp;sn=c294b6a69564a4c98d4c0cb29aeb9ac0&amp;chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&amp;token=1531009350&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十六篇:变量详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933382&amp;idx=1&amp;sn=4cf80b4f50c80dcc8171d2128b47cf63&amp;chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&amp;token=1341741305&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十七篇:存储过程&amp;amp;自定义函数详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933388&amp;idx=1&amp;sn=59cb1d23845e45894bb72c1e2479f074&amp;chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&amp;token=1832749573&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十八篇:流程控制语句&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933392&amp;idx=1&amp;sn=ff29e380b42a0aa7cb1dc7659d745686&amp;chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&amp;token=1479782197&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第十九篇:游标详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933396&amp;idx=1&amp;sn=b6cc5d5287bf43d94e6706fa217aa8cb&amp;chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&amp;token=1846211483&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二十篇:异常捕获及处理详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933400&amp;idx=1&amp;sn=61af771f10342ee4956efea6749abd71&amp;chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&amp;token=1781447741&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二十一篇:什么是索引?&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933422&amp;idx=1&amp;sn=f28a92c195d914d636117c2316524c5e&amp;chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&amp;token=1928746279&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二十二篇:mysql索引原理详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933427&amp;idx=1&amp;sn=d9cb0317b50c76519291d2e4311b887f&amp;chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&amp;token=410060235&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二十三篇:mysql索引管理详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933439&amp;idx=1&amp;sn=a1eddd36a6f597b9cd43e39e9f1b9d76&amp;chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&amp;token=410060235&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二十四篇:如何正确的使用索引?&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933444&amp;idx=1&amp;sn=2d0c3ca9ba1275aa9dceac367d7b21a9&amp;chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&amp;token=164798892&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二十五篇:sql中where条件在数据库中提取与应用浅析&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&amp;mid=2648933457&amp;idx=1&amp;sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&amp;chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&amp;token=164798892&amp;lang=zh_CN#rd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第二十六篇：聊聊mysql如何实现分布式锁?&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;MYSQL视频学习：&quot;&gt;&lt;a href=&quot;#MYSQL视频学习：&quot; class=&quot;headerlink&quot; title=&quot;MYSQL视频学习：&quot;&gt;&lt;/a&gt;MYSQL视频学习：&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Vt411z7wy&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;b站MYSQL基础课&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1hE411V7vu&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;数据库关系代数&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;关系代数操作哈工大&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;机器学习相关资料&quot;&gt;&lt;a href=&quot;#机器学习相关资料&quot; class=&quot;headerlink&quot; title=&quot;机器学习相关资料:&quot;&gt;&lt;/a&gt;机器学习相关资料:&lt;/h2&gt;&lt;h3 id=&quot;吴恩达机器学习系列课程&quot;&gt;&lt;a href=&quot;#吴恩达机器学习系列课程&quot; class=&quot;headerlink&quot; title=&quot;吴恩达机器学习系列课程&quot;&gt;&lt;/a&gt;吴恩达机器学习系列课程&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://www.ai-start.com/ml2014/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;斯坦福大学2014机器学习教程中文笔记目录在线阅读&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV164411b7dx&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;视频地址(中文字幕版):&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;视频视频原地址(打开不流畅，建议b站观看):&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;学习网站：&quot;&gt;&lt;a href=&quot;#学习网站：&quot; class=&quot;headerlink&quot; title=&quot;学习网站：&quot;&gt;&lt;/a&gt;学习网站：&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.runoob.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程（编程基础知识）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.w3school.com.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;w3school（web技术教程）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.yiibai.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;易百教程&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     

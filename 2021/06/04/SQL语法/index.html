@@ -105,12 +105,13 @@
 <p>SQL（Structured Query Language)，标准SQL由ANSI标准委员会管理，从而称为ANSI SQL。各个DBMS都有自己的实现，如 PL/SQL、Transact-SQL 等。</p>
 <p>SQL不区分大小写，但数据库表名，列名和值是否区分依赖于具体的DBMS以及配置</p>
 <p>SQL支持的注释：</p>
+<a id="more"></a>
 <p>注释：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *</span><br><span class="line"><span class="keyword">FROM</span> mytable; <span class="comment">-- 注释</span></span><br><span class="line"><span class="comment">/* 注释1</span></span><br><span class="line"><span class="comment">   注释2 */</span></span><br></pre></td></tr></table></figure>
 
 <p>数据库创建和使用：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">test</span>;</span><br><span class="line"><span class="keyword">USE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<!--more-->
 <h2 id="二，创建表"><a href="#二，创建表" class="headerlink" title="二，创建表"></a>二，创建表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">create Table mytable(</span><br><span class="line">	#int 类型 ，不为空，自增</span><br><span class="line">	id INT NOT NULL AUTO_INCREMENT,</span><br><span class="line">	#int 类型，不为空，默认值为1，不为空</span><br><span class="line">	col1 INT NOT NULL DEFAULT1,</span><br><span class="line">	#变长字符串类型，最长为45个字符，可以为空</span><br><span class="line">	col2 VARCHAR(45) NULL,</span><br><span class="line">	#日期类型，不为空</span><br><span class="line">	col3 DATE NULL,</span><br><span class="line">	#设置主键id</span><br><span class="line">	PRIMARY KEY(&#39;id&#39;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
 <h2 id="三，修改表"><a href="#三，修改表" class="headerlink" title="三，修改表"></a>三，修改表</h2><p>添加列</p>
