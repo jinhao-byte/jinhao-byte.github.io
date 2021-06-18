@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">860</span>
+            <span class="post-count">1.1k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">4 min</span>
+            <span class="post-count">5 min</span>
         </span>
     </span>
 </div>
@@ -138,6 +138,31 @@ public static int find(int findNum ,int[] a,int start,int fin){
     Integer c1 = 1000;
     Integer c2 = 1000;
     System.out.println(&quot;c1==c2:&quot;+(c1==c2));//false
+}</code></pre><p>}</p>
+<p>2021-6-17<br>Collection练习：</p>
+<p>import java.util.*;</p>
+<p>public class collectionTest {<br>    public static void main(String[] args) {<br>        //创建Collection集合的对象<br>        Collection<String> c = new ArrayList<String>();<br>        //添加元素：bollean add(E e)<br>        c.add(“hello”);<br>        c.add(“World”);<br>        c.add(“demo”);<br>        System.out.println(c);<br>        System.out.println(“===========================”);<br>        List arr1 = new ArrayList&lt;&gt;();<br>        arr1.add(1);<br>        arr1.add(2);<br>        arr1.add(2);<br>        arr1.add(2);<br>        arr1.add(2);<br>        Iterator iterator = arr1.iterator();<br>        while (iterator.hasNext()){<br>            Integer a = (Integer) iterator.next();<br>            System.out.println(a);<br>        }</p>
+<pre><code>}</code></pre><p>}</p>
+<p>枚举练习：</p>
+<p>public class enumTest {<br>    public static void main(String[] args) {<br>        Color color = Color.green;<br>        switch (color){<br>            case red:<br>                System.out.println(“红色”);<br>                break;<br>            case blank:<br>                System.out.println(“灰色”);<br>                break;<br>                case yellow:<br>                System.out.println(“黄色”);<br>                break;<br>            default:<br>                System.out.println(“没有yanse”);</p>
+<pre><code>    }
+    int value1 = 3;
+    int value2 = 4;
+    Result result = method1(value1,value2);
+    System.out.println(result);//FAILURE
+    //result的变量类型：
+    System.out.println(result.getClass().getName());//enumTest$Result
+}
+private static Result method1(int value1,int value2){
+    if(value1&gt;value2)return Result.SUCCESS;
+    if(value1&lt;=value2)return Result.FAILURE;
+    else return Result.FAILURE;
+}
+public  enum  Color{
+    red,green,blank,yellow
+}
+enum Result{
+    SUCCESS,FAILURE
 }</code></pre><p>}</p>
  
       <!-- reward -->
