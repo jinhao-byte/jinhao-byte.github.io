@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">7k</span>
+            <span class="post-count">7.2k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">24 min</span>
+            <span class="post-count">25 min</span>
         </span>
     </span>
 </div>
@@ -223,6 +223,9 @@ default：如果class不采用public修饰的话，此时的class只能被该包
 <p>String的两种创建方式：<br>    1：双引号的方式，是在编译生成class文件的时候，字符串就存放在常量池里的，定义一个新的字符串的时候，先从常量池里找有没有这个字符串，有的话直接拿来用，没有的话，放进去后，再用。<br>    2：new关键字创建，创建一个字符串对象，对象放在堆区内存中，每次创建一个字符串的时候，创建一个新的字符串对象，字符串内容一样，字符串的引用不一样，可以用==来判断一下，不能用equals方法来判断，因为String类重写了toString方法。</p>
 <pre><code>因为String是不可变对象，多个字符串拼接的话，会形成多个对象，可能会造成内存溢出，拼接的时候可以使用StringBuffer和Builder</code></pre><p>枚举：<br>        采用枚举能够限定取值的范围，在程序编译的时候，及早返回错误，使程序更加健壮</p>
 <p>Treeset：<br>    可以放入不重复的数据，而且会进行排序，但必须实现Comparable接口，基本类型的包装类和String已经实现了该接口</p>
+<p>Comparable和 Comparator区别：<br>    一个类实现Comparable接口表明这个类的对象之间可以相互比较，对象组成的集合可以直接使用sort方法排序。<br>    Comparator可以看做一种算法的实现，将算法和数据分离，Comparator也可以在两种情况下使用：<br>        1：类本身没有考虑到比较问题而没有实现Comparable,可以通过Comparator来实现排序，不必改变对象本身<br>        2：可以使用多种排序标准，降序，升序。<br>    对于一些普通的数据类型（比如 String, Integer, Double…），它们默认实现了Comparable 接口，实现了 compareTo 方法，我们可以直接使用。</p>
+<pre><code>而对于一些自定义类，它们可能在不同情况下需要实现不同的比较策略，我们可以新创建 Comparator 接口，然后使用特定的 Comparator 实现进行比较。</code></pre><p>HashMap：<br>    HashMap底层实现是hash表，所以Map的Key，必须重写hashCode和equals方法。</p>
+<p>TreeMap：<br>    TreeMap可以对Map中的Key进行排序，如果map中的key采用的是自定义类，那么需要实现Comparable或者Comparator接口完成排序</p>
  
       <!-- reward -->
       

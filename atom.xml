@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-18T01:48:15.865Z</updated>
+  <updated>2021-06-23T01:18:30.692Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,56 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>机器学习笔记</title>
+    <link href="http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-06-23T00:42:19.541Z</published>
+    <updated>2021-06-23T01:18:30.692Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。&lt;/p&gt;
+&lt;p&gt;监督学习基本思想：我们每个数据集的每个样本都有相应的正确答案，再根据这些样本进行预测。&lt;/p&gt;
+&lt;p&gt;回归：就是我们推测这一系列连续值属性&lt;/p&gt;
+&lt;p&gt;分类：就是我们试着推测出离散的输出</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>多线程</title>
+    <link href="http://example.com/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>http://example.com/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
+    <published>2021-06-22T06:49:10.177Z</published>
+    <updated>2021-06-23T00:29:41.215Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;多线程：&lt;br&gt;    进程：正在运行的程序，是系统进行资源分配和调度的独立单位，每一个进程都有自己的内存空间和系统资源&lt;br&gt;    线程：在进程中的单个顺序控制流，是一条执行路径&lt;br&gt;        单线程：一个进程如果只有一条执行路径，则称为单线程程序&lt;br&gt;  </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Java代码练习</title>
     <link href="http://example.com/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
     <id>http://example.com/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/</id>
     <published>2021-06-12T11:53:50.957Z</published>
-    <updated>2021-06-18T01:48:15.865Z</updated>
+    <updated>2021-06-21T12:42:34.572Z</updated>
     
     
     <summary type="html">&lt;p&gt;2021-6-12&lt;br&gt;冒泡排序：&lt;br&gt;import java.util.Scanner;&lt;br&gt;public class bubbleSortTest {&lt;br&gt;    public static void main(String[] args) {&lt;br&gt;        Scanner input = new Scanner(System.in);&lt;br&gt;        int a[] = new int[10];&lt;br&gt;        for(int i = 0;i&amp;lt;a.length;i++){&lt;br&gt;            a[i] = input.nextInt();&lt;br&gt;        }&lt;br&gt;        System.out.println(“冒泡排序未排序前数组：”);&lt;br&gt;        //for each 循环&lt;br&gt;        for (int i:a) {&lt;br&gt;            System.out.print(i+”  “);&lt;br&gt;        }&lt;br&gt;        //冒泡排序：&lt;br&gt;        int d=0;&lt;br&gt;        for (int i=0; i&amp;lt;a.length-1;i++){&lt;br&gt;            for (int j=0;j&amp;lt;a.length-i-1;j++) {&lt;br&gt;                if (a[j] &amp;lt; a[j + 1]) {&lt;br&gt;                    d = a[j];&lt;br&gt;                    a[j] = a[j + 1];&lt;br&gt;                    a[j + 1] = d;&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;    }&lt;br&gt;        //冒泡排序后的结果&lt;br&gt;        System.out.println(“冒泡排序后”);&lt;br&gt;        for (int i=0;i&amp;lt;a.length;i++){&lt;br&gt;            System.out.print(a[i]+”   “);&lt;br&gt;        }&lt;br&gt;}}&lt;/p&gt;
@@ -164,7 +209,7 @@
     <link href="http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"/>
     <id>http://example.com/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</id>
     <published>2021-05-21T07:57:02.300Z</published>
-    <updated>2021-06-18T01:48:28.150Z</updated>
+    <updated>2021-06-22T06:49:44.212Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;path：&quot;&gt;&lt;a href=&quot;#path：&quot; class=&quot;headerlink&quot; title=&quot;path：&quot;&gt;&lt;/a&gt;path：&lt;/h1&gt;&lt;p&gt;主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。&lt;br&gt;Classpath：类路径，java运行查找类文件的路径&lt;/p&gt;
@@ -286,7 +331,7 @@
     <link href="http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"/>
     <id>http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</id>
     <published>2021-05-11T14:58:05.795Z</published>
-    <updated>2021-06-18T01:49:20.237Z</updated>
+    <updated>2021-06-21T08:20:29.390Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;指数增长-Malthus-模型&quot;&gt;&lt;a href=&quot;#指数增长-Malthus-模型&quot; class=&quot;headerlink&quot; title=&quot;指数增长(Malthus)模型:&quot;&gt;&lt;/a&gt;指数增长(Malthus)模型:&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1:https://blog.csdn.net/weixin_43441742/article/details/99622081
