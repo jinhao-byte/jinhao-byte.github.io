@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1k</span>
+            <span class="post-count">1.2k</span>
         </span>
     </span>
 
@@ -105,7 +105,22 @@
 <p>final int getPriority()：返回线程的优先级<br>final void setPriority(int newPriority)：更改线程的优先级，线程优先级默认为5，优先级范围是：1-10</p>
 <p>线程控制：<br>    static void sleep(long millis)：是当前正在执行的线程停留（暂停执行），指定的毫秒数<br>    void join()：等待这个线程死亡<br>    void setDaemon(boolean on) 将线程标记为守护线程，当运行的线程都是守护线程时，Java虚拟机将退出</p>
 <p>实现多线程的方式：<br>    继承Thread类或者实现Runnable接口<br>    相比继承Thread类，实现Runnable接口的好处：<br>        避免了Java的单继承的局限性<br>        适合多个相同程序的代码，去处理同一个资源的情况，把线程和程序的代码，数据有效分离，体现面向对象思想</p>
-<p>同步代码块解决数据安全问题：<br>    出现条件：在多线程环境下，有个共享数据，多条语句操作共享数据<br>    如何解决：让程序没有安全问题的环境<br>    如何实现：把多条语句操作数据的代码给锁起来，让任何时刻只能有一个线程执行就行了<br>    同步代码块：<br>        synchronized(任意对象){<br>            多条语句操作工具数据的代码<br>        }<br>        synchronized(任意对象)：相当于给代码加锁，任意对象就可以看做为一把锁<br>        好处和弊端：<br>            解决多线程的数据安全问题<br>            当线程很多的时候，因为每个线程都会去判断同步上的锁，这就很耗费资源，无形中降低程序的运行效率</p>
+<p>同步代码块解决数据安全问题：<br>    出现条件：在多线程环境下，有个共享数据，多条语句操作共享数据<br>    如何解决：让程序没有安全问题的环境<br>    如何实现：把多条语句操作数据的代码给锁起来，让任何时刻只能有一个线程执行就行了</p>
+<pre><code>同步代码块：   
+    synchronized(任意对象){
+        多条语句操作工具数据的代码
+    }
+    synchronized(任意对象)：相当于给代码加锁，任意对象就可以看做为一把锁
+    好处和弊端：
+        解决多线程的数据安全问题
+        当线程很多的时候，因为每个线程都会去判断同步上的锁，这就很耗费资源，无形中降低程序的运行效率</code></pre><p>线程安全的类：</p>
+<pre><code>StringBuffer:
+    线程安全，可变的字符串序列，从JDK5开始，被StringBuilder替代。通常应该使用StringBuilder类，因为它支持所有相同的操作，但它更快，因为执行不同步。
+Vector：
+    该类改进了List接口。与新的集合实现不同，Vector被同步。如果不需要线程安全实现，建议使用ArrayList代替Vector
+Hashtable:
+    该类实现哈希表，将键映射到值，任何非null对象都可以作为键或者值，Hashtable被同步。如果不需要线程安全的实现，建议使用HashMap代替Hashable</code></pre><p>生产者消费者模式：<br>    待理解</p>
+<p>Thread.sleep():<br>    是Thread类的一个静态方法，使当前线程休眠，进入阻塞状态（暂停执行），如果线程在睡眠状态被中断，将会抛出IterruptedException中断异常。</p>
 <p>代码练习：<br>public class SellTicketDemo {<br>    public static void main(String[] args) {<br>        //创建SellTicket类对象<br>        SellTicket st = new SellTicket();</p>
 <pre><code>    //创建三个Thread类对象，把SelllTicket对象作为构造方法的参数，并给对应窗口进行命名
     Thread thread1 = new Thread(st,&quot;窗口1&quot;);
