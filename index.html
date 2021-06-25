@@ -145,6 +145,64 @@
     
     
     <article
+  id="post-网络编程"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"
+    >网络编程</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2021-06-25T02:57:17.345Z" itemprop="datePublished">2021-06-25</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>计算机网络：<br>    是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及其网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。</p>
+<p>网络编程：<br>    在网络通信协议下，实现网络互联的不同计算机运行的程序间可以进行数据交换。</p>
+<p>网络编程3要素：</p>
+<pre><code>IP地址：
+    要想让网络中的计算机能够互相通信，必须为每台计算机指定一个标识号，通过这个标识号来指定要接收数据的计算机和识别发送的计算机，而IP地址就是这个标识号。也就是设备的标识
+
+端口：
+    网络的通信，本质上是两个应用程序的通信。每台计算机都有很多的应用程序，那么在网络通信时，如何区分这些应用程序呢？如果说IP地址可以唯一标识网络中的设备，那么端口号就可以唯一标识设备中的应用程序了。也就是应用程序的标识
+
+协议：
+    通过计算机网络可以使多台计算机实现连接，位于同一个网络中的计算机在进行连接和通信时需要遵守一定的规则，这就好比在道路中行驶的汽车一定要遵守交通规则一样。在计算机网络中，这些连接和通信的规则被称为网络通信协议，它对数据的传输格式、传输速率、传输步骤等做了统一规定，通信双方必须同时遵守才能完成数据交换。常见的协议有UDP协议和TCP协议</code></pre><p>IP地址：网络中设备的唯一标识<br>    IPV4：为每个连接在网络上的主机分配的32bit的地址，也就是4字节，例如11000000 10101000 00000001 01000010，为一个ipv4的地址，利用点分十进制表示法可以看成192.168.1.66<br>    IPV6：v4的地址不够用，v6重新定义地址空间，采用128为地址长度，16字节一组，8组十六进制数，来解决网络地址不足的问题<br>    DOS常用命令：<br>        ipconfig：查看本机IP地址<br>        ping IP地址：检查网络是否连通<br>    特殊IP地址：<br>        127.0.0.1：是回送地址，可以代表本机地址，一般用来测试使用</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-机器学习笔记"
   class="article article-type-post"
   itemscope
@@ -679,71 +737,13 @@ public void run() {
 </article>
 
     
-    <article
-  id="post-Git"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/26/Git/"
-    >Git</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/26/Git/" class="article-date">
-  <time datetime="2021-05-26T06:23:49.816Z" itemprop="datePublished">2021-05-26</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>Git：目前最先进的分布式版本控制系统</p>
-<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
-<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
-<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
-<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
-<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
-<p>暂存区：</p>
-<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p> 
-      <a class="article-more-link" href="/2021/05/26/Git/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>

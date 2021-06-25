@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-23T01:44:17.949Z</updated>
+  <updated>2021-06-25T03:26:59.019Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络编程</title>
+    <link href="http://example.com/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://example.com/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
+    <published>2021-06-25T02:57:17.345Z</published>
+    <updated>2021-06-25T03:26:59.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;计算机网络：&lt;br&gt;    是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及其网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。&lt;/p&gt;
+&lt;p&gt;网络编程：&lt;br&gt;   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>机器学习笔记</title>
@@ -387,21 +409,6 @@
 &lt;h3 id=&quot;学习网站：&quot;&gt;&lt;a href=&quot;#学习网站：&quot; class=&quot;headerlink&quot; title=&quot;学习网站：&quot;&gt;&lt;/a&gt;学习网站：&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.runoob.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程（编程基础知识）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.w3school.com.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;w3school（web技术教程）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.yiibai.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;易百教程&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL学习笔记</title>
-    <link href="http://example.com/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-05-04T01:18:17.899Z</published>
-    <updated>2021-06-03T03:11:05.876Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;MySQL学习笔记&quot;&gt;&lt;a href=&quot;#MySQL学习笔记&quot; class=&quot;headerlink&quot; title=&quot;MySQL学习笔记&quot;&gt;&lt;/a&gt;MySQL学习笔记&lt;/h1&gt;&lt;h2 id=&quot;登录和退出MySQL服务器&quot;&gt;&lt;a href=&quot;#登录和退出MySQL服务器&quot; class=&quot;headerlink&quot; title=&quot;登录和退出MySQL服务器&quot;&gt;&lt;/a&gt;登录和退出MySQL服务器&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; 登录MySQL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; mysql -u root -p12345612&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; 退出MySQL数据库服务器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
