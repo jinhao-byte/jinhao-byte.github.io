@@ -145,6 +145,46 @@
     
     
     <article
+  id="post-JavaSE进阶"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/"
+    >JavaSE进阶</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/" class="article-date">
+  <time datetime="2021-05-30T06:28:16.000Z" itemprop="datePublished">2021-05-30</time>
+</a>    
+    </div>
+       
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-Git"
   class="article article-type-post"
   itemscope
@@ -169,25 +209,7 @@
   <time datetime="2021-05-26T06:23:49.816Z" itemprop="datePublished">2021-05-26</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p>Git：目前最先进的分布式版本控制系统</p>
-<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
-<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
-<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
-<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
-<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
-<p>暂存区：</p>
-<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p> 
-      <a class="article-more-link" href="/2021/05/26/Git/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -227,19 +249,7 @@
   <time datetime="2021-05-21T07:57:02.300Z" itemprop="datePublished">2021-05-21</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
-<h1 id="public-class-和class："><a href="#public-class-和class：" class="headerlink" title="public class 和class："></a>public class 和class：</h1><p>​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p> 
-      <a class="article-more-link" href="/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -279,25 +289,7 @@
   <time datetime="2021-05-21T02:33:28.444Z" itemprop="datePublished">2021-05-21</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="maven"><a href="#maven" class="headerlink" title="maven:"></a>maven:</h3><p>[1] 根目录：工程名</p>
-<p>[2] |—src：源码</p>
-<p>[3] |—|—main:存放主程序,目录下是项目的主要代码</p>
-<p>[4] |—|—|—java：java源码文件</p>
-<p>[5] |—|—|—resource：存放框架的配置文件</p>
-<p>[6] |—|—test：存放测试程序,目录下存放测试相关的代码</p>
-<p>[7] |—pop.xml：maven的核心配置文件</p>
-<p>webapp下存放Web应用相关代码</p> 
-      <a class="article-more-link" href="/2021/05/21/javaee/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -337,43 +329,7 @@
   <time datetime="2021-05-17T12:02:07.320Z" itemprop="datePublished">2021-05-17</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p> 一些最重要的 SQL 命令</p>
-<ul>
-<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
-</li>
-<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
-</li>
-<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
-</li>
-<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
-</li>
-<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
-</li>
-<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
-</li>
-<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
-</li>
-<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
-</li>
-<li><p><strong>DROP TABLE</strong> - 删除表</p>
-</li>
-<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
-</li>
-<li><p><strong>DROP INDEX</strong> - 删除索引</p>
-<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
-</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -413,21 +369,7 @@
   <time datetime="2021-05-13T08:08:25.061Z" itemprop="datePublished">2021-05-13</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
-<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
-<pre><code>错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre><p>【cmd命令】‘netstat’不是内部命令：<br><a href="https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187</a></p> 
-      <a class="article-more-link" href="/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -467,14 +409,7 @@
   <time datetime="2021-05-12T06:15:51.008Z" itemprop="datePublished">2021-05-12</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-   
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -514,14 +449,7 @@
   <time datetime="2021-05-12T03:32:04.361Z" itemprop="datePublished">2021-05-12</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-   
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -561,26 +489,7 @@
   <time datetime="2021-05-11T14:58:05.795Z" itemprop="datePublished">2021-05-11</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="指数增长-Malthus-模型"><a href="#指数增长-Malthus-模型" class="headerlink" title="指数增长(Malthus)模型:"></a>指数增长(Malthus)模型:</h1><pre><code>1:https://blog.csdn.net/weixin_43441742/article/details/99622081
-
-2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162160078716780274133193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;utm_term=Malthus&amp;spm=1018.2226.3001.4187
-3:
-
-提出和假设：
-    指数增长模型，由马尔萨斯在1798年提出
-    基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率</code></pre> 
-      <a class="article-more-link" href="/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -620,142 +529,7 @@
   <time datetime="2021-05-04T01:44:19.590Z" itemprop="datePublished">2021-05-04</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="用来记录自己的的ML学习历程"><a href="#用来记录自己的的ML学习历程" class="headerlink" title="用来记录自己的的ML学习历程"></a>用来记录自己的的ML学习历程</h1><p>决策树：</p>
-<p>KNN算法：<br>    参考文章：<a href="https://blog.csdn.net/pengjunlee/article/details/82713047" target="_blank" rel="noopener">https://blog.csdn.net/pengjunlee/article/details/82713047</a><br>    解释：看一个人怎么样，看她身边的朋友是什么样就知道了，寻找最近的K个数据，推测出新数据的分类<br>    指导思想：近朱者赤，近墨者黑<br>    KNN只根据临近的几个样本的类别进行分类，对于一些类域交叉或者重叠较多的待分类样本集来说，KNN方法较为适合。</p>
-<pre><code>原理：
-    通用步骤： 
-        计算距离（常用欧几里得距离或者马氏距离） 
-        升序排列
-        取前K个
-        加权平均
-    K的选取：   
-        K太大：导致分类模糊
-        K太小：受个例影响，波动较大
-    如何选取K:
-        经验
-        均方根误差
-
-关键：
-    样本的所有特征都可以进行量化，一些非数值类型，可以采取手段量化为数值，例如颜色可以进行灰度转换为灰度值，来实现距离计算。
-    样本特征要作归一化处理，样本有很多参数，每个参数都有自己的定义域和取值范围，他们对距离计算的影响不一样，取值较大的类型会盖过较小的参数。所以样本参数必须做一些scale处理，最简单的方式就是所有的特征的数值都采取归一化处理。
-    需要一个距离函数以计算两个样本之间的距离，通常使用的距离函数有：欧氏距离，余弦距离，汉明距离，曼哈顿距离等，一般选取欧式。
-    欧式只适合于连续变量，在文本分类这种非连续变量情况下，汉明距离可以作为度量。
-    通常情况下，如果运用一些特殊的算法来计算度量的话，KNN分类的精度可以显著提高，如：大边缘最近邻法或者近邻成分分析法。
-        欧氏距离：高中的空间距离计算
-        曼哈顿距离：|x1-x2|+|y1-y2|
-    确定K的值：K值得选取，太大会产生欠拟合，太小容易过拟合，需要进行交叉验证确定K值
-    KNN的优点：
-        简单易于理解，易于实现，无需参数估计，无需训练；
-        适合对稀有事件进行分类；
-        特别适合于多分类问题（对象具有多个标签），KNN比SVM表现更好
-    KNN的缺点：
-        样本不平衡的时候， 该算法只计算最近的邻居样本，某一类的样本数量很大，或者这类样本并不接近目标样本，或者这类样本很靠近目标样本。
-        计算量较大。
-KNN算法实现：
-    步骤：
-        算距离：给定待分类样本，计算它与已分类样本中每个样本的距离；
-        找邻居：圈定与待分类样本距离最近的K个已分类样本，作为  待分类样本的近邻 ；
-        做分类：根据这K个近邻中的大部分样本所属的类别来决定待分类样本该属于哪个分类；
-    import math</code></pre><p>import csv<br>import operator<br>import random<br>import numpy as np<br>from sklearn.datasets import make_blobs</p>
-<p>#Python version 3.6.5</p>
-<h1 id="生成样本数据集-samples-样本数量-features-特征向量的维度-centers-类别个数"><a href="#生成样本数据集-samples-样本数量-features-特征向量的维度-centers-类别个数" class="headerlink" title="生成样本数据集 samples(样本数量) features(特征向量的维度) centers(类别个数)"></a>生成样本数据集 samples(样本数量) features(特征向量的维度) centers(类别个数)</h1><p>def createDataSet(samples=100, features=2, centers=2):<br>    return make_blobs(n_samples=samples, n_features=features, centers=centers, cluster_std=1.0, random_state=8)</p>
-<h1 id="加载鸢尾花卉数据集-filename-数据集文件存放路径"><a href="#加载鸢尾花卉数据集-filename-数据集文件存放路径" class="headerlink" title="加载鸢尾花卉数据集 filename(数据集文件存放路径)"></a>加载鸢尾花卉数据集 filename(数据集文件存放路径)</h1><p>def loadIrisDataset(filename):<br>    with open(filename, ‘rt’) as csvfile:<br>        lines = csv.reader(csvfile)<br>        dataset = list(lines)<br>        for x in range(len(dataset)):<br>            for y in range(4):<br>                dataset[x][y] = float(dataset[x][y])<br>        return dataset</p>
-<h1 id="拆分数据集-dataset-要拆分的数据集-split-训练集所占比例-trainingSet-训练集-testSet-测试集"><a href="#拆分数据集-dataset-要拆分的数据集-split-训练集所占比例-trainingSet-训练集-testSet-测试集" class="headerlink" title="拆分数据集 dataset(要拆分的数据集) split(训练集所占比例) trainingSet(训练集) testSet(测试集)"></a>拆分数据集 dataset(要拆分的数据集) split(训练集所占比例) trainingSet(训练集) testSet(测试集)</h1><p>def splitDataSet(dataSet, split, trainingSet=[], testSet=[]):<br>    for x in range(len(dataSet)):<br>        if random.random() &lt;= split:<br>            trainingSet.append(dataSet[x])<br>        else:<br>            testSet.append(dataSet[x])</p>
-<h1 id="计算欧氏距离"><a href="#计算欧氏距离" class="headerlink" title="计算欧氏距离"></a>计算欧氏距离</h1><p>def euclideanDistance(instance1, instance2, length):<br>    distance = 0<br>    for x in range(length):<br>        distance += pow((instance1[x] - instance2[x]), 2)<br>    return math.sqrt(distance)</p>
-<h1 id="选取距离最近的K个实例"><a href="#选取距离最近的K个实例" class="headerlink" title="选取距离最近的K个实例"></a>选取距离最近的K个实例</h1><p>def getNeighbors(trainingSet, testInstance, k):<br>    distances = []<br>    length = len(testInstance) - 1<br>    for x in range(len(trainingSet)):<br>        dist = euclideanDistance(testInstance, trainingSet[x], length)<br>        distances.append((trainingSet[x], dist))<br>    distances.sort(key=operator.itemgetter(1))</p>
-<pre><code>neighbors = []
-for x in range(k):
-    neighbors.append(distances[x][0])
-return neighbors</code></pre><h1 id="获取距离最近的K个实例中占比例较大的分类"><a href="#获取距离最近的K个实例中占比例较大的分类" class="headerlink" title="获取距离最近的K个实例中占比例较大的分类"></a>获取距离最近的K个实例中占比例较大的分类</h1><p>def getResponse(neighbors):<br>    classVotes = {}<br>    for x in range(len(neighbors)):<br>        response = neighbors[x][-1]<br>        if response in classVotes:<br>            classVotes[response] += 1<br>        else:<br>            classVotes[response] = 1<br>    sortedVotes = sorted(classVotes.items(), key=operator.itemgetter(1), reverse=True)<br>    return sortedVotes[0][0]</p>
-<h1 id="计算准确率"><a href="#计算准确率" class="headerlink" title="计算准确率"></a>计算准确率</h1><p>def getAccuracy(testSet, predictions):<br>    correct = 0<br>    for x in range(len(testSet)):<br>        if testSet[x][-1] == predictions[x]:<br>            correct += 1<br>    return (correct / float(len(testSet))) * 100.0</p>
-<p>def main():<br>    # 使用自定义创建的数据集进行分类<br>    # x,y = createDataSet(features=2)<br>    # dataSet= np.c_[x,y]</p>
-<pre><code># 使用鸢尾花卉数据集进行分类
-dataSet = loadIrisDataset(r&apos;C:\DevTolls\eclipse-pureh2b\python\DeepLearning\KNN\iris_dataset.txt&apos;)
-
-print(dataSet)
-trainingSet = []
-testSet = []
-splitDataSet(dataSet, 0.75, trainingSet, testSet)
-print(&apos;Train set:&apos; + repr(len(trainingSet)))
-print(&apos;Test set:&apos; + repr(len(testSet)))
-predictions = []
-k = 7
-for x in range(len(testSet)):
-    neighbors = getNeighbors(trainingSet, testSet[x], k)
-    result = getResponse(neighbors)
-    predictions.append(result)
-    print(&apos;&gt;predicted=&apos; + repr(result) + &apos;,actual=&apos; + repr(testSet[x][-1]))
-accuracy = getAccuracy(testSet, predictions)
-print(&apos;Accuracy: &apos; + repr(accuracy) + &apos;%&apos;)</code></pre><p>main()</p>
-<p>尾花卉数据文件百度网盘下载链接：<a href="https://pan.baidu.com/s/10vI5p_QuM7esc-jkar2zdQ" target="_blank" rel="noopener">https://pan.baidu.com/s/10vI5p_QuM7esc-jkar2zdQ</a> 密码：4und</p>
-<pre><code>KNN算法应用：
-    使用KNN算法处理简单分类任务
-    在scikit-learn中，内置若干玩具数据集，还有API让我们可以自己来生成一些数据集。</code></pre> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-学习资源链接"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"
-    >学习资源链接</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/" class="article-date">
-  <time datetime="2021-05-04T01:18:17.910Z" itemprop="datePublished">2021-05-04</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
-<h3 id="MYSQL视频学习："><a href="#MYSQL视频学习：" class="headerlink" title="MYSQL视频学习："></a>MYSQL视频学习：</h3><p><a href="https://www.bilibili.com/video/BV1Vt411z7wy" target="_blank" rel="noopener">b站MYSQL基础课</a></p>
-<p><a href="https://www.bilibili.com/video/BV1hE411V7vu" target="_blank" rel="noopener">数据库关系代数</a></p>
-<p><a href="https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" rel="noopener">关系代数操作哈工大</a></p>
-<h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
-<h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
-<p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
-<p><a href="https://www.yiibai.com/" target="_blank" rel="noopener">易百教程</a></p> 
-      <a class="article-more-link" href="/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
