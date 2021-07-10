@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-26T07:43:18.184Z</updated>
+  <updated>2021-07-04T05:10:46.599Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>反射机制</title>
+    <link href="http://example.com/2021/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"/>
+    <id>http://example.com/2021/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/</id>
+    <published>2021-07-04T05:00:37.124Z</published>
+    <updated>2021-07-04T05:10:46.599Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;反射概念：程序能够访问，监测和修改自身状态和行为的一种能力&lt;/p&gt;
+&lt;p&gt;反射是一种强大工具，能够创建灵活代码，代码可以在运行时装配，无序在组件内进行源代码链接。&lt;br&gt;如果使用不当，成本很高&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>马原知识点</title>
+    <link href="http://example.com/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://example.com/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
+    <published>2021-07-04T03:17:58.165Z</published>
+    <updated>2021-07-04T07:29:28.093Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;绪论：&quot;&gt;&lt;a href=&quot;#绪论：&quot; class=&quot;headerlink&quot; title=&quot;绪论：&quot;&gt;&lt;/a&gt;绪论：&lt;/h2&gt;&lt;p&gt;马克思主义的直接理论来源是：德国古典哲学</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>计算机基础知识</title>
@@ -56,10 +100,11 @@
     <link href="http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-06-23T00:42:19.541Z</published>
-    <updated>2021-06-23T01:44:17.949Z</updated>
+    <updated>2021-07-10T13:24:26.479Z</updated>
     
     
-    <summary type="html">&lt;p&gt;监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;学习资料来源：&lt;br&gt;    GitChat《机器学习极简入门》,黄广海《吴恩达机器学习笔记》&lt;/p&gt;
+&lt;p&gt;监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。&lt;/p&gt;
 &lt;p&gt;监督学习基本思想：我们每个数据集的每个样本都有相应的正确答案，再根据这些样本进行预测。&lt;/p&gt;
 &lt;p&gt;回归：就是我们推测这一系列连续值属性&lt;/p&gt;
 &lt;p&gt;分类：就是我们试着推测出离散的输出值，目标是推出一组离散的结果&lt;/p&gt;
@@ -357,50 +402,6 @@
     <published>2021-05-12T03:32:04.361Z</published>
     <updated>2021-05-12T03:32:04.361Z</updated>
     
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数学建模比赛</title>
-    <link href="http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"/>
-    <id>http://example.com/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</id>
-    <published>2021-05-11T14:58:05.795Z</published>
-    <updated>2021-06-24T00:15:00.106Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;指数增长-Malthus-模型&quot;&gt;&lt;a href=&quot;#指数增长-Malthus-模型&quot; class=&quot;headerlink&quot; title=&quot;指数增长(Malthus)模型:&quot;&gt;&lt;/a&gt;指数增长(Malthus)模型:&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1:https://blog.csdn.net/weixin_43441742/article/details/99622081
-
-2:https://blog.csdn.net/weixin_46308081/article/details/115640828?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162160078716780274133193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162160078716780274133193&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115640828.first_rank_v2_pc_rank_v29&amp;amp;utm_term=Malthus&amp;amp;spm=1018.2226.3001.4187
-3:
-
-提出和假设：
-    指数增长模型，由马尔萨斯在1798年提出
-    基本假设：人口（相对）增长率r是常数（r很小）
-    相对增长率 = 出生率 － 死亡率&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习记录</title>
-    <link href="http://example.com/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    <id>http://example.com/2021/05/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
-    <published>2021-05-04T01:44:19.590Z</published>
-    <updated>2021-06-06T12:33:36.912Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;用来记录自己的的ML学习历程&quot;&gt;&lt;a href=&quot;#用来记录自己的的ML学习历程&quot; class=&quot;headerlink&quot;</summary>
-        
-      
     
     
     
