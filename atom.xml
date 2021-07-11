@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-04T05:10:46.599Z</updated>
+  <updated>2021-07-11T02:41:39.642Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MatLab学习</title>
+    <link href="http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-07-11T00:34:18.323Z</published>
+    <updated>2021-07-11T02:41:39.642Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;学习资料来自：公众号：二进制人工智能，回复matlab。&lt;br&gt;2021-7-10&lt;br&gt;Matlab操作界面了解，搜索路径&lt;br&gt;2021-7-11&lt;br&gt;clc：清空命令行窗口的数据&lt;br&gt;语句后面加上分号的话，不显示结果，可以继续执行&lt;br&gt;MATLAB提供数据转换函</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>反射机制</title>
@@ -388,19 +409,6 @@
     <id>http://example.com/2021/05/12/XML%E5%AD%A6%E4%B9%A0/</id>
     <published>2021-05-12T06:15:51.008Z</published>
     <updated>2021-05-12T06:15:51.008Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue学习</title>
-    <link href="http://example.com/2021/05/12/vue%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://example.com/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</id>
-    <published>2021-05-12T03:32:04.361Z</published>
-    <updated>2021-05-12T03:32:04.361Z</updated>
     
     
     
