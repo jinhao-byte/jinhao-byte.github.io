@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.5k</span>
+            <span class="post-count">3.3k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">9 min</span>
+            <span class="post-count">12 min</span>
         </span>
     </span>
 </div>
@@ -206,6 +206,29 @@ xh</code></pre><blockquote>
     ~a：a为1，，结果为0
     参与逻辑运算的如果是两个同型矩阵，那么将会对矩阵相同位置上的元素，按照标量规则进行运算返回一个与原矩阵同型的矩阵，元素由0，1组成；</code></pre><p>字符串处理：<br>    在matlab中，字符串是用单括号括起来的，创建字符串过程中，如果字符串中有单引号的话，用两个单引号表示字符串中的一个字符串。创建字符串矩阵实例：ch = [‘abcdef’,’123456’];<br>    字符串的操作：<br>        字符串作为命令执行：eval(s);s中为matlab的命令字符串<br>        字符串与数值之间的转换：abs和double函数可以用来获取字符串矩阵所对应的ASCII码矩阵；char函数可以把ASCII码矩阵转换为字符串矩阵；<br>    字符串的比较：（关系运算符或者是利用字符串比较函数）<br>        1，关系比较符，字符串里的每个字符按照ASCII码进行逐个比较，比较的结果是一个数值向量，向量要么是1，或者是0。<br>        2，字符串比较函数：<br>            1)strcmp(s1,s2):用来比较字符串s1和s2是否相等，如果相等返回1，否则返回0。<br>            2)strncmp(s1,s2,n):用来比较两个字符串前n个是否相等，如果相等返回1，否则返回0。<br>            3)strcmpi(s1,s2):在忽略字母大小写前提下，比较量字符串是否相等，相等返回1，否则返回0。<br>            4)strncmpi(s1,s2,n):忽略字符串大小写，比较前n个字符串是否相等，相等返回1，否则返回0。<br>    字符串的查找和替换：<br>        find(s1,s2):返回短字符串在长字符串中的开始位置。<br>        strrep(s1,s2,s3):返回字符串s1中的所有子字符串s2替换为字符串s3.</p>
 <p>—————————-第一章一天终于给肝完了，还有八章😣o(╥﹏╥)o———————————————–</p>
+<p>———–2021-7-12————-第二章，都是矩阵，线代忘得差不多了…… 开始！！！！！！—————————-</p>
+<p>size(A):返回矩阵的大小。<br>format rat：输出格式将小数形式转化为分数形式<br>矩阵的特征值：</p>
+<p>特殊矩阵：<br>      通用型矩阵：<br>        zero函数：产生全0矩阵，即零矩阵。<br>        ones矩阵：产生全是1矩阵，即幺矩阵。<br>        eye函数：产生对角线段不为1的矩阵，当矩阵是方阵的时候，得到一个单位矩阵。<br>        rand函数：产生（0，1）区间的均匀分布的随机矩阵。<br>        randn函数：产生均值为0，方差为1的标准正泰分布随机矩阵 。</p>
+<p>​    用于专门学科的特殊矩阵：<br>        魔方矩阵–Magic Square<br>            特点：n阶魔方矩阵由1，2，3…n^2共n^2个整数组成，且每行，每列，主副对角线上的n个元素之和都相等；n阶魔方矩阵每行每列元素之和为（1+2+3+…+n^2）/n = (n+n^3)/2。<br>            MATLAB函数的magic(n)产生特定的魔方矩阵。<br>        范德蒙矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225223730821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="范德蒙矩阵"><br>        希尔伯特矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225223910101.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        伴随矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225224117756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>            <img src="https://img-blog.csdnimg.cn/20200225224219403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        帕斯卡矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225224445440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>            例子：<br>            <img src="https://img-blog.csdnimg.cn/20200225224515349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<pre><code>矩阵变换：
+    对角阵：只有对角线上有非零元素的矩阵。
+    数量矩阵：对角线上的元素相等的对角矩阵。
+    单位矩阵：对角线上的元素都为1的对角矩阵。
+    相关函数：
+        提取对角线元素：
+       ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200225225014735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+        构造对角矩阵
+       ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022522511771.png)
+
+    三角阵：
+        上三角矩阵：
+        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200225225517654.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+        下三角矩阵：
+        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200225225548956.png)</code></pre><p>矩阵的转置：<br>    两者对于实矩阵没有差异，均表示转置矩阵<br>    ctranspose, ‘表示复共轭转置，转置后虚部符号相反。<br>    transpose, .’表示非共轭转置，转置后虚部不变</p>
+<p>矩阵的旋转：<br>    <img src="https://img-blog.csdnimg.cn/20200225225828259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>矩阵的翻转：<br>    <img src="https://img-blog.csdnimg.cn/20200225225949126.png" alt="在这里插入图片描述"><br>    <img src="https://img-blog.csdnimg.cn/2020022523065439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>矩阵的求逆矩阵：<br>    对于一个方阵A，如果存在一个与其同阶的方阵使得AB=BA=I（I为单位矩阵）则称B为A的逆矩阵，A也是B的逆矩阵。<br>    函数：inv(A),求方阵A的逆矩阵<br>    例子🌰：<br>    <img src="https://img-blog.csdnimg.cn/20200225231016428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>矩阵求值：<br>    矩阵的行列式：<br>        把一个方阵看做一个行列式，按照行列式的规则求值，这个值就是方阵对应的行列式的值。<br>        det(A):求方阵A所对应的行列式的值。（必须是方阵）<br>    矩阵的秩：<br>        概念：矩阵线性无关的行数或者列数称为矩阵的秩。<br>        函数：rank(A),求矩阵的秩。<br>    矩阵的迹：<br>        概念：矩阵的迹等于矩阵的对角线元素之和，也等于矩阵的特征值之和。<br>        函数：trace(A),求矩阵A的迹。</p>
  
       <!-- reward -->
       
