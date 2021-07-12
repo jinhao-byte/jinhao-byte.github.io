@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-11T02:41:39.642Z</updated>
+  <updated>2021-07-12T01:41:35.440Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/"/>
     <id>http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/</id>
     <published>2021-07-11T00:34:18.323Z</published>
-    <updated>2021-07-11T02:41:39.642Z</updated>
+    <updated>2021-07-12T01:41:35.440Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;学习资料来自：公众号：二进制人工智能，回复matlab。&lt;br&gt;2021-7-10&lt;br&gt;Matlab操作界面了解，搜索路径&lt;br&gt;2021-7-11&lt;br&gt;clc：清空命令行窗口的数据&lt;br&gt;语句后面加上分号的话，不显示结果，可以继续执行&lt;br&gt;MATLAB提供数据转换函</summary>
+    <summary type="html">&lt;p&gt;学习资料来自：公众号：二进制人工智能，回复matlab。&lt;br&gt;2021-7-10&lt;br&gt;Matlab操作界面了解，搜索路径&lt;br&gt;2021-7-11&lt;br&gt;clc：清空命令行窗口的数据&lt;br&gt;doc，with，help：可以了解matlab的使用和函数用法查找&lt;br&gt;矩阵</summary>
         
       
     
@@ -121,7 +121,7 @@
     <link href="http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-06-23T00:42:19.541Z</published>
-    <updated>2021-07-10T13:24:26.479Z</updated>
+    <updated>2021-07-11T13:16:02.001Z</updated>
     
     
     <summary type="html">&lt;p&gt;学习资料来源：&lt;br&gt;    GitChat《机器学习极简入门》,黄广海《吴恩达机器学习笔记》&lt;/p&gt;

@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">841</span>
+            <span class="post-count">2.5k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">3 min</span>
+            <span class="post-count">9 min</span>
         </span>
     </span>
 </div>
@@ -98,7 +98,9 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>学习资料来自：公众号：二进制人工智能，回复matlab。<br>2021-7-10<br>Matlab操作界面了解，搜索路径<br>2021-7-11<br>clc：清空命令行窗口的数据<br>语句后面加上分号的话，不显示结果，可以继续执行<br>MATLAB提供数据转换函数来实现数据类型的转换</p>
+  <p>学习资料来自：公众号：二进制人工智能，回复matlab。<br>2021-7-10<br>Matlab操作界面了解，搜索路径<br>2021-7-11<br>clc：清空命令行窗口的数据<br>doc，with，help：可以了解matlab的使用和函数用法查找<br>矩阵乘法：*<br>数组乘法：.*</p>
+<p>inv(矩阵)函数返回的是矩阵得转置</p>
+<p>语句后面加上分号的话，不显示结果，可以继续执行<br>MATLAB提供数据转换函数来实现数据类型的转换</p>
 <p>整形：<br>    无符号整数：无符号 8,16,32,64位整数范围：0-2的8次方-1；<br>    有符号整数：带符号8,16,32,64位整数范围：-2的七次方-2的七次方-1</p>
 <p>浮点型：<br>    分为单精度和双精度两种类型，单精度实数占用内存4个字节，双精度实数占用内存8个字节，双精度型精度更高。<br>    single函数：将其他类型转化为单精度类型；<br>    double函数：将其他类型转化为双精度类型；</p>
 <p>复数型：<br>    复数类型包括实部和虚部两个部分，实部和虚部默认为双精度型，虚部单位用i表示。<br>    函数：<br>        real() %求复数的实部<br>        imag() %求复数的虚部</p>
@@ -127,6 +129,83 @@ find(A)函数：返回向量中非零元素的位置</code></pre><p>变量与赋
 <p>查看修改变量：who/whos,whos显示的信息更多</p>
 <p>内存变量文件（save,load）<br>    用于保存Matlab工作区变量的文件叫做内存变量文件，其扩展名为.mat，也叫MAT文件，是一种标准的二进制格式文件。<br>    save命令：创建内存变量文件<br>    load命令：载入内存变量文件<br>    save mydata a x   % 将a x保存在mydata.mat文件中<br>    load mydata       % 载入mydata.mat中的变量</p>
 <p>MATLAB矩阵的表示：  </p>
+<pre><code>1：矩阵元素用中括号扩起来，按照行的顺序输入个各元素
+2：同一行的元素可以用逗号或者空格分隔开
+3：不同行的元素用分号分割</code></pre><p>MATLAB矩阵的拼接：<br>    A=[1,2,3,4;5,6,7,8]<br>    B=[4,3,2,1;0,9,8,7]<br>    C=[A;B]%B矩阵在A矩阵的下面<br>    C1=[A,B]%B矩阵在A矩阵右边</p>
+<p>构建复数矩阵：<br>    B=[1,2,3;4,5,6];<br>    C=[6,7,8;9,10,11];<br>    A=B+i*C<br>A =<br>   1.0000 + 6.0000i   2.0000 + 7.0000i   3.0000 + 8.0000i<br>   4.0000 + 9.0000i   5.0000 +10.0000i   6.0000 +11.0000i</p>
+<p>冒号表达式：<br>    格式   初始值:步长:终止值</p>
+<p>结构矩阵：<br>    &gt;&gt; class(1).n1=18;class(1).xm=’XIaoming’;class(1).xh=[1,2,3,4,5];</p>
+<blockquote>
+<blockquote>
+<p> class(2).n1=19;class(2).xm=’XIaohong’;class(2).xh=[1,2,3,4,6];<br>class(3).n1=10;class(3).xm=’Xiaojun’;class(3).xh=[1,2,3,4,9];<br>whos<br>  Name       Size            Bytes  Class     Attributes</p>
+</blockquote>
+</blockquote>
+<p>  class      1x3              1390  struct              </p>
+<blockquote>
+<blockquote>
+<p>class</p>
+</blockquote>
+</blockquote>
+<p>class = </p>
+<p>1x3 struct array with fields:</p>
+<pre><code>n1
+xm
+xh</code></pre><blockquote>
+<blockquote>
+<p>class(1)</p>
+</blockquote>
+</blockquote>
+<p>ans = </p>
+<pre><code>n1: 18
+xm: &apos;XIaoming&apos;
+xh: [1 2 3 4 5]</code></pre><blockquote>
+<blockquote>
+<p>class1 = class</p>
+</blockquote>
+</blockquote>
+<p>class1 = </p>
+<p>1x3 struct array with fields:</p>
+<pre><code>n1
+xm
+xh</code></pre><blockquote>
+<blockquote>
+<p>class1(1).xh</p>
+</blockquote>
+</blockquote>
+<p>ans =</p>
+<pre><code>1     2     3     4     5</code></pre><blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<p>单元矩阵：<br>    单元矩阵类型，可以把不同的数据放在一个变量中，单元矩阵与结构矩阵不一样，单元矩阵的一个元素就是一个数据</p>
+<p>矩阵元素的引用：<br>    1，通过下标来引用矩阵的元素，A(3,1)表示A矩阵的第三行第二列的元素。<br>    2，通过序号来引用，matlab是按照列进行元素存储的，存储完第一列元素后，继续存储第二列的元素。<br>    矩阵元素的序号和下标可以利用sub2ind和ind2sub函数进行相互转化</p>
+<p>利用冒号表达式获得子矩阵：<br>    获取第i行的全部元素A(i,:)<br>    获得第j列的全部元素A(:,j)<br>    获得第i<del>i+m行内且在第k</del>k+m列中的所有元素A(i:i+m,k:k+m)<br>    获得第i~i+m行的所有元素A(i:i+m,:)</p>
+<p>end运算符: 表示某一维的末尾元素下标</p>
+<p>改变矩阵的形状(reshape):reshape(A,m,n)<br>    函数只是改变原矩阵的行数和列数，不改变原矩阵的元素个数以及存储顺序。<br>    例如：<br>    X = [23,45,65,34,65,34,98,45,6,7,89,6]<br>    y = reshape(X,3,4)% y矩阵是3行4列，按列存储<br>    y =<br>    23    34    98     7<br>    45    65    45    89<br>    65    34     6     6</p>
+<p>MATLAB基本运算：<br>    基本算数运算：<br>        加+   减-   乘*   左除\  右除/  乘方^<br>    MATLAB的算数运算是在矩阵意义下运行的。<br>    单个数据的算数运算只是矩阵运算的一种特例<br>    加法运算：<br>        如果两矩阵同型，则运算时两矩阵的对应元素相加减。<br>        如果两个矩阵不同型，则matlab将给出错误信息<br>        一个标量也可以和矩阵进行加减运算，这时把标量和矩阵的每一个元素进行加减运算<br>    乘法运算：</p>
+<pre><code>    矩阵A和B进行乘法运算，要求A的列数与B的行数相等，则称矩阵A，B是可乘的。
+    如果两矩阵维数或者大小不相容，会报错。
+除法运算：
+    在MATLAB中，有两种矩阵除法：左除/和右除\。
+    如果A矩阵是非奇异矩阵，则B/A等效于 B * inv(A), A\B等效于inv(A) * B     (奇异矩阵就是行列式为0的矩阵，一个矩阵可逆，说明一个矩阵是非奇异矩阵)
+乘方运算：
+    A^2 = A*A
+点运算：
+    点运算符：四个：.*     ./      .\       .^    。
+    两矩阵进行点运算指的是他们的对应元素进行相关运算，要求两矩阵同型。
+关系运算：
+    关系运算符：&lt;小于，&lt;=小于等于，&gt;大于，=&gt;大于等于， ==等于，~=不等于。
+    当两个比较量是标量时，直接比较两个数的大小，正确则返回1，否则返回0。
+    当比较的量是两个同型的矩阵时，比较的是两对矩阵相同位置的元素按照标量关系运算规则逐个进行，最终的关系运算的结果是一个与原矩阵同型的矩阵，元素由0，1组成。
+    当参与比较的一个是标量一个是矩阵的时候，标量与矩阵的每一个元素进行比较，最终的结果返回与原矩阵相同的矩阵，元素由0，1组成。
+逻辑运算
+    运算符：&amp;（与），|（或），和~（非）
+    a，b两个标量，
+    a&amp;b：a，b全为零的时候，运算结果为1，否则为0；
+    a|b：a，b只要有一个不为零，运算结果就为1；
+    ~a：a为1，，结果为0
+    参与逻辑运算的如果是两个同型矩阵，那么将会对矩阵相同位置上的元素，按照标量规则进行运算返回一个与原矩阵同型的矩阵，元素由0，1组成；</code></pre><p>字符串处理：<br>    在matlab中，字符串是用单括号括起来的，创建字符串过程中，如果字符串中有单引号的话，用两个单引号表示字符串中的一个字符串。创建字符串矩阵实例：ch = [‘abcdef’,’123456’];<br>    字符串的操作：<br>        字符串作为命令执行：eval(s);s中为matlab的命令字符串<br>        字符串与数值之间的转换：abs和double函数可以用来获取字符串矩阵所对应的ASCII码矩阵；char函数可以把ASCII码矩阵转换为字符串矩阵；<br>    字符串的比较：（关系运算符或者是利用字符串比较函数）<br>        1，关系比较符，字符串里的每个字符按照ASCII码进行逐个比较，比较的结果是一个数值向量，向量要么是1，或者是0。<br>        2，字符串比较函数：<br>            1)strcmp(s1,s2):用来比较字符串s1和s2是否相等，如果相等返回1，否则返回0。<br>            2)strncmp(s1,s2,n):用来比较两个字符串前n个是否相等，如果相等返回1，否则返回0。<br>            3)strcmpi(s1,s2):在忽略字母大小写前提下，比较量字符串是否相等，相等返回1，否则返回0。<br>            4)strncmpi(s1,s2,n):忽略字符串大小写，比较前n个字符串是否相等，相等返回1，否则返回0。<br>    字符串的查找和替换：<br>        find(s1,s2):返回短字符串在长字符串中的开始位置。<br>        strrep(s1,s2,s3):返回字符串s1中的所有子字符串s2替换为字符串s3.</p>
+<p>—————————-第一章一天终于给肝完了，还有八章😣o(╥﹏╥)o———————————————–</p>
  
       <!-- reward -->
       
