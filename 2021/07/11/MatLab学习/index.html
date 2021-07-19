@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">3.3k</span>
+            <span class="post-count">4.9k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">12 min</span>
+            <span class="post-count">18 min</span>
         </span>
     </span>
 </div>
@@ -228,8 +228,88 @@ xh</code></pre><blockquote>
 <p>矩阵的旋转：<br>    <img src="https://img-blog.csdnimg.cn/20200225225828259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>矩阵的翻转：<br>    <img src="https://img-blog.csdnimg.cn/20200225225949126.png" alt="在这里插入图片描述"><br>    <img src="https://img-blog.csdnimg.cn/2020022523065439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>矩阵的求逆矩阵：<br>    对于一个方阵A，如果存在一个与其同阶的方阵使得AB=BA=I（I为单位矩阵）则称B为A的逆矩阵，A也是B的逆矩阵。<br>    函数：inv(A),求方阵A的逆矩阵<br>    例子🌰：<br>    <img src="https://img-blog.csdnimg.cn/20200225231016428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>矩阵求值：<br>    矩阵的行列式：<br>        把一个方阵看做一个行列式，按照行列式的规则求值，这个值就是方阵对应的行列式的值。<br>        det(A):求方阵A所对应的行列式的值。（必须是方阵）<br>    矩阵的秩：<br>        概念：矩阵线性无关的行数或者列数称为矩阵的秩。<br>        函数：rank(A),求矩阵的秩。<br>    矩阵的迹：<br>        概念：矩阵的迹等于矩阵的对角线元素之和，也等于矩阵的特征值之和。<br>        函数：trace(A),求矩阵A的迹。</p>
- 
+<p>矩阵求值：<br>    矩阵的行列式：<br>        把一个方阵看做一个行列式，按照行列式的规则求值，这个值就是方阵对应的行列式的值。<br>        det(A):求方阵A所对应的行列式的值。（必须是方阵）<br>    矩阵的秩：<br>        概念：矩阵线性无关的行数或者列数称为矩阵的秩。<br>        函数：rank(A),求矩阵的秩。<br>    矩阵的迹：<br>        概念：矩阵的迹等于矩阵的对角线元素之和，也等于矩阵的特征值之和。<br>        函数：trace(A),求矩阵A的迹。<br>    向量和矩阵的范数：<br>        矩阵或者向量的范数用来度量矩阵或者向量在某种意义下的长度。<br>        <img src="https://img-blog.csdnimg.cn/20200225232020998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    矩阵的条件数：<br>        <img src="https://img-blog.csdnimg.cn/20200225232406378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>矩阵的特征值与特征向量：<br>    特征值的数学定义：（有点忘记了，￣□￣｜｜）<br>        <img src="https://img-blog.csdnimg.cn/20200226010535257.png" alt="在这里插入图片描述"><br>    求矩阵的特征值和特征向量：<br>        <img src="https://img-blog.csdnimg.cn/20200226010633561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>稀疏矩阵：<br>    稀疏矩阵指的是零元素个数远远多于非零元素个数的矩阵，如果将大量的零元素也存储，会导致存储空间的浪费。MATLAB为稀疏矩阵提供特殊的存储方式。</p>
+<pre><code>1：完全存储方式
+2：稀疏存储方式：矩阵值存储矩阵的非零元素的值及其位置，即行号和列号。
+    注意：采取稀疏矩阵存储方式时，矩阵元素的存储顺序并没有改变，还是按照列顺序进行存储。
+
+稀疏存储方式的产生：    
+    完全存储方式与稀疏存储方式之间的转化：
+        A = sparse(S):将矩阵S转化为稀疏矩阵方式的
+        S = full(A):将矩阵A转化为完全存储方式的矩阵S。
+    🌰：    
+        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226023304423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+
+    直接建立稀疏存储矩阵：
+        sparse函数的其他调用函数：
+            sparse(m,n):生成一个mxn的所有元素都是零的稀疏矩阵。
+            sparse(u,s,S):其中u，v，S是3个等长的向量。S是要建立的稀疏存储矩阵的非零元素
+        🌰：
+            ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022602353898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+
+        spconvert函数：
+            ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022602383560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+        用A的一行元素来表示一个稀疏矩阵的一个元素，相当于A每一行的每个元素是相应的稀疏矩阵元素的一个信息。这些信息经过spconvert函数就可以得到相应的稀疏矩阵元素。
+
+    带状稀疏矩阵的稀疏存储：
+        稀疏矩阵有两种基本类型：无规则结构的稀疏矩阵，有结构的稀疏矩阵。
+
+        带状稀疏矩阵：所有非零元素集中在对角线上的矩阵。
+        1）：[B,d] = spdiags(A):从带状稀疏矩阵A中提取全部的非零对角线元素赋值给矩阵B及其这些非零对角线的位置向量d。
+        2）：A = spdiags(B,d,m,n):产生带状矩阵的稀疏存储矩阵A，其中m，n为原带状稀疏矩阵的行数与列数，矩阵B的第i列即为原带状矩阵的第i条非零对角线，向量d为原带状稀疏矩阵所有非零对角线的位置。
+
+    单位矩阵的稀疏存储：
+        speye(m,n)返回一个m x n的稀疏存储单位矩阵。</code></pre><p>——————————-2021-7-13—第二章结束，三章加油ヾ(◍°∇°◍)ﾉﾞ————————</p>
+<p>有点简单🍳，哈哈</p>
+<p>rem(x,y):求x/y的余数</p>
+<p>顺序存储结构：<br>    程序：程序是用某种计算机能够理解并且能够执行的语言来描述的解决问题的方法和步骤。<br>    程度设计的基本步骤：分析问题，确定求解问题的数学模型或者方法–&gt;设计算法，并画出流程图–&gt;选择编程工具，根据算法编写程序–&gt;调试程序，分析程序的输出结果。</p>
+<pre><code>程序的三种基本结构：顺序结构，选择结构，循环结构；
+
+脚本文件和函数文件：
+    脚本文件是可以在命令行窗口直接执行的文件，也叫命令文件。
+    函数文件是定义一个函数，不能直接执行，必须先调用它。
+
+文件的创建：
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226095729894.png)
+
+顺序结构：
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226100056429.png)
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226100556715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+
+    数据的输入：
+    A = input(&apos;请输入变量A的值：&apos;);
+    数据的输出：
+    disp(输出项);（disp不会显示变量的名字和空格，输出格式更紧凑）
+
+    程序的暂停：pause(延迟秒数)，如果是强行终止程序的运行，可以只用Ctrl+C命令。
+
+    输入原始数据--&gt;对原始数据进行处理--&gt;输出处理结果
+
+if语句实现选择结构：    
+    选择结构：
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226101516330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+
+    if语句：
+        ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022610162038.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226102049629.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226102518527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)</code></pre><p>MATLAB绘图：<br>    hold on 和hold off（默认）<br>    是相对使用的前者的意思是，你在当前图的轴（坐标系）中画了一幅图，再画另一幅图时，原来的图还在，与新图共存，都看得到<br>    后者表达的是，你在当前图的轴（坐标系）中画了一幅图，此时，状态是hold off,则再画另一幅图时，原来的图就看不到了，在轴上绘制的是新图，原图被替换了</p>
+<pre><code>linspace(x,y,z):生成一个数列，x开头，y结束，z为步长（间隔）
+二维曲线：
+    plot函数：plot(x,y)其中，x，y分别用来存储x坐标和y坐标。</code></pre><p>函数文件的定义和调用：</p>
+<pre><code>函数文件基本结构：
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226162544633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+    tip：当函数名与函数文件名不同的时候，MATLAB将忽略函数名，调用时使用函数文件名。
+
+函数调用：
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226162645415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
+
+匿名函数：
+    匿名函数不用函数文件定义，直接在程序脚本中创建。
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022616305056.png)
+    🌰：
+        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226170501499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)</code></pre> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -462,7 +542,7 @@ xh</code></pre><blockquote>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
+      <a class="nav-item-link" href="/null">摄影</a>
     </li>
     
     <li class="nav-item">
