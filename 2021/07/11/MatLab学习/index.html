@@ -16,7 +16,7 @@
       <title>MatLab学习 |  Jinhao&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/images/touxiang.jpg" />
        
 <link rel="stylesheet" href="/dist/main.css">
 
@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">4.9k</span>
+            <span class="post-count">4.4k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">18 min</span>
+            <span class="post-count">16 min</span>
         </span>
     </span>
 </div>
@@ -183,133 +183,49 @@ xh</code></pre><blockquote>
 <p>end运算符: 表示某一维的末尾元素下标</p>
 <p>改变矩阵的形状(reshape):reshape(A,m,n)<br>    函数只是改变原矩阵的行数和列数，不改变原矩阵的元素个数以及存储顺序。<br>    例如：<br>    X = [23,45,65,34,65,34,98,45,6,7,89,6]<br>    y = reshape(X,3,4)% y矩阵是3行4列，按列存储<br>    y =<br>    23    34    98     7<br>    45    65    45    89<br>    65    34     6     6</p>
 <p>MATLAB基本运算：<br>    基本算数运算：<br>        加+   减-   乘*   左除\  右除/  乘方^<br>    MATLAB的算数运算是在矩阵意义下运行的。<br>    单个数据的算数运算只是矩阵运算的一种特例<br>    加法运算：<br>        如果两矩阵同型，则运算时两矩阵的对应元素相加减。<br>        如果两个矩阵不同型，则matlab将给出错误信息<br>        一个标量也可以和矩阵进行加减运算，这时把标量和矩阵的每一个元素进行加减运算<br>    乘法运算：</p>
-<pre><code>    矩阵A和B进行乘法运算，要求A的列数与B的行数相等，则称矩阵A，B是可乘的。
-    如果两矩阵维数或者大小不相容，会报错。
-除法运算：
-    在MATLAB中，有两种矩阵除法：左除/和右除\。
-    如果A矩阵是非奇异矩阵，则B/A等效于 B * inv(A), A\B等效于inv(A) * B     (奇异矩阵就是行列式为0的矩阵，一个矩阵可逆，说明一个矩阵是非奇异矩阵)
-乘方运算：
-    A^2 = A*A
-点运算：
-    点运算符：四个：.*     ./      .\       .^    。
-    两矩阵进行点运算指的是他们的对应元素进行相关运算，要求两矩阵同型。
-关系运算：
-    关系运算符：&lt;小于，&lt;=小于等于，&gt;大于，=&gt;大于等于， ==等于，~=不等于。
-    当两个比较量是标量时，直接比较两个数的大小，正确则返回1，否则返回0。
-    当比较的量是两个同型的矩阵时，比较的是两对矩阵相同位置的元素按照标量关系运算规则逐个进行，最终的关系运算的结果是一个与原矩阵同型的矩阵，元素由0，1组成。
-    当参与比较的一个是标量一个是矩阵的时候，标量与矩阵的每一个元素进行比较，最终的结果返回与原矩阵相同的矩阵，元素由0，1组成。
-逻辑运算
-    运算符：&amp;（与），|（或），和~（非）
-    a，b两个标量，
-    a&amp;b：a，b全为零的时候，运算结果为1，否则为0；
-    a|b：a，b只要有一个不为零，运算结果就为1；
-    ~a：a为1，，结果为0
-    参与逻辑运算的如果是两个同型矩阵，那么将会对矩阵相同位置上的元素，按照标量规则进行运算返回一个与原矩阵同型的矩阵，元素由0，1组成；</code></pre><p>字符串处理：<br>    在matlab中，字符串是用单括号括起来的，创建字符串过程中，如果字符串中有单引号的话，用两个单引号表示字符串中的一个字符串。创建字符串矩阵实例：ch = [‘abcdef’,’123456’];<br>    字符串的操作：<br>        字符串作为命令执行：eval(s);s中为matlab的命令字符串<br>        字符串与数值之间的转换：abs和double函数可以用来获取字符串矩阵所对应的ASCII码矩阵；char函数可以把ASCII码矩阵转换为字符串矩阵；<br>    字符串的比较：（关系运算符或者是利用字符串比较函数）<br>        1，关系比较符，字符串里的每个字符按照ASCII码进行逐个比较，比较的结果是一个数值向量，向量要么是1，或者是0。<br>        2，字符串比较函数：<br>            1)strcmp(s1,s2):用来比较字符串s1和s2是否相等，如果相等返回1，否则返回0。<br>            2)strncmp(s1,s2,n):用来比较两个字符串前n个是否相等，如果相等返回1，否则返回0。<br>            3)strcmpi(s1,s2):在忽略字母大小写前提下，比较量字符串是否相等，相等返回1，否则返回0。<br>            4)strncmpi(s1,s2,n):忽略字符串大小写，比较前n个字符串是否相等，相等返回1，否则返回0。<br>    字符串的查找和替换：<br>        find(s1,s2):返回短字符串在长字符串中的开始位置。<br>        strrep(s1,s2,s3):返回字符串s1中的所有子字符串s2替换为字符串s3.</p>
+<p> 矩阵A和B进行乘法运算，要求A的列数与B的行数相等，则称矩阵A，B是可乘的。<br>    如果两矩阵维数或者大小不相容，会报错。<br>除法运算：<br>    在MATLAB中，有两种矩阵除法：左除/和右除\。<br>    如果A矩阵是非奇异矩阵，则B/A等效于 B * inv(A), A\B等效于inv(A) * B     (奇异矩阵就是行列式为0的矩阵，一个矩阵可逆，说明一个矩阵是非奇异矩阵)<br>乘方运算：<br>    A^2 = A<em>A<br>点运算：<br>    点运算符：四个：.</em>     ./      .\       .^    。<br>    两矩阵进行点运算指的是他们的对应元素进行相关运算，要求两矩阵同型。<br>关系运算：<br>    关系运算符：&lt;小于，&lt;=小于等于，&gt;大于，=&gt;大于等于， ==等于，<del>=不等于。<br>    当两个比较量是标量时，直接比较两个数的大小，正确则返回1，否则返回0。<br>    当比较的量是两个同型的矩阵时，比较的是两对矩阵相同位置的元素按照标量关系运算规则逐个进行，最终的关系运算的结果是一个与原矩阵同型的矩阵，元素由0，1组成。<br>    当参与比较的一个是标量一个是矩阵的时候，标量与矩阵的每一个元素进行比较，最终的结果返回与原矩阵相同的矩阵，元素由0，1组成。<br>逻辑运算<br>    运算符：&amp;（与），|（或），和</del>（非）<br>    a，b两个标量，<br>    a&amp;b：a，b全为零的时候，运算结果为1，否则为0；<br>    a|b：a，b只要有一个不为零，运算结果就为1；<br>    ~a：a为1，，结果为0<br>    参与逻辑运算的如果是两个同型矩阵，那么将会对矩阵相同位置上的元素，按照标量规则进行运算返回一个与原矩阵同型的矩阵，元素由0，1组成；</p>
+<p>字符串处理：<br>    在matlab中，字符串是用单括号括起来的，创建字符串过程中，如果字符串中有单引号的话，用两个单引号表示字符串中的一个字符串。创建字符串矩阵实例：ch = [‘abcdef’,’123456’];<br>    字符串的操作：<br>        字符串作为命令执行：eval(s);s中为matlab的命令字符串<br>        字符串与数值之间的转换：abs和double函数可以用来获取字符串矩阵所对应的ASCII码矩阵；char函数可以把ASCII码矩阵转换为字符串矩阵；<br>    字符串的比较：（关系运算符或者是利用字符串比较函数）<br>        1，关系比较符，字符串里的每个字符按照ASCII码进行逐个比较，比较的结果是一个数值向量，向量要么是1，或者是0。<br>        2，字符串比较函数：<br>            1)strcmp(s1,s2):用来比较字符串s1和s2是否相等，如果相等返回1，否则返回0。<br>            2)strncmp(s1,s2,n):用来比较两个字符串前n个是否相等，如果相等返回1，否则返回0。<br>            3)strcmpi(s1,s2):在忽略字母大小写前提下，比较量字符串是否相等，相等返回1，否则返回0。<br>            4)strncmpi(s1,s2,n):忽略字符串大小写，比较前n个字符串是否相等，相等返回1，否则返回0。<br>    字符串的查找和替换：<br>        find(s1,s2):返回短字符串在长字符串中的开始位置。<br>        strrep(s1,s2,s3):返回字符串s1中的所有子字符串s2替换为字符串s3.</p>
 <p>—————————-第一章一天终于给肝完了，还有八章😣o(╥﹏╥)o———————————————–</p>
 <p>———–2021-7-12————-第二章，都是矩阵，线代忘得差不多了…… 开始！！！！！！—————————-</p>
 <p>size(A):返回矩阵的大小。<br>format rat：输出格式将小数形式转化为分数形式<br>矩阵的特征值：</p>
 <p>特殊矩阵：<br>      通用型矩阵：<br>        zero函数：产生全0矩阵，即零矩阵。<br>        ones矩阵：产生全是1矩阵，即幺矩阵。<br>        eye函数：产生对角线段不为1的矩阵，当矩阵是方阵的时候，得到一个单位矩阵。<br>        rand函数：产生（0，1）区间的均匀分布的随机矩阵。<br>        randn函数：产生均值为0，方差为1的标准正泰分布随机矩阵 。</p>
-<p>​    用于专门学科的特殊矩阵：<br>        魔方矩阵–Magic Square<br>            特点：n阶魔方矩阵由1，2，3…n^2共n^2个整数组成，且每行，每列，主副对角线上的n个元素之和都相等；n阶魔方矩阵每行每列元素之和为（1+2+3+…+n^2）/n = (n+n^3)/2。<br>            MATLAB函数的magic(n)产生特定的魔方矩阵。<br>        范德蒙矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225223730821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="范德蒙矩阵"><br>        希尔伯特矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225223910101.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        伴随矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225224117756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>            <img src="https://img-blog.csdnimg.cn/20200225224219403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        帕斯卡矩阵：<br>            <img src="https://img-blog.csdnimg.cn/20200225224445440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>            例子：<br>            <img src="https://img-blog.csdnimg.cn/20200225224515349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<pre><code>矩阵变换：
-    对角阵：只有对角线上有非零元素的矩阵。
-    数量矩阵：对角线上的元素相等的对角矩阵。
-    单位矩阵：对角线上的元素都为1的对角矩阵。
-    相关函数：
-        提取对角线元素：
-       ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200225225014735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-        构造对角矩阵
-       ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022522511771.png)
-
-    三角阵：
-        上三角矩阵：
-        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200225225517654.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-        下三角矩阵：
-        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200225225548956.png)</code></pre><p>矩阵的转置：<br>    两者对于实矩阵没有差异，均表示转置矩阵<br>    ctranspose, ‘表示复共轭转置，转置后虚部符号相反。<br>    transpose, .’表示非共轭转置，转置后虚部不变</p>
+<p>​    用于专门学科的特殊矩阵：<br>​        魔方矩阵–Magic Square<br>​            特点：n阶魔方矩阵由1，2，3…n^2共n^2个整数组成，且每行，每列，主副对角线上的n个元素之和都相等；n阶魔方矩阵每行每列元素之和为（1+2+3+…+n^2）/n = (n+n^3)/2。<br>​            MATLAB函数的magic(n)产生特定的魔方矩阵。<br>​        范德蒙矩阵：<br>​            <img src="https://img-blog.csdnimg.cn/20200225223730821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="范德蒙矩阵"><br>​        希尔伯特矩阵：<br>​            <img src="https://img-blog.csdnimg.cn/20200225223910101.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>​        伴随矩阵：<br>​            <img src="https://img-blog.csdnimg.cn/20200225224117756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>​            <img src="https://img-blog.csdnimg.cn/20200225224219403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>​        帕斯卡矩阵：<br>​            <img src="https://img-blog.csdnimg.cn/20200225224445440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>​            例子：<br>​            <img src="https://img-blog.csdnimg.cn/20200225224515349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>矩阵变换：<br>    对角阵：只有对角线上有非零元素的矩阵。<br>    数量矩阵：对角线上的元素相等的对角矩阵。<br>    单位矩阵：对角线上的元素都为1的对角矩阵。<br>    相关函数：<br>        提取对角线元素：<br>       <img src="https://img-blog.csdnimg.cn/20200225225014735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        构造对角矩阵<br>       <img src="https://img-blog.csdnimg.cn/2020022522511771.png" alt="在这里插入图片描述"></p>
+<p>三角阵：<br>    上三角矩阵：<br>    <img src="https://img-blog.csdnimg.cn/20200225225517654.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    下三角矩阵：<br>    <img src="https://img-blog.csdnimg.cn/20200225225548956.png" alt="在这里插入图片描述"></p>
+<p>矩阵的转置：<br>    两者对于实矩阵没有差异，均表示转置矩阵<br>    ctranspose, ‘表示复共轭转置，转置后虚部符号相反。<br>    transpose, .’表示非共轭转置，转置后虚部不变</p>
 <p>矩阵的旋转：<br>    <img src="https://img-blog.csdnimg.cn/20200225225828259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>矩阵的翻转：<br>    <img src="https://img-blog.csdnimg.cn/20200225225949126.png" alt="在这里插入图片描述"><br>    <img src="https://img-blog.csdnimg.cn/2020022523065439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>矩阵的求逆矩阵：<br>    对于一个方阵A，如果存在一个与其同阶的方阵使得AB=BA=I（I为单位矩阵）则称B为A的逆矩阵，A也是B的逆矩阵。<br>    函数：inv(A),求方阵A的逆矩阵<br>    例子🌰：<br>    <img src="https://img-blog.csdnimg.cn/20200225231016428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>矩阵求值：<br>    矩阵的行列式：<br>        把一个方阵看做一个行列式，按照行列式的规则求值，这个值就是方阵对应的行列式的值。<br>        det(A):求方阵A所对应的行列式的值。（必须是方阵）<br>    矩阵的秩：<br>        概念：矩阵线性无关的行数或者列数称为矩阵的秩。<br>        函数：rank(A),求矩阵的秩。<br>    矩阵的迹：<br>        概念：矩阵的迹等于矩阵的对角线元素之和，也等于矩阵的特征值之和。<br>        函数：trace(A),求矩阵A的迹。<br>    向量和矩阵的范数：<br>        矩阵或者向量的范数用来度量矩阵或者向量在某种意义下的长度。<br>        <img src="https://img-blog.csdnimg.cn/20200225232020998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    矩阵的条件数：<br>        <img src="https://img-blog.csdnimg.cn/20200225232406378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>矩阵的特征值与特征向量：<br>    特征值的数学定义：（有点忘记了，￣□￣｜｜）<br>        <img src="https://img-blog.csdnimg.cn/20200226010535257.png" alt="在这里插入图片描述"><br>    求矩阵的特征值和特征向量：<br>        <img src="https://img-blog.csdnimg.cn/20200226010633561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>稀疏矩阵：<br>    稀疏矩阵指的是零元素个数远远多于非零元素个数的矩阵，如果将大量的零元素也存储，会导致存储空间的浪费。MATLAB为稀疏矩阵提供特殊的存储方式。</p>
-<pre><code>1：完全存储方式
-2：稀疏存储方式：矩阵值存储矩阵的非零元素的值及其位置，即行号和列号。
-    注意：采取稀疏矩阵存储方式时，矩阵元素的存储顺序并没有改变，还是按照列顺序进行存储。
-
-稀疏存储方式的产生：    
-    完全存储方式与稀疏存储方式之间的转化：
-        A = sparse(S):将矩阵S转化为稀疏矩阵方式的
-        S = full(A):将矩阵A转化为完全存储方式的矩阵S。
-    🌰：    
-        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226023304423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-
-    直接建立稀疏存储矩阵：
-        sparse函数的其他调用函数：
-            sparse(m,n):生成一个mxn的所有元素都是零的稀疏矩阵。
-            sparse(u,s,S):其中u，v，S是3个等长的向量。S是要建立的稀疏存储矩阵的非零元素
-        🌰：
-            ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022602353898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-
-        spconvert函数：
-            ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022602383560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-        用A的一行元素来表示一个稀疏矩阵的一个元素，相当于A每一行的每个元素是相应的稀疏矩阵元素的一个信息。这些信息经过spconvert函数就可以得到相应的稀疏矩阵元素。
-
-    带状稀疏矩阵的稀疏存储：
-        稀疏矩阵有两种基本类型：无规则结构的稀疏矩阵，有结构的稀疏矩阵。
-
-        带状稀疏矩阵：所有非零元素集中在对角线上的矩阵。
-        1）：[B,d] = spdiags(A):从带状稀疏矩阵A中提取全部的非零对角线元素赋值给矩阵B及其这些非零对角线的位置向量d。
-        2）：A = spdiags(B,d,m,n):产生带状矩阵的稀疏存储矩阵A，其中m，n为原带状稀疏矩阵的行数与列数，矩阵B的第i列即为原带状矩阵的第i条非零对角线，向量d为原带状稀疏矩阵所有非零对角线的位置。
-
-    单位矩阵的稀疏存储：
-        speye(m,n)返回一个m x n的稀疏存储单位矩阵。</code></pre><p>——————————-2021-7-13—第二章结束，三章加油ヾ(◍°∇°◍)ﾉﾞ————————</p>
+<p>1：完全存储方式<br>2：稀疏存储方式：矩阵值存储矩阵的非零元素的值及其位置，即行号和列号。<br>    注意：采取稀疏矩阵存储方式时，矩阵元素的存储顺序并没有改变，还是按照列顺序进行存储。</p>
+<p>稀疏存储方式的产生：<br>    完全存储方式与稀疏存储方式之间的转化：<br>        A = sparse(S):将矩阵S转化为稀疏矩阵方式的<br>        S = full(A):将矩阵A转化为完全存储方式的矩阵S。<br>    🌰：<br>        <img src="https://img-blog.csdnimg.cn/20200226023304423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>直接建立稀疏存储矩阵：<br>    sparse函数的其他调用函数：<br>        sparse(m,n):生成一个mxn的所有元素都是零的稀疏矩阵。<br>        sparse(u,s,S):其中u，v，S是3个等长的向量。S是要建立的稀疏存储矩阵的非零元素<br>    🌰：<br>        <img src="https://img-blog.csdnimg.cn/2020022602353898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>spconvert函数：<br>    <img src="https://img-blog.csdnimg.cn/2020022602383560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>用A的一行元素来表示一个稀疏矩阵的一个元素，相当于A每一行的每个元素是相应的稀疏矩阵元素的一个信息。这些信息经过spconvert函数就可以得到相应的稀疏矩阵元素。</p>
+<p>带状稀疏矩阵的稀疏存储：<br>    稀疏矩阵有两种基本类型：无规则结构的稀疏矩阵，有结构的稀疏矩阵。</p>
+<p>带状稀疏矩阵：所有非零元素集中在对角线上的矩阵。<br>1）：[B,d] = spdiags(A):从带状稀疏矩阵A中提取全部的非零对角线元素赋值给矩阵B及其这些非零对角线的位置向量d。<br>2）：A = spdiags(B,d,m,n):产生带状矩阵的稀疏存储矩阵A，其中m，n为原带状稀疏矩阵的行数与列数，矩阵B的第i列即为原带状矩阵的第i条非零对角线，向量d为原带状稀疏矩阵所有非零对角线的位置。</p>
+<p>单位矩阵的稀疏存储：<br>    speye(m,n)返回一个m x n的稀疏存储单位矩阵。</p>
+<p>——————————-2021-7-13—第二章结束，三章加油ヾ(◍°∇°◍)ﾉﾞ————————</p>
 <p>有点简单🍳，哈哈</p>
 <p>rem(x,y):求x/y的余数</p>
 <p>顺序存储结构：<br>    程序：程序是用某种计算机能够理解并且能够执行的语言来描述的解决问题的方法和步骤。<br>    程度设计的基本步骤：分析问题，确定求解问题的数学模型或者方法–&gt;设计算法，并画出流程图–&gt;选择编程工具，根据算法编写程序–&gt;调试程序，分析程序的输出结果。</p>
-<pre><code>程序的三种基本结构：顺序结构，选择结构，循环结构；
-
-脚本文件和函数文件：
-    脚本文件是可以在命令行窗口直接执行的文件，也叫命令文件。
-    函数文件是定义一个函数，不能直接执行，必须先调用它。
-
-文件的创建：
-    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226095729894.png)
-
-顺序结构：
-    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226100056429.png)
-    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226100556715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-
-    数据的输入：
-    A = input(&apos;请输入变量A的值：&apos;);
-    数据的输出：
-    disp(输出项);（disp不会显示变量的名字和空格，输出格式更紧凑）
-
-    程序的暂停：pause(延迟秒数)，如果是强行终止程序的运行，可以只用Ctrl+C命令。
-
-    输入原始数据--&gt;对原始数据进行处理--&gt;输出处理结果
-
-if语句实现选择结构：    
-    选择结构：
-    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226101516330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-
-    if语句：
-        ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022610162038.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226102049629.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226102518527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)</code></pre><p>MATLAB绘图：<br>    hold on 和hold off（默认）<br>    是相对使用的前者的意思是，你在当前图的轴（坐标系）中画了一幅图，再画另一幅图时，原来的图还在，与新图共存，都看得到<br>    后者表达的是，你在当前图的轴（坐标系）中画了一幅图，此时，状态是hold off,则再画另一幅图时，原来的图就看不到了，在轴上绘制的是新图，原图被替换了</p>
-<pre><code>linspace(x,y,z):生成一个数列，x开头，y结束，z为步长（间隔）
-二维曲线：
-    plot函数：plot(x,y)其中，x，y分别用来存储x坐标和y坐标。</code></pre><p>函数文件的定义和调用：</p>
-<pre><code>函数文件基本结构：
-    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226162544633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-    tip：当函数名与函数文件名不同的时候，MATLAB将忽略函数名，调用时使用函数文件名。
-
-函数调用：
-    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226162645415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)
-
-匿名函数：
-    匿名函数不用函数文件定义，直接在程序脚本中创建。
-    ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022616305056.png)
-    🌰：
-        ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226170501499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70)</code></pre> 
+<p>程序的三种基本结构：顺序结构，选择结构，循环结构；</p>
+<p>脚本文件和函数文件：<br>    脚本文件是可以在命令行窗口直接执行的文件，也叫命令文件。<br>    函数文件是定义一个函数，不能直接执行，必须先调用它。</p>
+<p>文件的创建：<br>    <img src="https://img-blog.csdnimg.cn/20200226095729894.png" alt="在这里插入图片描述"></p>
+<p>顺序结构：<br>    <img src="https://img-blog.csdnimg.cn/20200226100056429.png" alt="在这里插入图片描述"><br>    <img src="https://img-blog.csdnimg.cn/20200226100556715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>数据的输入：<br>A = input(‘请输入变量A的值：’);<br>数据的输出：<br>disp(输出项);（disp不会显示变量的名字和空格，输出格式更紧凑）</p>
+<p>程序的暂停：pause(延迟秒数)，如果是强行终止程序的运行，可以只用Ctrl+C命令。</p>
+<p>输入原始数据–&gt;对原始数据进行处理–&gt;输出处理结果</p>
+<p>if语句实现选择结构：<br>    选择结构：<br>    <img src="https://img-blog.csdnimg.cn/20200226101516330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>if语句：<br>    <img src="https://img-blog.csdnimg.cn/2020022610162038.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    <img src="https://img-blog.csdnimg.cn/20200226102049629.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    <img src="https://img-blog.csdnimg.cn/20200226102518527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>MATLAB绘图：<br>    hold on 和hold off（默认）<br>    是相对使用的前者的意思是，你在当前图的轴（坐标系）中画了一幅图，再画另一幅图时，原来的图还在，与新图共存，都看得到<br>    后者表达的是，你在当前图的轴（坐标系）中画了一幅图，此时，状态是hold off,则再画另一幅图时，原来的图就看不到了，在轴上绘制的是新图，原图被替换了</p>
+<p>linspace(x,y,z):生成一个数列，x开头，y结束，z为步长（间隔）<br>二维曲线：<br>    plot函数：plot(x,y)其中，x，y分别用来存储x坐标和y坐标。</p>
+<p>函数文件的定义和调用：</p>
+<p>函数文件基本结构：<br>    <img src="https://img-blog.csdnimg.cn/20200226162544633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    tip：当函数名与函数文件名不同的时候，MATLAB将忽略函数名，调用时使用函数文件名。</p>
+<p>函数调用：<br>    <img src="https://img-blog.csdnimg.cn/20200226162645415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>匿名函数：<br>    匿名函数不用函数文件定义，直接在程序脚本中创建。<br>    <img src="https://img-blog.csdnimg.cn/2020022616305056.png" alt="在这里插入图片描述"><br>    🌰：<br>        <img src="https://img-blog.csdnimg.cn/20200226170501499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM3ODgzNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -389,6 +305,15 @@ if语句实现选择结构：
 
    
   <nav class="article-nav">
+    
+      <a href="/2021/08/08/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%BD%9C%E4%B8%9A%E7%BB%83%E4%B9%A0/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            数学建模作业练习
+          
+        </div>
+      </a>
     
     
       <a href="/2021/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" class="article-nav-link">
@@ -516,7 +441,7 @@ if语句实现选择结构：
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Jinhao&#39;s blog"></a>
+    <a href="/"><img src="/images/touxiang.jpg" alt="Jinhao&#39;s blog"></a>
   </div>
   
   <ul class="nav nav-main">
