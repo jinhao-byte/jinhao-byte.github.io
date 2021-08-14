@@ -30,6 +30,32 @@
   </entry>
   
   <entry>
+    <title>机器学习笔记</title>
+    <link href="http://example.com/2021/07/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/07/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-07-19T16:00:00.000Z</published>
+    <updated>2021-08-14T07:38:36.558Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;学习资料来源：GitChat《机器学习极简入门》,黄广海《吴恩达机器学习笔记》&lt;/p&gt;
+&lt;p&gt;监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。&lt;/p&gt;
+&lt;p&gt;监督学习基本思想：我们每个数据集的每个样本都有相应的正确答案，再根据这些样本进行预测。&lt;/p&gt;
+&lt;p&gt;回归：就是我们推测这一系列连续值属性&lt;/p&gt;
+&lt;p&gt;分类：就是我们试着推测出离散的输出值，目标是推出一组离散的结果&lt;/p&gt;
+&lt;p&gt;无监督学习：无监督学习中没有任何标签或者是有相同的标签或者就是没有标签&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;聚类是无监督学习的一种&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;无监督学习：是一种学习策略，交给算法大量数据，并让算法为我们从数据中找出某种结构&lt;/p&gt;
+&lt;p&gt;代价函数也称为平方误差函数&lt;/p&gt;
+&lt;p&gt;梯度下降算法：一种用来求函数最小值的算法&lt;/p&gt;
+&lt;p&gt;正规方程：可以直接计算出函数最小值&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;正规方程和梯度下降：在数据量较大的时候，梯度下降法比正规方程更适用&lt;/em&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>MatLab学习</title>
     <link href="http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/"/>
     <id>http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/</id>
@@ -123,32 +149,6 @@
 &lt;p&gt;网络编程：&lt;br&gt;   </summary>
         
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习笔记</title>
-    <link href="http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2021/06/23/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-06-23T00:42:19.541Z</published>
-    <updated>2021-07-20T13:05:59.074Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;学习资料来源：GitChat《机器学习极简入门》,黄广海《吴恩达机器学习笔记》&lt;/p&gt;
-&lt;p&gt;监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。&lt;/p&gt;
-&lt;p&gt;监督学习基本思想：我们每个数据集的每个样本都有相应的正确答案，再根据这些样本进行预测。&lt;/p&gt;
-&lt;p&gt;回归：就是我们推测这一系列连续值属性&lt;/p&gt;
-&lt;p&gt;分类：就是我们试着推测出离散的输出值，目标是推出一组离散的结果&lt;/p&gt;
-&lt;p&gt;无监督学习：无监督学习中没有任何标签或者是有相同的标签或者就是没有标签&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;聚类是无监督学习的一种&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;无监督学习：是一种学习策略，交给算法大量数据，并让算法为我们从数据中找出某种结构&lt;/p&gt;
-&lt;p&gt;代价函数也称为平方误差函数&lt;/p&gt;
-&lt;p&gt;梯度下降算法：一种用来求函数最小值的算法&lt;/p&gt;
-&lt;p&gt;正规方程：可以直接计算出函数最小值&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;正规方程和梯度下降：在数据量较大的时候，梯度下降法比正规方程更适用&lt;/em&gt;&lt;/p&gt;</summary>
     
     
     
