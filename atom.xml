@@ -30,6 +30,38 @@
   </entry>
   
   <entry>
+    <title>机器学习笔记</title>
+    <link href="http://example.com/2021/07/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/07/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-07-19T16:00:00.000Z</published>
+    <updated>2021-08-14T08:20:08.015Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;学习资料来源：GitChat《机器学习极简入门》,黄广海《吴恩达机器学习笔记》&lt;/p&gt;
+&lt;p&gt;监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。&lt;/p&gt;
+&lt;p&gt;监督学习基本思想：我们每个数据集的每个样本都有相应的正确答案，再根据这些样本进行预测。&lt;/p&gt;
+&lt;p&gt;回归：就是我们推测这一系列连续值属性&lt;/p&gt;
+&lt;p&gt;分类：就是我们试着推测出离散的输出值，目标是推出一组离散的结果&lt;/p&gt;
+&lt;p&gt;无监督学习：无监督学习中没有任何标签或者是有相同的标签或者就是没有标签&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;聚类是无监督学习的一种&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;无监督学习：是一种学习策略，交给算法大量数据，并让算法为我们从数据中找出某种结构&lt;/p&gt;
+&lt;p&gt;代价函数也称为平方误差函数&lt;/p&gt;
+&lt;p&gt;梯度下降算法：一种用来求函数最小值的算法&lt;/p&gt;
+&lt;p&gt;正规方程：可以直接计算出函数最小值&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;正规方程和梯度下降：在数据量较大的时候，梯度下降法比正规方程更适用&lt;/em&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MatLab学习</title>
     <link href="http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/"/>
     <id>http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/</id>
@@ -384,19 +416,6 @@
 &lt;pre&gt;&lt;code&gt;错误信息：Error during artifact deployment. See server log for details.
     解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=162192913216780255278525&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;amp;spm=1018.2226.3001.4187&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;【cmd命令】‘netstat’不是内部命令：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162280993916780264039009&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;amp;spm=1018.2226.3001.4187&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162280993916780264039009&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;amp;spm=1018.2226.3001.4187&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;UTF-8的BOM：&lt;br&gt;    &lt;a href=&quot;https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>XML学习</title>
-    <link href="http://example.com/2021/05/12/XML%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://example.com/2021/05/12/XML%E5%AD%A6%E4%B9%A0/</id>
-    <published>2021-05-12T06:15:51.008Z</published>
-    <updated>2021-05-12T06:15:51.008Z</updated>
-    
     
     
     
