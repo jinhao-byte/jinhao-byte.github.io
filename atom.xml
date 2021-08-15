@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-08T03:32:07.952Z</updated>
+  <updated>2021-08-15T12:03:45.609Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>考研信息查询</title>
+    <link href="http://example.com/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2/"/>
+    <id>http://example.com/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2/</id>
+    <published>2021-08-15T08:01:45.028Z</published>
+    <updated>2021-08-15T12:03:45.609Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;初试时间：&lt;/p&gt;
+&lt;p&gt;​    每年12月份的最后一个星期左右&lt;/p&gt;
+&lt;p&gt;​    第一天：政治+英语    第二天：数学+专业课&lt;/p&gt;
+&lt;p&gt;​   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数学建模作业练习</title>
@@ -397,25 +421,6 @@
 &lt;p&gt;SELECT DISTINCT：&lt;br&gt;选取出来列中唯一不同的值（重复的值出现一次）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>学习记录</title>
-    <link href="http://example.com/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    <id>http://example.com/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
-    <published>2021-05-13T08:08:25.061Z</published>
-    <updated>2021-06-28T11:54:09.164Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;2021-5-25&lt;br&gt;idea启动tomcat，8080端口被占，已解决&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;tomcat启动项目报错：&lt;br&gt;    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=162192913216780255278525&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;amp;spm=1018.2226.3001.4187&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;【cmd命令】‘netstat’不是内部命令：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162280993916780264039009&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;amp;spm=1018.2226.3001.4187&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=162280993916780264039009&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;amp;spm=1018.2226.3001.4187&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;UTF-8的BOM：&lt;br&gt;    &lt;a href=&quot;https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
