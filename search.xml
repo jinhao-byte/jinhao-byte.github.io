@@ -1,105 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>机器学习笔记</title>
-    <url>/2021/07/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>学习资料来源：GitChat《机器学习极简入门》,黄广海《吴恩达机器学习笔记》</p>
-<p>监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。</p>
-<p>监督学习基本思想：我们每个数据集的每个样本都有相应的正确答案，再根据这些样本进行预测。</p>
-<p>回归：就是我们推测这一系列连续值属性</p>
-<p>分类：就是我们试着推测出离散的输出值，目标是推出一组离散的结果</p>
-<p>无监督学习：无监督学习中没有任何标签或者是有相同的标签或者就是没有标签</p>
-<p><em>聚类是无监督学习的一种</em></p>
-<p>无监督学习：是一种学习策略，交给算法大量数据，并让算法为我们从数据中找出某种结构</p>
-<p>代价函数也称为平方误差函数</p>
-<p>梯度下降算法：一种用来求函数最小值的算法</p>
-<p>正规方程：可以直接计算出函数最小值</p>
-<p><em>正规方程和梯度下降：在数据量较大的时候，梯度下降法比正规方程更适用</em></p>
-<a id="more"></a>
-
-<p>深度学习与机器学习具有传承关系，学习后者对于理解前者有很大帮助。</p>
-<p>有监督学习（监督学习）VS无监督学习<br>有监督学习，有标签，对数据有标注<br>无监督学习，没有标签值</p>
-<p>机器学习3要素：数据，模型，算法<br>    算法通过在数据上进行运算产生模型<br>    向量空间模型（Vector Space Model/VSM），VSM负责将各种格式（图片，文字，视频）转化为一个个向量。<br>    有监督学习除了和无监督学习有标注样本的X，还有无标注样本的标签向量Y。</p>
-<p>特征工程：确定哪些特征来表示数据；确定用什么方式表达这些特征。</p>
-<p>代价函数一般写成：<br>    J（theta），代价函数的自变量是f（X）函数中的待定的参数，theta可以是一个向量，如果是向量的话，说明待定的参数不止一个，一个维度代表一个参数。</p>
-<p>让代价函数最小的theta就是最好的theta，代入到原函数中，函数也是最终的模型函数。</p>
-<p>找到最好的theta的方法：<br>    梯度下降法（Gradient Descent);共轭梯度法（Conjugate Gradient）;牛顿法和拟牛顿法;模拟退火法（Simulated Annealing）等等。</p>
-<p>构建模型的基本步骤：    </p>
-<p>Step-1：数据准备。<br>    Step-1.1 数据预处理：收集数据、清洗数据、标注数据。<br>    Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。<br>    Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。</p>
-<p>Step-2：<br>    训练——&gt;将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依据的算法进行运算。<br>    训练程序输出的结果，就是模型。</p>
-<p>Step-3：<br>    测试——&gt;将测试集数据输入给训练获得的模型，得到预测结果；再将预测结果与这些数据原本预期的结果进行比较。</p>
-<p>训练集：用来做训练的数据集合<br>验证集：用来在训练的过程中每个训练轮次结束后验证当前模型性能，为进一步优化模型提供参考的数据的集合。<br>测试集：用来测试的数据的集合，用于检验最终得出的模型的性能</p>
-<p>tip：每个集合应是独立的，和另外两个没有重叠。</p>
-<p>有些情况，验证和测试可以合二为一；<br>验证集：可以理解为小规模的对于已经生成模型的测试。</p>
-<p>Step-2 训练过程：</p>
-<p>Step-2.1： 编写训练程序。<br>    Step-2.1.1： 选择模型类型；<br>    Step-2.1.2： 选择优化算法；<br>    Step-2.1.3： 根据模型类型和算法编写程序。<br>    Step-2.2： 训练 -&gt; 获得临时模型。</p>
-<p>Step-2.3： 在训练集上运行临时模型，获得训练集预测结果。</p>
-<p>Step-2.4： 在验证集上运行临时模型，获得验证集预测结果。</p>
-<p>Step-2.5： 综合参照 Step-2.4 和 Step-2.5 的预测结果，改进模型。</p>
-<p>Step-2.6： Step-2.2 到 Step-2.5 反复迭代，直至获得让我们满意，或者已经无法继续优化的模型。</p>
-<p><em>机器学习的模型质量往往和训练数据有直接关系。</em></p>
-<p>有限的数据，提高模型质量的手段：<br>    1对数据进行归一化处理(Normalization),正则化(Regularization)等标准化操作；<br>    2采用BootStrap等采样方法处理有限的训练/测试数据，已达到更好的运算效果。<br>    3根据业务进行特征选取：从业务角度区分输入数据包含的特征，并理解这些特征对结果的贡献。</p>
-<p>超参数：是需要模型训练者自己设置和调整的，许多算法库都有算法的默认超参数。</p>
-<p>模型训练得出结果容易，得到优质结果难。</p>
-<p>分类模型评判指标： Precision，Recall 和 F1Score<br>    对于分类，简单的常见的验证指标：精准率，召回率，为了综合两个指标并量化结果，又出现F1Score。</p>
-<p>精准率：Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p>
-<p>召回率：Recall=TP/（TP+FN），即在所有实际为 Class_A 的测试数据中，预测正确的比率。</p>
-<p>F1Score = 2*(Precision * Recall)/(Precision + Recall)</p>
-<p>显然上面三个值都是越大越好，但往往在实际当中 P 和 R 是矛盾的，很难保证双高。</p>
-<p>偏差和过拟合：<br>    如果一个模型，在训练集上的预测结果就不佳，指标偏低，一般就是欠拟合的；<br>    如果在训练集上指标很好的话，在验证集和测试集指标偏低，则可能过拟合；<br>    欠拟合情况：多数情况下是选择模型太过简单，特征选取不够导致的。<br>    过拟合情况：模型太过复杂，特征选取不当（过多，或者组合不当）造成的。<br>    解决方法：针对性的选择更简单/复杂的模型类型；增加减少特征；减小/增大正则项比重；增大训练数据的训练量</p>
-<p>凸函数：<br>    机器学习的凸函数，不是高等数学的凸函数，是高等数学的凹函数。</p>
-<p>线性回归：<br>    线性回归模型是：利用线性回归对一个或者多个自变量和因变量之间的关系进行拟合的模型。</p>
-<pre><code>当训练数据的特征是一维的时候，线性回归可以在之间坐标系中表示，形式是一条直线。</code></pre><p>一元函数在某一点处沿着x轴的正方向的变化率称为导数，二元或者多元的情况，则某一点处沿着某一维度坐标正方向的变化率称为偏导数</p>
-<p>——————————–第十一篇的偏微分部分不是很理解———————————————————-</p>
-<p>当我们求出了一个函数的（偏）微分函数后，将某个变量带入其中，得出的（偏）微分函数对应的函数值，就是原函数在该点处，对该自变量求导的导数值。<br>所以，只要我们求出了目标函数的（偏）微分函数，那么目标函数自变量值域内每一点的导数值也就都可以求了。</p>
-<hr>
-<p>线性回归的超参数：<br>    对于梯度下降法而言，是要用到梯度下降，就会有步长alpha这个超参数。<br>    如果训练结果偏差较大，可以尝试调小步长；<br>    如果模型质量不错但是训练效率太低，可以适当放大步长；<br>    也可以尝试使用动态步长，开始步长较大，随着梯度的缩小，步长同样缩小……<br>    如果训练程序是通过人工指定迭代次数来确定退出条件，则迭代次数也是一个超参数。<br>    如果训练程序以模型结果与真实结果的整体差值小于某一个阈值为退出条件，则这个阈值就是超参数</p>
-<hr>
-<p>正则化：为了防止</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>机器学习</tag>
-      </tags>
+    <title>python基础</title>
+    <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>考研信息查询</title>
-    <url>/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2/</url>
-    <content><![CDATA[<p>初试时间：</p>
-<p>​    每年12月份的最后一个星期左右</p>
-<p>​    第一天：政治+英语    第二天：数学+专业课</p>
-<p>​    上午8：30-11：30，下午14：00-17：00</p>
-<hr>
-<p>政治：马原24分，毛特30分，史纲14分，思修与法律基础16分，当代世界经济与形式与政策16分</p>
-<p>​    政治单科划线50-55左右，70+算高分。</p>
-<p>​    试卷内容分为两大模块：主观题（5道，每题10分）客观题（16道单选一题1分，14道多选一题2分）多选选全给分</p>
-<p>​    估分：选择题分数*2，历年真题选择题平均分29分左右。</p>
-<p>​    复习规划：</p>
-<p>​        7-10月：</p>
-<p>​            《肖秀荣知识点精讲精练》+《肖秀荣1000题》，可以先不做真题，真题除了马原不会有考的题目。快速阅读《肖秀荣知识点精讲精练》有不错的知识印象，形成大概的知识点框架。一天一节，看完一节将1000题中的选择题做完，可以先不做大题，一天1-2小时。</p>
-<p>​        10-12月：</p>
-<p>​            《疾风劲草冲刺背诵核心考点》可以不加配套试题+《肖秀荣1000题》+《肖秀荣形势与政策》。需要专门背诵选择题的考点。每天先背诵一节《核心考点》然后凭借刚背诵的知识点做肖秀荣1000，核心考点看完开始看形势政策，形势政策可不不用看完，挑今年大事。一天2小时</p>
-<p>​        12月-考前：主攻政治大题，每天2-3小时</p>
-<p>​            《肖秀荣8套》+《肖秀荣4套》8套11月下旬卖，4套12月上旬卖。每天一张卷子，只做选择题部分，大题用来背，大题重点背加黑部分，同时也要写写，找找题感。肖4大题重中之重，马原大题部分可以独立做，锻炼自己思考能力，【马原找原理需要题量】，其他的分析题直接过答案，分析今年的出题角度。押题班压题课可以听听，不要全信。</p>
-<hr>
-<p>英语：</p>
-<p>​    英语1：（完形填空10分，阅读A40分，阅读B（新题型）10分，翻译10分，大作文20分，小作文10分）英语二：（完形填空10分，阅读A40分，阅读B（新题型）10分，翻译15分，大作文15分，小作文10分）                    </p>
-<hr>
-<p>数学：数1注重知识点的宽度，数2侧重知识点的深度。</p>
-<p>​    数1：高数60%，线代20%，概率20%<br>​        选择：6高数+2线代+1概率，一题5分；<br>​        填空：4高数+1线代+1概率，一题5分；<br>​        解答题：4高数+1线代+1概率，高数40分，线代15分，概率15分；<br>​    数2：高数80%，线代20%<br>​        选择：8高数+2线代，一题5分；<br>​        填空：5高数+1线代，一题5分；<br>​        解答：5高数+1线代，高数55分，线代15分；</p>
-<p>数2复习规划：多做题，相对少看视频</p>
-<p>​    7-10月：同济课本+数学二公式手册+李永乐数学历年真题权威解析（分章节）+汤家凤1800题<br>​        可以对照着公式手册画课本上的知识点，剔除掉书上不考的内容。每天复习每章节考察的知识点，复习完一章就去做李永乐数学历年真题权威解析。一天4-5小时。</p>
-<p>​            </p>
-<p>试考408，调剂能调自主命题的学校吗？</p>
+    <title>XML学习</title>
+    <url>/2021/05/12/XML%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>vue学习</title>
+    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/2021/05/26/Git/</url>
+    <content><![CDATA[<p>Git：目前最先进的分布式版本控制系统</p>
+<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
+<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
+<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
+<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
+<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
+<p>暂存区：</p>
+<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
+<a id="more"></a>
+
+
+<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
 ]]></content>
   </entry>
   <entry>
     <title>数学建模作业练习</title>
     <url>/2021/08/08/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%BD%9C%E4%B8%9A%E7%BB%83%E4%B9%A0/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>计算机基础知识</title>
+    <url>/2021/06/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Java代码练习</title>
+    <url>/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/</url>
+    <content><![CDATA[<p>2021-6-12<br>冒泡排序：<br>import java.util.Scanner;<br>public class bubbleSortTest {<br>    public static void main(String[] args) {<br>        Scanner input = new Scanner(System.in);<br>        int a[] = new int[10];<br>        for(int i = 0;i&lt;a.length;i++){<br>            a[i] = input.nextInt();<br>        }<br>        System.out.println(“冒泡排序未排序前数组：”);<br>        //for each 循环<br>        for (int i:a) {<br>            System.out.print(i+”  “);<br>        }<br>        //冒泡排序：<br>        int d=0;<br>        for (int i=0; i&lt;a.length-1;i++){<br>            for (int j=0;j&lt;a.length-i-1;j++) {<br>                if (a[j] &lt; a[j + 1]) {<br>                    d = a[j];<br>                    a[j] = a[j + 1];<br>                    a[j + 1] = d;<br>                }<br>            }<br>    }<br>        //冒泡排序后的结果<br>        System.out.println(“冒泡排序后”);<br>        for (int i=0;i&lt;a.length;i++){<br>            System.out.print(a[i]+”   “);<br>        }<br>}}</p>
+<p>选择排序：<br>public class selectionSortTest {<br>    public static void main(String[] args) {<br>        int []arr = new int[]{1,2,3,9,8,7,6,5,4,10};<br>        selectSort(arr);<br>        for (int i=0;i&lt;arr.length;i++){<br>            System.out.println(arr[i]+”   “);<br>        }<br>    }<br>    public  static void selectSort(int[] a){<br>        //实现冒泡排序,从小到大排列<br>        //数组要遍历a.length遍<br>        int minIndex=0;<br>        for (int i=0;i&lt;a.length;i++){<br>            minIndex = i;//记录一下最小值的索引<br>            for (int j=i+1;j&lt;a.length;j++){<br>                if (a[minIndex]&gt;a[j]){<br>                    minIndex=j;<br>                }<br>            }<br>            //将最小值和起始值进行交换<br>            int d=a[i];<br>            a[i]=a[minIndex];<br>            a[minIndex]=d;<br>        }</p>
+<pre><code>}
+}</code></pre><a id="more"></a>
+<p>二分查找：<br>import java.util.Scanner;<br>import java.math.*;<br>public class binarySearch {<br>    public static void main(String[] args) {<br>        Scanner input =new Scanner(System.in);<br>        int[] a = new int[]{1,2,3,4,5,6,7,8,9,10};<br>        System.out.println(“数组：”);<br>        for (int i=0;i&lt;a.length;i++){<br>            System.out.print(a[i]+” “);<br>        }<br>        System.out.println(“输入你想查找的数：”);<br>        int b = input.nextInt();<br>        //递归实现：<br>//        System.out.println(“—————–递归实现———————-“);<br>//        int findnumIndex =find(b,a,0,a.length-1);<br>//        System.out.println(“findnumIndex:”+findnumIndex);<br>        System.out.println(“——————-while实现———————–”);<br>        //循环实现<br>        int first=0;<br>        int last = a.length-1;<br>        int mid = (first+last)/2;<br>        if (b==mid){<br>            System.out.println(“findnumIndex:”+mid);<br>        }<br>        while (b!=a[mid]){<br>           if (b&lt;a[mid]){<br>               last = mid;<br>               mid = (first+last) /2;<br>           }else if(b&gt;a[mid]){<br>                first = mid;<br>                mid = (first+last)/2;<br>           }else if (b==a[mid]){<br>               System.out.println(“findnumIndex:”+mid);<br>           }<br>        }<br>        System.out.println(“findnumIndex:”+mid);<br>    }</p>
+<pre><code>//findNum  想查找的目标数字，a：查找的数组     start:查找数组起始位置    fin:查找的数组的末尾位置
+//返回目标数字所在的索引
+public static int find(int findNum ,int[] a,int start,int fin){
+
+    int mid = a[start]+a[fin];
+    mid = mid/2;
+    if (findNum&lt;a[start] || findNum&gt;a[fin]){
+        System.out.println(&quot;该数不在此数组内&quot;);
+        return -1;
+    }else if (findNum&lt;mid) {
+        fin=mid;
+        return find(findNum,a,start,fin);
+    }
+    else if (findNum&gt;mid){
+        start = mid;
+        return find(findNum,a,start,fin);
+    }else if(findNum==mid) {
+        return mid;
+    }
+        return -1;
+
+}</code></pre><p>}</p>
+<p>2021-6-13<br>比较字符串地址值<br>public class stringPoolTest {<br>    public static void main(String[] args) {<br>        String s1 = “abc”;<br>        String s2 = “abc”;<br>        String s3  = new String(“abc”);<br>        System.out.println(s1==s2);//s1,s2都是来源于一个字符串常量池的停用<br>        System.out.println(s1==s3);//一个是字符串常量池的地址值，一个是字符串对象的地址。<br>        System.out.println(s1.equals(s3));//String重写了toString方法，比较的是内容，所以为true<br>    }<br>}</p>
+<p>2021-6-15</p>
+<p>泛型自动类型推断<br>import java.util.ArrayList;</p>
+<p>public class genericsTest {<br>    public static void main(String[] args) {<br>        //jdk7新特性，后面的尖括号不用填写东西<br>        ArrayList<animal> arrayList = new ArrayList&lt;&gt;();<br>        //普通写法<br>        ArrayList<animal> arrayList1 = new ArrayList<animal>();<br>    }<br>}<br>class animal{</p>
+<p>}</p>
+<p>switch支持String：</p>
+<p>public class switchTest {<br>    public static void main(String[] args) {<br>        //Switch支持String<br>        String name = “cui”;<br>        switch(name){<br>            case “jin”: System.out.println(“jin”);break;<br>            case “cui”: System.out.println(“cui”);break;<br>            case “hao”: System.out.println(“hao”);break;<br>            default:<br>                System.out.println(“没有cui”);break;<br>        }<br>    }<br>}</p>
+<p>Integer的常量池：<br>public class intergerPoolTest {<br>    public static void main(String[] args) {<br>        int a1= 100;<br>        int a2 = 100;<br>        System.out.println(“a1== a2”+(a1== a2));//true<br>        int e1= 100000;<br>        int e2 = 100000;<br>        System.out.println(“e1== e2”+(e1== e2));//true</p>
+<pre><code>    Integer b1 = 100;
+    Integer b2 = 100;
+    System.out.println(&quot;b1==b2:&quot;+(b1==b2));//true
+    Integer c1 = 1000;
+    Integer c2 = 1000;
+    System.out.println(&quot;c1==c2:&quot;+(c1==c2));//false
+}</code></pre><p>}</p>
+<p>2021-6-17<br>Collection练习：</p>
+<p>import java.util.*;</p>
+<p>public class collectionTest {<br>    public static void main(String[] args) {<br>        //创建Collection集合的对象<br>        Collection<String> c = new ArrayList<String>();<br>        //添加元素：bollean add(E e)<br>        c.add(“hello”);<br>        c.add(“World”);<br>        c.add(“demo”);<br>        System.out.println(c);<br>        System.out.println(“===========================”);<br>        List arr1 = new ArrayList&lt;&gt;();<br>        arr1.add(1);<br>        arr1.add(2);<br>        arr1.add(2);<br>        arr1.add(2);<br>        arr1.add(2);<br>        Iterator iterator = arr1.iterator();<br>        while (iterator.hasNext()){<br>            Integer a = (Integer) iterator.next();<br>            System.out.println(a);<br>        }</p>
+<pre><code>}</code></pre><p>}</p>
+<p>枚举练习：</p>
+<p>public class enumTest {<br>    public static void main(String[] args) {<br>        Color color = Color.green;<br>        switch (color){<br>            case red:<br>                System.out.println(“红色”);<br>                break;<br>            case blank:<br>                System.out.println(“灰色”);<br>                break;<br>                case yellow:<br>                System.out.println(“黄色”);<br>                break;<br>            default:<br>                System.out.println(“没有yanse”);</p>
+<pre><code>    }
+    int value1 = 3;
+    int value2 = 4;
+    Result result = method1(value1,value2);
+    System.out.println(result);//FAILURE
+    //result的变量类型：
+    System.out.println(result.getClass().getName());//enumTest$Result
+}
+private static Result method1(int value1,int value2){
+    if(value1&gt;value2)return Result.SUCCESS;
+    if(value1&lt;=value2)return Result.FAILURE;
+    else return Result.FAILURE;
+}
+public  enum  Color{
+    red,green,blank,yellow
+}
+enum Result{
+    SUCCESS,FAILURE
+}</code></pre><p>}</p>
+<p>2021-6-21<br>集合类练习：<br>import java.lang.reflect.Array;<br>import java.util.ArrayList;<br>import java.util.Iterator;<br>import java.util.List;</p>
+<p>public class genericsTest01 {<br>    public static void main(String[] args) {<br>        List list =new ArrayList();<br>        list.add(1);<br>        list.add(2);<br>        list.add(4);<br>        list.add(3);<br>        for (Iterator iter = list.iterator(); list.iterator().hasNext();){<br>            System.out.println(iter.next());<br>        }</p>
+<pre><code>}</code></pre><p>}</p>
+]]></content>
   </entry>
   <entry>
     <title>MatLab学习</title>
@@ -234,276 +250,295 @@ xh</code></pre><blockquote>
 ]]></content>
   </entry>
   <entry>
-    <title>反射机制</title>
-    <url>/2021/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<p>反射概念：程序能够访问，监测和修改自身状态和行为的一种能力</p>
-<p>反射是一种强大工具，能够创建灵活代码，代码可以在运行时装配，无序在组件内进行源代码链接。<br>如果使用不当，成本很高</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>马原知识点</title>
-    <url>/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<h2 id="绪论："><a href="#绪论：" class="headerlink" title="绪论："></a>绪论：</h2><p>马克思主义的直接理论来源是：德国古典哲学 ，英国古典政治经济学，十九世纪英法空想社会主义<br>马克思主义的创始人：马克思，恩格斯<br>马克思主义中国化的三大理论成果：毛泽东思想，邓小平理论，“三个代表思想”<br>马克思主义理论体系：马克思主义哲学，马克思主义政治经济学，科学社会主义<br>学习马克思主义基本原理的方法：实事求是，理论联实际，认真学习马克思主义著作，科学对待马克思主义<br>马克思主义生命力的根源是：以实践为基础的科学性和革命性的统一<br>无产阶级的科学世界观和方法论是：辩证唯物主义和历史唯物主义<br>马克思最重要的理论品质：与时俱进<br>马克思主义最崇高的社会理想是：实现社会主义<br>马克思主义最鲜明的政治立场：致力于实现以劳动人民为主体的最广大人民的根本利益</p>
-<p>辨析题：</p>
-<p>一，马克思主义是马克思恩格斯的观点和学说的体系：</p>
-<p>答：观点是不全面的，</p>
-<p>（阶级性）马克思主义是无产阶级思想的科学体系<br>（创始人角度）是马克思恩格斯创立的基本理论、基本观点和学说的体系<br>（研究对象和主要内容角度）<br>    是无产阶级科学世界观和方法论，是关于自然、社会和思维发展的普遍规律的学说，是关于资本主义发展和转变为社会主义的普遍规律的学说，是关于无产阶级和人类解放的科学理论<br>（理论品质角度）并且在实践中不断丰富和发展的科学理论体系</p>
-<p>二，德国古典哲学是马克思主义的唯一的直接理论来源：</p>
-<p>答：这个观点是不全面的，</p>
-<p>马克思主义的直接理论来源是<strong>德国古典哲学</strong>，<strong>英国古典政治经济学</strong>和<strong>１９世纪英法空想社会主义</strong>。马克思主义创始人马克思恩格斯直接吸收这三个理论的积极成果，结合无产阶级的实践经验，创立了无产阶级的科学思想体系——马克思主义。</p>
-<p>三，马克思主义是行动指南，而不是教条：</p>
-<p>答：观点是正确的，</p>
-<p>马克思主义是<strong>无产阶级思想的科学体系</strong>，是无产阶级和劳动人民认识世界和改造世界的思想武器，<strong>是无产阶级的科学世界观和方法论</strong>。马克思主义是无产阶级实践经验的总结，是指导无产阶级进行革命的理论，它随着实践的发展而发展。因此，马克思主义不是教条，而是不断发展的理论。</p>
-<p>论述题：</p>
-<p>怎么理解马克思主义？</p>
-<p>答：可以从不同角度理解，</p>
-<p>阶级性：马克思主义是无产阶级思想的科学体系</p>
-<p>创始人：是马克思恩格斯创立的<strong>基本理论</strong>、<strong>基本观点</strong>和<strong>学说</strong>的体系。</p>
-<p>研究对象和主要内容：马克思主义是无产阶级科学世界观和方法论，是关于自然、社会和思维发展的普遍规律的学说，是关于资本主义发展和转变为社会主义的普遍规律的学说，是关于无产阶级和人类解放的科学理论。</p>
-<p>理论体系：是由<strong>马克思主义哲学</strong>、<strong>马克思主义政治经济学</strong>和<strong>科学社会主义</strong>三个不可分割的部分组成的完整的科学体系，同时马克思主义又是在实践不断丰富和发展的开放式的，与时俱进的发展的科学体系。</p>
-<p>怎样理解马克思主义是发展的理论？</p>
-<p>一切从实际出发，理论联系实际，实事求是，在实践中检验和发展真理，是马克思主义最重要的理论品质。这一理论品质是马克思主义产生以来保持强大生命力的关键所在。</p>
-<h2 id="第一章：世界的物质性及其发展规律"><a href="#第一章：世界的物质性及其发展规律" class="headerlink" title="第一章：世界的物质性及其发展规律"></a>第一章：世界的物质性及其发展规律</h2><p>哲学的基本问题包括：1，物质和意识，谁是本源；2，思维和存在的同一性问题<br>物质：不依赖人类的感觉而存在，唯一特性是客观存在性，存在于人们的意识之外，可以为人的意识所反映<br>意识：自然界长期发展的产物，是人脑的机能和属性，是物质世界的主观映像，内容是客观存在的，形式是主观的<br>物质决定意识，意识依赖于物质并反作用于物质</p>
-<p>世界的物质统一性：</p>
-<p>​    世界是物质的，而物质是运动的，物质和运动是不可分割的<br>​    物质世界的运动是绝对的，物质在运动过程中静止是相对的<br>​    时间和空间是物质运动的存在形式<br>​    物质，运动，时间，空间具有内在的统一性</p>
-<p>社会生活的本质是实践的：</p>
-<p>​    实践是社会关系形成的基础；<br>​    实践形成看社会生活的基本领域；<br>​    实践构成了社会发展的动力；</p>
-<p>事物的普遍联系：</p>
-<p>​    联系是事物内部各要素之间和事物之间相互影响，相互制约和相互作用的关系。<br>​    联系具有客观性，普遍性，多样性。</p>
-<p>新事物为什么不可战胜？</p>
-<p>​    发展是前进的上升的运动，发展的实质是新事物的产生和旧事物的灭亡。<br>​    ①就新生事物与环境的关系而言，新事物之所以新，是因为有新的结构和功能，它适应已经变化了的环境和条件。</p>
-<p>​    ②就新事物与旧事物的关系而言，新事物是在旧事物的“母体”中孕育成熟的，它既否定了旧事物中消极腐朽的东西，又保留了旧事物中合理的、仍然适合新的条件的因素，并添加了旧事物中所不能容纳的新内容</p>
-<p>对立统一规律：</p>
-<p>​    <strong>对立统一规律</strong>是事物发展的根本规律，是唯物辩证法的实质和核心<br>​    ①矛盾的两种基本属性——<strong>同一性</strong>和<strong>斗争性</strong><br>​    ②矛盾问题的精髓——<strong>普遍性</strong>和<strong>特殊性</strong><br>​    同一性：矛盾两者相互依存<br>​    斗争性：矛盾对立面之间相互排斥，相互分离<br>​    普遍性：矛盾存在一切事物的发展过程中<br>​    特殊性：不同事物的矛盾各有特点</p>
-<p>为什么对立统一规律是唯物辩证法体系的实质和核心？</p>
-<pre><code>1，揭示了事物普遍联系的根本内容和永恒发展的内在动力，从根本上回答了事物为什么会发展的问题
-2，对立统一规律是贯穿质量互变规律、否定之否定规律以及唯物辩证法基本范畴的中心线索，也是理解这些规律和范畴的“钥匙”。
-3，对立统一提供了人们认识世界和改造世界的基本方法-----矛盾分析法</code></pre><p>量变和质变的辩证关系：</p>
-<p>​    1，量变是质变的必要准备。<br>​    2，质变是量变的必然结果。<br>​    3，量变和质变相互渗透。</p>
-<p>辩证否定观的内容：</p>
-<p>​    ①否定是事物的自我否定，是事物内部矛盾运动的结果<br>​    ②否定是事物发展的环节。<br>​    ③否定是新旧事物联系的环节，新事物孕育产生于旧事物，新旧事物是通过否定环节联系起来的。<br>​    ④辩证否定的实质是“<strong>扬弃</strong>”，即新事物对旧事物既批判又继承，既克服其消极因素又保留其积极因素。</p>
-<p>否定之否定规律的基本内容：</p>
-<p>​    事物的发展经过两次辩证的否定，由肯定阶段到否定阶段，再到否定之否定阶段，从而使事物的发展表现为螺旋式上升和波浪式前进的过程。否定之否定规律<strong>提示了事物的发展是前进性和曲折性的统一。</strong></p>
-<p>矛盾分析法：</p>
-<p>​    分析矛盾特殊性的方法，“<strong>两点论</strong>”与“<strong>重点论</strong>”相结合的方法，抓关键、看主流的方法，在对立中把握同一与在同一中把握对立的方法，批判与继承相统一的方法等，都是矛盾分析法的具体表现。</p>
-<p>唯物辩证法的五大基本范畴：原因与结果 可能性与现实性 现象与本质 必然性与偶然性 内容与形式</p>
-<p>辩证思维方法是人们正确进行理性思维的方法：<strong>归纳与演绎</strong>、<strong>分析与综合</strong>、<strong>抽象与具体</strong>、<strong>逻辑与历史相统一</strong></p>
-<p>.什么是规律？</p>
-<p>规律是事物的本质的联系。任何规律都是事物的内在根据和本质联系。</p>
-<p>（1）规律就是物质运动发展过程中本质的、必然的、稳定的联系。</p>
-<p>（2）规律具有两个特点。第一，客观性、第二，普遍性</p>
-<p>自然规律与社会规律的区别与联系</p>
-<p>区别：前者是一种盲目的无意识的力量起作用，后者则是通过有意识人的活动来实现的；前者是可以重现的，后者则是历史的，在不同的状态下有不同的表现形式。这就使认识社会规律比认识自然规律要困难得多。 </p>
-<p>联系：作为规律，它本身具有不以人的意志为转移的客观性，人不能任意改变、创造或消灭自然规律。 </p>
-<p>意识的作用：<br>①意识是能动的，具有目的性和计划性。<br>②意识活动具有创造性。<br>③意识具有指导实践改造客观世界的作用。<br>④意识还具有指导、控制人的行为和生理活动的作用。<br>总之，意识是物质的产物，是物质世界在人脑中的主观映像，这是物质、意识关系问题上的唯物主义。</p>
-<p>全部哲学、特别是近代哲学的重大的基本问题是：思维和存在的关系问题<br>列宁对辩证唯物主义物质范畴的定义是通过：物质和意识的关系界定的<br>马克思主义认为，世界的真正统一性在于他的：物质性<br>既是自然界与人类社会分化统一的历史前提，又是自然界与人类社会统一起来的现实基础：实践<br>对于同一事物，不同的人有不同的反映：意识受主体状况影响<br>辩证唯物主义认为，事物发展的规律是：事物内在的本质和稳定的联系</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计算机基础知识</title>
-    <url>/2021/06/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>网络编程</title>
-    <url>/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<p>计算机网络：<br>    是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及其网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。</p>
-<p>网络编程：<br>    在网络通信协议下，实现网络互联的不同计算机运行的程序间可以进行数据交换。</p>
-<p>网络编程3要素：</p>
-<pre><code>IP地址：
-    要想让网络中的计算机能够互相通信，必须为每台计算机指定一个标识号，通过这个标识号来指定要接收数据的计算机和识别发送的计算机，而IP地址就是这个标识号。也就是设备的标识
-
-端口：
-    网络的通信，本质上是两个应用程序的通信。每台计算机都有很多的应用程序，那么在网络通信时，如何区分这些应用程序呢？如果说IP地址可以唯一标识网络中的设备，那么端口号就可以唯一标识设备中的应用程序了。也就是应用程序的标识
-
-协议：
-    通过计算机网络可以使多台计算机实现连接，位于同一个网络中的计算机在进行连接和通信时需要遵守一定的规则，这就好比在道路中行驶的汽车一定要遵守交通规则一样。在计算机网络中，这些连接和通信的规则被称为网络通信协议，它对数据的传输格式、传输速率、传输步骤等做了统一规定，通信双方必须同时遵守才能完成数据交换。常见的协议有UDP协议和TCP协议</code></pre><p>IP地址：网络中设备的唯一标识<br>    IPV4：为每个连接在网络上的主机分配的32bit的地址，也就是4字节，例如11000000 10101000 00000001 01000010，为一个ipv4的地址，利用点分十进制表示法可以看成192.168.1.66<br>    IPV6：v4的地址不够用，v6重新定义地址空间，采用128为地址长度，16字节一组，8组十六进制数，来解决网络地址不足的问题<br>    DOS常用命令：<br>        ipconfig：查看本机IP地址<br>        ping IP地址：检查网络是否连通<br>    特殊IP地址：<br>        127.0.0.1：是回送地址，可以代表本机地址，一般用来测试使用</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>多线程</title>
-    <url>/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
-    <content><![CDATA[<p>多线程：<br>    进程：正在运行的程序，是系统进行资源分配和调度的独立单位，每一个进程都有自己的内存空间和系统资源<br>    线程：在进程中的单个顺序控制流，是一条执行路径<br>        单线程：一个进程如果只有一条执行路径，则称为单线程程序<br>        多线程：一个进程有多个执行路径，则称为多线程程序</p>
-<p>线程调度的两种方式：<br>    分时调度：所有线程轮流使用CPU的使用权，平均分配每个线程占用CPU的时间<br>    抢占式调度：优先让优先级高的线程使用CPU，如果线程优先级相同，那么会随机选择一个，优先级高的线程获取CPU时间片相对较多。</p>
-<p>Java使用的是抢占式调度模型</p>
-<p>随机性：<br>    假如计算机只有一个CPU，那么CPU只能在一个时刻只能执行一条命令，线程只有得到CPU的时间片，也就是使用权才能执行命令。<br>    所以多线程程序的执行是有随机性的</p>
-<p>final int getPriority()：返回线程的优先级<br>final void setPriority(int newPriority)：更改线程的优先级，线程优先级默认为5，优先级范围是：1-10</p>
-<p>线程控制：<br>    static void sleep(long millis)：是当前正在执行的线程停留（暂停执行），指定的毫秒数<br>    void join()：等待这个线程死亡<br>    void setDaemon(boolean on) 将线程标记为守护线程，当运行的线程都是守护线程时，Java虚拟机将退出</p>
-<p>实现多线程的方式：<br>    继承Thread类或者实现Runnable接口<br>    相比继承Thread类，实现Runnable接口的好处：<br>        避免了Java的单继承的局限性<br>        适合多个相同程序的代码，去处理同一个资源的情况，把线程和程序的代码，数据有效分离，体现面向对象思想</p>
-<p>同步代码块解决数据安全问题：<br>    出现条件：在多线程环境下，有个共享数据，多条语句操作共享数据<br>    如何解决：让程序没有安全问题的环境<br>    如何实现：把多条语句操作数据的代码给锁起来，让任何时刻只能有一个线程执行就行了</p>
-<pre><code>同步代码块：   
-    synchronized(任意对象){
-        多条语句操作工具数据的代码
-    }
-    synchronized(任意对象)：相当于给代码加锁，任意对象就可以看做为一把锁
-    好处和弊端：
-        解决多线程的数据安全问题
-        当线程很多的时候，因为每个线程都会去判断同步上的锁，这就很耗费资源，无形中降低程序的运行效率</code></pre><p>线程安全的类：</p>
-<pre><code>StringBuffer:
-    线程安全，可变的字符串序列，从JDK5开始，被StringBuilder替代。通常应该使用StringBuilder类，因为它支持所有相同的操作，但它更快，因为执行不同步。
-Vector：
-    该类改进了List接口。与新的集合实现不同，Vector被同步。如果不需要线程安全实现，建议使用ArrayList代替Vector
-Hashtable:
-    该类实现哈希表，将键映射到值，任何非null对象都可以作为键或者值，Hashtable被同步。如果不需要线程安全的实现，建议使用HashMap代替Hashable</code></pre><p>生产者消费者模式：<br>    待理解</p>
-<p>Thread.sleep():<br>    是Thread类的一个静态方法，使当前线程休眠，进入阻塞状态（暂停执行），如果线程在睡眠状态被中断，将会抛出IterruptedException中断异常。</p>
-<p>代码练习：<br>public class SellTicketDemo {<br>    public static void main(String[] args) {<br>        //创建SellTicket类对象<br>        SellTicket st = new SellTicket();</p>
-<pre><code>    //创建三个Thread类对象，把SelllTicket对象作为构造方法的参数，并给对应窗口进行命名
-    Thread thread1 = new Thread(st,&quot;窗口1&quot;);
-    Thread thread2 = new Thread(st,&quot;窗口2&quot;);
-    Thread thread3 = new Thread(st,&quot;窗口3&quot;);
-
-    thread1.start();
-    thread2.start();
-    thread3.start();
-   /*
-   出现问题：
-        相同的票出现多次
-        出现负数票
-    出现原因：
-        线程执行的随机性导致
-    */
-
-}</code></pre><p>}</p>
-<p>public class SellTicket implements Runnable{<br>    private int tickets = 100;</p>
-<pre><code>@Override
-public void run() {
-    while (true){
-        if(tickets&gt;0){
-            System.out.println(Thread.currentThread().getName()+&quot;正在出售第&quot;+tickets+&quot;张票&quot;);
-            tickets--;
-        }
-    }
-}</code></pre><p>}</p>
-<p>public class priorityDemo {<br>    public static void main(String[] args) {<br>        MyThread myThread =new MyThread();<br>        MyThread myThread1 =new MyThread();<br>        MyThread myThread2 =new MyThread();<br>        MyThread myThread3 =new MyThread();<br>        MyThread myThread4 =new MyThread();<br>        MyThread myThread5 =new MyThread();<br>        MyThread myThread6 =new MyThread();<br>        myThread.setName(“my”);<br>        myThread1.setName(“my1”);<br>        myThread2.setName(“my2”);<br>        myThread3.setName(“my3”);<br>        myThread4.setName(“my4”);<br>        myThread5.setName(“my5”);<br>        myThread6.setName(“my6”);<br>        //其他的线程默认为5<br>        myThread6.setPriority(10);//进程my6是最高的<br>        myThread1.setPriority(1);//进程my是优先级最小的<br>       //测试<br>        myThread.start();<br>        myThread1.start();<br>        myThread2.start();<br>        myThread3.start();<br>        myThread4.start();<br>        myThread5.start();<br>        myThread6.start();</p>
-<pre><code>}</code></pre><p>}</p>
-<p>public class MyThreadTest {<br>    public static void main(String[] args) {<br>        MyThread my1 = new MyThread();<br>        MyThread my2 = new MyThread();<br>        my1.setName(“my1”);<br>        my2.setName(“my2”);<br>        my1.start();<br>        my2.start();<br>        String my1Name = my1.getName();<br>        String my2Name = my2.getName();<br>        System.out.println(“my1name:”+my1Name);<br>        System.out.println(“my2name:”+my2Name);<br>    }<br>}</p>
-<p>public class MyThread extends Thread{<br>    @Override<br>    public void run(){<br>        for(int i = 0; i&lt;10;i++){<br>            System.out.println(i);<br>        }<br>        System.out.println(this.getName());<br>    }</p>
-<p>}</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Java代码练习</title>
-    <url>/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/</url>
-    <content><![CDATA[<p>2021-6-12<br>冒泡排序：<br>import java.util.Scanner;<br>public class bubbleSortTest {<br>    public static void main(String[] args) {<br>        Scanner input = new Scanner(System.in);<br>        int a[] = new int[10];<br>        for(int i = 0;i&lt;a.length;i++){<br>            a[i] = input.nextInt();<br>        }<br>        System.out.println(“冒泡排序未排序前数组：”);<br>        //for each 循环<br>        for (int i:a) {<br>            System.out.print(i+”  “);<br>        }<br>        //冒泡排序：<br>        int d=0;<br>        for (int i=0; i&lt;a.length-1;i++){<br>            for (int j=0;j&lt;a.length-i-1;j++) {<br>                if (a[j] &lt; a[j + 1]) {<br>                    d = a[j];<br>                    a[j] = a[j + 1];<br>                    a[j + 1] = d;<br>                }<br>            }<br>    }<br>        //冒泡排序后的结果<br>        System.out.println(“冒泡排序后”);<br>        for (int i=0;i&lt;a.length;i++){<br>            System.out.print(a[i]+”   “);<br>        }<br>}}</p>
-<p>选择排序：<br>public class selectionSortTest {<br>    public static void main(String[] args) {<br>        int []arr = new int[]{1,2,3,9,8,7,6,5,4,10};<br>        selectSort(arr);<br>        for (int i=0;i&lt;arr.length;i++){<br>            System.out.println(arr[i]+”   “);<br>        }<br>    }<br>    public  static void selectSort(int[] a){<br>        //实现冒泡排序,从小到大排列<br>        //数组要遍历a.length遍<br>        int minIndex=0;<br>        for (int i=0;i&lt;a.length;i++){<br>            minIndex = i;//记录一下最小值的索引<br>            for (int j=i+1;j&lt;a.length;j++){<br>                if (a[minIndex]&gt;a[j]){<br>                    minIndex=j;<br>                }<br>            }<br>            //将最小值和起始值进行交换<br>            int d=a[i];<br>            a[i]=a[minIndex];<br>            a[minIndex]=d;<br>        }</p>
-<pre><code>}
-}</code></pre><a id="more"></a>
-<p>二分查找：<br>import java.util.Scanner;<br>import java.math.*;<br>public class binarySearch {<br>    public static void main(String[] args) {<br>        Scanner input =new Scanner(System.in);<br>        int[] a = new int[]{1,2,3,4,5,6,7,8,9,10};<br>        System.out.println(“数组：”);<br>        for (int i=0;i&lt;a.length;i++){<br>            System.out.print(a[i]+” “);<br>        }<br>        System.out.println(“输入你想查找的数：”);<br>        int b = input.nextInt();<br>        //递归实现：<br>//        System.out.println(“—————–递归实现———————-“);<br>//        int findnumIndex =find(b,a,0,a.length-1);<br>//        System.out.println(“findnumIndex:”+findnumIndex);<br>        System.out.println(“——————-while实现———————–”);<br>        //循环实现<br>        int first=0;<br>        int last = a.length-1;<br>        int mid = (first+last)/2;<br>        if (b==mid){<br>            System.out.println(“findnumIndex:”+mid);<br>        }<br>        while (b!=a[mid]){<br>           if (b&lt;a[mid]){<br>               last = mid;<br>               mid = (first+last) /2;<br>           }else if(b&gt;a[mid]){<br>                first = mid;<br>                mid = (first+last)/2;<br>           }else if (b==a[mid]){<br>               System.out.println(“findnumIndex:”+mid);<br>           }<br>        }<br>        System.out.println(“findnumIndex:”+mid);<br>    }</p>
-<pre><code>//findNum  想查找的目标数字，a：查找的数组     start:查找数组起始位置    fin:查找的数组的末尾位置
-//返回目标数字所在的索引
-public static int find(int findNum ,int[] a,int start,int fin){
-
-    int mid = a[start]+a[fin];
-    mid = mid/2;
-    if (findNum&lt;a[start] || findNum&gt;a[fin]){
-        System.out.println(&quot;该数不在此数组内&quot;);
-        return -1;
-    }else if (findNum&lt;mid) {
-        fin=mid;
-        return find(findNum,a,start,fin);
-    }
-    else if (findNum&gt;mid){
-        start = mid;
-        return find(findNum,a,start,fin);
-    }else if(findNum==mid) {
-        return mid;
-    }
-        return -1;
-
-}</code></pre><p>}</p>
-<p>2021-6-13<br>比较字符串地址值<br>public class stringPoolTest {<br>    public static void main(String[] args) {<br>        String s1 = “abc”;<br>        String s2 = “abc”;<br>        String s3  = new String(“abc”);<br>        System.out.println(s1==s2);//s1,s2都是来源于一个字符串常量池的停用<br>        System.out.println(s1==s3);//一个是字符串常量池的地址值，一个是字符串对象的地址。<br>        System.out.println(s1.equals(s3));//String重写了toString方法，比较的是内容，所以为true<br>    }<br>}</p>
-<p>2021-6-15</p>
-<p>泛型自动类型推断<br>import java.util.ArrayList;</p>
-<p>public class genericsTest {<br>    public static void main(String[] args) {<br>        //jdk7新特性，后面的尖括号不用填写东西<br>        ArrayList<animal> arrayList = new ArrayList&lt;&gt;();<br>        //普通写法<br>        ArrayList<animal> arrayList1 = new ArrayList<animal>();<br>    }<br>}<br>class animal{</p>
-<p>}</p>
-<p>switch支持String：</p>
-<p>public class switchTest {<br>    public static void main(String[] args) {<br>        //Switch支持String<br>        String name = “cui”;<br>        switch(name){<br>            case “jin”: System.out.println(“jin”);break;<br>            case “cui”: System.out.println(“cui”);break;<br>            case “hao”: System.out.println(“hao”);break;<br>            default:<br>                System.out.println(“没有cui”);break;<br>        }<br>    }<br>}</p>
-<p>Integer的常量池：<br>public class intergerPoolTest {<br>    public static void main(String[] args) {<br>        int a1= 100;<br>        int a2 = 100;<br>        System.out.println(“a1== a2”+(a1== a2));//true<br>        int e1= 100000;<br>        int e2 = 100000;<br>        System.out.println(“e1== e2”+(e1== e2));//true</p>
-<pre><code>    Integer b1 = 100;
-    Integer b2 = 100;
-    System.out.println(&quot;b1==b2:&quot;+(b1==b2));//true
-    Integer c1 = 1000;
-    Integer c2 = 1000;
-    System.out.println(&quot;c1==c2:&quot;+(c1==c2));//false
-}</code></pre><p>}</p>
-<p>2021-6-17<br>Collection练习：</p>
-<p>import java.util.*;</p>
-<p>public class collectionTest {<br>    public static void main(String[] args) {<br>        //创建Collection集合的对象<br>        Collection<String> c = new ArrayList<String>();<br>        //添加元素：bollean add(E e)<br>        c.add(“hello”);<br>        c.add(“World”);<br>        c.add(“demo”);<br>        System.out.println(c);<br>        System.out.println(“===========================”);<br>        List arr1 = new ArrayList&lt;&gt;();<br>        arr1.add(1);<br>        arr1.add(2);<br>        arr1.add(2);<br>        arr1.add(2);<br>        arr1.add(2);<br>        Iterator iterator = arr1.iterator();<br>        while (iterator.hasNext()){<br>            Integer a = (Integer) iterator.next();<br>            System.out.println(a);<br>        }</p>
-<pre><code>}</code></pre><p>}</p>
-<p>枚举练习：</p>
-<p>public class enumTest {<br>    public static void main(String[] args) {<br>        Color color = Color.green;<br>        switch (color){<br>            case red:<br>                System.out.println(“红色”);<br>                break;<br>            case blank:<br>                System.out.println(“灰色”);<br>                break;<br>                case yellow:<br>                System.out.println(“黄色”);<br>                break;<br>            default:<br>                System.out.println(“没有yanse”);</p>
-<pre><code>    }
-    int value1 = 3;
-    int value2 = 4;
-    Result result = method1(value1,value2);
-    System.out.println(result);//FAILURE
-    //result的变量类型：
-    System.out.println(result.getClass().getName());//enumTest$Result
-}
-private static Result method1(int value1,int value2){
-    if(value1&gt;value2)return Result.SUCCESS;
-    if(value1&lt;=value2)return Result.FAILURE;
-    else return Result.FAILURE;
-}
-public  enum  Color{
-    red,green,blank,yellow
-}
-enum Result{
-    SUCCESS,FAILURE
-}</code></pre><p>}</p>
-<p>2021-6-21<br>集合类练习：<br>import java.lang.reflect.Array;<br>import java.util.ArrayList;<br>import java.util.Iterator;<br>import java.util.List;</p>
-<p>public class genericsTest01 {<br>    public static void main(String[] args) {<br>        List list =new ArrayList();<br>        list.add(1);<br>        list.add(2);<br>        list.add(4);<br>        list.add(3);<br>        for (Iterator iter = list.iterator(); list.iterator().hasNext();){<br>            System.out.println(iter.next());<br>        }</p>
-<pre><code>}</code></pre><p>}</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>四级英语词汇</title>
-    <url>/2021/06/07/%E5%9B%9B%E7%BA%A7%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
-    <content><![CDATA[<p>a art.一(个)；每一 (个)<br>abandon vt.丢弃；放弃，抛弃<br>ability n.能力；能耐，本领<br>able a.有能力的；出色的<br>abnormal a.不正常的；变态的<br>aboard ad.在船(车)上；上船<br>about prep.关于；在…周围<br>above prep.在…上面；高于<br>abroad ad.(在)国外；到处<br>absence n.缺席，不在场；缺乏<br>absent a.不在场的；缺乏的<br>absolute a.绝对的；纯粹的<br>absolutely ad.完全地；绝对地<br>absorb vt.吸收；使专心<br>abstract a.抽象的 n.摘要<br>abundant a.丰富的；大量的<br>abuse vt.滥用；虐待 n.滥用<br>academic a.学院的；学术的<br>academy n.私立中学；专科院校</p>
+    <title>JavaSE进阶</title>
+    <url>/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[<p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现</p>
 <a id="more"></a>
-<p>accelerate vt.(使)加快；促进<br>acceleration n.加速；加速度<br>accent n.口音，腔调；重音<br>accept vt.vi.接受；同意<br>acceptable a.可接受的，合意的<br>acceptance n.接受，验收；承认<br>access n.接近；通道，入口<br>accessory n.同谋，从犯；附件<br>accident n.意外的；事故<br>accidental a.偶然的；非本质的<br>accommodate vt.容纳；供应，供给<br>accommodation n.招待设备；预定铺位<br>accompany vt.陪伴，陪同；伴随<br>accomplish vt.达到(目的 )；完成<br>accord vt.使一致；给予<br>accordance n.一致；和谐；授予<br>accordingly ad.因此，所以；照着<br>account n.记述；解释；帐目<br>accumulate vt.积累 vi.堆积<br>accuracy n.准确(性)；准确度<br>accurate a.准确的，正确无误的<br>accuse vt.指责；归咎于<br>accustom vt.使习惯<br>accustomed a.惯常的；习惯的<br>ache vi.痛；想念 n.疼痛<br>achieve vt.完成，实现；达到<br>achievement n.完成；成就，成绩<br>acid n.酸；酸的，酸性的<br>acquaintance n.认识；了解；熟人<br>acquire vt.取得；获得；学到<br>acre n.英亩(=6.07 亩)<br>across prep.横过；在…对面<br>act vi.行动；见效 n.行为<br>action n.行动；作用；功能<br>active a.活跃的；积极的<br>activity n.活动；活力；行动<br>actor n.男演员；演剧的人<br>actress n.女演员<br>actual a.实际的；现行的<br>actually ad.实际上；竟然<br>acute a.尖的，锐的；敏锐的<br>ad n.广告<br>adapt vt.使适应；改编<br>add vt.添加，附加，掺加<br>addition n.加，加法；附加物<br>additional a.附加的，追加的<br>address n.地址；演说；谈吐<br>adequate a.足够的；可以胜任的<br>adjective n.形容词 a.形容词的<br>adjust vt.调整，调节；校正<br>administration n.管理；管理部门<br>admire vt.钦佩，羡慕，赞赏<br>admission n.允许进入；承认<br>admit vt.承认；准许…进入<br>adopt vt.收养；采用；采取<br>adult n.成年人 a.成年的<br>advance vi.前进；提高 n.进展<br>advanced a.先进的；高级的<br>advantage n.优点，优势；好处<br>adventure n.冒险；惊险活动<br>adverb n.副词<br>advertisement n.广告；公告；登广告<br>advice n.劝告；忠告；意见<br>advisable n.明智的；可取的<br>advise vt.劝告；建议；通知<br>aeroplane n.飞机<br>affair n.事情，事件；事务<br>affect vt.影响；感动<br>affection n.慈爱，爱；爱慕<br>afford vt.担负得起…；提供<br>afraid a.害怕的；担心的<br>Africa n.非洲<br>African a.非洲的 n.非洲人<br>after prep.在…以后；次于<br>afternoon n.下午，午后<br>afterward ad.后来，以后<br>again ad.又一次；而且<br>against prep.倚在；逆，对着<br>age n.年龄；时代 vt.变老<br>agency n.经办；代理；代理处<br>agent n.代理人，代理商<br>aggressive a.侵略的；好斗的<br>ago ad.以前<br>agony n.极度痛苦<br>agree vi.同意；持相同意见<br>agreement n.协定，协议；同意<br>agriculture n.农业，农艺；农学<br>ahead ad.在前；向前；提前<br>aid n.帮助，救护；助手<br>aim vi.瞄准，针对；致力<br>air n.空气；空中；外观<br>aircraft n.飞机，飞行器<br>airline n.航空公司；航线<br>airplane n.飞机<br>airport n.机场，航空站<br>alarm n.惊恐，忧虑；警报<br>alcohol n.酒精，乙醇<br>alike a.同样的，相同的<br>alive a.活着的；活跃的<br>all a.全部的 prep.全部<br>allow vt.允许，准许；任<br>alloy n.合金； (金属的 )成色<br>almost ad.几乎，差不多<br>alone a.单独的 ad.单独地<br>along prep.沿着 ad.向前<br>aloud ad.出声地，大声地<br>alphabet n.字母表，字母系统<br>already ad.早已，已经<br>also ad.亦，也；而且，还<br>alter vt.改变，变更；改做<br>alternative n.替换物；取舍，抉择<br>although conj.尽管，虽然<br>altitude n.高，高度；高处<br>altogether ad.完全；总而言之<br>aluminium n.铝<br>always ad.总是，一直；永远<br>a.m (缩)上午，午前<br>amaze vt.使惊奇，使惊愕<br>ambition n.雄心，抱负，野心<br>ambulance n.救护车；野战医院<br>America n.美洲；美国<br>American a.美洲的 n.美国人<br>among prep.在…之中<br>amongst prep在…之中 (=among)<br>amount n.总数；数量；和<br>ampere n.安培<br>    amplify vt.放大，增强；扩大<br>amuse vt.逗…乐；给…娱乐<br>analyse vt.分析，分解，解析<br>analysis n.分析，分解，解析<br>ancestor n.祖宗，祖先<br>anchor n.锚 vi.抛锚，停泊<br>ancient a.古代的，古老的<br>and conj.和，又，并，则<br>angel n.天使，神差，安琪儿<br>anger n.怒，愤怒 vt.使发怒<br>angle n.角，角度<br>angry a.愤怒的，生气的<br>animal n.动物，兽 a.动物的<br>ankle n.踝，踝节部<br>announce vt.宣布，宣告，发表<br>announcer n.宣告者；播音员<br>annoy vt.使恼怒；打搅<br>annual a.每年的 n.年报<br>another a.再一个的；别的<br>answer vt.回答；响应；适应<br>ant n.蚂蚁<br>anticipate vt.预料，预期，期望<br>anxiety n.焦虑，忧虑；渴望<br>anxious a.忧虑的；渴望的<br>any a.什么，一些；任何的<br>anybody prep.任何人<br>anyhow ad.无论如何<br>anyone pron.任何人<br>anything pron.任何事物；一切<br>anyway ad.无论如何<br>anywhere ad.在什么地方<br>apart ad.相隔；分开；除去<br>apartment n.一套公寓房间<br>apologize vi.道歉，谢罪，认错<br>apology n.道歉，认错，谢罪<br>apparatus n.器械，仪器；器官<br>apparent a.表面上的；明显的<br>appeal vi.&amp;n.呼吁；申述<br>appear vi.出现；来到；似乎<br>appearance n.出现，来到；外观<br>    appetite n.食欲，胃口；欲望<br>apple n.苹果，苹果树<br>appliance n.用具，器具，器械<br>applicable a.能应用的；适当的<br>application n.请求，申请；施用<br>apply vt.应用，实施，使用<br>appoint vt.任命，委任；约定<br>appointment n.任命；约定，约会<br>appreciate vt.欣赏；领会；感谢<br>approach vt.向…靠近 n.靠近<br>appropriate a.适当的，恰当的<br>approval n.赞成，同意；批准<br>approve vt.赞成，称许；批准<br>approximately ad.近似地，大约<br>April n. 四月<br>Arabian a.阿拉伯的<br>arbitrary a.随心所欲的；专断的<br>architecture n.建筑学；建筑式样<br>area n.面积；地区；领域<br>argue vi.争论，争辩，辩论<br>argument n.争论，辩论；理由<br>arise vi.出现；由…引起<br>arithmetic n.算术，四则运算<br>arm n.臂；臂状物；武器<br>army n.军队；陆军<br>around prep.在…周围<br>arouse vt.引起，唤起；唤醒<br>arrange vt.筹备；整理；调解<br>arrangement n.整理，排列；安排<br>arrest vt.逮捕，拘留；阻止<br>arrival n.到达；到来；到达者<br>arrive vi.到达；来临；达到<br>arrow n.箭；箭状物<br>art n.艺术，美术；技术<br>article n.文章；条款；物品<br>artificial a.人工的；娇揉造作的<br>artist n.艺术家，美术家<br>artistic a.艺术的；艺术家的<br>as conj.当…的时候<br>ash n.灰，灰末；骨灰<br>ashamed a.惭愧(的)；羞耻 (的)<br>Asia n.亚洲<br>Asian a.亚洲的 n.亚洲人<br>aside ad.在旁边，到旁边<br>ask vt.问；要求；邀请<br>asleep a.睡着的，睡熟的<br>aspect n.方面；样子，外表<br>    assemble vt.集合，召集；装配<br>assembly n.集合；集会；装配<br>assess vt.对(财产等 )估价<br>assign vt.指派；分配；指定<br>assignment n.任务，指定的作业<br>assist vt.援助，帮助；搀扶<br>assistant n.助手，助理；助教<br>associate vi.交往 n.伙伴，同事<br>association n.协会，团体；联合<br>assume vt.假定；承担；呈现<br>assure vt.使确信；向…保证<br>    astonish vt.使惊讶，使吃惊<br>astronaut n.宇宙航行员，宇航员<br>at prep.在…里；在…时<br>athlete n.运动员；田径运动员<br>Atlantic a.大西洋的 n.大西洋<br>atmosphere n.大气；空气；气氛<br>atmospheric a.大气的；大气层的<br>atom n.原子；微粒；微量<br>atomic a.原子的；原子能的<br>attach vt.缚，系，贴；附加<br>attack vt.&amp;vi.&amp;n. 攻击，进攻<br>attain vt.达到，获得，完成<br>attempt vt.尝试，试图 n.企图<br>attend vt.出席；照顾，护理<br>attention n.注意，留心；注意力<br>attentive a.注意的；有礼貌的<br>attitude n.态度，看法；姿势<br>attract vt.吸引；引起，诱惑<br>attraction n.吸引；吸引力；引力<br>attractive a.有吸引力的<br>attribute vt.把…归因于 n.属性<br>audience n.听众，观众，读者<br>August n.八月<br>aunt n.伯母，婶母，姑母<br>    aural a.耳的，听觉的<br>Australia n.澳大利亚<br>Australian a.澳大利亚的<br>author n.作者，作家<br>authority n.当局，官方；权力<br>auto n.(口语)汽车<br>automatic a.自动的；机械的<br>automation n.自动，自动化<br>automobile n.汽车，机动车<br>autumn n.秋，秋季<br>    auxiliary a.辅助的；附属的<br>available a.可利用的；通用的<br>    avenue n.林荫道，道路；大街<br>average n.平均数 a.平均的<br>    aviation n.航空，航空学<br>avoid vt.避免，躲开；撤消<br>await vt.等候，期待<br>awake a.醒着的 vt.唤醒<br>award n.奖，奖品；判定<br>aware a.知道的，意识到的<br>away ad.离开，远离；…去<br>    awful a.令人不愉快的<br>awfully ad.令人畏惧的；很<br>    awkward a.笨拙的；尴尬的<br>ax n.斧子<br>axis n.轴，轴线；中心线<br>baby n.婴儿；孩子气的人<br>back ad.在后；回原处；回<br>background n.背景，后景，经历<br>backward a.向后的；倒的 ad.倒<br>    bacteria n.细菌<br>bad a.坏的，恶的；严重的<br>badly ad.坏，差；严重地<br>badminton n.羽毛球<br>bag n.袋，包，钱包，背包<br>    baggage n.行李<br>bake vt.烤，烘，焙；烧硬<br>balance vt.使平衡；称 n.天平<br>ball n.球，球状物；舞会<br>balloon n.气球，玩具气球<br>banana n.香蕉；芭蕉属植物<br>band n.乐队；带；波段<br>bang n.巨响，枪声；猛击<br>bank n.银行；库；岩，堤<br>banner n.旗，旗帜，横幅<br>bar n.酒吧间；条，杆；栅<br>barber n.理发师<br>    bare a.赤裸的；仅仅的<br>bargain n.交易 vi.议价；成交<br>bark n.吠叫声 vi.吠，叫<br>    barn n.谷仓；牲口棚<br>    barrel n.桶；圆筒；枪管<br>    barrier n.栅栏，屏障；障碍<br>base n.基础，底层；基地<br>basic a.基本的，基础的<br>basically ad.基本上<br>basin n.盆，洗脸盆；盆地<br>basis n.基础，根据<br>basket n.篮，篓，筐<br>basketball n.篮球；篮球运动<br>bat n.球拍；短棍；蝙蝠<br>bath n.浴，洗澡；浴缸<br>bathe vt.给…洗澡；弄湿<br>bathroom n.浴室；盥洗室<br>battery n.电池；一套，一组<br>battle n.战役；斗争 vi.作战<br>bay n.湾；山脉中的凹处<br>B.C. (缩)公元前<br>be aux.v.&amp;vi.是，在，做<br>beach n.海滩，湖滩，河滩<br>    beam n.梁；横梁；束，柱<br>bean n.豆，蚕豆<br>bear n.熊；粗鲁的人<br>bear vt.容忍；负担；生育<br>beard n.胡须，络腮胡子<br>beast n.兽，野兽；牲畜<br>beat vt.&amp;vi.打，敲；打败<br>beautiful a.美的，美丽的<br>beauty n.美，美丽；美人<br>because conj.由于，因为<br>become vi.变成；成为，变得<br>bed n.床，床位；圃；河床<br>bee n.蜂，密蜂；忙碌的人<br>beef n.牛肉；菜牛<br>beer n.啤酒<br>before prep.在…以前；向…<br>beg vt.&amp;vi.乞求；请求<br>beggar n.乞丐，穷人<br>begin vi.开始 vt.开始<br>beginner n.初学者，生手<br>beginning n.开始，开端；起源<br>behalf n.利益，维护，支持<br>behave vi.表现，举止；运转<br>behavior n.行为，举止，态度<br>behind prep.在…后面<br>being n.存在；生物；生命<br>belief n.信任，相信；信念<br>believe vt.相信；认为<br>bell n.钟，铃，门铃；钟声<br>belong vi.属于，附属<br>beloved a.为…的爱的 n.爱人<br>below prep.在…下面 (以下)<br>belt n.带，腰带；皮带；区<br>bench n.长凳，条凳；工作台<br>bend vt.使弯曲 vi.弯曲<br>beneath prep.在…下方<br>beneficial a.有利的，有益的<br>benefit n.利益；恩惠；津贴<br>berry n.浆果(如草莓等 )<br>beside prep.在…旁边<br>besides ad.而且 prep.除…之外<br>best a.最好的；最大的<br>bet vt.&amp;vi.&amp;n. 打赌<br>    betray vt.背叛；辜负；泄漏<br>better a.较好的 ad.更好地<br>between prep.在…中间<br>beyond prep.在…的那边<br>Bible n.基督教《圣经》<br>bicycle n.自行车，脚踏车<br>big a.大的，巨大的<br>bike n.自行车 vi.骑自行车<br>bill n.账单；招贴；票据<br>billion num. 万亿(英)<br>bind vt.捆绑；包扎；装钉<br>biology n.生物学；生态学<br>bird n.鸟，禽<br>birthday n.生日，诞生的日期<br>biscuit n.(英)饼干； (美)软饼<br>bit n.一点，一些，小片<br>bite vt.咬，叮，螫；剌穿<br>bitter a.痛苦的；严寒的<br>bitterly ad.苦苦地；悲痛地<br>black a.黑色的；黑暗的<br>blackboard n.黑板<br>    blade n.刀刃，刀片；叶片<br>    blame vt.责备，把…归咎于<br>blank a.空白的 n.空白<br>blanket n.毛毯，毯子，羊毛毯<br>blast n.爆炸，冲击波 vt.炸<br>    blaze n.火；闪光 vi.燃烧<br>bleed vi.出血，流血；泌脂<br>blend vt.&amp;vi.&amp;n. 混和<br>bless vt.为…祝福<br>    blind a.瞎的；盲目的<br>block n.街区 vt.堵塞，拦阻<br>blood n.血，血液；血统<br>bloom n.花；开花，开花期<br>blossom n.花，开花 vi.开花<br>blow vi. 吹，吹动；吹响<br>blue a.蓝色的 n.蓝色<br>board n.板 vt.上(船、车等 )<br>boast vi.自夸 vt.吹嘘<br>boat n.小船，艇；渔船<br>body n.身体；主体；尸体<br>boil vi. 沸腾；汽化 vt.煮沸<br>    bold a.大胆的；冒失的<br>    bolt n.螺栓；插销 vt.闩门<br>    bomb n.BoB!!! vt. 轰炸<br>bond n.联结，联系；公债<br>bone n.骨，骨骼<br>book n.书，书籍 vt.预定<br>boot n.靴子，长统靴<br>booth n.货摊；公用电话亭<br>border n.边，边缘；边界<br>bore vt.使厌烦；钻，挖<br>born a.天生的；出生的<br>borrow vt.借，借用，借人<br>bosom n.胸，胸部；内心<br>boss n.老板，上司 vt.指挥<br>both pron.两者(都)<br>bother vt.烦扰，迷惑 n.麻烦<br>bottle n.瓶，酒瓶；一瓶<br>bottom n.底，底部，根基<br>bough n.树枝<br>bounce vi.反跳，弹起；跳起<br>bound a.一定的；有义务的<br>boundary n.分界线，办界<br>bow n.弓；蝴蝶结；鞠躬<br>bowl n.碗，钵；碗状物<br>box n.箱，盒；包箱<br>box vi.拳击，打拳<br>boy n.男孩，少年；家伙<br>brain n.脑，脑髓；脑力<br>brake n.闸，刹车 vi.制动<br>branch n.树枝；分部；分科<br>brand n.商品；烙印 vt.铭刻<br>    brandy n.白兰地酒<br>    brass n.黄铜；黄铜器<br>brave a.勇敢的，华丽的<br>    bread n.面包；食物，粮食<br>    breadth n.宽度，幅度；幅面<br>break vt.打破；损坏；破坏<br>breakfast n.早饭，早餐<br>breast n.乳房；胸脯，胸膛<br>breath n.气息，呼吸；气味<br>breathe vi.呼吸 vt.呼吸<br>breed n.品种 vt.使繁殖<br>    breeze n.微风，和风<br>brick n.砖，砖块；砖状物<br>    bridge n.桥，桥梁；桥牌<br>brief a.简短的；短暂的<br>bright a.明亮的；聪明的<br>brighten vt.使发光；使快活<br>brilliant a.光辉的；卓越的<br>    brim n.边，边缘；帽沿<br>bring vt.带来；引出；促使<br>brisk a.活泼的；清新的<br>    bristle n.短而硬的毛；鬃毛<br>Britain n.不列颠，英国<br>British a.不列颠的，英联邦的<br>    brittle a.脆的；易损坏的<br>broad a.宽的，阔的；广泛的<br>broadcast n.广播，播音<br>broken a.被打碎的，骨折的<br>    bronze n.青铜；青铜制品<br>    brood n.同窝幼鸟 vt.孵(蛋)<br>    brook n.小河，溪流<br>broom n.扫帚<br>    brother n.兄弟；同事，同胞<br>brow n.额；眉，眉毛<br>brown n.褐色，棕色<br>    bruise n.青肿，伤痕；擦伤<br>    brush n.刷子，毛刷；画笔<br>    brute n.禽兽，畜生<br>    bubble n.泡 vi.冒泡，沸腾<br>    bucket n.水桶；吊桶；铲斗<br>    bud n.芽，萌芽；蓓蕾<br>build vt.建筑；建立；创立<br>building n.建筑物，大楼；建筑<br>bulb n.电灯泡；球状物<br>bulk n.物体，容积，大批<br>bull n.公牛；雄的象<br>bullet n.枪弹，子弹，弹丸<br>bunch n.束，球，串；一群<br>    bundle n.捆，包，束；包袱<br>burden n.担子，重担；装载量<br>    bureau n.局，司，处；社，所<br>burn vi.烧，燃烧 n.烧伤<br>burst vt.使爆裂 vi.&amp;n. 爆炸<br>bury vt.埋葬，葬；埋藏<br>bus n.公共汽车<br>bush n.灌木，灌木丛，矮树<br>business n.商业，生意；事务<br>busy a.忙的，繁忙的<br>but conj.但是，可是<br>    butcher n.屠夫；屠杀者<br>butter n.黄油；奶油<br>butterfly n.蝴蝶<br>button n.扣子；按钮 vt.扣紧<br>buy vt.买，购买 vi.买<br>by prep.在…旁；被，由<br>cabbage n.洋白菜，卷心菜<br>    cabin n.小屋；船舱，机舱<br>    cabinet n.橱，柜；内阁<br>    cable n.缆，索；电缆；电报<br>cafe n.咖啡馆；小餐厅<br>cafeteria n.自助食堂<br>cage n.笼；鸟笼，囚笼<br>cake n.饼，糕，蛋糕<br>    calculate vt.计算；估计；计划<br>calculation n.计算，计算结果<br>calculator n.计算器，计算者<br>calendar n.日历，历书；历法<br>call vt.把…叫做；叫，喊<br>    calm a.静的，平静的<br>camel n.骆驼<br>camera n.照相机，摄影机<br>camp n.野营，营地，兵营<br>campaign n.战役；运动<br>campus n.校园，学校场地<br>can aux.v.能，会，可能<br>can n.罐头，听头；容器<br>Canada n.加拿大<br>Canadian a.加拿大的<br>canal n.运河；沟渠；管<br>cancel vt.取消，撤消；删去<br>cancer n.癌，癌症，肿瘤<br>candidate n.候选人；投考者<br>    candle n.蜡烛；烛形物；烛光<br>candy n.糖果；砂糖结晶<br>cannon n.大炮，火炮；榴弹炮<br>    canoe n.独木舟，皮艇，划子<br>    canteen n.小卖部；临时餐室<br>canvas n.粗帆布；一块油画布<br>cap n.帽子，便帽；帽状物<br>capable a.有能力的，有才能的<br>capacity n.容量；能力；能量<br>capital n.资本，资金；首都<br>captain n.陆军上尉；队长<br>captive n.俘虏，被监禁的人<br>capture vt.捕获，俘获；夺得<br>car n.汽车，小汽车，轿车<br>carbon n.碳<br>card n.卡，卡片，名片<br>care vi.关心，介意 n.小心<br>career n.生涯，职业，经历<br>careful a.仔细的；细致的<br>careless a.粗心的，漫不经心的<br>cargo n.船货，货物<br>carpenter n.木工，木匠<br>carpet n.地毯，毡毯，毛毯<br>carriage n.客车厢；四轮马车<br>carrier n.运输工具；运载工具<br>carrot n.胡罗卜<br>carry vt.携带；运载；传送<br>cart n.二轮运货马车<br>carve vt.刻，雕刻；切开<br>case n.情况；事实；病例<br>case n.箱(子)，盒(子)，套<br>cash n.现金，现款<br>cassette n.盒式录音带；盒子<br>cast vt.投，扔，抛；浇铸<br>    castle n.城堡；巨大建筑物<br>casual a.偶然的；随便的<br>cat n.猫，猫科，猫皮<br>catalog n.目录，目录册<br>catch vt.捉住；赶上；领会<br>    cathedral n.总教堂；大教堂<br>cattle n.牛；牲口，家畜<br>cause n.原因，理由；事业<br>cave n.山洞，洞穴，窑洞<br>    cease vi.&amp;vi.&amp;n.停止，停息<br>ceiling n.天花板，顶蓬<br>celebrate vt.庆祝；歌颂，赞美<br>cell n.细胞；小房间<br>cellar n.地窑，地下室<br>cement n.水泥；胶泥 vt.粘结<br>cent n.分；分币；百<br>centigrade a.百分度的<br>centimetre n.公分，厘米<br>central a.中心的；主要的<br>centre n.中心；中枢 vt.集中<br>century n.世纪，百年<br>ceremony n.典礼，仪式；礼节<br>certain a.确实的；肯定的<br>certainly ad.一定，必定；当然<br>certainty n.必然；肯定<br>certificate n.证书，证件，执照<br>chain n.链，链条，项圈<br>chair n.椅子；主席<br>chairman n.主席；议长，会长<br>    chalk n.白垩；粉笔<br>challenge n.挑战；要求，需要<br>    chamber n.会议室；房间；腔<br>champion n.冠军，得胜者<br>chance n.机会，机遇；可能性<br>change n.改变，变化；零钱<br>channel n.海峡；渠道；频道<br>chapter n.章，回，篇<br>character n.性格；特性；角色<br>characteristic a.特有的 n.特性<br>charge vt.索价；控告 n.费用<br>charity n.施舍；慈善事业<br>charming a.迷人的，可爱的<br>chart n.图，图表；海图<br>chase n.追逐，追赶，追求<br>cheap a.廉价的；劣质的<br>cheat vt.骗取；哄 vi.行骗<br>check vt.检查；制止 n.检查<br>cheek n.面颊，脸蛋<br>cheer vt.使振作；欢呼<br>cheerful a.快乐的，愉快的<br>cheese n.乳酪，干酪<br>chemical a.化学的 n.化学制品<br>chemist n.化学家；药剂师<br>    chemistry n.化学<br>    cheque n.支票<br>    cherry n.樱桃；樱桃树<br>chess n.棋；国际象棋<br>chest n.胸腔，胸膛；箱子<br>    chew vt.咀嚼，嚼碎<br>chicken n.小鸡，小鸟；鸡肉<br>chief a.主要的；首席的<br>child n.小孩，儿童；儿子<br>childhood n.童年，幼年；早期<br>childish a.孩子的；幼稚的<br>chill vt. 使变冷 n.寒冷<br>chimney n.烟囱，烟筒；玻璃罩<br>chin n.颏，下巴<br>China n.中国<br>china n.瓷器，瓷料<br>Chinese a.中国的 n.中国人<br>chocolate n.巧克力；巧克力糖<br>choice n.选择，抉择<br>choke vt.使窒息；塞满<br>choose vt.选择，挑选；情愿<br>chop vt.砍，劈；切细 vi.砍<br>Christian n.基督教徒；信徒<br>Christmas n.圣诞节</p>
+<pre><code>java语言中凡是没有方法体的方法都是抽象方法。
+        不对，错误的。
+        Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们
+        都不是抽象方法，例如：
+            public native int hashCode();
+            这个方法底层调用了C++写的动态链接库程序。
+            前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</code></pre><!--more-->
+<pre><code>接口的基础语法：
+    接口是一种‘引用数据类型’
+    接口是完全抽象的
+    接口的定义：[修饰符列表] interface 接口名{}
+    接口的多继承
+    接口中只有常量+抽象方法
+    接口中所有的元素都是public修饰的
+    接口中的抽象方法的public abstract可以省略
+    接口中常量的public static final可以省略
+    接口中方法不能有方法体
+    一个非抽象的类，实现接口的时候，必须将接口中的所有方法实现
+    一个类可以实现多个接口
+    extends 和 implements可以共存，extends在前，impl在后
+    使用接口，写代码时，可以使用多态
+
+接口在开发中的作用：
+    面向抽象编程---&gt;面向接口编程
+    有了接口就实现拓展
+    调用者面向接口调用，实现者面向接口编写实现
+
+抽象类和接口的区别：
+    抽象类是半抽象的，接口是完全抽象的
+    抽象类中有构造方法，接口中没有
+    接口和接口之间，支持多继承
+    类和类之间只能单继承
+    一个类可以同时实现多个接口，一个抽象类只能继承一个类
+    接口中只允许出现常量和抽象方法
+    接口使用的比抽象类多，抽象类使用少
+    接口一般都是对“行为”的抽象</code></pre><p>import和package：<br>    package：<br>        必须出现在源文件的第一行<br>    import：<br>        java.lang包不需要引入<br>        同包下的java文件不需要引入</p>
+<p>private 表示私有的，只能在本类中访问<br>        public 表示公开的，在任何位置都可以访问<br>        “默认”表示只能在本类，以及同包下访问。<br>        protected表示只能在本类、同包、子类中访问。</p>
+<p>JDK类库根类：Object<br>    需要知道的几个方法：<br>        protected Object clone()   // 负责对象克隆的。<br>         int hashCode()    // 获取对象哈希值的一个方法。<br>        boolean equals(Object obj)  // 判断两个对象是否相等<br>            以后所有类的equals方法也需要重写，因为Object中的equals方法比较的是两个对象的内存地址，我们应该比较内容，所以需要重写。<br>            重写规则：自己定，主要看是什么和什么相等时表示两个对象相等。<br>            基本数据类型比较实用：==<br>            对象和对象比较：调用equals方法<br>            String类是SUN编写的，所以String类的equals方法重写了。<br>            以后判断两个字符串是否相等，最好不要使用==，要调用字符串对象的equals方法。<br>            注意：重写equals方法的时候要彻底。<br>        String toString()  // 将对象转换成字符串形式<br>            以后的所有的类的toString()方法是需要重写的，System.out.println(引用);<br>             这里会自动调用“引用”的toString()方法。String类是SUN写，toString方法已经重写了。<br>        protected void finalize()  // 垃圾回收器负责调用的方法</p>
+<p>数组：<br>    理解：空间存储上，内存地址是连续的，每个元素占用的空间大小形同，知道首元素的内存地址，知道下标可以计算出偏移量，<br>    优点：检索效率高<br>    缺点：随机增删效率较低，数组无法存储大数据量<br>    数组最后一个元素的增删效率不受影响</p>
+<pre><code>一维数组的静态初始化和动态初始化
+    静态初始化：
+        int []arr ={1,2,3,4};
+        Object[] objs = {new Object(), new Object(), new Object()};
+    动态初始化：
+        int[] arr = new int[4]; // 4个长度，每个元素默认值0
+        Object[] objs = new Object[4]; // 4个长度，每个元素默认值null                        
+
+数组的拷贝：System.arraycopy()方法的使用
+    数组的特点：长度一旦确定，不可变
+    数组长度不够的时候，需要扩容，扩容机制：新建一个更大的数组
+    将小数组中数据拷贝到大数组中，小数组对象被垃圾回收</code></pre><p>String类：<br>    理解：<br>        字符串一旦创建，不可修改<br>        双引号括起来的字符串存储在字符串常量池中<br>        字符串的比较使用的是equals方法<br>        String已经重写了toString()和equals()方法<br>    String的构造方法：<br>        String s = “abc”;<br>        String s = new String(“abc”);<br>        String s = new String(byte数组);<br>        String s = new String(byte数组, 起始下标, 长度);<br>        String s = new String(char数组);<br>        String s = new String(char数组, 起始下标, 长度);<br>    采用双引号赋值字符串，在编译期将会放到方法区中的字符串的常量池，如果是运行时对字符串相加或者相减会放到堆中（放之前会验证方法区中是否含有相同的字符串常量，如果存在，把地址返回，如果不存在，先将字符串常量放到池中，然后返回该对象的地址）<br>    String常用方法：<br>        1. endsWith：判断字符串是否以指定的后缀结束<br>        2. startsWith，判断字符串是否以指定的前缀开始<br>        3. equals，字符串相等比较，不忽略大小写<br>        4. equalsIgnoreCase，字符串相等比较，忽略大小写<br>        5. indexOf，取得指定字符在字符串的位置<br>        6. lastIndexOf，返回最后一次字符串出现的位置<br>        7. length，取得字符串的长度<br>        8. replaceAll，替换字符串中指定的内容<br>        9. split，根据指定的表达式拆分字符串<br>        10. substring，截子串<br>        11. trim,去前尾空格<br>        12. valueOf，将其他类型转换成字符串<br>    使用String时注意：<br>        String是不可变对象，如果多个字符串拼接，就会产生多个对象，会造成内存溢出</p>
+<p>StringBuffer和StringBuilder<br>    StringBuffer和StringBuilder可以看做可变长度的字符串<br>    StringBuffer和StringBuilder初始化容量为16<br>    StringBuffer和StringBuilder是完成字符串拼接操作的，方法名：append<br>    频繁进行字符串拼接不建议使用‘+’<br>    StringBuffer（字符串缓冲区）:<br>        工作原理：<br>            预先申请一块内存，存放字符序列，如果字符序列满了，重新改变缓存区的大小，StringBuffer是可变对象，这个是String最大的不同<br>    StringBuilderr：<br>        用法和Buffer一样，区别是StringBuffer方法是同步的，是线程安全的，但速度慢，StringBuilder速度快，线程不安全<br>八中基本数据类型对应的包装类：<br>    包装类存在的作用：方便编程<br>    八种包装类的类名：<br>        Byte<br>        Short<br>        Integer<br>        Long<br>        Float<br>        Double<br>        Boolean<br>        Character<br>    所有的数字的父类Number       </p>
+<p>日期类：<br>    获取系统当前时间：<br>        Date d = new Date();<br>    日期格式化：Date –&gt; String<br>        yyyy-MM-dd HH:mm:ss SSS<br>        SimpleDateFormat sdf = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss SSS”);<br>        String s = sdf.format(new Date());<br>    String –&gt; Date<br>        SimpleDateFormat sdf = new SimpleDate(“yyyy-MM-dd HH:mm:ss”);<br>        Date d = sdf.parse(“2008-08-08 08:08:08”);<br>    获取毫秒数<br>        long begin = System.currentTimeMillis();<br>        Date d = new Date(begin - 1000 * 60 * 60 * 24);</p>
+<p>数字类<br>    DecimalFormat数字格式化<br>        ###,###.## 表示加入千分位，保留两个小数。<br>        ###,###.0000 表示加入千分位，保留4个小数，不够补0<br>    BigDecimal<br>        财务软件中通常使用BigDecimal</p>
+<p>随机数<br>    怎么产生int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt();<br>    怎么产生某个范围之内的int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt(101); // 产生[0-100]的随机数。</p>
+<p>枚举<br>    枚举是一种引用数据类型。<br>    枚举编译之后也是class文件。<br>    枚举类型怎么定义？<br>        enum 枚举类型名{<br>            枚举值,枚举值2,枚举值3<br>        }<br>    当一个方法执行结果超过两种情况，并且是一枚一枚可以列举出来的时候，建议返回值类型设计为枚举类型。</p>
+<p>异常处理机制：<br>    java中异常的作用:增强程序的健壮性<br>    java中的异常以类和对象的形式存在</p>
+<p>java的异常处理机制：<br>    异常在java中以类和对象的形式存在<br>    Object<br>    Object下有Throwable（可抛出的）<br>    Throwable下有两个分支：Error：（不可处理的，直接退出JVM）和Exception（可处理的）<br>    Exception下有两个分支：<br>        Exception的直接子类：编译时异常（要求程序员在编写程序阶段必须预先对这些异常进行处理，如果不处理编译器报错，因此得名编译时异常。）。<br>        RuntimeException：运行时异常。（在编写程序阶段程序员可以预先处理，也可以不管，都行。）<br>    java对异常的处理的两种方式：<br>        使用throws关键字，抛给上一级<br>        使用try……catch语句进行异常的抓捕<br>        java出现异常，如果一直往上抛，最终会抛给main方法，main方法再往上抛给了JVM，JVM知道异常后，终止java程序的执行。<br>    异常捕获的顺序：从小到大<br>    子类方法不能抛出比父类方法更多的异常</p>
+<p>集合：<br>    Java主要有3个重要的集合<br>        List:一个有序的集合，可以放重复的数据<br>        Set:无序的集合，不允许放重复的数据<br>        Map:一个无序的集合，包含一个键对象和一个值对象，键对象不重复，值对象可以重复<br>    Collection和Iterator：<br>        Collection是List和Set的父接口，在Collection中定义一些主要方法<br>        Iterator：迭代接口，通过此接口可以遍历集合中的数据<br>    List接口：<br>        主要实现了ArrayList和LinkedList，都是由顺序的基于线性存储，可以看成是可变数组。<br>        ArrayList：查询数据比较快，添加和删除数据比较慢（基于可变数组）<br>        LinkedList：查询数据比较慢，添加和删除数据比较快（基于链式数据结构）<br>        Vector：不建议使用，方法是同步的，效率慢，已经被ArrayList取代<br>        Stack：是继承Vector实现的一个栈，栈结构是后进先出的，已经被LinkedList取代<br>    Set接口：<br>        哈希表：一种数据结构，用于提供快速存取操作，基于数组。<br>        HashSet：存储的数据是无序的不可重复的，按照哈希算法存取数据，具有很好的性能<br>            工作原理：插入数据的时候，调用对象的hashCode得到对象的哈希吗，根据哈希吗计算出对象插入集合的位置。<br>        equals和hashCode:</p>
+<pre><code>    TreeSet:
+        可以对Set集合进行排序，默认自然升序排序
+Map接口：
+    可以放置键值对，也就是每个元素都包含键对象和值对象，Map实现较为常用的为HashMap，HashMap对键对象的存取和HashSet一样，仍采用哈希算法，所以如果使用自定类作为Map的键对象，必须复写equals和hashCode方法。
+    HashMap：
+
+    TreeMap：</code></pre><p>基本类型的包装类：<br>    作用：提供更多实用的操作，更容易处理基本类型，所有的包装类都是final的，所以不能创建子类，包装类都是不可变对象<br>    byte    Byte<br>    short   Short<br>    char    Character<br>    int     Integer<br>    long    Long<br>    float   Float<br>    double  Double<br>    boolean Boolean</p>
+<p>JDK5.0新特性：<br>    JDK5.0之前包装类和基本类型做运算时，必须将包装类转换为基本类型。JDK5.0提供自动装箱拆箱Auto-boxing/unboxing</p>
+<p>泛型：</p>
+<p>2021-6-3 </p>
+<p>IO流：要站在内存的角度，看输出和输入<br>    概述：文件通常是一连串的字节和字符构成，组成文件的字节序列称为字节流，组成文件的字符序列称为字符流。java根据流的方向分为输入流和输出流。</p>
+<pre><code>输入流：将文件或其他输入设备的数据加载到内存的过程；
+输出流：将内存中的数据保存到文件或者其他输出设备中
+
+Java语言将IO分为：字节输入\输出流和字符输入\输出流
+
+InputStream（字节输入流）:
+    InputStream是一个抽象类，所有继承InputStream的类都是字节输入流
+OutputStream（字节输出流）：   
+    所有继承OutputStream的类都是字节输出流
+Reader（字符输出流）：
+    所有继承Reader的类都是字符输入流
+Writer（字符输出流）： 
+    所有继承Writer都是字符输出流
+
+文件流：
+    文件流主要分为：文件字节输入流、文件字节输出流、文件字符输入流、文件字符输出流
+
+    FileInputStream(文件字节输入流):
+        主要按照字节方式读取文件
+        注意：如果是读取的是中文，按照字节读入，然后直接打印在控制台的话，会发生乱码，因为汉字是按照两个自己存储的，按照一个字节打印汉字是不完整的。
+    FileOutputStream(文件字节输出流)：
+        按照字节方式写文件，例如文件的复制，首先读取文件，读取文件后将文件保存在另一个磁盘上，就完成了备份。
+    FileReader(文件字符输入流):
+        以字符为单位读取字符，也就是一次读取两个字节，采用字符输入流读取文本文件，汉字就不乱码了。
+    FileWriter(文件字符输出流):
+        输出字符流到文本文件。
+
+缓冲流：
+    目的：为了提升效率，减少物理读取次数。
+    缓冲流主要有：：BufferedInputStream、BufferedOutputStream，BufferedReader、BufferedWriter
+    BufferedReader 提供了实用方法readLine()，可以直接读取一行，BufferWriter 提供了 newLine()可以写换行符。
+
+转换流：   
+    包括InputStreamReader 和 OutputStreamWriter
+    InputStreamReader：将字节流输入流转换为字符输入流
+    OutputStreamWriter：主要是将字节流输出流转换成字符输出流
+
+打印流：
+    包括：PrintStream 字节流和 PrintWriter字符流</code></pre><p>对象流：</p>
+<p>​    对象流可以将Java对象转换为二进制写入磁盘，这个过程通常叫做序列化，并且还可以从磁盘里读出完整java对象，而这个过程叫做反序列化。</p>
+<p>对象流主要包括：ObjectInputStream 和 ObjectOutputStream </p>
+<p>实现序列化和反序列化：</p>
+<p>​    实现序列化该类必须实现序列化接口 java.io.Serializable,该接口没有任何方法，该接口只是一种标记接口，标记这个类是可序列化的</p>
+<p>序列化：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line"></span><br><span class="line">public class ObjectStreamTest02 &#123; </span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123; </span><br><span class="line"></span><br><span class="line">ObjectOutputStream oos &#x3D; null; </span><br><span class="line"></span><br><span class="line">try &#123; </span><br><span class="line">oos &#x3D; new ObjectOutputStream( new FileOutputStream(&quot;c:&#x2F;Person.dat&quot;)); </span><br><span class="line">Person person &#x3D; new Person(); </span><br><span class="line">person.name &#x3D; &quot;张三&quot;; </span><br><span class="line">oos.writeObject(person); </span><br><span class="line">&#125;catch(FileNotFoundException e) &#123; </span><br><span class="line">e.printStackTrace(); </span><br><span class="line">&#125;catch(IOException e) &#123; </span><br><span class="line">e.printStackTrace(); </span><br><span class="line">&#125;finally &#123; </span><br><span class="line">try &#123; </span><br><span class="line">if (oos !&#x3D; null) &#123; </span><br><span class="line">oos.close(); </span><br><span class="line">&#125; </span><br><span class="line">&#125;catch(IOException e) &#123;&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125;  </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;实现序列化接口 </span><br><span class="line">class Person implements Serializable&#123; </span><br><span class="line">String name; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>反序列化，过程类似</p>
+<p>关于transient关键字：一个类实现Serializable接口后，类中的某个属性被transient关键字修饰后，序列化时会被忽略</p>
+<p>serialVersionUID ：序列化有关 </p>
+<p>File类：</p>
+<p>​    提供了大量的文件操作：删除文件，修改文件，得到文件的修改日期，建立目录，列表文件。</p>
+<p>zip格式：</p>
+<p>​    参见java.util.zip.*包下的api</p>
+<p>多线程</p>
+<p>多线程概念：线程指的是进程中的一个执行场景，也就是执行流程。</p>
+<p>​    每一个进程是一个应用程序，都有独立的内存空间</p>
+<p>​    同一个进程的线程中的线程共享其进程中的内存和资源（共享的内存是堆内存和方法区内存，栈内存不共享，每个线程有自己的。）</p>
+<p>什么是进程？</p>
+<p>​    一个进程就是一个应用程序。在操作系统中每启动一个应用程序就会启动一个进程。例如：qq进程，word进程……。</p>
+<p>系统引入多进程的作用：最初的计算机是“单进程的”，计算机只能运行一个应用程序，例如第一台计算机只有 </p>
+<p>DOS 窗口。现代的计算机可以满足我们一边听音乐，一边玩游戏。现代的计算给我们人类感 </p>
+<p>觉：多件事情一起运行。感觉是并行的（错觉）。</p>
+<p>对于单核的计算机来讲，在某一个时间点上只能做一件事情，但是由于计算机的处理速度 </p>
+<p>很高，多个进程之间完成频繁的切换执行，这个切换速度使人类产生了错觉，人类的错觉是：多个进程在同时运行。 </p>
+<p>计算机引入多进程的作用：提高 <strong>CPU</strong> <strong>的使用率</strong>。 </p>
+<p><strong>重点：进程和进程之间的内存独立。</strong> </p>
+<p>什么是线程：线程是进程的一个执行场景。一个进程可以启动多个线程。 </p>
+<p><strong>进程引入多线程的作用？</strong></p>
+<p>提高进程的使用率。 </p>
+<p><strong>重点：线程和线程之间栈内存独立，堆内存和方法区内存共享。一个线程一个栈。</strong> </p>
+<p><strong>描述</strong> <strong>java</strong> <strong>程序的执行原理：</strong> </p>
+<p>java 命令执行会启动 JVM，JVM 的启动表示启动一个应用程序，表示启动了一个进程。 </p>
+<p>该进程会自动启动一个“主线程”，然后主线程负责调用某个类的 main 方法。所以 main 方法 </p>
+<p>的执行是在主线程中执行的。然后通过 main 方法代码的执行可以启动其他的“分支线程”。 </p>
+<p>所以，main 方法结束程序不一定结束，因为其他的分支线程有可能还在执行。 </p>
+<p>线程的创建和启动：<br>    java虚拟机的主线程入口是main方法，用户可以自己创建线程，创建方式有两种：</p>
+<p>​    继承Thread类</p>
+<p>​    实现Runnable接口（推荐使用Runnable接口）</p>
+<p>继承Thread类：</p>
+<p>Thread类中创建线程最重要的两个方法：</p>
+<p>public void run()</p>
+<p>public void start()</p>
+<p>采用</p>
 ]]></content>
   </entry>
   <entry>
-    <title>中原工学院数据库系统概论试题</title>
-    <url>/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="《数据库系统概论》期末考试卷"><a href="#《数据库系统概论》期末考试卷" class="headerlink" title="《数据库系统概论》期末考试卷"></a>《数据库系统概论》期末考试卷</h1><h2 id="一，填空题"><a href="#一，填空题" class="headerlink" title="一，填空题"></a>一，填空题</h2><p>1.实体之间的联系按照联系方式的不同可分为  <u>一对一</u> 、 <u>一对多</u> 和 <u>多对多</u>   。  </p>
-<p>2.数据库系统的核心是  <u>数据库管理系统（DBMS）</u>。</p>
-<p>3.在关系模型中，实体以及实体间的联系都是用  <u>关系</u>  来表示的。</p>
-<p>4.在关系代数中专门的关系运算包括   <u>选择   、投影、   连接    、除</u>等运算。</p>
-<p>5.1975年由IBM公司的M.Zloof提出的QBE语言是一个很有特色的 <u>域关系演算</u>   语言。</p>
-<p>6.SQL语言集<u>数据查询</u>、  <u>数据操作</u>    、  <u>数据定义</u>和  <u>数据控制</u>   功能于一体，充分体现了关系数据语言的特点和优点。</p>
-<p>7.数据库管理系统保证数据安全的主要措施是进行  <u>存取控制</u>     。</p>
-<p>8.人们已经提出了许多种类型的数据依赖，其中最重要的是  <u>函数依赖</u>    和 <u>多值依赖</u>  。</p>
-<p>9.关系模式由3NF转化为BCNF是消除了主属性对码的  <u>部分函数依赖</u>   和 <u>传递函数依赖</u>    。</p>
-<p>10.数据库设计应包括两个方面的内容： <u>结构设计</u>和   <u>行为设计</u>。</p>
-<p>11.CGI规范允许Web服务器执行  <u>外部程序</u>    ，并将它们的输出发送给浏览器。</p>
-<p>12.数据库技术与  <u>面向对象</u>    技术相结合，形成了面向对象数据库系统。</p>
+    <title>Java基础复习</title>
+    <url>/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
+<h1 id="public-class-和class："><a href="#public-class-和class：" class="headerlink" title="public class 和class："></a>public class 和class：</h1><p>​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p>
 <a id="more"></a>
-<h2 id="二，单项选择"><a href="#二，单项选择" class="headerlink" title="二，单项选择"></a>二，单项选择</h2><p>1.数据库类型是按照(  B  )来划分的。</p>
-<p> A.文件形式    B.数据模型  C.记录形式    D.数据存取方法</p>
-<p>2.关系演算的基础是(   C  )</p>
-<p> A.形式逻辑中的逻辑演算   B.形式逻辑中的关系演算 C.数理逻辑中的谓词演算  D.数理逻辑中的形式演算</p>
-<p>3.若要求分解保持函数依赖，那么模式分解一定能够达到(  B   )</p>
-<p> A. 2NF      B. 3NF      C. BCNF      D. 1NF</p>
-<p>4.1级封锁协议加上T要读取的数据R加S锁，这是(   C  )</p>
-<p> A. 3级封锁协议   B. 4级封锁协议   C. 2级封锁协议  D. 1级封锁协议</p>
-<p>5.建立数据字典的时机是(  A  )</p>
-<p> A.需求分析阶段   B.数据库物理设计阶段   C.数据库实施  D.概念结构设计阶段</p>
-<h2 id="三，简答题"><a href="#三，简答题" class="headerlink" title="三，简答题"></a>三，简答题</h2><p>1.简述数据库管理系统的功能。</p>
-<p>DBMS功能包括：</p>
-<p>数据定义，数据操纵，数据库运行管理，数据组织，存储和管理，数据库的建立和维护，数据通信接口。</p>
-<p>2.简述SQL语言的特点。</p>
-<p> SQL语言集数据查询、数据操纵、数据定义和数据控制功能于一体，充分体现了关系数据库语言的特点和优点。其特点如下：</p>
-<p>综合统一，高度非过程化，面向集合的操作方式，以同一种语法结构提供两种操作方式，语言简洁，易学易用</p>
-<p>3、什么是数据库系统?</p>
-<p>答：数据库系统是实现有组织地、动态地存储大量关联数据，方便多用户访问的计算机软、硬资源组成的系统。它包含关联数据的集合，DBMS和用户应用程序等。</p>
-<p>4、试述数据库完整保护的主要任务和措施。</p>
-<p>主要任务是保障数据的正确性，有效性，协调性，提高数据对用户的可用性。</p>
-<p>其措施如下：适时检查完整约束条件，保证语义完整。控制并发操作，使其不破坏完整性。在系统出现故障后，即时恢复系统。</p>
-<p>5、在倒排文件中，如果只建立了部分关键字的辅索引，如何进行查找？</p>
-<p>对询问中涉及的关键字，首先在已建立的辅索引中求指针的交集P，而后对P中所指记录逐个验证其它关键字是否与询问条件匹配，所有匹配的记录即为查询结果。</p>
-<h2 id="四，综合题"><a href="#四，综合题" class="headerlink" title="四，综合题"></a>四，综合题</h2>]]></content>
+
+<h1 id="类的命名："><a href="#类的命名：" class="headerlink" title="类的命名："></a>类的命名：</h1><p>首字母大写，单词之间首字母大写</p>
+<h1 id="标识符和标识符命名："><a href="#标识符和标识符命名：" class="headerlink" title="标识符和标识符命名："></a>标识符和标识符命名：</h1><p>​    必须由数字，字母，下划线，和美元符号构成，不能以数字开头，区分大小写，最好见名知意，只用驼峰形式，第一个单词首字母为小写，其他单词首字母为大写，例如：fatherMather()</p>
+<h1 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h1><p>​    全部都是小写。</p>
+<h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><p>基本数据类型：</p>
+<p>​    数值类型：<br>​            整数：byte，short，int，long<br>​            浮点：float，double<br>​    字符类型；char<br>​    布尔类型：boolean<br>引用数据类型： 数组,类,接口</p>
+<!--more-->
+<h1 id="字符编码："><a href="#字符编码：" class="headerlink" title="字符编码："></a>字符编码：</h1><p>ASCII：采用一个字节编码，主要针对英文编码<br>ISO-8859-1：(latin-1) ISO制定，主要为西欧语言编码，兼容ASCII<br>GBK/GB2312/GB18030：主要是汉字编码<br>unicode：统一全世界所有文字编码，有几种实现：UTF-8，TUF-16，UTF-32<br>java中的char使用的是utf-16编码，所以一个char类型变量可以存放一个汉字</p>
+<h1 id="java整数常量表示方法："><a href="#java整数常量表示方法：" class="headerlink" title="java整数常量表示方法："></a>java整数常量表示方法：</h1><p>默认整数型为int，long类型后最好加上大写的L，小写容易混淆<br>十进制：默认是十进制<br>八进制：以0开头，如013<br>十六进制：以0x开头，如0x23</p>
+<h1 id="java浮点类型："><a href="#java浮点类型：" class="headerlink" title="java浮点类型："></a>java浮点类型：</h1><p>默认是double<br>double为8个字节，float为4个字节<br>double向float转换会出现精度丢失<br>声明float，数值后必须加上f，如:float f = 10.5f；</p>
+<h1 id="基本类型转换："><a href="#基本类型转换：" class="headerlink" title="基本类型转换："></a>基本类型转换：</h1><p>boolean特殊，不能转换为其他类型<br>默认转换：<br>    byte–&gt;short(char)–&gt;int–&gt;long–&gt;float–&gt;double<br>    byte,short,char之间不会相互转换，首先先转换为int<br>强制转换：<br>    容量大类型转换为容量小类型<br>    只要不超过范围，可以直接将整数值赋值给byte，short，char</p>
+<h1 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h1><p>短路与和逻辑与：<br>    短路与：从第一个判断数推断结果，只要第一个是false，不计算第二个操作数<br>    逻辑与：两个操作数都计算<br>短路或和逻辑或：<br>    短路或：从第一个操作数推断结果，只要是true，不计算第二个操作数<br>    逻辑或：两个操作数都计算<br>条件运算符：<br>    op1？op2：op3<br>    如果操作数op1为true，则输出op2，否则输出op3</p>
+<h1 id="switch语句："><a href="#switch语句：" class="headerlink" title="switch语句："></a>switch语句：</h1><p>switch(表达式){<br>         case 值1: 语句 break;<br>         case 值2: 语句 break;<br>         default 语句<br>}<br>     表达式中的值只能是：char，byte，short，int 类型，boolean ，long，float，double都是非法的<br>break语句可以省略，但会出现switch穿透<br>default 语句也可以省略，一般不建议省略</p>
+<h1 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h1><p>​    方法的修饰符有：public，protected，private，abstract，static，final，synchronized<br>​    方法名：符合合法的标识符（驼峰式）</p>
+<h2 id="方法重载：（多态的一种）"><a href="#方法重载：（多态的一种）" class="headerlink" title="方法重载：（多态的一种）"></a>方法重载：（多态的一种）</h2><p>​    重载条件：<br>​        方法名相同<br>​        方法的参数类型，个数，顺序至少有一个不同<br>​        方法的返回值可以不同也可以相同，（不依靠返回值类型区分重载）<br>​        方法的修饰符可以不同，方法重载和修饰符没有关系<br>​        方法重载只出现在一个类中</p>
+<h1 id="面向过程和面向对象："><a href="#面向过程和面向对象：" class="headerlink" title="面向过程和面向对象："></a>面向过程和面向对象：</h1><p>​    面向过程：必须了解整个过程，每个步骤的因果关系，每个步骤很难分离<br>​    面向对象：将现实世界分割成不同单元(对象),实现每个对象，如果完成某个功能，只需要将每个对象协作起来就可以了</p>
+<h2 id="面向对象的三大特性："><a href="#面向对象的三大特性：" class="headerlink" title="面向对象的三大特性："></a>面向对象的三大特性：</h2><p>​    封装<br>​    继承<br>​    多态</p>
+<h1 id="类和对象："><a href="#类和对象：" class="headerlink" title="类和对象："></a>类和对象：</h1><p>对象也叫实例，类的具体化就是对象或实例<br>好处：更符合人的思维模式，更容易分析<br>面向对象开发的三个阶段：<br>    OOA：面向对象的分析<br>    OOD：面向对象的设计<br>    OOP：面向对象的编程 —–Java是纯面向对象的语言<br>类 = 属性 ＋ 方法<br>    属性来源于类的状态，方法来自于动作<br>    类中的成员变量和局部变量，成员变量会默认初始化，默认初始化为该变量的默认值，局部变量必须在使用前初始化，</p>
+<p>对象的创建和使用：<br>    必须是new出来，才能用<br>    一个类可以创建N个对象，成员变量只属于当前的对象（只属于对象，不属于类），只能通过对象才能访问成员变量，通过类不能直接访问成员变量</p>
+<p>面向对象封装：<br>    使用private声明成员变量，成员变量只属于对象，属性只能通过方法访问<br>    封装属性，暴露方法</p>
+<p>构造方法：<br>    声明格式：构造方法修饰词 类名 (参数列表)<br>    构造方法修饰词：public，protected，private<br>    构造方法可重载<br>    特点：<br>        方法名必须和类名一致<br>        构造方法不具有返回值，也没有void，否则就成为了普通的方法<br>        每个类都有构造方法，没有明显显示，系统会默认的定义一个不含任何参数的构造方法</p>
+<p>this关键字：<br>    this指的是当前调用的对象，有100个对象就有100个this<br>    this的使用：<br>        局部变量和成员变量重名的时候，this指定调用成员变量<br>        通过this调用另一个构造方法<br>        在构造方法中，如果使用this调用构造方法，this语句必须放在第一行，否则会报错<br>        this只能用在构造方法和成员方法内部(声明变量也可以用)，static标识的方法里不能使用this</p>
+<p>static关键字：<br>    静态的意思，可以修饰成员方法，成员变量<br>    特点：被类的所有对象共享，这也是我们判断是否使用静态关键字的条件，可以通过类名调用，当然也可以通过对象名调用（推荐使用类名）<br>    访问特点：<br>        非静态的成员方法：<br>            能访问静态的成员变量，能访问非静态的成员变量，能访问静态的成员方法，能访问非静态的成员方法<br>        静态的成员方法：能访问静态的成员变量，能访问静态的成员方法<br>    可修饰：变量，方法，代码块<br>    用static修饰的变量和方法，可以采用类名访问<br>    用static声明的代码块为静态代码块，jvm加载类的时候，会执行静态代码块的内容<br>    static声明的变量，所有的通过该类new出来的对象，都可以访问该变量，类也可以访问，所以叫类变量。<br>    总结：静态的只能调用静态的</p>
+<p>静态方法：<br>    静态方法不能直接调用实例变量，实例方法和this，和实例相关的，都不能直接调用。</p>
+<p>静态变量<br>    在类加载的时候就会初始化，就是将类的字节码读取到方法区就初始化了</p>
+<p>main方法：<br>    public：表示全局所有，就是封装性<br>    static：静态的，也就是说它描述的方法只能通过类调用<br>    main：系统规定<br>    String[]args：参数类型也是系统规定的<br>    静态方法，java虚拟机调用方便，直接拿到类就能调用main方法，静态的东西都在方法区，静态方法调用成员属性，在方法区无法找到，就算在堆区找到，对象也没有创建，所以，静态方法不能直接访问成员属性和成员方法。</p>
+<h2 id="类的继承："><a href="#类的继承：" class="headerlink" title="类的继承："></a>类的继承：</h2><pre><code>继承的注意事项：只支持单继承，不支持多继承，但支持多层继承
+
+继承的好处和弊端：提高代码的复用率（多个类相同的成员可以放在同一个类中）
+提高代码的维护性
+继承让类与类之间产生关系，类的耦合性增强，当父类发生变化时子类实现也不得不跟着变化，削弱子类的独立性。
+
+继承的应用场景：
+    使用继承，需要考虑类与类之间是否考虑is，a的关系，不能盲目使用继承</code></pre><p>​    关键字：extends<br>​    继承是面向对象的重要概念<br>​    继承提高软件可重用性<br>​    java只支持类的单继承<br>​    软件设计原则：重复代码最好不要重复两次或多次</p>
+<pre><code>​    
+
+
+
+方法的覆盖/重写（Override）：</code></pre><p>​    方法覆盖的条件：<br>​        必须有继承关系<br>​        覆盖只能出现在子类中，没有继承关系，不存在覆盖，只存在重载<br>​        在子类中被覆盖的方法，必须和父类的方法完全一致，方法名，返回类型，参数列表，完全一样<br>​        <strong>子类方法的访问权限不能小于父类方法的访问权限</strong><br>    方法重写的应用场景：<br>        当子类需要父类的功能，而功能主体子类有自己独特内容，可以重写父类方法中的方法，沿袭父类的功能，又定义子类特有的内容<br>    Override注解：监测当前方法，是否是重写的方法，起到检验的作用</p>
+<pre><code>方法重写的注意事项：
+    私有方法不能被重写，子类方法访问权限不能更低；
+
+继承中变量的访问：就近原则，子类没有找到变量，在父类找，不考虑父类的父类。</code></pre><h2 id="多态："><a href="#多态：" class="headerlink" title="多态："></a>多态：</h2><p>重载式多态：<br>    也叫编译时多态，这种多态在编译时就确定好了，在调用这种重载式方法的时候，传入不同的参数，最后得到不同的结果，就是一种多态。<br>重写式多态：<br>        也叫运行时多态，多态通过动态绑定来实现，在执行期间判断引用对象的实际类型，根据实际类型调用相应方法</p>
+<p>多态中的成员访问特点：<br>    成员的访问特点：成员变量—-&gt;编译看父类，运行看父类;成员方法—-&gt;编译看父类，运行看子类;</p>
+<p>多态的好处和弊端：<br>    好处：提高程序的扩展性，定义方法的时候，使用父类型作为参数，在使用的时候，使用具体的子类型参与操作<br>    弊端：不能使用子类的特有成员</p>
+<p>多态的转型：<br>    向上转型：父类引用指向子类对象就是向上转型<br>    向上转型：子类型 对象名 = （子对象）父类引用;</p>
+<p>对静态方法的覆盖：<br>    静态方法不存在多态的概念，多态和成员方法相关，静态方法值属于某一个类，声明的是哪一个类，就调用的是哪一个类的静态方法，和子类没有关系。new谁调谁。<br>    为什么覆盖成员方法可以构成多态，主要是运行期间的动态绑定，静态绑定的含义是在编译成class文件的时候已经确定好调用哪个方法。</p>
+<p>super关键字：<br>    调用父类的构造方法和成员方法<br>    super只能应用在成员方法和构造方法中，不能应用在静态方法中，和this一样，如果在构造方法中使用，必须放在第一行。<br>    子类必须要调用父类的构造方法，先把父类构造完成，因为子类依赖于父类，没有父也就没有子<br>    有时需要在子类中显示的调用父类的成员方法</p>
+<p>final关键字：<br>     final的应用：final的意思是最终的意思 可以修饰成员变量，方法，类</p>
+<pre><code>采用final修饰的类不能被继承
+采用final修饰的方法不能被覆盖
+采用final修饰的变量不能被修改
+final修饰的变量必须显示初始化
+如果修饰的是引用，那么这个引用只能指向一个对象，也就是说这个引用不能再次赋值，但被指向的对象可以修改。
+构造方法不能被final修饰
+final定义的静态变量，调用时不会执行java的类初始化方法，也就是说不会执行static代码块等相关语句。
+final修饰引用数据类型变量：final修饰的引用类型的地址值不能发生变化，但地址里面的内容是可以变化的</code></pre><p>抽象类：<br>    采用sbstract关键字定义的类就是抽象类，采用abstract关键字定义的方法就是抽象方法<br>    抽象的方法只需要在抽象类中，提供声明，不需要实现<br>    如果一个类包含抽象方法，那么这个类必须是抽象类<br>    一个类是抽象的，那么这个类被子类继承，抽象方法必须复写，如果在子类中不复写抽象方法，那么必须将此方法声明为抽象方法。<br>    抽象的类是不能被实例化的<br>    抽象类不能被final修饰，因为抽象方法就是被子类实现的，而且final修饰的类不能被继承。<br>    抽象的方法只需在抽象类中，提供声明，不需要实现，起到一个强制的约束作用，要求子类必须实现。<br>    如果一个类是抽象的，那么这个类被子类继承，抽象方法必须被覆盖。如果子类不覆盖该抽象方法，那么必须将方法再次声明为抽象方法，继承的子类也成为了抽象子类。<br>    抽象类不能被final修饰<br>    抽象类特点：<br>        抽象类和成员方法必须用abstract关键字修饰;<br>        抽象类中不一定有抽象方法，有抽象方法的类一定是抽象类;<br>        抽象类不能被实例化<br>        抽象类的子类：要么重写抽象类中的所有抽象方法，要么是抽象类</p>
+<pre><code>抽象类的成员特点：
+    成员变量：既可以是变量，也可以是常量
+    构造方法：空参构造，有参构造
+    成员方法：抽象方法，普通方法</code></pre><p>接口：<br>    接口可以看做是抽象类的一种特殊情况，在接口中只能定义抽象的方法和变量。<br>    java接口要用interface声明<br>    接口的方法默认就是public abstract的，不能修改<br>    接口的变量时public static final类型的，不能改变，所以必须显示的初始化。<br>    接口不能被实例化，接口没有函数的概念。<br>    接口之间可以继承，接口之间不能实现。<br>    接口的方法只能通过类来实现，通过implements关键字<br>    如果一个类实现了接口，接口里的方法必须全部实现<br>    一个类可以实现多个接口<br>    接口中的方法默认是public abstract的，不能更改<br>    接口中的变量是public static final类型的，不能更改，所以必须显示的初始化。就算是没有关键词final修饰，例如 String y=”yes”; y也是默认加上public static final的<br>    接口不能被实例化，接口没有构造函数的概念</p>
+<p>接口的进一步应用：<br>    在java中接口其实描述了类需要做的事情，类要遵循接口的定义来做事。<br>    使用接口的好处：<br>        采用接口明确的声明了他所能提供的服务<br>        解决了java单继承的问题<br>        实现了可接插性（重要）</p>
+<p>类和接口的关系：<br>    类与类的关系：继承关系，只能单继承，但是可以多层继承<br>    类和接口的关系：实现关系，可以单实现，也可以多实现，还可以继承一个类同时实现多个接口。<br>    接口与接口的关系：继承关系，可以单继承，也可以多继承！！！。</p>
+<p>多态：<br>    多种状态的含义。<br>    如方法重载，相同的方法名称考可以完成不同的功能，这就是多态的一种表现，此时成为静态多态。<br>    如将学生数据保存的示例，当调用接口的方法，java就自动调用实现类的方法，如果Oracle实现级调用Oracle的方法，如果是MySql实现的就调用MySql中的方法，这是在运行时决定的，叫做运行时多态。<br>    多态的条件：<br>        有继承或实现，有方法覆盖或实现，父类对象（接口）指向子类对象<br>    接口和抽象类的区别：<br>        接口描述方法的特征，不给出实现，一方面解决了java的单继承问题，实现了可接插性。<br>        抽象类提供了部分实现，抽象类是不能实例化的，抽象类的存在主要是把公共的代码移植到抽象类中。<br>        面向接口编程，不要面向具体编程（面向抽象编程，不面向具体编程）<br>        优先选择接口（因为继承抽象类后，此类将无法再继承，所以丧失了类的灵活性）</p>
+<p>类之间的关系：<br>    泛化关系：类和类之间的继承关系及接口之间的继承关系<br>    实现关系：类对接口的实现<br>    并联关系：类和类之间的连接，一个类可以知道另一个类的属性和方法，在java语言中使用实例变量体现<br>    聚合关系：是关联关系的一种，是较强的关联关系，是整体和部分的关系，如汽车和轮胎，聚合关系的类处在不平等的层次上，一个代表整体，一个代表部分<br>    合成关系：是关系的一种，比聚合关系强的关联关系，如：人和四肢，整体对象决定部分对象的生命周期，部分对象每一时刻只与一个对象发生合成关系<br>    依赖关系：比关联关系弱，在java语言中体现在返回值，参数，局部变量和静态方法调用</p>
+<p>Object类：<br>    Object类是所有Java类的基类<br>    如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类</p>
+<p>toString():<br>    返回该对象的字符串表示，通常toString方法会返回一个”以文本方式表示”此对象的字符串，Object类的toString方法返回一个字符串，该字符串由类名加标记@和此对象的哈希码的无符号十六进制表示组成，</p>
+<p>finalize：<br>    垃圾回收器（Garbage Collection），也叫GC，垃圾回收器的主要特点：<br>        当对象不再被程序使用时，垃圾回收器将其回收<br>        垃圾回收是在后台运行的，无法命令垃圾回收器马上回收资源但是可以告诉它，尽快回收资源（System.gc和Runtime.getRuntime().gc()）<br>        垃圾回收器在回收某个对象的时候，首先会调用该对象的finalize方法<br>        GC主要针对堆内存</p>
+<p>==和equals方法：<br>    等号可以比较基本类型和引用类型，等号比较的是值，特别是比较引用类型，比较的是引用的内存地址<br>    equals方法比较对象的地址，字符串的equals方法是比较的内容</p>
+<p>包和import：<br>    包：其实就是目录，特别是项目比较大的时候，java文件特别多的时候，应该分目录管理，在java中称为分包管理，包的名称通常采用小写<br>        包最好采用小写字母<br>        包的命名要有规则，不能重复，一般采用公司网站的逆序<br>        package必须放在所有语句的第一行，注释除外<br>    import:<br>        采用import引入需要使用的类<br>        可以采用*通配符，引入包下的所有类（方式不明确，效率较低，但简单）<br>        如果都在同一个包下，就不需要import引入了</p>
+<p>JDK常用开发包：<br>    java.lang:语言标准包，使用此包中的内容无需import引入<br>    java.sql:提供JDBC接口类<br>    java.util：提供常用工具类<br>    java.io:提供各种输入输出流</p>
+<p>修饰符：<br>    package：<br>        包是文件夹，用来管理文件；<br>        包的定义格式：<br>            package 包名；（多级包，分开）<br>            例如：package com.edu.demo<br>        带包编译&amp;带包运行<br>            带包编译：javac -d.类名.java<br>            带包运行：java 包名+类名<br>    import:<br>        导包的意义：使用不同包下的类时，使用的时候要写类的路径，写起来很麻烦为了简化导包的操作，java就提供导包的功能<br>        导包的格式：import 包名</p>
+<p>访问权限控制符：<br>    java访问修饰符主要包括：private，protected，public，可以限定其他类对该类，属性和方法的使用权限。</p>
+<pre><code>修饰符      类的内部        同一个包里      子类（不同包中）        任何地方
+private     Y               N               N                       N
+protected   Y               Y               Y                       N
+public      Y               Y               Y                       Y
+default     Y               Y               N                       N
+对类的修饰只有public和default，内部类除外
+
+
+
+
+
+private:private声明的变量或方法，只能在同一个类中使用
+protected：采用protected声明的变量或方法只能子类或者同一个包下的类可以调用。
+default：如果class不采用public修饰的话，此时的class只能被该包下的类访问，其他包无法访问</code></pre><p>内部类：<br>    在一个类的内部定义的类，叫做内部类<br>    内部类的分类：<br>        实例内部类<br>            创建实例内部类，外部类的实例必须已经创建<br>            实例内部类会持有外部类的引用<br>            实例内部不能定义static成员，只能定义实例成员<br>        局部内部类<br>            局部内部类是在方法中定义的，只能在当前方法中使用，和局部变量的作用一样，局部内部类和实例内部类一致，不能包含静态成员。局部变量在内部类中使用必须采用final修饰<br>        静态内部类<br>            静态内部类不会持有外部的类的引用，创建时可以不用创建外部类<br>            静态内部类可以访问外部的成员变量，如果访问外部类的成员变量，必须通过外部类的实例访问<br>        匿名内部类<br>            特殊内部类，没有名字。</p>
+<p>JVM的内存结构中三块比较重要的内存空间。<br>    方法区：<br>        存储代码片段，存储xxx.class字节码文件，这个空间是最先有数据的，<br>        类加载器首先将代码加载到这里。<br>    堆内存：<br>        用来存放各种类的实例对象<br>    栈内存：<br>        stack栈当中存储什么？<br>            每个方法执行时所需要的内存空间（局部变量）。</p>
+<p>System.out.println(“Hello World!”)：<br>        System.out 中，out后面没有小括号，说明out是变量名。<br>        另外System是一个类名，直接使用类名System.out，说明out是一个静态变量。<br>        System.out 返回一个对象，然后采用“对象.”的方式访问println()方法。</p>
+<p>java和c++的区别：</p>
+<p>都是面向对象的语言</p>
+<p>java不提供指针直接访问内存，程序内存更安全</p>
+<p>java的类是单继承，c++支持多继承，虽然java的类不可以多继承，但是接口可以多继承</p>
+<p>java有自动内存管理机制，不需要人手动释放无用内存。</p>
+<p>c语言中，字符串或字符数组最后都会有额外的字符‘\0’来表示结束，java里没有结束符的概念。</p>
+<p>import java和javax：</p>
+<p>javax之前是Java的拓展包，后来成为java的标准API的一部分，没啥区别了。</p>
+<p>编译和解释型语言：</p>
+<p>编译型语言：编译器针对指定的操作系统将源代码一次性翻译成可被平台执行的机器码</p>
+<p>解释型语言：解释器对源程序逐行解释成特定平台的机器码并立即执行。</p>
+<p>java程序是要先编译后解释，经过两个步骤。所以java是编译和解释并存。</p>
+<p>字符常量和字符串常量区别：<br>形式上：字符常量使用单引号，字符串常量使用双引号</p>
+<p>含义上：字符常量相当于一个整数值（ASCII），可参加表达式运算，字符串常量代表一个地址值（该字符串在内存中存放的位置）</p>
+<p>内存大小：字符常量只占2个字节，字符串常量占若干个字节。</p>
+<p>泛型：</p>
+<p>==和equals的区别：</p>
+<p>==：判断两个对象的地址是否相等，即判断两个对象是不是一个对象。</p>
+<p>（基本数据类型==比较的是值，引用数据类型==比较的是内存地址）</p>
+<p>因为java只有值传递，所以==，不管是比较基本数据类型，还是引用数据类型的变量，本质都是比较值，只是引用类型变量的值是对象的地址。</p>
+<p>equals()：判断两个对象是否相等，不能用于比较基本数据类型的变量。</p>
+<p>如果没有对equals方法进行重写，则比较的是引用类型的变量所指向的对象的地址；</p>
+<p>诸如String，Date等类对equals方法进行重写的话，比较所指对象的内容。</p>
+<p>为什么重写equals方法必须重写hsahCode方法？（待整理）</p>
+<pre><code>hashCode()：获取哈希值，也称散列码，实际返回的是int整数。哈希码的作用是确定该对象在哈希表的索引位置。hashCode()定义在JDK的Object类中，意味着java中的任何类都包含hashCode()函数。注意：Object的hashCode方法是本地方法，也就是c语言或者c++实现的，该方法会用来将对象的内存地址转换为整数返回。
+
+强调：向HsahSet或者HashMap中加入数据时，必须同时覆盖equals和hashCode方法
+    两个对象的equals相等，那么他们的hashCode相等，两个对象的equals不相等，hashCode不要求相等。</code></pre><p>Java中的几种基本类型和对应的包装类：（待整理）<br>    基本类型:<br>        6种数字类型：byte，short，int，long，float，double<br>        1种字符类型：char<br>        1种布尔类型：boolean (默认false)<br>        Java里使用long类型的时候，要在数值后面加上L<br>        char类型用单引号，String用双引号。<br>    自动拆箱和装箱：<br>        装箱：将基本类型用他们对应的引用类型包装起来；<br>        拆箱：将包装类型转换为基本类型；</p>
+<p>String的两种创建方式：<br>    1：双引号的方式，是在编译生成class文件的时候，字符串就存放在常量池里的，定义一个新的字符串的时候，先从常量池里找有没有这个字符串，有的话直接拿来用，没有的话，放进去后，再用。<br>    2：new关键字创建，创建一个字符串对象，对象放在堆区内存中，每次创建一个字符串的时候，创建一个新的字符串对象，字符串内容一样，字符串的引用不一样，可以用==来判断一下，不能用equals方法来判断，因为String类重写了toString方法。</p>
+<pre><code>因为String是不可变对象，多个字符串拼接的话，会形成多个对象，可能会造成内存溢出，拼接的时候可以使用StringBuffer和Builder</code></pre><p>枚举：<br>        采用枚举能够限定取值的范围，在程序编译的时候，及早返回错误，使程序更加健壮</p>
+<p>Treeset：<br>    可以放入不重复的数据，而且会进行排序，但必须实现Comparable接口，基本类型的包装类和String已经实现了该接口</p>
+<p>Comparable和 Comparator区别：<br>    一个类实现Comparable接口表明这个类的对象之间可以相互比较，对象组成的集合可以直接使用sort方法排序。<br>    Comparator可以看做一种算法的实现，将算法和数据分离，Comparator也可以在两种情况下使用：<br>        1：类本身没有考虑到比较问题而没有实现Comparable,可以通过Comparator来实现排序，不必改变对象本身<br>        2：可以使用多种排序标准，降序，升序。<br>    对于一些普通的数据类型（比如 String, Integer, Double…），它们默认实现了Comparable 接口，实现了 compareTo 方法，我们可以直接使用。</p>
+<pre><code>而对于一些自定义类，它们可能在不同情况下需要实现不同的比较策略，我们可以新创建 Comparator 接口，然后使用特定的 Comparator 实现进行比较。</code></pre><p>HashMap：<br>    HashMap底层实现是hash表，所以Map的Key，必须重写hashCode和equals方法。</p>
+<p>TreeMap：<br>    TreeMap可以对Map中的Key进行排序，如果map中的key采用的是自定义类，那么需要实现Comparable或者Comparator接口完成排序</p>
+]]></content>
   </entry>
   <entry>
     <title>SQL语法</title>
@@ -989,323 +1024,45 @@ enum Result{
 ]]></content>
   </entry>
   <entry>
-    <title>学习资料链接</title>
-    <url>/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<p>01 Java基础阶段：<br>链接:<a href="https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw" target="_blank" rel="noopener">https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw</a>  密码:koa9<br>02 数据库阶段：<br>链接:<a href="https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw" target="_blank" rel="noopener">https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw</a>  密码:sbog<br>03 Web前端：<br>链接:<a href="https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ</a>  密码:p0wy<br>04 Javaweb阶段：<br>链接:<a href="https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w" target="_blank" rel="noopener">https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w</a>  密码:njpq<br>05 Web进阶：<br>链接:<a href="https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g" target="_blank" rel="noopener">https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g</a>  密码:9w0s<br>06 Web项目实战：<br>链接:<a href="https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA" target="_blank" rel="noopener">https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA</a>  密码:ekn5<br>07 Java框架阶段：<br>链接:<a href="https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ" target="_blank" rel="noopener">https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ</a>  密码:2jqq<br>08 互联网分布式技术：<br>链接:<a href="https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg" target="_blank" rel="noopener">https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg</a>  密码:6t3d<br>09 项目实战：<br>链接:<a href="https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw" target="_blank" rel="noopener">https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw</a>  密码:gplw<br>10 Java开发工具：<br>链接：<a href="https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA" target="_blank" rel="noopener">https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA</a> 提取码：krpc</p>
-<a id="more"></a>]]></content>
-  </entry>
-  <entry>
-    <title>python基础</title>
-    <url>/2021/06/02/python%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>JavaSE进阶</title>
-    <url>/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[<p>抽象类和接口以及抽象类和接口的区别：<br>    抽象类：<br>        抽象类的定义：在class前添加abstract关键字<br>        抽象类是无法实例化的，所以抽象类是用来被子类继承的<br>        final和abstract不能联合使用，这两个关键字是对立的<br>        抽象类的子类可以是抽象类，也可以是非抽象类<br>        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。<br>        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。<br>        抽象方法的定义：public abstract void doSome();<br>        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现</p>
+    <title>中原工学院数据库系统概论试题</title>
+    <url>/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="《数据库系统概论》期末考试卷"><a href="#《数据库系统概论》期末考试卷" class="headerlink" title="《数据库系统概论》期末考试卷"></a>《数据库系统概论》期末考试卷</h1><h2 id="一，填空题"><a href="#一，填空题" class="headerlink" title="一，填空题"></a>一，填空题</h2><p>1.实体之间的联系按照联系方式的不同可分为  <u>一对一</u> 、 <u>一对多</u> 和 <u>多对多</u>   。  </p>
+<p>2.数据库系统的核心是  <u>数据库管理系统（DBMS）</u>。</p>
+<p>3.在关系模型中，实体以及实体间的联系都是用  <u>关系</u>  来表示的。</p>
+<p>4.在关系代数中专门的关系运算包括   <u>选择   、投影、   连接    、除</u>等运算。</p>
+<p>5.1975年由IBM公司的M.Zloof提出的QBE语言是一个很有特色的 <u>域关系演算</u>   语言。</p>
+<p>6.SQL语言集<u>数据查询</u>、  <u>数据操作</u>    、  <u>数据定义</u>和  <u>数据控制</u>   功能于一体，充分体现了关系数据语言的特点和优点。</p>
+<p>7.数据库管理系统保证数据安全的主要措施是进行  <u>存取控制</u>     。</p>
+<p>8.人们已经提出了许多种类型的数据依赖，其中最重要的是  <u>函数依赖</u>    和 <u>多值依赖</u>  。</p>
+<p>9.关系模式由3NF转化为BCNF是消除了主属性对码的  <u>部分函数依赖</u>   和 <u>传递函数依赖</u>    。</p>
+<p>10.数据库设计应包括两个方面的内容： <u>结构设计</u>和   <u>行为设计</u>。</p>
+<p>11.CGI规范允许Web服务器执行  <u>外部程序</u>    ，并将它们的输出发送给浏览器。</p>
+<p>12.数据库技术与  <u>面向对象</u>    技术相结合，形成了面向对象数据库系统。</p>
 <a id="more"></a>
-<pre><code>java语言中凡是没有方法体的方法都是抽象方法。
-        不对，错误的。
-        Object类中就有很多方法都没有方法体，都是以“;”结尾的，但他们
-        都不是抽象方法，例如：
-            public native int hashCode();
-            这个方法底层调用了C++写的动态链接库程序。
-            前面修饰符列表中没有：abstract。有一个native。表示调用JVM本地程序。</code></pre><!--more-->
-<pre><code>接口的基础语法：
-    接口是一种‘引用数据类型’
-    接口是完全抽象的
-    接口的定义：[修饰符列表] interface 接口名{}
-    接口的多继承
-    接口中只有常量+抽象方法
-    接口中所有的元素都是public修饰的
-    接口中的抽象方法的public abstract可以省略
-    接口中常量的public static final可以省略
-    接口中方法不能有方法体
-    一个非抽象的类，实现接口的时候，必须将接口中的所有方法实现
-    一个类可以实现多个接口
-    extends 和 implements可以共存，extends在前，impl在后
-    使用接口，写代码时，可以使用多态
-
-接口在开发中的作用：
-    面向抽象编程---&gt;面向接口编程
-    有了接口就实现拓展
-    调用者面向接口调用，实现者面向接口编写实现
-
-抽象类和接口的区别：
-    抽象类是半抽象的，接口是完全抽象的
-    抽象类中有构造方法，接口中没有
-    接口和接口之间，支持多继承
-    类和类之间只能单继承
-    一个类可以同时实现多个接口，一个抽象类只能继承一个类
-    接口中只允许出现常量和抽象方法
-    接口使用的比抽象类多，抽象类使用少
-    接口一般都是对“行为”的抽象</code></pre><p>import和package：<br>    package：<br>        必须出现在源文件的第一行<br>    import：<br>        java.lang包不需要引入<br>        同包下的java文件不需要引入</p>
-<p>private 表示私有的，只能在本类中访问<br>        public 表示公开的，在任何位置都可以访问<br>        “默认”表示只能在本类，以及同包下访问。<br>        protected表示只能在本类、同包、子类中访问。</p>
-<p>JDK类库根类：Object<br>    需要知道的几个方法：<br>        protected Object clone()   // 负责对象克隆的。<br>         int hashCode()    // 获取对象哈希值的一个方法。<br>        boolean equals(Object obj)  // 判断两个对象是否相等<br>            以后所有类的equals方法也需要重写，因为Object中的equals方法比较的是两个对象的内存地址，我们应该比较内容，所以需要重写。<br>            重写规则：自己定，主要看是什么和什么相等时表示两个对象相等。<br>            基本数据类型比较实用：==<br>            对象和对象比较：调用equals方法<br>            String类是SUN编写的，所以String类的equals方法重写了。<br>            以后判断两个字符串是否相等，最好不要使用==，要调用字符串对象的equals方法。<br>            注意：重写equals方法的时候要彻底。<br>        String toString()  // 将对象转换成字符串形式<br>            以后的所有的类的toString()方法是需要重写的，System.out.println(引用);<br>             这里会自动调用“引用”的toString()方法。String类是SUN写，toString方法已经重写了。<br>        protected void finalize()  // 垃圾回收器负责调用的方法</p>
-<p>数组：<br>    理解：空间存储上，内存地址是连续的，每个元素占用的空间大小形同，知道首元素的内存地址，知道下标可以计算出偏移量，<br>    优点：检索效率高<br>    缺点：随机增删效率较低，数组无法存储大数据量<br>    数组最后一个元素的增删效率不受影响</p>
-<pre><code>一维数组的静态初始化和动态初始化
-    静态初始化：
-        int []arr ={1,2,3,4};
-        Object[] objs = {new Object(), new Object(), new Object()};
-    动态初始化：
-        int[] arr = new int[4]; // 4个长度，每个元素默认值0
-        Object[] objs = new Object[4]; // 4个长度，每个元素默认值null                        
-
-数组的拷贝：System.arraycopy()方法的使用
-    数组的特点：长度一旦确定，不可变
-    数组长度不够的时候，需要扩容，扩容机制：新建一个更大的数组
-    将小数组中数据拷贝到大数组中，小数组对象被垃圾回收</code></pre><p>String类：<br>    理解：<br>        字符串一旦创建，不可修改<br>        双引号括起来的字符串存储在字符串常量池中<br>        字符串的比较使用的是equals方法<br>        String已经重写了toString()和equals()方法<br>    String的构造方法：<br>        String s = “abc”;<br>        String s = new String(“abc”);<br>        String s = new String(byte数组);<br>        String s = new String(byte数组, 起始下标, 长度);<br>        String s = new String(char数组);<br>        String s = new String(char数组, 起始下标, 长度);<br>    采用双引号赋值字符串，在编译期将会放到方法区中的字符串的常量池，如果是运行时对字符串相加或者相减会放到堆中（放之前会验证方法区中是否含有相同的字符串常量，如果存在，把地址返回，如果不存在，先将字符串常量放到池中，然后返回该对象的地址）<br>    String常用方法：<br>        1. endsWith：判断字符串是否以指定的后缀结束<br>        2. startsWith，判断字符串是否以指定的前缀开始<br>        3. equals，字符串相等比较，不忽略大小写<br>        4. equalsIgnoreCase，字符串相等比较，忽略大小写<br>        5. indexOf，取得指定字符在字符串的位置<br>        6. lastIndexOf，返回最后一次字符串出现的位置<br>        7. length，取得字符串的长度<br>        8. replaceAll，替换字符串中指定的内容<br>        9. split，根据指定的表达式拆分字符串<br>        10. substring，截子串<br>        11. trim,去前尾空格<br>        12. valueOf，将其他类型转换成字符串<br>    使用String时注意：<br>        String是不可变对象，如果多个字符串拼接，就会产生多个对象，会造成内存溢出</p>
-<p>StringBuffer和StringBuilder<br>    StringBuffer和StringBuilder可以看做可变长度的字符串<br>    StringBuffer和StringBuilder初始化容量为16<br>    StringBuffer和StringBuilder是完成字符串拼接操作的，方法名：append<br>    频繁进行字符串拼接不建议使用‘+’<br>    StringBuffer（字符串缓冲区）:<br>        工作原理：<br>            预先申请一块内存，存放字符序列，如果字符序列满了，重新改变缓存区的大小，StringBuffer是可变对象，这个是String最大的不同<br>    StringBuilderr：<br>        用法和Buffer一样，区别是StringBuffer方法是同步的，是线程安全的，但速度慢，StringBuilder速度快，线程不安全<br>八中基本数据类型对应的包装类：<br>    包装类存在的作用：方便编程<br>    八种包装类的类名：<br>        Byte<br>        Short<br>        Integer<br>        Long<br>        Float<br>        Double<br>        Boolean<br>        Character<br>    所有的数字的父类Number       </p>
-<p>日期类：<br>    获取系统当前时间：<br>        Date d = new Date();<br>    日期格式化：Date –&gt; String<br>        yyyy-MM-dd HH:mm:ss SSS<br>        SimpleDateFormat sdf = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss SSS”);<br>        String s = sdf.format(new Date());<br>    String –&gt; Date<br>        SimpleDateFormat sdf = new SimpleDate(“yyyy-MM-dd HH:mm:ss”);<br>        Date d = sdf.parse(“2008-08-08 08:08:08”);<br>    获取毫秒数<br>        long begin = System.currentTimeMillis();<br>        Date d = new Date(begin - 1000 * 60 * 60 * 24);</p>
-<p>数字类<br>    DecimalFormat数字格式化<br>        ###,###.## 表示加入千分位，保留两个小数。<br>        ###,###.0000 表示加入千分位，保留4个小数，不够补0<br>    BigDecimal<br>        财务软件中通常使用BigDecimal</p>
-<p>随机数<br>    怎么产生int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt();<br>    怎么产生某个范围之内的int类型随机数。<br>        Random r = new Random();<br>        int i = r.nextInt(101); // 产生[0-100]的随机数。</p>
-<p>枚举<br>    枚举是一种引用数据类型。<br>    枚举编译之后也是class文件。<br>    枚举类型怎么定义？<br>        enum 枚举类型名{<br>            枚举值,枚举值2,枚举值3<br>        }<br>    当一个方法执行结果超过两种情况，并且是一枚一枚可以列举出来的时候，建议返回值类型设计为枚举类型。</p>
-<p>异常处理机制：<br>    java中异常的作用:增强程序的健壮性<br>    java中的异常以类和对象的形式存在</p>
-<p>java的异常处理机制：<br>    异常在java中以类和对象的形式存在<br>    Object<br>    Object下有Throwable（可抛出的）<br>    Throwable下有两个分支：Error：（不可处理的，直接退出JVM）和Exception（可处理的）<br>    Exception下有两个分支：<br>        Exception的直接子类：编译时异常（要求程序员在编写程序阶段必须预先对这些异常进行处理，如果不处理编译器报错，因此得名编译时异常。）。<br>        RuntimeException：运行时异常。（在编写程序阶段程序员可以预先处理，也可以不管，都行。）<br>    java对异常的处理的两种方式：<br>        使用throws关键字，抛给上一级<br>        使用try……catch语句进行异常的抓捕<br>        java出现异常，如果一直往上抛，最终会抛给main方法，main方法再往上抛给了JVM，JVM知道异常后，终止java程序的执行。<br>    异常捕获的顺序：从小到大<br>    子类方法不能抛出比父类方法更多的异常</p>
-<p>集合：<br>    Java主要有3个重要的集合<br>        List:一个有序的集合，可以放重复的数据<br>        Set:无序的集合，不允许放重复的数据<br>        Map:一个无序的集合，包含一个键对象和一个值对象，键对象不重复，值对象可以重复<br>    Collection和Iterator：<br>        Collection是List和Set的父接口，在Collection中定义一些主要方法<br>        Iterator：迭代接口，通过此接口可以遍历集合中的数据<br>    List接口：<br>        主要实现了ArrayList和LinkedList，都是由顺序的基于线性存储，可以看成是可变数组。<br>        ArrayList：查询数据比较快，添加和删除数据比较慢（基于可变数组）<br>        LinkedList：查询数据比较慢，添加和删除数据比较快（基于链式数据结构）<br>        Vector：不建议使用，方法是同步的，效率慢，已经被ArrayList取代<br>        Stack：是继承Vector实现的一个栈，栈结构是后进先出的，已经被LinkedList取代<br>    Set接口：<br>        哈希表：一种数据结构，用于提供快速存取操作，基于数组。<br>        HashSet：存储的数据是无序的不可重复的，按照哈希算法存取数据，具有很好的性能<br>            工作原理：插入数据的时候，调用对象的hashCode得到对象的哈希吗，根据哈希吗计算出对象插入集合的位置。<br>        equals和hashCode:</p>
-<pre><code>    TreeSet:
-        可以对Set集合进行排序，默认自然升序排序
-Map接口：
-    可以放置键值对，也就是每个元素都包含键对象和值对象，Map实现较为常用的为HashMap，HashMap对键对象的存取和HashSet一样，仍采用哈希算法，所以如果使用自定类作为Map的键对象，必须复写equals和hashCode方法。
-    HashMap：
-
-    TreeMap：</code></pre><p>基本类型的包装类：<br>    作用：提供更多实用的操作，更容易处理基本类型，所有的包装类都是final的，所以不能创建子类，包装类都是不可变对象<br>    byte    Byte<br>    short   Short<br>    char    Character<br>    int     Integer<br>    long    Long<br>    float   Float<br>    double  Double<br>    boolean Boolean</p>
-<p>JDK5.0新特性：<br>    JDK5.0之前包装类和基本类型做运算时，必须将包装类转换为基本类型。JDK5.0提供自动装箱拆箱Auto-boxing/unboxing</p>
-<p>泛型：</p>
-<p>2021-6-3 </p>
-<p>IO流：要站在内存的角度，看输出和输入<br>    概述：文件通常是一连串的字节和字符构成，组成文件的字节序列称为字节流，组成文件的字符序列称为字符流。java根据流的方向分为输入流和输出流。</p>
-<pre><code>输入流：将文件或其他输入设备的数据加载到内存的过程；
-输出流：将内存中的数据保存到文件或者其他输出设备中
-
-Java语言将IO分为：字节输入\输出流和字符输入\输出流
-
-InputStream（字节输入流）:
-    InputStream是一个抽象类，所有继承InputStream的类都是字节输入流
-OutputStream（字节输出流）：   
-    所有继承OutputStream的类都是字节输出流
-Reader（字符输出流）：
-    所有继承Reader的类都是字符输入流
-Writer（字符输出流）： 
-    所有继承Writer都是字符输出流
-
-文件流：
-    文件流主要分为：文件字节输入流、文件字节输出流、文件字符输入流、文件字符输出流
-
-    FileInputStream(文件字节输入流):
-        主要按照字节方式读取文件
-        注意：如果是读取的是中文，按照字节读入，然后直接打印在控制台的话，会发生乱码，因为汉字是按照两个自己存储的，按照一个字节打印汉字是不完整的。
-    FileOutputStream(文件字节输出流)：
-        按照字节方式写文件，例如文件的复制，首先读取文件，读取文件后将文件保存在另一个磁盘上，就完成了备份。
-    FileReader(文件字符输入流):
-        以字符为单位读取字符，也就是一次读取两个字节，采用字符输入流读取文本文件，汉字就不乱码了。
-    FileWriter(文件字符输出流):
-        输出字符流到文本文件。
-
-缓冲流：
-    目的：为了提升效率，减少物理读取次数。
-    缓冲流主要有：：BufferedInputStream、BufferedOutputStream，BufferedReader、BufferedWriter
-    BufferedReader 提供了实用方法readLine()，可以直接读取一行，BufferWriter 提供了 newLine()可以写换行符。
-
-转换流：   
-    包括InputStreamReader 和 OutputStreamWriter
-    InputStreamReader：将字节流输入流转换为字符输入流
-    OutputStreamWriter：主要是将字节流输出流转换成字符输出流
-
-打印流：
-    包括：PrintStream 字节流和 PrintWriter字符流</code></pre><p>对象流：</p>
-<p>​    对象流可以将Java对象转换为二进制写入磁盘，这个过程通常叫做序列化，并且还可以从磁盘里读出完整java对象，而这个过程叫做反序列化。</p>
-<p>对象流主要包括：ObjectInputStream 和 ObjectOutputStream </p>
-<p>实现序列化和反序列化：</p>
-<p>​    实现序列化该类必须实现序列化接口 java.io.Serializable,该接口没有任何方法，该接口只是一种标记接口，标记这个类是可序列化的</p>
-<p>序列化：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line"></span><br><span class="line">public class ObjectStreamTest02 &#123; </span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123; </span><br><span class="line"></span><br><span class="line">ObjectOutputStream oos &#x3D; null; </span><br><span class="line"></span><br><span class="line">try &#123; </span><br><span class="line">oos &#x3D; new ObjectOutputStream( new FileOutputStream(&quot;c:&#x2F;Person.dat&quot;)); </span><br><span class="line">Person person &#x3D; new Person(); </span><br><span class="line">person.name &#x3D; &quot;张三&quot;; </span><br><span class="line">oos.writeObject(person); </span><br><span class="line">&#125;catch(FileNotFoundException e) &#123; </span><br><span class="line">e.printStackTrace(); </span><br><span class="line">&#125;catch(IOException e) &#123; </span><br><span class="line">e.printStackTrace(); </span><br><span class="line">&#125;finally &#123; </span><br><span class="line">try &#123; </span><br><span class="line">if (oos !&#x3D; null) &#123; </span><br><span class="line">oos.close(); </span><br><span class="line">&#125; </span><br><span class="line">&#125;catch(IOException e) &#123;&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125;  </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;实现序列化接口 </span><br><span class="line">class Person implements Serializable&#123; </span><br><span class="line">String name; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>反序列化，过程类似</p>
-<p>关于transient关键字：一个类实现Serializable接口后，类中的某个属性被transient关键字修饰后，序列化时会被忽略</p>
-<p>serialVersionUID ：序列化有关 </p>
-<p>File类：</p>
-<p>​    提供了大量的文件操作：删除文件，修改文件，得到文件的修改日期，建立目录，列表文件。</p>
-<p>zip格式：</p>
-<p>​    参见java.util.zip.*包下的api</p>
-<p>多线程</p>
-<p>多线程概念：线程指的是进程中的一个执行场景，也就是执行流程。</p>
-<p>​    每一个进程是一个应用程序，都有独立的内存空间</p>
-<p>​    同一个进程的线程中的线程共享其进程中的内存和资源（共享的内存是堆内存和方法区内存，栈内存不共享，每个线程有自己的。）</p>
-<p>什么是进程？</p>
-<p>​    一个进程就是一个应用程序。在操作系统中每启动一个应用程序就会启动一个进程。例如：qq进程，word进程……。</p>
-<p>系统引入多进程的作用：最初的计算机是“单进程的”，计算机只能运行一个应用程序，例如第一台计算机只有 </p>
-<p>DOS 窗口。现代的计算机可以满足我们一边听音乐，一边玩游戏。现代的计算给我们人类感 </p>
-<p>觉：多件事情一起运行。感觉是并行的（错觉）。</p>
-<p>对于单核的计算机来讲，在某一个时间点上只能做一件事情，但是由于计算机的处理速度 </p>
-<p>很高，多个进程之间完成频繁的切换执行，这个切换速度使人类产生了错觉，人类的错觉是：多个进程在同时运行。 </p>
-<p>计算机引入多进程的作用：提高 <strong>CPU</strong> <strong>的使用率</strong>。 </p>
-<p><strong>重点：进程和进程之间的内存独立。</strong> </p>
-<p>什么是线程：线程是进程的一个执行场景。一个进程可以启动多个线程。 </p>
-<p><strong>进程引入多线程的作用？</strong></p>
-<p>提高进程的使用率。 </p>
-<p><strong>重点：线程和线程之间栈内存独立，堆内存和方法区内存共享。一个线程一个栈。</strong> </p>
-<p><strong>描述</strong> <strong>java</strong> <strong>程序的执行原理：</strong> </p>
-<p>java 命令执行会启动 JVM，JVM 的启动表示启动一个应用程序，表示启动了一个进程。 </p>
-<p>该进程会自动启动一个“主线程”，然后主线程负责调用某个类的 main 方法。所以 main 方法 </p>
-<p>的执行是在主线程中执行的。然后通过 main 方法代码的执行可以启动其他的“分支线程”。 </p>
-<p>所以，main 方法结束程序不一定结束，因为其他的分支线程有可能还在执行。 </p>
-<p>线程的创建和启动：<br>    java虚拟机的主线程入口是main方法，用户可以自己创建线程，创建方式有两种：</p>
-<p>​    继承Thread类</p>
-<p>​    实现Runnable接口（推荐使用Runnable接口）</p>
-<p>继承Thread类：</p>
-<p>Thread类中创建线程最重要的两个方法：</p>
-<p>public void run()</p>
-<p>public void start()</p>
-<p>采用</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Git</title>
-    <url>/2021/05/26/Git/</url>
-    <content><![CDATA[<p>Git：目前最先进的分布式版本控制系统</p>
-<p>Workspace：工作区<br>Index/Stage：暂存区<br>Repository：仓库区（本地仓库）<br>Remote：远程仓库</p>
-<p>SVN/Git区别：<br>    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。<br>    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。</p>
-<p>版本库repository：<br>    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。</p>
-<p>理解工作区和暂存区：<br>    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴<br>    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st<br>    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。</p>
-<p>使用Git提交文件到版本库步骤：<br>    1：使用git add把文件添加进去，实际就是把文件添加到暂存区<br>    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。</p>
-<p>暂存区：</p>
-<p>远程仓库：<br>    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：<br>        1，</p>
-<a id="more"></a>
-
-
-<p>所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码，Git也是，版本控制系统可以告诉自己每次的改动，但是图片，视频这些二进制文件，虽然也能由版本控制西永管理，但还是没法跟踪文件的变化，只能把二进制文件每次改动串动起来，也就知道文件从1kb变成了2kb，但是改了什么，版本控制也不知道。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Java基础复习</title>
-    <url>/2021/05/21/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="path："><a href="#path：" class="headerlink" title="path："></a>path：</h1><p>主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。<br>Classpath：类路径，java运行查找类文件的路径</p>
-<h1 id="public-class-和class："><a href="#public-class-和class：" class="headerlink" title="public class 和class："></a>public class 和class：</h1><p>​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。</p>
-<a id="more"></a>
-
-<h1 id="类的命名："><a href="#类的命名：" class="headerlink" title="类的命名："></a>类的命名：</h1><p>首字母大写，单词之间首字母大写</p>
-<h1 id="标识符和标识符命名："><a href="#标识符和标识符命名：" class="headerlink" title="标识符和标识符命名："></a>标识符和标识符命名：</h1><p>​    必须由数字，字母，下划线，和美元符号构成，不能以数字开头，区分大小写，最好见名知意，只用驼峰形式，第一个单词首字母为小写，其他单词首字母为大写，例如：fatherMather()</p>
-<h1 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h1><p>​    全部都是小写。</p>
-<h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><p>基本数据类型：</p>
-<p>​    数值类型：<br>​            整数：byte，short，int，long<br>​            浮点：float，double<br>​    字符类型；char<br>​    布尔类型：boolean<br>引用数据类型： 数组,类,接口</p>
-<!--more-->
-<h1 id="字符编码："><a href="#字符编码：" class="headerlink" title="字符编码："></a>字符编码：</h1><p>ASCII：采用一个字节编码，主要针对英文编码<br>ISO-8859-1：(latin-1) ISO制定，主要为西欧语言编码，兼容ASCII<br>GBK/GB2312/GB18030：主要是汉字编码<br>unicode：统一全世界所有文字编码，有几种实现：UTF-8，TUF-16，UTF-32<br>java中的char使用的是utf-16编码，所以一个char类型变量可以存放一个汉字</p>
-<h1 id="java整数常量表示方法："><a href="#java整数常量表示方法：" class="headerlink" title="java整数常量表示方法："></a>java整数常量表示方法：</h1><p>默认整数型为int，long类型后最好加上大写的L，小写容易混淆<br>十进制：默认是十进制<br>八进制：以0开头，如013<br>十六进制：以0x开头，如0x23</p>
-<h1 id="java浮点类型："><a href="#java浮点类型：" class="headerlink" title="java浮点类型："></a>java浮点类型：</h1><p>默认是double<br>double为8个字节，float为4个字节<br>double向float转换会出现精度丢失<br>声明float，数值后必须加上f，如:float f = 10.5f；</p>
-<h1 id="基本类型转换："><a href="#基本类型转换：" class="headerlink" title="基本类型转换："></a>基本类型转换：</h1><p>boolean特殊，不能转换为其他类型<br>默认转换：<br>    byte–&gt;short(char)–&gt;int–&gt;long–&gt;float–&gt;double<br>    byte,short,char之间不会相互转换，首先先转换为int<br>强制转换：<br>    容量大类型转换为容量小类型<br>    只要不超过范围，可以直接将整数值赋值给byte，short，char</p>
-<h1 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h1><p>短路与和逻辑与：<br>    短路与：从第一个判断数推断结果，只要第一个是false，不计算第二个操作数<br>    逻辑与：两个操作数都计算<br>短路或和逻辑或：<br>    短路或：从第一个操作数推断结果，只要是true，不计算第二个操作数<br>    逻辑或：两个操作数都计算<br>条件运算符：<br>    op1？op2：op3<br>    如果操作数op1为true，则输出op2，否则输出op3</p>
-<h1 id="switch语句："><a href="#switch语句：" class="headerlink" title="switch语句："></a>switch语句：</h1><p>switch(表达式){<br>         case 值1: 语句 break;<br>         case 值2: 语句 break;<br>         default 语句<br>}<br>     表达式中的值只能是：char，byte，short，int 类型，boolean ，long，float，double都是非法的<br>break语句可以省略，但会出现switch穿透<br>default 语句也可以省略，一般不建议省略</p>
-<h1 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h1><p>​    方法的修饰符有：public，protected，private，abstract，static，final，synchronized<br>​    方法名：符合合法的标识符（驼峰式）</p>
-<h2 id="方法重载：（多态的一种）"><a href="#方法重载：（多态的一种）" class="headerlink" title="方法重载：（多态的一种）"></a>方法重载：（多态的一种）</h2><p>​    重载条件：<br>​        方法名相同<br>​        方法的参数类型，个数，顺序至少有一个不同<br>​        方法的返回值可以不同也可以相同，（不依靠返回值类型区分重载）<br>​        方法的修饰符可以不同，方法重载和修饰符没有关系<br>​        方法重载只出现在一个类中</p>
-<h1 id="面向过程和面向对象："><a href="#面向过程和面向对象：" class="headerlink" title="面向过程和面向对象："></a>面向过程和面向对象：</h1><p>​    面向过程：必须了解整个过程，每个步骤的因果关系，每个步骤很难分离<br>​    面向对象：将现实世界分割成不同单元(对象),实现每个对象，如果完成某个功能，只需要将每个对象协作起来就可以了</p>
-<h2 id="面向对象的三大特性："><a href="#面向对象的三大特性：" class="headerlink" title="面向对象的三大特性："></a>面向对象的三大特性：</h2><p>​    封装<br>​    继承<br>​    多态</p>
-<h1 id="类和对象："><a href="#类和对象：" class="headerlink" title="类和对象："></a>类和对象：</h1><p>对象也叫实例，类的具体化就是对象或实例<br>好处：更符合人的思维模式，更容易分析<br>面向对象开发的三个阶段：<br>    OOA：面向对象的分析<br>    OOD：面向对象的设计<br>    OOP：面向对象的编程 —–Java是纯面向对象的语言<br>类 = 属性 ＋ 方法<br>    属性来源于类的状态，方法来自于动作<br>    类中的成员变量和局部变量，成员变量会默认初始化，默认初始化为该变量的默认值，局部变量必须在使用前初始化，</p>
-<p>对象的创建和使用：<br>    必须是new出来，才能用<br>    一个类可以创建N个对象，成员变量只属于当前的对象（只属于对象，不属于类），只能通过对象才能访问成员变量，通过类不能直接访问成员变量</p>
-<p>面向对象封装：<br>    使用private声明成员变量，成员变量只属于对象，属性只能通过方法访问<br>    封装属性，暴露方法</p>
-<p>构造方法：<br>    声明格式：构造方法修饰词 类名 (参数列表)<br>    构造方法修饰词：public，protected，private<br>    构造方法可重载<br>    特点：<br>        方法名必须和类名一致<br>        构造方法不具有返回值，也没有void，否则就成为了普通的方法<br>        每个类都有构造方法，没有明显显示，系统会默认的定义一个不含任何参数的构造方法</p>
-<p>this关键字：<br>    this指的是当前调用的对象，有100个对象就有100个this<br>    this的使用：<br>        局部变量和成员变量重名的时候，this指定调用成员变量<br>        通过this调用另一个构造方法<br>        在构造方法中，如果使用this调用构造方法，this语句必须放在第一行，否则会报错<br>        this只能用在构造方法和成员方法内部(声明变量也可以用)，static标识的方法里不能使用this</p>
-<p>static关键字：<br>    静态的意思，可以修饰成员方法，成员变量<br>    特点：被类的所有对象共享，这也是我们判断是否使用静态关键字的条件，可以通过类名调用，当然也可以通过对象名调用（推荐使用类名）<br>    访问特点：<br>        非静态的成员方法：<br>            能访问静态的成员变量，能访问非静态的成员变量，能访问静态的成员方法，能访问非静态的成员方法<br>        静态的成员方法：能访问静态的成员变量，能访问静态的成员方法<br>    可修饰：变量，方法，代码块<br>    用static修饰的变量和方法，可以采用类名访问<br>    用static声明的代码块为静态代码块，jvm加载类的时候，会执行静态代码块的内容<br>    static声明的变量，所有的通过该类new出来的对象，都可以访问该变量，类也可以访问，所以叫类变量。<br>    总结：静态的只能调用静态的</p>
-<p>静态方法：<br>    静态方法不能直接调用实例变量，实例方法和this，和实例相关的，都不能直接调用。</p>
-<p>静态变量<br>    在类加载的时候就会初始化，就是将类的字节码读取到方法区就初始化了</p>
-<p>main方法：<br>    public：表示全局所有，就是封装性<br>    static：静态的，也就是说它描述的方法只能通过类调用<br>    main：系统规定<br>    String[]args：参数类型也是系统规定的<br>    静态方法，java虚拟机调用方便，直接拿到类就能调用main方法，静态的东西都在方法区，静态方法调用成员属性，在方法区无法找到，就算在堆区找到，对象也没有创建，所以，静态方法不能直接访问成员属性和成员方法。</p>
-<h2 id="类的继承："><a href="#类的继承：" class="headerlink" title="类的继承："></a>类的继承：</h2><pre><code>继承的注意事项：只支持单继承，不支持多继承，但支持多层继承
-
-继承的好处和弊端：提高代码的复用率（多个类相同的成员可以放在同一个类中）
-提高代码的维护性
-继承让类与类之间产生关系，类的耦合性增强，当父类发生变化时子类实现也不得不跟着变化，削弱子类的独立性。
-
-继承的应用场景：
-    使用继承，需要考虑类与类之间是否考虑is，a的关系，不能盲目使用继承</code></pre><p>​    关键字：extends<br>​    继承是面向对象的重要概念<br>​    继承提高软件可重用性<br>​    java只支持类的单继承<br>​    软件设计原则：重复代码最好不要重复两次或多次</p>
-<pre><code>​    
-
-
-
-方法的覆盖/重写（Override）：</code></pre><p>​    方法覆盖的条件：<br>​        必须有继承关系<br>​        覆盖只能出现在子类中，没有继承关系，不存在覆盖，只存在重载<br>​        在子类中被覆盖的方法，必须和父类的方法完全一致，方法名，返回类型，参数列表，完全一样<br>​        <strong>子类方法的访问权限不能小于父类方法的访问权限</strong><br>    方法重写的应用场景：<br>        当子类需要父类的功能，而功能主体子类有自己独特内容，可以重写父类方法中的方法，沿袭父类的功能，又定义子类特有的内容<br>    Override注解：监测当前方法，是否是重写的方法，起到检验的作用</p>
-<pre><code>方法重写的注意事项：
-    私有方法不能被重写，子类方法访问权限不能更低；
-
-继承中变量的访问：就近原则，子类没有找到变量，在父类找，不考虑父类的父类。</code></pre><h2 id="多态："><a href="#多态：" class="headerlink" title="多态："></a>多态：</h2><p>重载式多态：<br>    也叫编译时多态，这种多态在编译时就确定好了，在调用这种重载式方法的时候，传入不同的参数，最后得到不同的结果，就是一种多态。<br>重写式多态：<br>        也叫运行时多态，多态通过动态绑定来实现，在执行期间判断引用对象的实际类型，根据实际类型调用相应方法</p>
-<p>多态中的成员访问特点：<br>    成员的访问特点：成员变量—-&gt;编译看父类，运行看父类;成员方法—-&gt;编译看父类，运行看子类;</p>
-<p>多态的好处和弊端：<br>    好处：提高程序的扩展性，定义方法的时候，使用父类型作为参数，在使用的时候，使用具体的子类型参与操作<br>    弊端：不能使用子类的特有成员</p>
-<p>多态的转型：<br>    向上转型：父类引用指向子类对象就是向上转型<br>    向上转型：子类型 对象名 = （子对象）父类引用;</p>
-<p>对静态方法的覆盖：<br>    静态方法不存在多态的概念，多态和成员方法相关，静态方法值属于某一个类，声明的是哪一个类，就调用的是哪一个类的静态方法，和子类没有关系。new谁调谁。<br>    为什么覆盖成员方法可以构成多态，主要是运行期间的动态绑定，静态绑定的含义是在编译成class文件的时候已经确定好调用哪个方法。</p>
-<p>super关键字：<br>    调用父类的构造方法和成员方法<br>    super只能应用在成员方法和构造方法中，不能应用在静态方法中，和this一样，如果在构造方法中使用，必须放在第一行。<br>    子类必须要调用父类的构造方法，先把父类构造完成，因为子类依赖于父类，没有父也就没有子<br>    有时需要在子类中显示的调用父类的成员方法</p>
-<p>final关键字：<br>     final的应用：final的意思是最终的意思 可以修饰成员变量，方法，类</p>
-<pre><code>采用final修饰的类不能被继承
-采用final修饰的方法不能被覆盖
-采用final修饰的变量不能被修改
-final修饰的变量必须显示初始化
-如果修饰的是引用，那么这个引用只能指向一个对象，也就是说这个引用不能再次赋值，但被指向的对象可以修改。
-构造方法不能被final修饰
-final定义的静态变量，调用时不会执行java的类初始化方法，也就是说不会执行static代码块等相关语句。
-final修饰引用数据类型变量：final修饰的引用类型的地址值不能发生变化，但地址里面的内容是可以变化的</code></pre><p>抽象类：<br>    采用sbstract关键字定义的类就是抽象类，采用abstract关键字定义的方法就是抽象方法<br>    抽象的方法只需要在抽象类中，提供声明，不需要实现<br>    如果一个类包含抽象方法，那么这个类必须是抽象类<br>    一个类是抽象的，那么这个类被子类继承，抽象方法必须复写，如果在子类中不复写抽象方法，那么必须将此方法声明为抽象方法。<br>    抽象的类是不能被实例化的<br>    抽象类不能被final修饰，因为抽象方法就是被子类实现的，而且final修饰的类不能被继承。<br>    抽象的方法只需在抽象类中，提供声明，不需要实现，起到一个强制的约束作用，要求子类必须实现。<br>    如果一个类是抽象的，那么这个类被子类继承，抽象方法必须被覆盖。如果子类不覆盖该抽象方法，那么必须将方法再次声明为抽象方法，继承的子类也成为了抽象子类。<br>    抽象类不能被final修饰<br>    抽象类特点：<br>        抽象类和成员方法必须用abstract关键字修饰;<br>        抽象类中不一定有抽象方法，有抽象方法的类一定是抽象类;<br>        抽象类不能被实例化<br>        抽象类的子类：要么重写抽象类中的所有抽象方法，要么是抽象类</p>
-<pre><code>抽象类的成员特点：
-    成员变量：既可以是变量，也可以是常量
-    构造方法：空参构造，有参构造
-    成员方法：抽象方法，普通方法</code></pre><p>接口：<br>    接口可以看做是抽象类的一种特殊情况，在接口中只能定义抽象的方法和变量。<br>    java接口要用interface声明<br>    接口的方法默认就是public abstract的，不能修改<br>    接口的变量时public static final类型的，不能改变，所以必须显示的初始化。<br>    接口不能被实例化，接口没有函数的概念。<br>    接口之间可以继承，接口之间不能实现。<br>    接口的方法只能通过类来实现，通过implements关键字<br>    如果一个类实现了接口，接口里的方法必须全部实现<br>    一个类可以实现多个接口<br>    接口中的方法默认是public abstract的，不能更改<br>    接口中的变量是public static final类型的，不能更改，所以必须显示的初始化。就算是没有关键词final修饰，例如 String y=”yes”; y也是默认加上public static final的<br>    接口不能被实例化，接口没有构造函数的概念</p>
-<p>接口的进一步应用：<br>    在java中接口其实描述了类需要做的事情，类要遵循接口的定义来做事。<br>    使用接口的好处：<br>        采用接口明确的声明了他所能提供的服务<br>        解决了java单继承的问题<br>        实现了可接插性（重要）</p>
-<p>类和接口的关系：<br>    类与类的关系：继承关系，只能单继承，但是可以多层继承<br>    类和接口的关系：实现关系，可以单实现，也可以多实现，还可以继承一个类同时实现多个接口。<br>    接口与接口的关系：继承关系，可以单继承，也可以多继承！！！。</p>
-<p>多态：<br>    多种状态的含义。<br>    如方法重载，相同的方法名称考可以完成不同的功能，这就是多态的一种表现，此时成为静态多态。<br>    如将学生数据保存的示例，当调用接口的方法，java就自动调用实现类的方法，如果Oracle实现级调用Oracle的方法，如果是MySql实现的就调用MySql中的方法，这是在运行时决定的，叫做运行时多态。<br>    多态的条件：<br>        有继承或实现，有方法覆盖或实现，父类对象（接口）指向子类对象<br>    接口和抽象类的区别：<br>        接口描述方法的特征，不给出实现，一方面解决了java的单继承问题，实现了可接插性。<br>        抽象类提供了部分实现，抽象类是不能实例化的，抽象类的存在主要是把公共的代码移植到抽象类中。<br>        面向接口编程，不要面向具体编程（面向抽象编程，不面向具体编程）<br>        优先选择接口（因为继承抽象类后，此类将无法再继承，所以丧失了类的灵活性）</p>
-<p>类之间的关系：<br>    泛化关系：类和类之间的继承关系及接口之间的继承关系<br>    实现关系：类对接口的实现<br>    并联关系：类和类之间的连接，一个类可以知道另一个类的属性和方法，在java语言中使用实例变量体现<br>    聚合关系：是关联关系的一种，是较强的关联关系，是整体和部分的关系，如汽车和轮胎，聚合关系的类处在不平等的层次上，一个代表整体，一个代表部分<br>    合成关系：是关系的一种，比聚合关系强的关联关系，如：人和四肢，整体对象决定部分对象的生命周期，部分对象每一时刻只与一个对象发生合成关系<br>    依赖关系：比关联关系弱，在java语言中体现在返回值，参数，局部变量和静态方法调用</p>
-<p>Object类：<br>    Object类是所有Java类的基类<br>    如果在类的声明中未使用extends关键字指明基类，则默认基类为Object类</p>
-<p>toString():<br>    返回该对象的字符串表示，通常toString方法会返回一个”以文本方式表示”此对象的字符串，Object类的toString方法返回一个字符串，该字符串由类名加标记@和此对象的哈希码的无符号十六进制表示组成，</p>
-<p>finalize：<br>    垃圾回收器（Garbage Collection），也叫GC，垃圾回收器的主要特点：<br>        当对象不再被程序使用时，垃圾回收器将其回收<br>        垃圾回收是在后台运行的，无法命令垃圾回收器马上回收资源但是可以告诉它，尽快回收资源（System.gc和Runtime.getRuntime().gc()）<br>        垃圾回收器在回收某个对象的时候，首先会调用该对象的finalize方法<br>        GC主要针对堆内存</p>
-<p>==和equals方法：<br>    等号可以比较基本类型和引用类型，等号比较的是值，特别是比较引用类型，比较的是引用的内存地址<br>    equals方法比较对象的地址，字符串的equals方法是比较的内容</p>
-<p>包和import：<br>    包：其实就是目录，特别是项目比较大的时候，java文件特别多的时候，应该分目录管理，在java中称为分包管理，包的名称通常采用小写<br>        包最好采用小写字母<br>        包的命名要有规则，不能重复，一般采用公司网站的逆序<br>        package必须放在所有语句的第一行，注释除外<br>    import:<br>        采用import引入需要使用的类<br>        可以采用*通配符，引入包下的所有类（方式不明确，效率较低，但简单）<br>        如果都在同一个包下，就不需要import引入了</p>
-<p>JDK常用开发包：<br>    java.lang:语言标准包，使用此包中的内容无需import引入<br>    java.sql:提供JDBC接口类<br>    java.util：提供常用工具类<br>    java.io:提供各种输入输出流</p>
-<p>修饰符：<br>    package：<br>        包是文件夹，用来管理文件；<br>        包的定义格式：<br>            package 包名；（多级包，分开）<br>            例如：package com.edu.demo<br>        带包编译&amp;带包运行<br>            带包编译：javac -d.类名.java<br>            带包运行：java 包名+类名<br>    import:<br>        导包的意义：使用不同包下的类时，使用的时候要写类的路径，写起来很麻烦为了简化导包的操作，java就提供导包的功能<br>        导包的格式：import 包名</p>
-<p>访问权限控制符：<br>    java访问修饰符主要包括：private，protected，public，可以限定其他类对该类，属性和方法的使用权限。</p>
-<pre><code>修饰符      类的内部        同一个包里      子类（不同包中）        任何地方
-private     Y               N               N                       N
-protected   Y               Y               Y                       N
-public      Y               Y               Y                       Y
-default     Y               Y               N                       N
-对类的修饰只有public和default，内部类除外
-
-
-
-
-
-private:private声明的变量或方法，只能在同一个类中使用
-protected：采用protected声明的变量或方法只能子类或者同一个包下的类可以调用。
-default：如果class不采用public修饰的话，此时的class只能被该包下的类访问，其他包无法访问</code></pre><p>内部类：<br>    在一个类的内部定义的类，叫做内部类<br>    内部类的分类：<br>        实例内部类<br>            创建实例内部类，外部类的实例必须已经创建<br>            实例内部类会持有外部类的引用<br>            实例内部不能定义static成员，只能定义实例成员<br>        局部内部类<br>            局部内部类是在方法中定义的，只能在当前方法中使用，和局部变量的作用一样，局部内部类和实例内部类一致，不能包含静态成员。局部变量在内部类中使用必须采用final修饰<br>        静态内部类<br>            静态内部类不会持有外部的类的引用，创建时可以不用创建外部类<br>            静态内部类可以访问外部的成员变量，如果访问外部类的成员变量，必须通过外部类的实例访问<br>        匿名内部类<br>            特殊内部类，没有名字。</p>
-<p>JVM的内存结构中三块比较重要的内存空间。<br>    方法区：<br>        存储代码片段，存储xxx.class字节码文件，这个空间是最先有数据的，<br>        类加载器首先将代码加载到这里。<br>    堆内存：<br>        用来存放各种类的实例对象<br>    栈内存：<br>        stack栈当中存储什么？<br>            每个方法执行时所需要的内存空间（局部变量）。</p>
-<p>System.out.println(“Hello World!”)：<br>        System.out 中，out后面没有小括号，说明out是变量名。<br>        另外System是一个类名，直接使用类名System.out，说明out是一个静态变量。<br>        System.out 返回一个对象，然后采用“对象.”的方式访问println()方法。</p>
-<p>java和c++的区别：</p>
-<p>都是面向对象的语言</p>
-<p>java不提供指针直接访问内存，程序内存更安全</p>
-<p>java的类是单继承，c++支持多继承，虽然java的类不可以多继承，但是接口可以多继承</p>
-<p>java有自动内存管理机制，不需要人手动释放无用内存。</p>
-<p>c语言中，字符串或字符数组最后都会有额外的字符‘\0’来表示结束，java里没有结束符的概念。</p>
-<p>import java和javax：</p>
-<p>javax之前是Java的拓展包，后来成为java的标准API的一部分，没啥区别了。</p>
-<p>编译和解释型语言：</p>
-<p>编译型语言：编译器针对指定的操作系统将源代码一次性翻译成可被平台执行的机器码</p>
-<p>解释型语言：解释器对源程序逐行解释成特定平台的机器码并立即执行。</p>
-<p>java程序是要先编译后解释，经过两个步骤。所以java是编译和解释并存。</p>
-<p>字符常量和字符串常量区别：<br>形式上：字符常量使用单引号，字符串常量使用双引号</p>
-<p>含义上：字符常量相当于一个整数值（ASCII），可参加表达式运算，字符串常量代表一个地址值（该字符串在内存中存放的位置）</p>
-<p>内存大小：字符常量只占2个字节，字符串常量占若干个字节。</p>
-<p>泛型：</p>
-<p>==和equals的区别：</p>
-<p>==：判断两个对象的地址是否相等，即判断两个对象是不是一个对象。</p>
-<p>（基本数据类型==比较的是值，引用数据类型==比较的是内存地址）</p>
-<p>因为java只有值传递，所以==，不管是比较基本数据类型，还是引用数据类型的变量，本质都是比较值，只是引用类型变量的值是对象的地址。</p>
-<p>equals()：判断两个对象是否相等，不能用于比较基本数据类型的变量。</p>
-<p>如果没有对equals方法进行重写，则比较的是引用类型的变量所指向的对象的地址；</p>
-<p>诸如String，Date等类对equals方法进行重写的话，比较所指对象的内容。</p>
-<p>为什么重写equals方法必须重写hsahCode方法？（待整理）</p>
-<pre><code>hashCode()：获取哈希值，也称散列码，实际返回的是int整数。哈希码的作用是确定该对象在哈希表的索引位置。hashCode()定义在JDK的Object类中，意味着java中的任何类都包含hashCode()函数。注意：Object的hashCode方法是本地方法，也就是c语言或者c++实现的，该方法会用来将对象的内存地址转换为整数返回。
-
-强调：向HsahSet或者HashMap中加入数据时，必须同时覆盖equals和hashCode方法
-    两个对象的equals相等，那么他们的hashCode相等，两个对象的equals不相等，hashCode不要求相等。</code></pre><p>Java中的几种基本类型和对应的包装类：（待整理）<br>    基本类型:<br>        6种数字类型：byte，short，int，long，float，double<br>        1种字符类型：char<br>        1种布尔类型：boolean (默认false)<br>        Java里使用long类型的时候，要在数值后面加上L<br>        char类型用单引号，String用双引号。<br>    自动拆箱和装箱：<br>        装箱：将基本类型用他们对应的引用类型包装起来；<br>        拆箱：将包装类型转换为基本类型；</p>
-<p>String的两种创建方式：<br>    1：双引号的方式，是在编译生成class文件的时候，字符串就存放在常量池里的，定义一个新的字符串的时候，先从常量池里找有没有这个字符串，有的话直接拿来用，没有的话，放进去后，再用。<br>    2：new关键字创建，创建一个字符串对象，对象放在堆区内存中，每次创建一个字符串的时候，创建一个新的字符串对象，字符串内容一样，字符串的引用不一样，可以用==来判断一下，不能用equals方法来判断，因为String类重写了toString方法。</p>
-<pre><code>因为String是不可变对象，多个字符串拼接的话，会形成多个对象，可能会造成内存溢出，拼接的时候可以使用StringBuffer和Builder</code></pre><p>枚举：<br>        采用枚举能够限定取值的范围，在程序编译的时候，及早返回错误，使程序更加健壮</p>
-<p>Treeset：<br>    可以放入不重复的数据，而且会进行排序，但必须实现Comparable接口，基本类型的包装类和String已经实现了该接口</p>
-<p>Comparable和 Comparator区别：<br>    一个类实现Comparable接口表明这个类的对象之间可以相互比较，对象组成的集合可以直接使用sort方法排序。<br>    Comparator可以看做一种算法的实现，将算法和数据分离，Comparator也可以在两种情况下使用：<br>        1：类本身没有考虑到比较问题而没有实现Comparable,可以通过Comparator来实现排序，不必改变对象本身<br>        2：可以使用多种排序标准，降序，升序。<br>    对于一些普通的数据类型（比如 String, Integer, Double…），它们默认实现了Comparable 接口，实现了 compareTo 方法，我们可以直接使用。</p>
-<pre><code>而对于一些自定义类，它们可能在不同情况下需要实现不同的比较策略，我们可以新创建 Comparator 接口，然后使用特定的 Comparator 实现进行比较。</code></pre><p>HashMap：<br>    HashMap底层实现是hash表，所以Map的Key，必须重写hashCode和equals方法。</p>
-<p>TreeMap：<br>    TreeMap可以对Map中的Key进行排序，如果map中的key采用的是自定义类，那么需要实现Comparable或者Comparator接口完成排序</p>
-]]></content>
+<h2 id="二，单项选择"><a href="#二，单项选择" class="headerlink" title="二，单项选择"></a>二，单项选择</h2><p>1.数据库类型是按照(  B  )来划分的。</p>
+<p> A.文件形式    B.数据模型  C.记录形式    D.数据存取方法</p>
+<p>2.关系演算的基础是(   C  )</p>
+<p> A.形式逻辑中的逻辑演算   B.形式逻辑中的关系演算 C.数理逻辑中的谓词演算  D.数理逻辑中的形式演算</p>
+<p>3.若要求分解保持函数依赖，那么模式分解一定能够达到(  B   )</p>
+<p> A. 2NF      B. 3NF      C. BCNF      D. 1NF</p>
+<p>4.1级封锁协议加上T要读取的数据R加S锁，这是(   C  )</p>
+<p> A. 3级封锁协议   B. 4级封锁协议   C. 2级封锁协议  D. 1级封锁协议</p>
+<p>5.建立数据字典的时机是(  A  )</p>
+<p> A.需求分析阶段   B.数据库物理设计阶段   C.数据库实施  D.概念结构设计阶段</p>
+<h2 id="三，简答题"><a href="#三，简答题" class="headerlink" title="三，简答题"></a>三，简答题</h2><p>1.简述数据库管理系统的功能。</p>
+<p>DBMS功能包括：</p>
+<p>数据定义，数据操纵，数据库运行管理，数据组织，存储和管理，数据库的建立和维护，数据通信接口。</p>
+<p>2.简述SQL语言的特点。</p>
+<p> SQL语言集数据查询、数据操纵、数据定义和数据控制功能于一体，充分体现了关系数据库语言的特点和优点。其特点如下：</p>
+<p>综合统一，高度非过程化，面向集合的操作方式，以同一种语法结构提供两种操作方式，语言简洁，易学易用</p>
+<p>3、什么是数据库系统?</p>
+<p>答：数据库系统是实现有组织地、动态地存储大量关联数据，方便多用户访问的计算机软、硬资源组成的系统。它包含关联数据的集合，DBMS和用户应用程序等。</p>
+<p>4、试述数据库完整保护的主要任务和措施。</p>
+<p>主要任务是保障数据的正确性，有效性，协调性，提高数据对用户的可用性。</p>
+<p>其措施如下：适时检查完整约束条件，保证语义完整。控制并发操作，使其不破坏完整性。在系统出现故障后，即时恢复系统。</p>
+<p>5、在倒排文件中，如果只建立了部分关键字的辅索引，如何进行查找？</p>
+<p>对询问中涉及的关键字，首先在已建立的辅索引中求指针的交集P，而后对P中所指记录逐个验证其它关键字是否与询问条件匹配，所有匹配的记录即为查询结果。</p>
+<h2 id="四，综合题"><a href="#四，综合题" class="headerlink" title="四，综合题"></a>四，综合题</h2>]]></content>
   </entry>
   <entry>
     <title>javaee</title>
@@ -1349,207 +1106,6 @@ Controller（控制器）：接收用户请求，委托模型进行处理（状�
 
 WebMVC：
     标准的MVC能主动推数据给视图进行更新，在web开发中模型无法主动推给视图（无法主动更新用户界面），因为web开发是请求-相应式模型</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>数据库零碎知识点</title>
-    <url>/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p> 一些最重要的 SQL 命令</p>
-<ul>
-<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
-</li>
-<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
-</li>
-<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
-</li>
-<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
-</li>
-<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
-</li>
-<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
-</li>
-<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
-</li>
-<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
-</li>
-<li><p><strong>DROP TABLE</strong> - 删除表</p>
-</li>
-<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
-</li>
-<li><p><strong>DROP INDEX</strong> - 删除索引</p>
-<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
-</li>
-</ul>
-<a id="more"></a>
-
-<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
-<p>​        inner join 或者 join      （后加on表示条件）</p>
-<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
-<p>​    外连接</p>
-<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
-<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
-<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
-<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
-<p>union</p>
-<p>select * from person right join card on person.cardId=card.id</p>
-<p>​        </p>
-<p>unique约束，可以为空，但为空只能有一个，</p>
-<p>视图：</p>
-<p>​    虚表，是从一个或多个</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>学习记录</title>
-    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
-<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
-<pre><code>错误信息：Error during artifact deployment. See server log for details.
-    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre><p>【cmd命令】‘netstat’不是内部命令：<br><a href="https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187</a></p>
-<p>UTF-8的BOM：<br>    <a href="https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs" target="_blank" rel="noopener">https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs</a></p>
-<a id="more"></a>]]></content>
-  </entry>
-  <entry>
-    <title>XML学习</title>
-    <url>/2021/05/12/XML%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>vue学习</title>
-    <url>/2021/05/12/vue%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>数学建模比赛</title>
-    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
-    <content><![CDATA[<h2 id="一些基本要求："><a href="#一些基本要求：" class="headerlink" title="一些基本要求："></a>一些基本要求：</h2><p>1：不要就题论题，寻一个一般性的数学模型，解决特定问题<br>2：文献查阅能力 把方程拿过来用，不需要搞太清楚<br>3：学习建模能力最重要</p>
-<p>赛题结构：实际问题背景，若干假设条件，要求回答问题</p>
-<p>标题和摘要部分很重要。</p>
-<p>题目：写出比较确切的题目</p>
-<p>论文排版问题很重要！！</p>
-<p>论文写作：多个方法作对比，进行分析，做写点总结性话语，页数20-25</p>
-<p>查重，高于30%基本上没有成绩，问题分析部分不能直接复制题目，论文题目，摘要，关键词是重中之重！！！</p>
-<p>题目：基于<strong>__</strong>模型的<strong>____</strong>研究与分析<br>        • 摘要备战：总结归纳能力，通过看高水平论文或优秀论文掌握<br>        • 问题重述：切记直接抄袭问题，对描述简短的拆建，描述复杂的精炼<br>        • 问题假设：明确假设点是关键，只要对我们的结果有影响，但又是小概率事件；<br>                              或者对结果有影响，但难以计算获取这类的<br>        • 问题分析：动脑能力是关键，先将问题进行定性，然后说明如何求解这类 问题<br>        • 符号说明：文中出现的符号均需说清楚，用希腊字母<br>        • 模型建立：将常见模型进行归纳整理，形成算法库<br>        • 模型求解：对编程语言熟练掌握，如 Ｍatlab，Lingo等<br>        • 模型优缺点评价：对模型的不足提前掌握，并在应用中的不足阐述<br>        • 参考文献：掌握标准格式</p>
-<h2 id="层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法"><a href="#层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法" class="headerlink" title="层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法"></a>层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法</h2><p><strong>适用于评价类问题,主观性较强，数据量较少</strong></p>
-<p>层次分析法的三大典型应用：<br>        1：用于最佳方案的选取（选取运动员，选取地址）<br>        2：用于评价类问题（评价水质状况，评价环境）<br>        3：用于指标体系的优选（兼顾科学和效率）</p>
-<p>特点：半定型，半定量问题转化为定量问题的行之有效的一种方法，使人们的思维过程层次化。</p>
-<p>用途：通过逐层比较多种关联因素为 分析评估，决策，预测，或者控制事物的法发展提供定量依据，适用于<strong>难于完全定量方法进行分析的复杂问题</strong></p>
-<p>层次结构：目标层（最高层），准则，指标层（中间层），方案层（最底层）</p>
-<p>步骤：<br>    one：构造两两比较矩阵，对于同一层次的各因素关于上一层中某一目标的重要性进行两两比较<br>    two：由比较矩阵计算被比较因素对每一准则的相对权重，并进行<strong>判断矩阵的一致性检验。</strong><br>    three：计算方案层对目标层的组合权重，并进行排序。</p>
-<h2 id="微分和差分"><a href="#微分和差分" class="headerlink" title="微分和差分 :"></a>微分和差分 :</h2><h2 id="概率与统计："><a href="#概率与统计：" class="headerlink" title="概率与统计："></a>概率与统计：</h2><p>​    伯努利方程，泊松分布，正态分布。<br>​    正态分布：期望就是平均数，什么时候是正态分布：多个因素影响最后结果。</p>
-<p>生命问题还有器件的使用寿命问题—-&gt;指数分布</p>
-<p>统计：在总体中抽出个别的样本，看样本来分析总体</p>
-<p>极大似然估计法</p>
-<p>假设检验：<br>    基本步骤：1假设      H0—-&gt;真         H1——-&gt;假</p>
-<h2 id="聚类分析："><a href="#聚类分析：" class="headerlink" title="聚类分析："></a>聚类分析：</h2><p>​    层次聚类，K均值聚类</p>
-<pre><code>SPSS分类软件，Mpai</code></pre><p>综合评价方法及其应用：<br>长江水质排名 </p>
-<h2 id="灰色系统分析方法（用于预测）"><a href="#灰色系统分析方法（用于预测）" class="headerlink" title="灰色系统分析方法（用于预测）"></a>灰色系统分析方法（用于预测）</h2><p>灰色系统：介于白黑系统之间，系统内部特性是部分已知的，另一部分是未知的。<br>灰数：信息不完全的数<br>灰数的白化：确定数的值</p>
-<p>总成分分析法：</p>
-<p>lingo用来解决优化问题，可以解决线性规划和非线性规划的问题<br>Model开头，end结束</p>
-<p>lingo不区分大小写；<br>以！开始以;结尾是一句注释</p>
-<p>点击solve进行求解</p>
-<p>Lingo编程语言</p>
-<p>随机分析</p>
-<p>线性规划问题：<br>    目标函数和约束函数均为线性函数，故称为线性规划问题，是在一组线性规划约束条件限制下，求解一个线性目标函数最大或者最小的问题。</p>
-<pre><code>可行解：满足约束条件的决策变量的取值
-可行域：所有可行解构成的集合，简称为R</code></pre><p>整数规划：<br>    规划中的变量（部分或者全部）限制为整数时，被称为整数规划。若在线性规划中，变量被限制为整数，则称为整数线性规划。目前所流行的求解整数规划的方法，往往只适用于整数线性规划。目前还没有一种 方法能有效地求解一切整数规划。</p>
-<pre><code>整数规划的特点：
-    1 原线性规划有最优解，当自变量限制为整数后，其整数规划解出现下述情况 
-        （1）原线性规划最优解全是整数，则整数规划最优解与线性规划最优解一致。 
-        （2）整数规划无可行解。 
-        （3）有可行解（当然就存在最优解），但最优解值变差。
-    2 整数规划最优解不能按照实数最优解简单取整而获得。
-
-整数规划按照对决策变量的要求可分为：纯整数规划，全整数规划，混合整数规划，0-1整数规划。
-
-通过四舍五入得到的解不一定是最优解，甚至不能保证所得到的的整数是可行解
-
-分支定界法：用来解决松弛问题没有可行解和松弛问题下的最优解不满足整数条件。
-割平面法：用来解决解中含有非整数分量的情况。
-
-0-1变量使用：用来解决互斥约束问题。两个东西只选其一</code></pre><p>非线性规划问题：</p>
-<pre><code>定义：如果目标函数或者约束条件中包含非线性函数，则规划问题为非线性规划问题
-
-一般来说，解非线性规划比解线性规划困难的多
-非线性规划现在还没有适用于各种问题
-一般形式：在一组等式或者不等式的约束下，求一个函数的最大值或者最小值，其中一个是非线性函数。
-
-二次规划：如果非线性规划的目标函数为自变量的二次函数，约束
-条件全是线性的，则称规划为二次规划。</code></pre><p>层次分析法（AHP）：<br>    用于解决规划问题，解决多目标的复杂问题的定性与定量想结合的决策分析方法。衡量目标之间的相对重要程度，有效应用于难以定量方法解决的课题。</p>
-<p>灰色预测模型：<br>    灰色预测法是一种对含有不确定因素的系统进行预测的方法，是对既含有已知信息又含有不确定信息的系统进行预测，就是对一定范围内变化的，与时间有关的灰色过程进行预测。</p>
-<pre><code>原理：通过鉴别系统因素之间发展趋势的相异程度，即进行关联分析，并对原始数据进行生成处理来寻找系统变动的规律，并生成较规律性的数据序列，然后建立相应的微分方程模型，从而进行预测未来的发展趋势的状况。
-
-灰色预测法用等时距观测到的反映预测的对象的特征的一系列数量值构造灰色预测模型，预测未来某一刻的特征值，或达到某一特征量的时间。
-
-灰色预测的四种常见类型：
-    灰色时间序列预测：即用观察到的反映预测对象特征的时间序列来构造灰色预测模型。预测未来某一时刻的特征值，或者达到某一特征量的时间。
-    畸变预测：通过灰色模型预测异常值出现的时刻，预测异常值出现时候出现在特定时区内。
-    系统预测：通过对系统行为特征指标建立一组互相关联的灰色预测模型，预测系统中众多变量间的相互协调关系的变化。
-    拓扑预测：将原始数据做成曲线，在曲线上按定值寻找该定值发生的所有时间点，并以该定值为框架构成时间点数列，然后建立预测该定值所发生的时间点。
-
-灰色关联度：是分析向量与向量之间，矩阵与矩阵之间的关联度，需要一个参考物（比较序列）进行计算。</code></pre><p>插值与拟合基本原理<br>    插值用拟合是数学建模中基本的数据分析手段，公认的常用算法。<br>    一个插值多项式如果次数太高，会出现严重的震荡现象（Runge现象）<br>    插值多项式的次数越高，精度不一定越高，在实际的应用中，不应该使用七次以上的插值。<br>    解决办法：将插值区间分成若干的小区间，小区间内用低次的（一次，二次）插值，即分段低次插值<br>    插值包括：一元插值，二元插值，散乱点插值</p>
-<pre><code>拟合问题：
-    插值问题与拟合问题的区别：
-        插值函数过已知点，拟合函数不一定过已知点。
-        插值只要用于求函数值，而拟合的主要目的就是求函数关系，从而进行预测等一系列分析。
-    线性拟合中的参数的计算，采用最小二乘法，而非线性拟合参数的计算需要运用Gauss-Newton迭代法    </code></pre><p>模糊综合评价模型原理</p>
-<pre><code>模糊数学：现实世界的许多现象和关系具有不确定性，不确定性的表现形式有很多：随机性，灰色性，模糊性和粗糙性。
-
-模糊数学多用于评价问题
-
-模糊集：许多现象和关系具有模糊性，例如，长与短，贫与富等
-
-隶属度：一个成员元素所属模糊集的程度
-
-确定隶属度的常用方法是模糊分布法，模糊分布将隶属函数看成一种模糊分布，首先根据问题性质选取适当的模型分布，然后根据相关数据确定分布中的参数
-
-模糊分布的常用梯形分布：偏小型，偏大型，中间型
-偏小型一般适用于描述‘小’，‘少’，‘浅’等模糊现象;偏大型正好与偏小型相反;中间型用于描述中间状态。
-
-模型综合评价：对一个事物的评价要涉及到很多因素或者多个指标，评价是在多因素作用下的一种综合评价。
-    评价的方法又很多：灰色评价法，层次分析法，模糊综合评价法，网络包络分析法人工神经网络评价法，理想解法等。
-
-模糊评价是模糊数学的一种具体应用，该方法简单易掌握，对多层次的复杂问题评价效果比较好。</code></pre><p>相关性分析：</p>
-<pre><code>如果一个变量的取值发生变化，另一个变量也发生了变化，则称为两个变量有关，否则无关。
-
-关系变量强度：指两个变量之间的关联程度的高低。
-统计学中，是已准实验的思想分析变量相关的，通常以以下角度分析：
-    1，两个变量是否独立；2，两个变量是否有共变趋势。3，一个变量的变化多大程度上能由另一个变量来解释。
-
-Pearson相关系数：适用于定距，定比的类型的变量，是运用最广的一种相关程度统计量
-Pearson相关系数的计算适用条件：
-    两变量均是由测量得到的连续变量。
-    两变量所来自的总体都是正态分布，或者接近正态分布。、
-    变量必须是成对出现的
-    两变量必须是线性关系。
-
-相关系数性质：相关系数r的绝对值越接近1，表明两个变量的相关程度越高，关系越密切。
-
-
-hold on，hold off：matlab中画图时加入，hold on 在已经显示的图画上继续显示，hold off 取消这种显示方式。
-
-
-整数规划模型：
-    数学规划中的变量（部分或全部）限制为整数时，称为整数规划。若在 线性规划模型中，变量限制为整数，则称为整数线性规划。整数规划只适用于整数线性规划
-
-    整数规划模型：
-    1)变量全部限制为整数，成为完全整数规划。
-    2）变量部分限制为整数，称为混合整数规划。
-
-    tip：整数规划最优解不能由实数最优解简单取整获得。</code></pre><p>​        </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>学习资源链接</title>
-    <url>/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
-<h3 id="MYSQL视频学习："><a href="#MYSQL视频学习：" class="headerlink" title="MYSQL视频学习："></a>MYSQL视频学习：</h3><p><a href="https://www.bilibili.com/video/BV1Vt411z7wy" target="_blank" rel="noopener">b站MYSQL基础课</a></p>
-<p><a href="https://www.bilibili.com/video/BV1hE411V7vu" target="_blank" rel="noopener">数据库关系代数</a></p>
-<p><a href="https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" rel="noopener">关系代数操作哈工大</a></p>
-<h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
-<h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
-<p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
-<p><a href="https://www.yiibai.com/" target="_blank" rel="noopener">易百教程</a></p>
-<a id="more"></a>
-]]></content>
   </entry>
   <entry>
     <title>MySQL学习笔记</title>
@@ -1870,6 +1426,450 @@ hold on，hold off：matlab中画图时加入，hold on 在已经显示的图画
 
 <p>此时会发生什么呢？由于现在的隔离级别是 <strong>SERIALIZABLE ( 串行化 )</strong> ，串行化的意思就是：假设把所有的事务都放在一个串行的队列中，那么所有的事务都会按照<strong>固定顺序执行</strong>，执行完一个事务后再继续执行下一个事务的<strong>写入操作</strong> ( <strong>这意味着队列中同时只能执行一个事务的写入操作</strong> ) 。</p>
 <p>根据这个解释，小王在插入数据时，会出现等待状态，直到小张执行 <code>COMMIT</code> 结束它所处的事务，或者出现等待超时。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>四级英语词汇</title>
+    <url>/2021/06/07/%E5%9B%9B%E7%BA%A7%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
+    <content><![CDATA[<p>a art.一(个)；每一 (个)<br>abandon vt.丢弃；放弃，抛弃<br>ability n.能力；能耐，本领<br>able a.有能力的；出色的<br>abnormal a.不正常的；变态的<br>aboard ad.在船(车)上；上船<br>about prep.关于；在…周围<br>above prep.在…上面；高于<br>abroad ad.(在)国外；到处<br>absence n.缺席，不在场；缺乏<br>absent a.不在场的；缺乏的<br>absolute a.绝对的；纯粹的<br>absolutely ad.完全地；绝对地<br>absorb vt.吸收；使专心<br>abstract a.抽象的 n.摘要<br>abundant a.丰富的；大量的<br>abuse vt.滥用；虐待 n.滥用<br>academic a.学院的；学术的<br>academy n.私立中学；专科院校</p>
+<a id="more"></a>
+<p>accelerate vt.(使)加快；促进<br>acceleration n.加速；加速度<br>accent n.口音，腔调；重音<br>accept vt.vi.接受；同意<br>acceptable a.可接受的，合意的<br>acceptance n.接受，验收；承认<br>access n.接近；通道，入口<br>accessory n.同谋，从犯；附件<br>accident n.意外的；事故<br>accidental a.偶然的；非本质的<br>accommodate vt.容纳；供应，供给<br>accommodation n.招待设备；预定铺位<br>accompany vt.陪伴，陪同；伴随<br>accomplish vt.达到(目的 )；完成<br>accord vt.使一致；给予<br>accordance n.一致；和谐；授予<br>accordingly ad.因此，所以；照着<br>account n.记述；解释；帐目<br>accumulate vt.积累 vi.堆积<br>accuracy n.准确(性)；准确度<br>accurate a.准确的，正确无误的<br>accuse vt.指责；归咎于<br>accustom vt.使习惯<br>accustomed a.惯常的；习惯的<br>ache vi.痛；想念 n.疼痛<br>achieve vt.完成，实现；达到<br>achievement n.完成；成就，成绩<br>acid n.酸；酸的，酸性的<br>acquaintance n.认识；了解；熟人<br>acquire vt.取得；获得；学到<br>acre n.英亩(=6.07 亩)<br>across prep.横过；在…对面<br>act vi.行动；见效 n.行为<br>action n.行动；作用；功能<br>active a.活跃的；积极的<br>activity n.活动；活力；行动<br>actor n.男演员；演剧的人<br>actress n.女演员<br>actual a.实际的；现行的<br>actually ad.实际上；竟然<br>acute a.尖的，锐的；敏锐的<br>ad n.广告<br>adapt vt.使适应；改编<br>add vt.添加，附加，掺加<br>addition n.加，加法；附加物<br>additional a.附加的，追加的<br>address n.地址；演说；谈吐<br>adequate a.足够的；可以胜任的<br>adjective n.形容词 a.形容词的<br>adjust vt.调整，调节；校正<br>administration n.管理；管理部门<br>admire vt.钦佩，羡慕，赞赏<br>admission n.允许进入；承认<br>admit vt.承认；准许…进入<br>adopt vt.收养；采用；采取<br>adult n.成年人 a.成年的<br>advance vi.前进；提高 n.进展<br>advanced a.先进的；高级的<br>advantage n.优点，优势；好处<br>adventure n.冒险；惊险活动<br>adverb n.副词<br>advertisement n.广告；公告；登广告<br>advice n.劝告；忠告；意见<br>advisable n.明智的；可取的<br>advise vt.劝告；建议；通知<br>aeroplane n.飞机<br>affair n.事情，事件；事务<br>affect vt.影响；感动<br>affection n.慈爱，爱；爱慕<br>afford vt.担负得起…；提供<br>afraid a.害怕的；担心的<br>Africa n.非洲<br>African a.非洲的 n.非洲人<br>after prep.在…以后；次于<br>afternoon n.下午，午后<br>afterward ad.后来，以后<br>again ad.又一次；而且<br>against prep.倚在；逆，对着<br>age n.年龄；时代 vt.变老<br>agency n.经办；代理；代理处<br>agent n.代理人，代理商<br>aggressive a.侵略的；好斗的<br>ago ad.以前<br>agony n.极度痛苦<br>agree vi.同意；持相同意见<br>agreement n.协定，协议；同意<br>agriculture n.农业，农艺；农学<br>ahead ad.在前；向前；提前<br>aid n.帮助，救护；助手<br>aim vi.瞄准，针对；致力<br>air n.空气；空中；外观<br>aircraft n.飞机，飞行器<br>airline n.航空公司；航线<br>airplane n.飞机<br>airport n.机场，航空站<br>alarm n.惊恐，忧虑；警报<br>alcohol n.酒精，乙醇<br>alike a.同样的，相同的<br>alive a.活着的；活跃的<br>all a.全部的 prep.全部<br>allow vt.允许，准许；任<br>alloy n.合金； (金属的 )成色<br>almost ad.几乎，差不多<br>alone a.单独的 ad.单独地<br>along prep.沿着 ad.向前<br>aloud ad.出声地，大声地<br>alphabet n.字母表，字母系统<br>already ad.早已，已经<br>also ad.亦，也；而且，还<br>alter vt.改变，变更；改做<br>alternative n.替换物；取舍，抉择<br>although conj.尽管，虽然<br>altitude n.高，高度；高处<br>altogether ad.完全；总而言之<br>aluminium n.铝<br>always ad.总是，一直；永远<br>a.m (缩)上午，午前<br>amaze vt.使惊奇，使惊愕<br>ambition n.雄心，抱负，野心<br>ambulance n.救护车；野战医院<br>America n.美洲；美国<br>American a.美洲的 n.美国人<br>among prep.在…之中<br>amongst prep在…之中 (=among)<br>amount n.总数；数量；和<br>ampere n.安培<br>    amplify vt.放大，增强；扩大<br>amuse vt.逗…乐；给…娱乐<br>analyse vt.分析，分解，解析<br>analysis n.分析，分解，解析<br>ancestor n.祖宗，祖先<br>anchor n.锚 vi.抛锚，停泊<br>ancient a.古代的，古老的<br>and conj.和，又，并，则<br>angel n.天使，神差，安琪儿<br>anger n.怒，愤怒 vt.使发怒<br>angle n.角，角度<br>angry a.愤怒的，生气的<br>animal n.动物，兽 a.动物的<br>ankle n.踝，踝节部<br>announce vt.宣布，宣告，发表<br>announcer n.宣告者；播音员<br>annoy vt.使恼怒；打搅<br>annual a.每年的 n.年报<br>another a.再一个的；别的<br>answer vt.回答；响应；适应<br>ant n.蚂蚁<br>anticipate vt.预料，预期，期望<br>anxiety n.焦虑，忧虑；渴望<br>anxious a.忧虑的；渴望的<br>any a.什么，一些；任何的<br>anybody prep.任何人<br>anyhow ad.无论如何<br>anyone pron.任何人<br>anything pron.任何事物；一切<br>anyway ad.无论如何<br>anywhere ad.在什么地方<br>apart ad.相隔；分开；除去<br>apartment n.一套公寓房间<br>apologize vi.道歉，谢罪，认错<br>apology n.道歉，认错，谢罪<br>apparatus n.器械，仪器；器官<br>apparent a.表面上的；明显的<br>appeal vi.&amp;n.呼吁；申述<br>appear vi.出现；来到；似乎<br>appearance n.出现，来到；外观<br>    appetite n.食欲，胃口；欲望<br>apple n.苹果，苹果树<br>appliance n.用具，器具，器械<br>applicable a.能应用的；适当的<br>application n.请求，申请；施用<br>apply vt.应用，实施，使用<br>appoint vt.任命，委任；约定<br>appointment n.任命；约定，约会<br>appreciate vt.欣赏；领会；感谢<br>approach vt.向…靠近 n.靠近<br>appropriate a.适当的，恰当的<br>approval n.赞成，同意；批准<br>approve vt.赞成，称许；批准<br>approximately ad.近似地，大约<br>April n. 四月<br>Arabian a.阿拉伯的<br>arbitrary a.随心所欲的；专断的<br>architecture n.建筑学；建筑式样<br>area n.面积；地区；领域<br>argue vi.争论，争辩，辩论<br>argument n.争论，辩论；理由<br>arise vi.出现；由…引起<br>arithmetic n.算术，四则运算<br>arm n.臂；臂状物；武器<br>army n.军队；陆军<br>around prep.在…周围<br>arouse vt.引起，唤起；唤醒<br>arrange vt.筹备；整理；调解<br>arrangement n.整理，排列；安排<br>arrest vt.逮捕，拘留；阻止<br>arrival n.到达；到来；到达者<br>arrive vi.到达；来临；达到<br>arrow n.箭；箭状物<br>art n.艺术，美术；技术<br>article n.文章；条款；物品<br>artificial a.人工的；娇揉造作的<br>artist n.艺术家，美术家<br>artistic a.艺术的；艺术家的<br>as conj.当…的时候<br>ash n.灰，灰末；骨灰<br>ashamed a.惭愧(的)；羞耻 (的)<br>Asia n.亚洲<br>Asian a.亚洲的 n.亚洲人<br>aside ad.在旁边，到旁边<br>ask vt.问；要求；邀请<br>asleep a.睡着的，睡熟的<br>aspect n.方面；样子，外表<br>    assemble vt.集合，召集；装配<br>assembly n.集合；集会；装配<br>assess vt.对(财产等 )估价<br>assign vt.指派；分配；指定<br>assignment n.任务，指定的作业<br>assist vt.援助，帮助；搀扶<br>assistant n.助手，助理；助教<br>associate vi.交往 n.伙伴，同事<br>association n.协会，团体；联合<br>assume vt.假定；承担；呈现<br>assure vt.使确信；向…保证<br>    astonish vt.使惊讶，使吃惊<br>astronaut n.宇宙航行员，宇航员<br>at prep.在…里；在…时<br>athlete n.运动员；田径运动员<br>Atlantic a.大西洋的 n.大西洋<br>atmosphere n.大气；空气；气氛<br>atmospheric a.大气的；大气层的<br>atom n.原子；微粒；微量<br>atomic a.原子的；原子能的<br>attach vt.缚，系，贴；附加<br>attack vt.&amp;vi.&amp;n. 攻击，进攻<br>attain vt.达到，获得，完成<br>attempt vt.尝试，试图 n.企图<br>attend vt.出席；照顾，护理<br>attention n.注意，留心；注意力<br>attentive a.注意的；有礼貌的<br>attitude n.态度，看法；姿势<br>attract vt.吸引；引起，诱惑<br>attraction n.吸引；吸引力；引力<br>attractive a.有吸引力的<br>attribute vt.把…归因于 n.属性<br>audience n.听众，观众，读者<br>August n.八月<br>aunt n.伯母，婶母，姑母<br>    aural a.耳的，听觉的<br>Australia n.澳大利亚<br>Australian a.澳大利亚的<br>author n.作者，作家<br>authority n.当局，官方；权力<br>auto n.(口语)汽车<br>automatic a.自动的；机械的<br>automation n.自动，自动化<br>automobile n.汽车，机动车<br>autumn n.秋，秋季<br>    auxiliary a.辅助的；附属的<br>available a.可利用的；通用的<br>    avenue n.林荫道，道路；大街<br>average n.平均数 a.平均的<br>    aviation n.航空，航空学<br>avoid vt.避免，躲开；撤消<br>await vt.等候，期待<br>awake a.醒着的 vt.唤醒<br>award n.奖，奖品；判定<br>aware a.知道的，意识到的<br>away ad.离开，远离；…去<br>    awful a.令人不愉快的<br>awfully ad.令人畏惧的；很<br>    awkward a.笨拙的；尴尬的<br>ax n.斧子<br>axis n.轴，轴线；中心线<br>baby n.婴儿；孩子气的人<br>back ad.在后；回原处；回<br>background n.背景，后景，经历<br>backward a.向后的；倒的 ad.倒<br>    bacteria n.细菌<br>bad a.坏的，恶的；严重的<br>badly ad.坏，差；严重地<br>badminton n.羽毛球<br>bag n.袋，包，钱包，背包<br>    baggage n.行李<br>bake vt.烤，烘，焙；烧硬<br>balance vt.使平衡；称 n.天平<br>ball n.球，球状物；舞会<br>balloon n.气球，玩具气球<br>banana n.香蕉；芭蕉属植物<br>band n.乐队；带；波段<br>bang n.巨响，枪声；猛击<br>bank n.银行；库；岩，堤<br>banner n.旗，旗帜，横幅<br>bar n.酒吧间；条，杆；栅<br>barber n.理发师<br>    bare a.赤裸的；仅仅的<br>bargain n.交易 vi.议价；成交<br>bark n.吠叫声 vi.吠，叫<br>    barn n.谷仓；牲口棚<br>    barrel n.桶；圆筒；枪管<br>    barrier n.栅栏，屏障；障碍<br>base n.基础，底层；基地<br>basic a.基本的，基础的<br>basically ad.基本上<br>basin n.盆，洗脸盆；盆地<br>basis n.基础，根据<br>basket n.篮，篓，筐<br>basketball n.篮球；篮球运动<br>bat n.球拍；短棍；蝙蝠<br>bath n.浴，洗澡；浴缸<br>bathe vt.给…洗澡；弄湿<br>bathroom n.浴室；盥洗室<br>battery n.电池；一套，一组<br>battle n.战役；斗争 vi.作战<br>bay n.湾；山脉中的凹处<br>B.C. (缩)公元前<br>be aux.v.&amp;vi.是，在，做<br>beach n.海滩，湖滩，河滩<br>    beam n.梁；横梁；束，柱<br>bean n.豆，蚕豆<br>bear n.熊；粗鲁的人<br>bear vt.容忍；负担；生育<br>beard n.胡须，络腮胡子<br>beast n.兽，野兽；牲畜<br>beat vt.&amp;vi.打，敲；打败<br>beautiful a.美的，美丽的<br>beauty n.美，美丽；美人<br>because conj.由于，因为<br>become vi.变成；成为，变得<br>bed n.床，床位；圃；河床<br>bee n.蜂，密蜂；忙碌的人<br>beef n.牛肉；菜牛<br>beer n.啤酒<br>before prep.在…以前；向…<br>beg vt.&amp;vi.乞求；请求<br>beggar n.乞丐，穷人<br>begin vi.开始 vt.开始<br>beginner n.初学者，生手<br>beginning n.开始，开端；起源<br>behalf n.利益，维护，支持<br>behave vi.表现，举止；运转<br>behavior n.行为，举止，态度<br>behind prep.在…后面<br>being n.存在；生物；生命<br>belief n.信任，相信；信念<br>believe vt.相信；认为<br>bell n.钟，铃，门铃；钟声<br>belong vi.属于，附属<br>beloved a.为…的爱的 n.爱人<br>below prep.在…下面 (以下)<br>belt n.带，腰带；皮带；区<br>bench n.长凳，条凳；工作台<br>bend vt.使弯曲 vi.弯曲<br>beneath prep.在…下方<br>beneficial a.有利的，有益的<br>benefit n.利益；恩惠；津贴<br>berry n.浆果(如草莓等 )<br>beside prep.在…旁边<br>besides ad.而且 prep.除…之外<br>best a.最好的；最大的<br>bet vt.&amp;vi.&amp;n. 打赌<br>    betray vt.背叛；辜负；泄漏<br>better a.较好的 ad.更好地<br>between prep.在…中间<br>beyond prep.在…的那边<br>Bible n.基督教《圣经》<br>bicycle n.自行车，脚踏车<br>big a.大的，巨大的<br>bike n.自行车 vi.骑自行车<br>bill n.账单；招贴；票据<br>billion num. 万亿(英)<br>bind vt.捆绑；包扎；装钉<br>biology n.生物学；生态学<br>bird n.鸟，禽<br>birthday n.生日，诞生的日期<br>biscuit n.(英)饼干； (美)软饼<br>bit n.一点，一些，小片<br>bite vt.咬，叮，螫；剌穿<br>bitter a.痛苦的；严寒的<br>bitterly ad.苦苦地；悲痛地<br>black a.黑色的；黑暗的<br>blackboard n.黑板<br>    blade n.刀刃，刀片；叶片<br>    blame vt.责备，把…归咎于<br>blank a.空白的 n.空白<br>blanket n.毛毯，毯子，羊毛毯<br>blast n.爆炸，冲击波 vt.炸<br>    blaze n.火；闪光 vi.燃烧<br>bleed vi.出血，流血；泌脂<br>blend vt.&amp;vi.&amp;n. 混和<br>bless vt.为…祝福<br>    blind a.瞎的；盲目的<br>block n.街区 vt.堵塞，拦阻<br>blood n.血，血液；血统<br>bloom n.花；开花，开花期<br>blossom n.花，开花 vi.开花<br>blow vi. 吹，吹动；吹响<br>blue a.蓝色的 n.蓝色<br>board n.板 vt.上(船、车等 )<br>boast vi.自夸 vt.吹嘘<br>boat n.小船，艇；渔船<br>body n.身体；主体；尸体<br>boil vi. 沸腾；汽化 vt.煮沸<br>    bold a.大胆的；冒失的<br>    bolt n.螺栓；插销 vt.闩门<br>    bomb n.BoB!!! vt. 轰炸<br>bond n.联结，联系；公债<br>bone n.骨，骨骼<br>book n.书，书籍 vt.预定<br>boot n.靴子，长统靴<br>booth n.货摊；公用电话亭<br>border n.边，边缘；边界<br>bore vt.使厌烦；钻，挖<br>born a.天生的；出生的<br>borrow vt.借，借用，借人<br>bosom n.胸，胸部；内心<br>boss n.老板，上司 vt.指挥<br>both pron.两者(都)<br>bother vt.烦扰，迷惑 n.麻烦<br>bottle n.瓶，酒瓶；一瓶<br>bottom n.底，底部，根基<br>bough n.树枝<br>bounce vi.反跳，弹起；跳起<br>bound a.一定的；有义务的<br>boundary n.分界线，办界<br>bow n.弓；蝴蝶结；鞠躬<br>bowl n.碗，钵；碗状物<br>box n.箱，盒；包箱<br>box vi.拳击，打拳<br>boy n.男孩，少年；家伙<br>brain n.脑，脑髓；脑力<br>brake n.闸，刹车 vi.制动<br>branch n.树枝；分部；分科<br>brand n.商品；烙印 vt.铭刻<br>    brandy n.白兰地酒<br>    brass n.黄铜；黄铜器<br>brave a.勇敢的，华丽的<br>    bread n.面包；食物，粮食<br>    breadth n.宽度，幅度；幅面<br>break vt.打破；损坏；破坏<br>breakfast n.早饭，早餐<br>breast n.乳房；胸脯，胸膛<br>breath n.气息，呼吸；气味<br>breathe vi.呼吸 vt.呼吸<br>breed n.品种 vt.使繁殖<br>    breeze n.微风，和风<br>brick n.砖，砖块；砖状物<br>    bridge n.桥，桥梁；桥牌<br>brief a.简短的；短暂的<br>bright a.明亮的；聪明的<br>brighten vt.使发光；使快活<br>brilliant a.光辉的；卓越的<br>    brim n.边，边缘；帽沿<br>bring vt.带来；引出；促使<br>brisk a.活泼的；清新的<br>    bristle n.短而硬的毛；鬃毛<br>Britain n.不列颠，英国<br>British a.不列颠的，英联邦的<br>    brittle a.脆的；易损坏的<br>broad a.宽的，阔的；广泛的<br>broadcast n.广播，播音<br>broken a.被打碎的，骨折的<br>    bronze n.青铜；青铜制品<br>    brood n.同窝幼鸟 vt.孵(蛋)<br>    brook n.小河，溪流<br>broom n.扫帚<br>    brother n.兄弟；同事，同胞<br>brow n.额；眉，眉毛<br>brown n.褐色，棕色<br>    bruise n.青肿，伤痕；擦伤<br>    brush n.刷子，毛刷；画笔<br>    brute n.禽兽，畜生<br>    bubble n.泡 vi.冒泡，沸腾<br>    bucket n.水桶；吊桶；铲斗<br>    bud n.芽，萌芽；蓓蕾<br>build vt.建筑；建立；创立<br>building n.建筑物，大楼；建筑<br>bulb n.电灯泡；球状物<br>bulk n.物体，容积，大批<br>bull n.公牛；雄的象<br>bullet n.枪弹，子弹，弹丸<br>bunch n.束，球，串；一群<br>    bundle n.捆，包，束；包袱<br>burden n.担子，重担；装载量<br>    bureau n.局，司，处；社，所<br>burn vi.烧，燃烧 n.烧伤<br>burst vt.使爆裂 vi.&amp;n. 爆炸<br>bury vt.埋葬，葬；埋藏<br>bus n.公共汽车<br>bush n.灌木，灌木丛，矮树<br>business n.商业，生意；事务<br>busy a.忙的，繁忙的<br>but conj.但是，可是<br>    butcher n.屠夫；屠杀者<br>butter n.黄油；奶油<br>butterfly n.蝴蝶<br>button n.扣子；按钮 vt.扣紧<br>buy vt.买，购买 vi.买<br>by prep.在…旁；被，由<br>cabbage n.洋白菜，卷心菜<br>    cabin n.小屋；船舱，机舱<br>    cabinet n.橱，柜；内阁<br>    cable n.缆，索；电缆；电报<br>cafe n.咖啡馆；小餐厅<br>cafeteria n.自助食堂<br>cage n.笼；鸟笼，囚笼<br>cake n.饼，糕，蛋糕<br>    calculate vt.计算；估计；计划<br>calculation n.计算，计算结果<br>calculator n.计算器，计算者<br>calendar n.日历，历书；历法<br>call vt.把…叫做；叫，喊<br>    calm a.静的，平静的<br>camel n.骆驼<br>camera n.照相机，摄影机<br>camp n.野营，营地，兵营<br>campaign n.战役；运动<br>campus n.校园，学校场地<br>can aux.v.能，会，可能<br>can n.罐头，听头；容器<br>Canada n.加拿大<br>Canadian a.加拿大的<br>canal n.运河；沟渠；管<br>cancel vt.取消，撤消；删去<br>cancer n.癌，癌症，肿瘤<br>candidate n.候选人；投考者<br>    candle n.蜡烛；烛形物；烛光<br>candy n.糖果；砂糖结晶<br>cannon n.大炮，火炮；榴弹炮<br>    canoe n.独木舟，皮艇，划子<br>    canteen n.小卖部；临时餐室<br>canvas n.粗帆布；一块油画布<br>cap n.帽子，便帽；帽状物<br>capable a.有能力的，有才能的<br>capacity n.容量；能力；能量<br>capital n.资本，资金；首都<br>captain n.陆军上尉；队长<br>captive n.俘虏，被监禁的人<br>capture vt.捕获，俘获；夺得<br>car n.汽车，小汽车，轿车<br>carbon n.碳<br>card n.卡，卡片，名片<br>care vi.关心，介意 n.小心<br>career n.生涯，职业，经历<br>careful a.仔细的；细致的<br>careless a.粗心的，漫不经心的<br>cargo n.船货，货物<br>carpenter n.木工，木匠<br>carpet n.地毯，毡毯，毛毯<br>carriage n.客车厢；四轮马车<br>carrier n.运输工具；运载工具<br>carrot n.胡罗卜<br>carry vt.携带；运载；传送<br>cart n.二轮运货马车<br>carve vt.刻，雕刻；切开<br>case n.情况；事实；病例<br>case n.箱(子)，盒(子)，套<br>cash n.现金，现款<br>cassette n.盒式录音带；盒子<br>cast vt.投，扔，抛；浇铸<br>    castle n.城堡；巨大建筑物<br>casual a.偶然的；随便的<br>cat n.猫，猫科，猫皮<br>catalog n.目录，目录册<br>catch vt.捉住；赶上；领会<br>    cathedral n.总教堂；大教堂<br>cattle n.牛；牲口，家畜<br>cause n.原因，理由；事业<br>cave n.山洞，洞穴，窑洞<br>    cease vi.&amp;vi.&amp;n.停止，停息<br>ceiling n.天花板，顶蓬<br>celebrate vt.庆祝；歌颂，赞美<br>cell n.细胞；小房间<br>cellar n.地窑，地下室<br>cement n.水泥；胶泥 vt.粘结<br>cent n.分；分币；百<br>centigrade a.百分度的<br>centimetre n.公分，厘米<br>central a.中心的；主要的<br>centre n.中心；中枢 vt.集中<br>century n.世纪，百年<br>ceremony n.典礼，仪式；礼节<br>certain a.确实的；肯定的<br>certainly ad.一定，必定；当然<br>certainty n.必然；肯定<br>certificate n.证书，证件，执照<br>chain n.链，链条，项圈<br>chair n.椅子；主席<br>chairman n.主席；议长，会长<br>    chalk n.白垩；粉笔<br>challenge n.挑战；要求，需要<br>    chamber n.会议室；房间；腔<br>champion n.冠军，得胜者<br>chance n.机会，机遇；可能性<br>change n.改变，变化；零钱<br>channel n.海峡；渠道；频道<br>chapter n.章，回，篇<br>character n.性格；特性；角色<br>characteristic a.特有的 n.特性<br>charge vt.索价；控告 n.费用<br>charity n.施舍；慈善事业<br>charming a.迷人的，可爱的<br>chart n.图，图表；海图<br>chase n.追逐，追赶，追求<br>cheap a.廉价的；劣质的<br>cheat vt.骗取；哄 vi.行骗<br>check vt.检查；制止 n.检查<br>cheek n.面颊，脸蛋<br>cheer vt.使振作；欢呼<br>cheerful a.快乐的，愉快的<br>cheese n.乳酪，干酪<br>chemical a.化学的 n.化学制品<br>chemist n.化学家；药剂师<br>    chemistry n.化学<br>    cheque n.支票<br>    cherry n.樱桃；樱桃树<br>chess n.棋；国际象棋<br>chest n.胸腔，胸膛；箱子<br>    chew vt.咀嚼，嚼碎<br>chicken n.小鸡，小鸟；鸡肉<br>chief a.主要的；首席的<br>child n.小孩，儿童；儿子<br>childhood n.童年，幼年；早期<br>childish a.孩子的；幼稚的<br>chill vt. 使变冷 n.寒冷<br>chimney n.烟囱，烟筒；玻璃罩<br>chin n.颏，下巴<br>China n.中国<br>china n.瓷器，瓷料<br>Chinese a.中国的 n.中国人<br>chocolate n.巧克力；巧克力糖<br>choice n.选择，抉择<br>choke vt.使窒息；塞满<br>choose vt.选择，挑选；情愿<br>chop vt.砍，劈；切细 vi.砍<br>Christian n.基督教徒；信徒<br>Christmas n.圣诞节</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>反射机制</title>
+    <url>/2021/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<p>反射概念：程序能够访问，监测和修改自身状态和行为的一种能力</p>
+<p>反射是一种强大工具，能够创建灵活代码，代码可以在运行时装配，无序在组件内进行源代码链接。<br>如果使用不当，成本很高</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>多线程</title>
+    <url>/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+    <content><![CDATA[<p>多线程：<br>    进程：正在运行的程序，是系统进行资源分配和调度的独立单位，每一个进程都有自己的内存空间和系统资源<br>    线程：在进程中的单个顺序控制流，是一条执行路径<br>        单线程：一个进程如果只有一条执行路径，则称为单线程程序<br>        多线程：一个进程有多个执行路径，则称为多线程程序</p>
+<p>线程调度的两种方式：<br>    分时调度：所有线程轮流使用CPU的使用权，平均分配每个线程占用CPU的时间<br>    抢占式调度：优先让优先级高的线程使用CPU，如果线程优先级相同，那么会随机选择一个，优先级高的线程获取CPU时间片相对较多。</p>
+<p>Java使用的是抢占式调度模型</p>
+<p>随机性：<br>    假如计算机只有一个CPU，那么CPU只能在一个时刻只能执行一条命令，线程只有得到CPU的时间片，也就是使用权才能执行命令。<br>    所以多线程程序的执行是有随机性的</p>
+<p>final int getPriority()：返回线程的优先级<br>final void setPriority(int newPriority)：更改线程的优先级，线程优先级默认为5，优先级范围是：1-10</p>
+<p>线程控制：<br>    static void sleep(long millis)：是当前正在执行的线程停留（暂停执行），指定的毫秒数<br>    void join()：等待这个线程死亡<br>    void setDaemon(boolean on) 将线程标记为守护线程，当运行的线程都是守护线程时，Java虚拟机将退出</p>
+<p>实现多线程的方式：<br>    继承Thread类或者实现Runnable接口<br>    相比继承Thread类，实现Runnable接口的好处：<br>        避免了Java的单继承的局限性<br>        适合多个相同程序的代码，去处理同一个资源的情况，把线程和程序的代码，数据有效分离，体现面向对象思想</p>
+<p>同步代码块解决数据安全问题：<br>    出现条件：在多线程环境下，有个共享数据，多条语句操作共享数据<br>    如何解决：让程序没有安全问题的环境<br>    如何实现：把多条语句操作数据的代码给锁起来，让任何时刻只能有一个线程执行就行了</p>
+<pre><code>同步代码块：   
+    synchronized(任意对象){
+        多条语句操作工具数据的代码
+    }
+    synchronized(任意对象)：相当于给代码加锁，任意对象就可以看做为一把锁
+    好处和弊端：
+        解决多线程的数据安全问题
+        当线程很多的时候，因为每个线程都会去判断同步上的锁，这就很耗费资源，无形中降低程序的运行效率</code></pre><p>线程安全的类：</p>
+<pre><code>StringBuffer:
+    线程安全，可变的字符串序列，从JDK5开始，被StringBuilder替代。通常应该使用StringBuilder类，因为它支持所有相同的操作，但它更快，因为执行不同步。
+Vector：
+    该类改进了List接口。与新的集合实现不同，Vector被同步。如果不需要线程安全实现，建议使用ArrayList代替Vector
+Hashtable:
+    该类实现哈希表，将键映射到值，任何非null对象都可以作为键或者值，Hashtable被同步。如果不需要线程安全的实现，建议使用HashMap代替Hashable</code></pre><p>生产者消费者模式：<br>    待理解</p>
+<p>Thread.sleep():<br>    是Thread类的一个静态方法，使当前线程休眠，进入阻塞状态（暂停执行），如果线程在睡眠状态被中断，将会抛出IterruptedException中断异常。</p>
+<p>代码练习：<br>public class SellTicketDemo {<br>    public static void main(String[] args) {<br>        //创建SellTicket类对象<br>        SellTicket st = new SellTicket();</p>
+<pre><code>    //创建三个Thread类对象，把SelllTicket对象作为构造方法的参数，并给对应窗口进行命名
+    Thread thread1 = new Thread(st,&quot;窗口1&quot;);
+    Thread thread2 = new Thread(st,&quot;窗口2&quot;);
+    Thread thread3 = new Thread(st,&quot;窗口3&quot;);
+
+    thread1.start();
+    thread2.start();
+    thread3.start();
+   /*
+   出现问题：
+        相同的票出现多次
+        出现负数票
+    出现原因：
+        线程执行的随机性导致
+    */
+
+}</code></pre><p>}</p>
+<p>public class SellTicket implements Runnable{<br>    private int tickets = 100;</p>
+<pre><code>@Override
+public void run() {
+    while (true){
+        if(tickets&gt;0){
+            System.out.println(Thread.currentThread().getName()+&quot;正在出售第&quot;+tickets+&quot;张票&quot;);
+            tickets--;
+        }
+    }
+}</code></pre><p>}</p>
+<p>public class priorityDemo {<br>    public static void main(String[] args) {<br>        MyThread myThread =new MyThread();<br>        MyThread myThread1 =new MyThread();<br>        MyThread myThread2 =new MyThread();<br>        MyThread myThread3 =new MyThread();<br>        MyThread myThread4 =new MyThread();<br>        MyThread myThread5 =new MyThread();<br>        MyThread myThread6 =new MyThread();<br>        myThread.setName(“my”);<br>        myThread1.setName(“my1”);<br>        myThread2.setName(“my2”);<br>        myThread3.setName(“my3”);<br>        myThread4.setName(“my4”);<br>        myThread5.setName(“my5”);<br>        myThread6.setName(“my6”);<br>        //其他的线程默认为5<br>        myThread6.setPriority(10);//进程my6是最高的<br>        myThread1.setPriority(1);//进程my是优先级最小的<br>       //测试<br>        myThread.start();<br>        myThread1.start();<br>        myThread2.start();<br>        myThread3.start();<br>        myThread4.start();<br>        myThread5.start();<br>        myThread6.start();</p>
+<pre><code>}</code></pre><p>}</p>
+<p>public class MyThreadTest {<br>    public static void main(String[] args) {<br>        MyThread my1 = new MyThread();<br>        MyThread my2 = new MyThread();<br>        my1.setName(“my1”);<br>        my2.setName(“my2”);<br>        my1.start();<br>        my2.start();<br>        String my1Name = my1.getName();<br>        String my2Name = my2.getName();<br>        System.out.println(“my1name:”+my1Name);<br>        System.out.println(“my2name:”+my2Name);<br>    }<br>}</p>
+<p>public class MyThread extends Thread{<br>    @Override<br>    public void run(){<br>        for(int i = 0; i&lt;10;i++){<br>            System.out.println(i);<br>        }<br>        System.out.println(this.getName());<br>    }</p>
+<p>}</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>学习记录</title>
+    <url>/2021/05/13/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>2021-5-25<br>idea启动tomcat，8080端口被占，已解决<br><a href="https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">https://blog.csdn.net/qq_33198758/article/details/82924561?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
+<p>tomcat启动项目报错：<br>    查看tomcat日志： C:\Users\（用户名）.IntelliJIdea2017.3\system\tomcat  </p>
+<pre><code>错误信息：Error during artifact deployment. See server log for details.
+    解决办法：https://blog.csdn.net/qq_39095899/article/details/106604228?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162192913216780255278525%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162192913216780255278525&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-7-106604228.first_rank_v2_pc_rank_v29&amp;utm_term=Error+during+artifact+deployment.+See+server+log+for+details.&amp;spm=1018.2226.3001.4187</code></pre><p>【cmd命令】‘netstat’不是内部命令：<br><a href="https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">https://blog.csdn.net/m18633778874/article/details/80441536?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280993916780264039009%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162280993916780264039009&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80441536.first_rank_v2_pc_rank_v29&amp;utm_term=netstat%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187</a></p>
+<p>UTF-8的BOM：<br>    <a href="https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs" target="_blank" rel="noopener">https://blog.csdn.net/qq_38929030/article/details/73920996?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.baidujs</a></p>
+<a id="more"></a>]]></content>
+  </entry>
+  <entry>
+    <title>学习资料链接</title>
+    <url>/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<p>01 Java基础阶段：<br>链接:<a href="https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw" target="_blank" rel="noopener">https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw</a>  密码:koa9<br>02 数据库阶段：<br>链接:<a href="https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw" target="_blank" rel="noopener">https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw</a>  密码:sbog<br>03 Web前端：<br>链接:<a href="https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ</a>  密码:p0wy<br>04 Javaweb阶段：<br>链接:<a href="https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w" target="_blank" rel="noopener">https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w</a>  密码:njpq<br>05 Web进阶：<br>链接:<a href="https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g" target="_blank" rel="noopener">https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g</a>  密码:9w0s<br>06 Web项目实战：<br>链接:<a href="https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA" target="_blank" rel="noopener">https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA</a>  密码:ekn5<br>07 Java框架阶段：<br>链接:<a href="https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ" target="_blank" rel="noopener">https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ</a>  密码:2jqq<br>08 互联网分布式技术：<br>链接:<a href="https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg" target="_blank" rel="noopener">https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg</a>  密码:6t3d<br>09 项目实战：<br>链接:<a href="https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw" target="_blank" rel="noopener">https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw</a>  密码:gplw<br>10 Java开发工具：<br>链接：<a href="https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA" target="_blank" rel="noopener">https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA</a> 提取码：krpc</p>
+<a id="more"></a>]]></content>
+  </entry>
+  <entry>
+    <title>学习资源链接</title>
+    <url>/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<h2 id="MySQL系列学习目录："><a href="#MySQL系列学习目录：" class="headerlink" title="MySQL系列学习目录："></a>MySQL系列学习目录：</h2><h3 id="MYSQL文章学习："><a href="#MYSQL文章学习：" class="headerlink" title="MYSQL文章学习："></a>MYSQL文章学习：</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933257&idx=1&sn=0f0086a2465a2fcae13d3fea65064803&chksm=88621bb7bf1592a1ac94fe4107ba1ef26a0fa97e1bf9aea7279009d8bd240f1ef7d27aa10393&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第一篇:MySQL基础</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933270&idx=1&sn=409080e17352da2035b0bfdf63ccdfde&chksm=88621ba8bf1592beb2ef6106d6bf9f3eccd48d6814c7031f36e3c8be68821f17cf065129688c&token=1876080189&lang=zh_CN#rd" target="_blank" rel="noopener">第二篇:详解MySQL数据类型</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933279&idx=1&sn=f8591b95362cb3c352d895b1289d665a&chksm=88621ba1bf1592b72a43a62e3f310695e8b87f17932d052145622c3edbb70ef8cb987849fc3e&token=516655478&lang=zh_CN#rd" target="_blank" rel="noopener">第三篇:管理员必备技能（必须掌握）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933289&idx=1&sn=c4f212c312ea86e08ad322caddd05e38&chksm=88621b97bf159281156ee3be510a1a15234531d2c97d66957e67377829ab23779809ea55bbde&token=1484565200&lang=zh_CN#rd" target="_blank" rel="noopener">第四篇:DDL常见操作</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933296&idx=1&sn=1c56256d60c5847a944d87c8cfc9c14d&chksm=88621b8ebf159298b0789e2994d2aaf8b582effc7d8c1ba715deaca11c86a9dc8ac730878dc0&token=2000571846&lang=zh_CN#rd" target="_blank" rel="noopener">第五篇:DML操作汇总（insert，update，delete）</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933300&idx=1&sn=bedef4d430dc76141e42e42ef6acfaa6&chksm=88621b8abf15929caae7904019c946a396885a33855ca465bacdd4187538005ebc3c116888f5&token=1814800041&lang=zh_CN#rd" target="_blank" rel="noopener">第六篇:select查询基础篇</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933305&idx=1&sn=2c5ba0bea6fcdd57d86cecd63541f91a&chksm=88621b87bf1592915086c1e945119fcc95af6aa1127b90ef1b56b018083bfd787ad95efde918&token=1144227002&lang=zh_CN#rd" target="_blank" rel="noopener">第七篇:玩转select条件查询，避免采坑</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933309&idx=1&sn=0f7dfec8bc70e67daa7159ee219325b8&chksm=88621b83bf1592951d949179061f39a1f4266b2879bc9a25af4da3b4b29f69ab1fcc595a462f&token=516674265&lang=zh_CN#rd" target="_blank" rel="noopener">第八篇:详解排序和分页(order by &amp; limit)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933315&idx=1&sn=4abf2b34a53a85cbd4a3b9ee31fcd398&chksm=88621bfdbf1592eb6a5a13202588dde9068ac7e6391d8dbf3fde33647bf0e044839ba4228216&token=1937580929&lang=zh_CN#rd" target="_blank" rel="noopener">第九篇:分组查询详解(group by &amp; having)</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933321&idx=1&sn=110f6cacb90845bf2327fbcd7acd708c&chksm=88621bf7bf1592e1f1c0f2f01e40d4bd63a48d98daa4ba1157ecad4c6c6520d18b4b2c24c906&token=1096041061&lang=zh_CN#rd" target="_blank" rel="noopener">第十篇:常用的几十个函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933325&idx=1&sn=33274227db275a3570e1e43ccdd4f49c&chksm=88621bf3bf1592e5b75f537e21961c4295fafb782dbf31c0c1cbf9e36f5f4ed44d31cdad68b3&token=1832579722&lang=zh_CN#rd" target="_blank" rel="noopener">第十一篇:深入了解连接查询及原理</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933342&idx=2&sn=2e41daa0926a9c32d5fddd23590391aa&chksm=88621be0bf1592f66904a184858df7c11129e8b545c7626b8b6c1fcc32d3dfdd9ab21aeda8e5&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十二篇:子查询</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933349&idx=1&sn=6e81f9046119cda43f8eb602d1139ef0&chksm=88621bdbbf1592cd9a20ec4715fe9f9459d079b641b04f607999c106cd52453d8c8508d939d7&token=386795745&lang=zh_CN#rd" target="_blank" rel="noopener">第十三篇:细说NULL导致的神坑，让人防不胜防</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933355&idx=1&sn=b426ad28dfc2a64bba813df5b7c341a4&chksm=88621bd5bf1592c3c08e441398f699d0a4c2303a51519aac169447f22765cc613dfc3d991f8b&token=385335213&lang=zh_CN#rd" target="_blank" rel="noopener">第十四篇:详解事务</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933370&idx=1&sn=4fe9b8e2aba766988c503737d34d9836&chksm=88621bc4bf1592d2b06d659884bf9881bd207a042ac36176f12808bd72f235e8e3404366259e&token=84059034&lang=zh_CN#rd" target="_blank" rel="noopener">第十五篇:详解视图</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933374&idx=1&sn=c294b6a69564a4c98d4c0cb29aeb9ac0&chksm=88621bc0bf1592d650752c44ca50540c1fa0c88c0a514019f1317559e13098de7dac37ddfc05&token=1531009350&lang=zh_CN#rd" target="_blank" rel="noopener">第十六篇:变量详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933382&idx=1&sn=4cf80b4f50c80dcc8171d2128b47cf63&chksm=88621c38bf15952e193177a0ba3e03beeaeed996553ce6900f91518310332e99c915e8be2566&token=1341741305&lang=zh_CN#rd" target="_blank" rel="noopener">第十七篇:存储过程&amp;自定义函数详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933388&idx=1&sn=59cb1d23845e45894bb72c1e2479f074&chksm=88621c32bf1595241573e4194912ca60a51eb8477f4b49492e26668c9bebc032e9d6672e7fdd&token=1832749573&lang=zh_CN#rd" target="_blank" rel="noopener">第十八篇:流程控制语句</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933392&idx=1&sn=ff29e380b42a0aa7cb1dc7659d745686&chksm=88621c2ebf1595380f99d9c4c89581638a27a5cf356de35d31aa9ae7ac17e63abe0e4adc813c&token=1479782197&lang=zh_CN#rd" target="_blank" rel="noopener">第十九篇:游标详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933396&idx=1&sn=b6cc5d5287bf43d94e6706fa217aa8cb&chksm=88621c2abf15953c3200c6d4d945ad70bdd2177f020f8e2229ae269153bbc8bf251af83e1135&token=1846211483&lang=zh_CN#rd" target="_blank" rel="noopener">第二十篇:异常捕获及处理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933400&idx=1&sn=61af771f10342ee4956efea6749abd71&chksm=88621c26bf15953041a6bc65734edf788af711ff176ad36884fe6411e5c4cfd0bf967e0e33fc&token=1781447741&lang=zh_CN#rd" target="_blank" rel="noopener">第二十一篇:什么是索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933422&idx=1&sn=f28a92c195d914d636117c2316524c5e&chksm=88621c10bf159506af8a3c6b947e32b11414ff72ed3ad19a9fa0b0cec0be6c3ae3931117b3d2&token=1928746279&lang=zh_CN#rd" target="_blank" rel="noopener">第二十二篇:mysql索引原理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933427&idx=1&sn=d9cb0317b50c76519291d2e4311b887f&chksm=88621c0dbf15951b1d4d37da57f88a7b026d2bb656234a738f8660be4c5750f82300c20be779&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十三篇:mysql索引管理详解</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933439&idx=1&sn=a1eddd36a6f597b9cd43e39e9f1b9d76&chksm=88621c01bf1595175894d27c996a49c9305c59bf23250f165943f91fcf35076813cf832985f7&token=410060235&lang=zh_CN#rd" target="_blank" rel="noopener">第二十四篇:如何正确的使用索引?</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933444&idx=1&sn=2d0c3ca9ba1275aa9dceac367d7b21a9&chksm=88621c7abf15956c9fae6cb4e68663263979a9aef7bec617c235032b03bc874e2dab0ef28fe1&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十五篇:sql中where条件在数据库中提取与应用浅析</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxMDQ4MQ==&mid=2648933457&idx=1&sn=b1e9e38bdcc3e3cf5e67e040ab4a4f94&chksm=88621c6fbf1595793a369015b88df0332c6bfab43ff6a8b35423797beaacf0f9632132e353e4&token=164798892&lang=zh_CN#rd" target="_blank" rel="noopener">第二十六篇：聊聊mysql如何实现分布式锁?</a></p>
+<h3 id="MYSQL视频学习："><a href="#MYSQL视频学习：" class="headerlink" title="MYSQL视频学习："></a>MYSQL视频学习：</h3><p><a href="https://www.bilibili.com/video/BV1Vt411z7wy" target="_blank" rel="noopener">b站MYSQL基础课</a></p>
+<p><a href="https://www.bilibili.com/video/BV1hE411V7vu" target="_blank" rel="noopener">数据库关系代数</a></p>
+<p><a href="https://www.bilibili.com/video/BV1Ez411b7hb/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" rel="noopener">关系代数操作哈工大</a></p>
+<h2 id="机器学习相关资料"><a href="#机器学习相关资料" class="headerlink" title="机器学习相关资料:"></a>机器学习相关资料:</h2><h3 id="吴恩达机器学习系列课程"><a href="#吴恩达机器学习系列课程" class="headerlink" title="吴恩达机器学习系列课程"></a>吴恩达机器学习系列课程</h3><p><a href="http://www.ai-start.com/ml2014/" target="_blank" rel="noopener">斯坦福大学2014机器学习教程中文笔记目录在线阅读</a><br><a href="https://www.bilibili.com/video/BV164411b7dx" target="_blank" rel="noopener">视频地址(中文字幕版):</a><br><a href="https://www.coursera.org/course/ml" target="_blank" rel="noopener">视频视频原地址(打开不流畅，建议b站观看):</a><br><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener">吴恩达老师的机器学习课程个人笔记+资料+码源 github地址:</a></p>
+<h3 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h3><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程（编程基础知识）</a></p>
+<p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3school（web技术教程）</a></p>
+<p><a href="https://www.yiibai.com/" target="_blank" rel="noopener">易百教程</a></p>
+<a id="more"></a>
+]]></content>
+  </entry>
+  <entry>
+    <title>数学建模比赛</title>
+    <url>/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/</url>
+    <content><![CDATA[<h2 id="一些基本要求："><a href="#一些基本要求：" class="headerlink" title="一些基本要求："></a>一些基本要求：</h2><p>1：不要就题论题，寻一个一般性的数学模型，解决特定问题<br>2：文献查阅能力 把方程拿过来用，不需要搞太清楚<br>3：学习建模能力最重要</p>
+<p>赛题结构：实际问题背景，若干假设条件，要求回答问题</p>
+<p>标题和摘要部分很重要。</p>
+<p>题目：写出比较确切的题目</p>
+<p>论文排版问题很重要！！</p>
+<p>论文写作：多个方法作对比，进行分析，做写点总结性话语，页数20-25</p>
+<p>查重，高于30%基本上没有成绩，问题分析部分不能直接复制题目，论文题目，摘要，关键词是重中之重！！！</p>
+<p>题目：基于<strong>__</strong>模型的<strong>____</strong>研究与分析<br>        • 摘要备战：总结归纳能力，通过看高水平论文或优秀论文掌握<br>        • 问题重述：切记直接抄袭问题，对描述简短的拆建，描述复杂的精炼<br>        • 问题假设：明确假设点是关键，只要对我们的结果有影响，但又是小概率事件；<br>                              或者对结果有影响，但难以计算获取这类的<br>        • 问题分析：动脑能力是关键，先将问题进行定性，然后说明如何求解这类 问题<br>        • 符号说明：文中出现的符号均需说清楚，用希腊字母<br>        • 模型建立：将常见模型进行归纳整理，形成算法库<br>        • 模型求解：对编程语言熟练掌握，如 Ｍatlab，Lingo等<br>        • 模型优缺点评价：对模型的不足提前掌握，并在应用中的不足阐述<br>        • 参考文献：掌握标准格式</p>
+<h2 id="层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法"><a href="#层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法" class="headerlink" title="层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法"></a>层次分析法（AHP）：一种定性和定量相结合，系统化的，层次化的分析方法</h2><p><strong>适用于评价类问题,主观性较强，数据量较少</strong></p>
+<p>层次分析法的三大典型应用：<br>        1：用于最佳方案的选取（选取运动员，选取地址）<br>        2：用于评价类问题（评价水质状况，评价环境）<br>        3：用于指标体系的优选（兼顾科学和效率）</p>
+<p>特点：半定型，半定量问题转化为定量问题的行之有效的一种方法，使人们的思维过程层次化。</p>
+<p>用途：通过逐层比较多种关联因素为 分析评估，决策，预测，或者控制事物的法发展提供定量依据，适用于<strong>难于完全定量方法进行分析的复杂问题</strong></p>
+<p>层次结构：目标层（最高层），准则，指标层（中间层），方案层（最底层）</p>
+<p>步骤：<br>    one：构造两两比较矩阵，对于同一层次的各因素关于上一层中某一目标的重要性进行两两比较<br>    two：由比较矩阵计算被比较因素对每一准则的相对权重，并进行<strong>判断矩阵的一致性检验。</strong><br>    three：计算方案层对目标层的组合权重，并进行排序。</p>
+<h2 id="微分和差分"><a href="#微分和差分" class="headerlink" title="微分和差分 :"></a>微分和差分 :</h2><h2 id="概率与统计："><a href="#概率与统计：" class="headerlink" title="概率与统计："></a>概率与统计：</h2><p>​    伯努利方程，泊松分布，正态分布。<br>​    正态分布：期望就是平均数，什么时候是正态分布：多个因素影响最后结果。</p>
+<p>生命问题还有器件的使用寿命问题—-&gt;指数分布</p>
+<p>统计：在总体中抽出个别的样本，看样本来分析总体</p>
+<p>极大似然估计法</p>
+<p>假设检验：<br>    基本步骤：1假设      H0—-&gt;真         H1——-&gt;假</p>
+<h2 id="聚类分析："><a href="#聚类分析：" class="headerlink" title="聚类分析："></a>聚类分析：</h2><p>​    层次聚类，K均值聚类</p>
+<pre><code>SPSS分类软件，Mpai</code></pre><p>综合评价方法及其应用：<br>长江水质排名 </p>
+<h2 id="灰色系统分析方法（用于预测）"><a href="#灰色系统分析方法（用于预测）" class="headerlink" title="灰色系统分析方法（用于预测）"></a>灰色系统分析方法（用于预测）</h2><p>灰色系统：介于白黑系统之间，系统内部特性是部分已知的，另一部分是未知的。<br>灰数：信息不完全的数<br>灰数的白化：确定数的值</p>
+<p>总成分分析法：</p>
+<p>lingo用来解决优化问题，可以解决线性规划和非线性规划的问题<br>Model开头，end结束</p>
+<p>lingo不区分大小写；<br>以！开始以;结尾是一句注释</p>
+<p>点击solve进行求解</p>
+<p>Lingo编程语言</p>
+<p>随机分析</p>
+<p>线性规划问题：<br>    目标函数和约束函数均为线性函数，故称为线性规划问题，是在一组线性规划约束条件限制下，求解一个线性目标函数最大或者最小的问题。</p>
+<pre><code>可行解：满足约束条件的决策变量的取值
+可行域：所有可行解构成的集合，简称为R</code></pre><p>整数规划：<br>    规划中的变量（部分或者全部）限制为整数时，被称为整数规划。若在线性规划中，变量被限制为整数，则称为整数线性规划。目前所流行的求解整数规划的方法，往往只适用于整数线性规划。目前还没有一种 方法能有效地求解一切整数规划。</p>
+<pre><code>整数规划的特点：
+    1 原线性规划有最优解，当自变量限制为整数后，其整数规划解出现下述情况 
+        （1）原线性规划最优解全是整数，则整数规划最优解与线性规划最优解一致。 
+        （2）整数规划无可行解。 
+        （3）有可行解（当然就存在最优解），但最优解值变差。
+    2 整数规划最优解不能按照实数最优解简单取整而获得。
+
+整数规划按照对决策变量的要求可分为：纯整数规划，全整数规划，混合整数规划，0-1整数规划。
+
+通过四舍五入得到的解不一定是最优解，甚至不能保证所得到的的整数是可行解
+
+分支定界法：用来解决松弛问题没有可行解和松弛问题下的最优解不满足整数条件。
+割平面法：用来解决解中含有非整数分量的情况。
+
+0-1变量使用：用来解决互斥约束问题。两个东西只选其一</code></pre><p>非线性规划问题：</p>
+<pre><code>定义：如果目标函数或者约束条件中包含非线性函数，则规划问题为非线性规划问题
+
+一般来说，解非线性规划比解线性规划困难的多
+非线性规划现在还没有适用于各种问题
+一般形式：在一组等式或者不等式的约束下，求一个函数的最大值或者最小值，其中一个是非线性函数。
+
+二次规划：如果非线性规划的目标函数为自变量的二次函数，约束
+条件全是线性的，则称规划为二次规划。</code></pre><p>层次分析法（AHP）：<br>    用于解决规划问题，解决多目标的复杂问题的定性与定量想结合的决策分析方法。衡量目标之间的相对重要程度，有效应用于难以定量方法解决的课题。</p>
+<p>灰色预测模型：<br>    灰色预测法是一种对含有不确定因素的系统进行预测的方法，是对既含有已知信息又含有不确定信息的系统进行预测，就是对一定范围内变化的，与时间有关的灰色过程进行预测。</p>
+<pre><code>原理：通过鉴别系统因素之间发展趋势的相异程度，即进行关联分析，并对原始数据进行生成处理来寻找系统变动的规律，并生成较规律性的数据序列，然后建立相应的微分方程模型，从而进行预测未来的发展趋势的状况。
+
+灰色预测法用等时距观测到的反映预测的对象的特征的一系列数量值构造灰色预测模型，预测未来某一刻的特征值，或达到某一特征量的时间。
+
+灰色预测的四种常见类型：
+    灰色时间序列预测：即用观察到的反映预测对象特征的时间序列来构造灰色预测模型。预测未来某一时刻的特征值，或者达到某一特征量的时间。
+    畸变预测：通过灰色模型预测异常值出现的时刻，预测异常值出现时候出现在特定时区内。
+    系统预测：通过对系统行为特征指标建立一组互相关联的灰色预测模型，预测系统中众多变量间的相互协调关系的变化。
+    拓扑预测：将原始数据做成曲线，在曲线上按定值寻找该定值发生的所有时间点，并以该定值为框架构成时间点数列，然后建立预测该定值所发生的时间点。
+
+灰色关联度：是分析向量与向量之间，矩阵与矩阵之间的关联度，需要一个参考物（比较序列）进行计算。</code></pre><p>插值与拟合基本原理<br>    插值用拟合是数学建模中基本的数据分析手段，公认的常用算法。<br>    一个插值多项式如果次数太高，会出现严重的震荡现象（Runge现象）<br>    插值多项式的次数越高，精度不一定越高，在实际的应用中，不应该使用七次以上的插值。<br>    解决办法：将插值区间分成若干的小区间，小区间内用低次的（一次，二次）插值，即分段低次插值<br>    插值包括：一元插值，二元插值，散乱点插值</p>
+<pre><code>拟合问题：
+    插值问题与拟合问题的区别：
+        插值函数过已知点，拟合函数不一定过已知点。
+        插值只要用于求函数值，而拟合的主要目的就是求函数关系，从而进行预测等一系列分析。
+    线性拟合中的参数的计算，采用最小二乘法，而非线性拟合参数的计算需要运用Gauss-Newton迭代法    </code></pre><p>模糊综合评价模型原理</p>
+<pre><code>模糊数学：现实世界的许多现象和关系具有不确定性，不确定性的表现形式有很多：随机性，灰色性，模糊性和粗糙性。
+
+模糊数学多用于评价问题
+
+模糊集：许多现象和关系具有模糊性，例如，长与短，贫与富等
+
+隶属度：一个成员元素所属模糊集的程度
+
+确定隶属度的常用方法是模糊分布法，模糊分布将隶属函数看成一种模糊分布，首先根据问题性质选取适当的模型分布，然后根据相关数据确定分布中的参数
+
+模糊分布的常用梯形分布：偏小型，偏大型，中间型
+偏小型一般适用于描述‘小’，‘少’，‘浅’等模糊现象;偏大型正好与偏小型相反;中间型用于描述中间状态。
+
+模型综合评价：对一个事物的评价要涉及到很多因素或者多个指标，评价是在多因素作用下的一种综合评价。
+    评价的方法又很多：灰色评价法，层次分析法，模糊综合评价法，网络包络分析法人工神经网络评价法，理想解法等。
+
+模糊评价是模糊数学的一种具体应用，该方法简单易掌握，对多层次的复杂问题评价效果比较好。</code></pre><p>相关性分析：</p>
+<pre><code>如果一个变量的取值发生变化，另一个变量也发生了变化，则称为两个变量有关，否则无关。
+
+关系变量强度：指两个变量之间的关联程度的高低。
+统计学中，是已准实验的思想分析变量相关的，通常以以下角度分析：
+    1，两个变量是否独立；2，两个变量是否有共变趋势。3，一个变量的变化多大程度上能由另一个变量来解释。
+
+Pearson相关系数：适用于定距，定比的类型的变量，是运用最广的一种相关程度统计量
+Pearson相关系数的计算适用条件：
+    两变量均是由测量得到的连续变量。
+    两变量所来自的总体都是正态分布，或者接近正态分布。、
+    变量必须是成对出现的
+    两变量必须是线性关系。
+
+相关系数性质：相关系数r的绝对值越接近1，表明两个变量的相关程度越高，关系越密切。
+
+
+hold on，hold off：matlab中画图时加入，hold on 在已经显示的图画上继续显示，hold off 取消这种显示方式。
+
+
+整数规划模型：
+    数学规划中的变量（部分或全部）限制为整数时，称为整数规划。若在 线性规划模型中，变量限制为整数，则称为整数线性规划。整数规划只适用于整数线性规划
+
+    整数规划模型：
+    1)变量全部限制为整数，成为完全整数规划。
+    2）变量部分限制为整数，称为混合整数规划。
+
+    tip：整数规划最优解不能由实数最优解简单取整获得。</code></pre><p>​        </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>数据库零碎知识点</title>
+    <url>/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p> 一些最重要的 SQL 命令</p>
+<ul>
+<li><p><strong>SELECT</strong> - 从数据库中提取数据</p>
+</li>
+<li><p><strong>UPDATE</strong> - 更新数据库中的数据</p>
+</li>
+<li><p><strong>DELETE</strong> - 从数据库中删除数据</p>
+</li>
+<li><p><strong>INSERT INTO</strong> - 向数据库中插入新数据</p>
+</li>
+<li><p><strong>CREATE DATABASE</strong> - 创建新数据库</p>
+</li>
+<li><p><strong>ALTER DATABASE</strong> - 修改数据库</p>
+</li>
+<li><p><strong>CREATE TABLE</strong> - 创建新表</p>
+</li>
+<li><p><strong>ALTER TABLE</strong> - 变更（改变）数据库表</p>
+</li>
+<li><p><strong>DROP TABLE</strong> - 删除表</p>
+</li>
+<li><p><strong>CREATE INDEX</strong> - 创建索引（搜索键）</p>
+</li>
+<li><p><strong>DROP INDEX</strong> - 删除索引</p>
+<p>SELECT DISTINCT：<br>选取出来列中唯一不同的值（重复的值出现一次）</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<p>SQL的四种连接查询：<br>    内连接（内联查询，就是两张表中的数据，通过某个字段相对，查询出相关记录数据）</p>
+<p>​        inner join 或者 join      （后加on表示条件）</p>
+<p>​        例如：select * from person inner join card on person.cardId=card.id;</p>
+<p>​    外连接</p>
+<p>​        1.左连接 left join 或者 left outer join  (会把左边表里的数据全部取出来，而右边表的数据，如果有的话，显示出来，没有的话，就会补NULL。)</p>
+<p>​        2.右连接 right join 或者 right outer join (和左外连接相似)</p>
+<p>​        3.完全外连接 full join 或者 full outer join (mysql  不支持full join)</p>
+<p>只能通过左右外连接，然后union起来，例如：<br>select * from person left join card on person.cardId=card.id</p>
+<p>union</p>
+<p>select * from person right join card on person.cardId=card.id</p>
+<p>​        </p>
+<p>unique约束，可以为空，但为空只能有一个，</p>
+<p>视图：</p>
+<p>​    虚表，是从一个或多个</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>网络编程</title>
+    <url>/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<p>计算机网络：<br>    是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及其网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。</p>
+<p>网络编程：<br>    在网络通信协议下，实现网络互联的不同计算机运行的程序间可以进行数据交换。</p>
+<p>网络编程3要素：</p>
+<pre><code>IP地址：
+    要想让网络中的计算机能够互相通信，必须为每台计算机指定一个标识号，通过这个标识号来指定要接收数据的计算机和识别发送的计算机，而IP地址就是这个标识号。也就是设备的标识
+
+端口：
+    网络的通信，本质上是两个应用程序的通信。每台计算机都有很多的应用程序，那么在网络通信时，如何区分这些应用程序呢？如果说IP地址可以唯一标识网络中的设备，那么端口号就可以唯一标识设备中的应用程序了。也就是应用程序的标识
+
+协议：
+    通过计算机网络可以使多台计算机实现连接，位于同一个网络中的计算机在进行连接和通信时需要遵守一定的规则，这就好比在道路中行驶的汽车一定要遵守交通规则一样。在计算机网络中，这些连接和通信的规则被称为网络通信协议，它对数据的传输格式、传输速率、传输步骤等做了统一规定，通信双方必须同时遵守才能完成数据交换。常见的协议有UDP协议和TCP协议</code></pre><p>IP地址：网络中设备的唯一标识<br>    IPV4：为每个连接在网络上的主机分配的32bit的地址，也就是4字节，例如11000000 10101000 00000001 01000010，为一个ipv4的地址，利用点分十进制表示法可以看成192.168.1.66<br>    IPV6：v4的地址不够用，v6重新定义地址空间，采用128为地址长度，16字节一组，8组十六进制数，来解决网络地址不足的问题<br>    DOS常用命令：<br>        ipconfig：查看本机IP地址<br>        ping IP地址：检查网络是否连通<br>    特殊IP地址：<br>        127.0.0.1：是回送地址，可以代表本机地址，一般用来测试使用</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>机器学习笔记</title>
+    <url>/2021/07/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>学习资料来源：GitChat《机器学习极简入门》,黄广海《吴恩达机器学习笔记》</p>
+<p>监督学习：就是我们给学习算法一个数据集，这个数据集由“正确答案”组成。</p>
+<p>监督学习基本思想：我们每个数据集的每个样本都有相应的正确答案，再根据这些样本进行预测。</p>
+<p>回归：就是我们推测这一系列连续值属性</p>
+<p>分类：就是我们试着推测出离散的输出值，目标是推出一组离散的结果</p>
+<p>无监督学习：无监督学习中没有任何标签或者是有相同的标签或者就是没有标签</p>
+<p><em>聚类是无监督学习的一种</em></p>
+<p>无监督学习：是一种学习策略，交给算法大量数据，并让算法为我们从数据中找出某种结构</p>
+<p>代价函数也称为平方误差函数</p>
+<p>梯度下降算法：一种用来求函数最小值的算法</p>
+<p>正规方程：可以直接计算出函数最小值</p>
+<p><em>正规方程和梯度下降：在数据量较大的时候，梯度下降法比正规方程更适用</em></p>
+<a id="more"></a>
+
+<p>深度学习与机器学习具有传承关系，学习后者对于理解前者有很大帮助。</p>
+<p>有监督学习（监督学习）VS无监督学习<br>有监督学习，有标签，对数据有标注<br>无监督学习，没有标签值</p>
+<p>机器学习3要素：数据，模型，算法<br>    算法通过在数据上进行运算产生模型<br>    向量空间模型（Vector Space Model/VSM），VSM负责将各种格式（图片，文字，视频）转化为一个个向量。<br>    有监督学习除了和无监督学习有标注样本的X，还有无标注样本的标签向量Y。</p>
+<p>特征工程：确定哪些特征来表示数据；确定用什么方式表达这些特征。</p>
+<p>代价函数一般写成：<br>    J（theta），代价函数的自变量是f（X）函数中的待定的参数，theta可以是一个向量，如果是向量的话，说明待定的参数不止一个，一个维度代表一个参数。</p>
+<p>让代价函数最小的theta就是最好的theta，代入到原函数中，函数也是最终的模型函数。</p>
+<p>找到最好的theta的方法：<br>    梯度下降法（Gradient Descent);共轭梯度法（Conjugate Gradient）;牛顿法和拟牛顿法;模拟退火法（Simulated Annealing）等等。</p>
+<p>构建模型的基本步骤：    </p>
+<p>Step-1：数据准备。<br>    Step-1.1 数据预处理：收集数据、清洗数据、标注数据。<br>    Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。<br>    Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。</p>
+<p>Step-2：<br>    训练——&gt;将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依据的算法进行运算。<br>    训练程序输出的结果，就是模型。</p>
+<p>Step-3：<br>    测试——&gt;将测试集数据输入给训练获得的模型，得到预测结果；再将预测结果与这些数据原本预期的结果进行比较。</p>
+<p>训练集：用来做训练的数据集合<br>验证集：用来在训练的过程中每个训练轮次结束后验证当前模型性能，为进一步优化模型提供参考的数据的集合。<br>测试集：用来测试的数据的集合，用于检验最终得出的模型的性能</p>
+<p>tip：每个集合应是独立的，和另外两个没有重叠。</p>
+<p>有些情况，验证和测试可以合二为一；<br>验证集：可以理解为小规模的对于已经生成模型的测试。</p>
+<p>Step-2 训练过程：</p>
+<p>Step-2.1： 编写训练程序。<br>    Step-2.1.1： 选择模型类型；<br>    Step-2.1.2： 选择优化算法；<br>    Step-2.1.3： 根据模型类型和算法编写程序。<br>    Step-2.2： 训练 -&gt; 获得临时模型。</p>
+<p>Step-2.3： 在训练集上运行临时模型，获得训练集预测结果。</p>
+<p>Step-2.4： 在验证集上运行临时模型，获得验证集预测结果。</p>
+<p>Step-2.5： 综合参照 Step-2.4 和 Step-2.5 的预测结果，改进模型。</p>
+<p>Step-2.6： Step-2.2 到 Step-2.5 反复迭代，直至获得让我们满意，或者已经无法继续优化的模型。</p>
+<p><em>机器学习的模型质量往往和训练数据有直接关系。</em></p>
+<p>有限的数据，提高模型质量的手段：<br>    1对数据进行归一化处理(Normalization),正则化(Regularization)等标准化操作；<br>    2采用BootStrap等采样方法处理有限的训练/测试数据，已达到更好的运算效果。<br>    3根据业务进行特征选取：从业务角度区分输入数据包含的特征，并理解这些特征对结果的贡献。</p>
+<p>超参数：是需要模型训练者自己设置和调整的，许多算法库都有算法的默认超参数。</p>
+<p>模型训练得出结果容易，得到优质结果难。</p>
+<p>分类模型评判指标： Precision，Recall 和 F1Score<br>    对于分类，简单的常见的验证指标：精准率，召回率，为了综合两个指标并量化结果，又出现F1Score。</p>
+<p>精准率：Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p>
+<p>召回率：Recall=TP/（TP+FN），即在所有实际为 Class_A 的测试数据中，预测正确的比率。</p>
+<p>F1Score = 2*(Precision * Recall)/(Precision + Recall)</p>
+<p>显然上面三个值都是越大越好，但往往在实际当中 P 和 R 是矛盾的，很难保证双高。</p>
+<p>偏差和过拟合：<br>    如果一个模型，在训练集上的预测结果就不佳，指标偏低，一般就是欠拟合的；<br>    如果在训练集上指标很好的话，在验证集和测试集指标偏低，则可能过拟合；<br>    欠拟合情况：多数情况下是选择模型太过简单，特征选取不够导致的。<br>    过拟合情况：模型太过复杂，特征选取不当（过多，或者组合不当）造成的。<br>    解决方法：针对性的选择更简单/复杂的模型类型；增加减少特征；减小/增大正则项比重；增大训练数据的训练量</p>
+<p>凸函数：<br>    机器学习的凸函数，不是高等数学的凸函数，是高等数学的凹函数。</p>
+<p>线性回归：<br>    线性回归模型是：利用线性回归对一个或者多个自变量和因变量之间的关系进行拟合的模型。</p>
+<pre><code>当训练数据的特征是一维的时候，线性回归可以在之间坐标系中表示，形式是一条直线。</code></pre><p>一元函数在某一点处沿着x轴的正方向的变化率称为导数，二元或者多元的情况，则某一点处沿着某一维度坐标正方向的变化率称为偏导数</p>
+<p>——————————–第十一篇的偏微分部分不是很理解———————————————————-</p>
+<p>当我们求出了一个函数的（偏）微分函数后，将某个变量带入其中，得出的（偏）微分函数对应的函数值，就是原函数在该点处，对该自变量求导的导数值。<br>所以，只要我们求出了目标函数的（偏）微分函数，那么目标函数自变量值域内每一点的导数值也就都可以求了。</p>
+<hr>
+<p>线性回归的超参数：<br>    对于梯度下降法而言，是要用到梯度下降，就会有步长alpha这个超参数。<br>    如果训练结果偏差较大，可以尝试调小步长；<br>    如果模型质量不错但是训练效率太低，可以适当放大步长；<br>    也可以尝试使用动态步长，开始步长较大，随着梯度的缩小，步长同样缩小……<br>    如果训练程序是通过人工指定迭代次数来确定退出条件，则迭代次数也是一个超参数。<br>    如果训练程序以模型结果与真实结果的整体差值小于某一个阈值为退出条件，则这个阈值就是超参数</p>
+<hr>
+<p>正则化：为了防止</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>马原知识点</title>
+    <url>/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h2 id="绪论："><a href="#绪论：" class="headerlink" title="绪论："></a>绪论：</h2><p>马克思主义的直接理论来源是：德国古典哲学 ，英国古典政治经济学，十九世纪英法空想社会主义<br>马克思主义的创始人：马克思，恩格斯<br>马克思主义中国化的三大理论成果：毛泽东思想，邓小平理论，“三个代表思想”<br>马克思主义理论体系：马克思主义哲学，马克思主义政治经济学，科学社会主义<br>学习马克思主义基本原理的方法：实事求是，理论联实际，认真学习马克思主义著作，科学对待马克思主义<br>马克思主义生命力的根源是：以实践为基础的科学性和革命性的统一<br>无产阶级的科学世界观和方法论是：辩证唯物主义和历史唯物主义<br>马克思最重要的理论品质：与时俱进<br>马克思主义最崇高的社会理想是：实现社会主义<br>马克思主义最鲜明的政治立场：致力于实现以劳动人民为主体的最广大人民的根本利益</p>
+<p>辨析题：</p>
+<p>一，马克思主义是马克思恩格斯的观点和学说的体系：</p>
+<p>答：观点是不全面的，</p>
+<p>（阶级性）马克思主义是无产阶级思想的科学体系<br>（创始人角度）是马克思恩格斯创立的基本理论、基本观点和学说的体系<br>（研究对象和主要内容角度）<br>    是无产阶级科学世界观和方法论，是关于自然、社会和思维发展的普遍规律的学说，是关于资本主义发展和转变为社会主义的普遍规律的学说，是关于无产阶级和人类解放的科学理论<br>（理论品质角度）并且在实践中不断丰富和发展的科学理论体系</p>
+<p>二，德国古典哲学是马克思主义的唯一的直接理论来源：</p>
+<p>答：这个观点是不全面的，</p>
+<p>马克思主义的直接理论来源是<strong>德国古典哲学</strong>，<strong>英国古典政治经济学</strong>和<strong>１９世纪英法空想社会主义</strong>。马克思主义创始人马克思恩格斯直接吸收这三个理论的积极成果，结合无产阶级的实践经验，创立了无产阶级的科学思想体系——马克思主义。</p>
+<p>三，马克思主义是行动指南，而不是教条：</p>
+<p>答：观点是正确的，</p>
+<p>马克思主义是<strong>无产阶级思想的科学体系</strong>，是无产阶级和劳动人民认识世界和改造世界的思想武器，<strong>是无产阶级的科学世界观和方法论</strong>。马克思主义是无产阶级实践经验的总结，是指导无产阶级进行革命的理论，它随着实践的发展而发展。因此，马克思主义不是教条，而是不断发展的理论。</p>
+<p>论述题：</p>
+<p>怎么理解马克思主义？</p>
+<p>答：可以从不同角度理解，</p>
+<p>阶级性：马克思主义是无产阶级思想的科学体系</p>
+<p>创始人：是马克思恩格斯创立的<strong>基本理论</strong>、<strong>基本观点</strong>和<strong>学说</strong>的体系。</p>
+<p>研究对象和主要内容：马克思主义是无产阶级科学世界观和方法论，是关于自然、社会和思维发展的普遍规律的学说，是关于资本主义发展和转变为社会主义的普遍规律的学说，是关于无产阶级和人类解放的科学理论。</p>
+<p>理论体系：是由<strong>马克思主义哲学</strong>、<strong>马克思主义政治经济学</strong>和<strong>科学社会主义</strong>三个不可分割的部分组成的完整的科学体系，同时马克思主义又是在实践不断丰富和发展的开放式的，与时俱进的发展的科学体系。</p>
+<p>怎样理解马克思主义是发展的理论？</p>
+<p>一切从实际出发，理论联系实际，实事求是，在实践中检验和发展真理，是马克思主义最重要的理论品质。这一理论品质是马克思主义产生以来保持强大生命力的关键所在。</p>
+<h2 id="第一章：世界的物质性及其发展规律"><a href="#第一章：世界的物质性及其发展规律" class="headerlink" title="第一章：世界的物质性及其发展规律"></a>第一章：世界的物质性及其发展规律</h2><p>哲学的基本问题包括：1，物质和意识，谁是本源；2，思维和存在的同一性问题<br>物质：不依赖人类的感觉而存在，唯一特性是客观存在性，存在于人们的意识之外，可以为人的意识所反映<br>意识：自然界长期发展的产物，是人脑的机能和属性，是物质世界的主观映像，内容是客观存在的，形式是主观的<br>物质决定意识，意识依赖于物质并反作用于物质</p>
+<p>世界的物质统一性：</p>
+<p>​    世界是物质的，而物质是运动的，物质和运动是不可分割的<br>​    物质世界的运动是绝对的，物质在运动过程中静止是相对的<br>​    时间和空间是物质运动的存在形式<br>​    物质，运动，时间，空间具有内在的统一性</p>
+<p>社会生活的本质是实践的：</p>
+<p>​    实践是社会关系形成的基础；<br>​    实践形成看社会生活的基本领域；<br>​    实践构成了社会发展的动力；</p>
+<p>事物的普遍联系：</p>
+<p>​    联系是事物内部各要素之间和事物之间相互影响，相互制约和相互作用的关系。<br>​    联系具有客观性，普遍性，多样性。</p>
+<p>新事物为什么不可战胜？</p>
+<p>​    发展是前进的上升的运动，发展的实质是新事物的产生和旧事物的灭亡。<br>​    ①就新生事物与环境的关系而言，新事物之所以新，是因为有新的结构和功能，它适应已经变化了的环境和条件。</p>
+<p>​    ②就新事物与旧事物的关系而言，新事物是在旧事物的“母体”中孕育成熟的，它既否定了旧事物中消极腐朽的东西，又保留了旧事物中合理的、仍然适合新的条件的因素，并添加了旧事物中所不能容纳的新内容</p>
+<p>对立统一规律：</p>
+<p>​    <strong>对立统一规律</strong>是事物发展的根本规律，是唯物辩证法的实质和核心<br>​    ①矛盾的两种基本属性——<strong>同一性</strong>和<strong>斗争性</strong><br>​    ②矛盾问题的精髓——<strong>普遍性</strong>和<strong>特殊性</strong><br>​    同一性：矛盾两者相互依存<br>​    斗争性：矛盾对立面之间相互排斥，相互分离<br>​    普遍性：矛盾存在一切事物的发展过程中<br>​    特殊性：不同事物的矛盾各有特点</p>
+<p>为什么对立统一规律是唯物辩证法体系的实质和核心？</p>
+<pre><code>1，揭示了事物普遍联系的根本内容和永恒发展的内在动力，从根本上回答了事物为什么会发展的问题
+2，对立统一规律是贯穿质量互变规律、否定之否定规律以及唯物辩证法基本范畴的中心线索，也是理解这些规律和范畴的“钥匙”。
+3，对立统一提供了人们认识世界和改造世界的基本方法-----矛盾分析法</code></pre><p>量变和质变的辩证关系：</p>
+<p>​    1，量变是质变的必要准备。<br>​    2，质变是量变的必然结果。<br>​    3，量变和质变相互渗透。</p>
+<p>辩证否定观的内容：</p>
+<p>​    ①否定是事物的自我否定，是事物内部矛盾运动的结果<br>​    ②否定是事物发展的环节。<br>​    ③否定是新旧事物联系的环节，新事物孕育产生于旧事物，新旧事物是通过否定环节联系起来的。<br>​    ④辩证否定的实质是“<strong>扬弃</strong>”，即新事物对旧事物既批判又继承，既克服其消极因素又保留其积极因素。</p>
+<p>否定之否定规律的基本内容：</p>
+<p>​    事物的发展经过两次辩证的否定，由肯定阶段到否定阶段，再到否定之否定阶段，从而使事物的发展表现为螺旋式上升和波浪式前进的过程。否定之否定规律<strong>提示了事物的发展是前进性和曲折性的统一。</strong></p>
+<p>矛盾分析法：</p>
+<p>​    分析矛盾特殊性的方法，“<strong>两点论</strong>”与“<strong>重点论</strong>”相结合的方法，抓关键、看主流的方法，在对立中把握同一与在同一中把握对立的方法，批判与继承相统一的方法等，都是矛盾分析法的具体表现。</p>
+<p>唯物辩证法的五大基本范畴：原因与结果 可能性与现实性 现象与本质 必然性与偶然性 内容与形式</p>
+<p>辩证思维方法是人们正确进行理性思维的方法：<strong>归纳与演绎</strong>、<strong>分析与综合</strong>、<strong>抽象与具体</strong>、<strong>逻辑与历史相统一</strong></p>
+<p>.什么是规律？</p>
+<p>规律是事物的本质的联系。任何规律都是事物的内在根据和本质联系。</p>
+<p>（1）规律就是物质运动发展过程中本质的、必然的、稳定的联系。</p>
+<p>（2）规律具有两个特点。第一，客观性、第二，普遍性</p>
+<p>自然规律与社会规律的区别与联系</p>
+<p>区别：前者是一种盲目的无意识的力量起作用，后者则是通过有意识人的活动来实现的；前者是可以重现的，后者则是历史的，在不同的状态下有不同的表现形式。这就使认识社会规律比认识自然规律要困难得多。 </p>
+<p>联系：作为规律，它本身具有不以人的意志为转移的客观性，人不能任意改变、创造或消灭自然规律。 </p>
+<p>意识的作用：<br>①意识是能动的，具有目的性和计划性。<br>②意识活动具有创造性。<br>③意识具有指导实践改造客观世界的作用。<br>④意识还具有指导、控制人的行为和生理活动的作用。<br>总之，意识是物质的产物，是物质世界在人脑中的主观映像，这是物质、意识关系问题上的唯物主义。</p>
+<p>全部哲学、特别是近代哲学的重大的基本问题是：思维和存在的关系问题<br>列宁对辩证唯物主义物质范畴的定义是通过：物质和意识的关系界定的<br>马克思主义认为，世界的真正统一性在于他的：物质性<br>既是自然界与人类社会分化统一的历史前提，又是自然界与人类社会统一起来的现实基础：实践<br>对于同一事物，不同的人有不同的反映：意识受主体状况影响<br>辩证唯物主义认为，事物发展的规律是：事物内在的本质和稳定的联系</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>考研信息整理</title>
+    <url>/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>初试时间：</p>
+<p>​    每年12月份的最后一个星期左右</p>
+<p>​    第一天：政治+英语    第二天：数学+专业课</p>
+<p>​    上午8：30-11：30，下午14：00-17：00</p>
+<hr>
+<p>政治：马原24分，毛特30分，史纲14分，思修与法律基础16分，当代世界经济与形式与政策16分</p>
+<p>​    政治单科划线50-55左右，70+算高分。</p>
+<p>​    试卷内容分为两大模块：主观题（5道，每题10分）客观题（16道单选一题1分，14道多选一题2分）多选选全给分</p>
+<p>​    估分：选择题分数*2，历年真题选择题平均分29分左右。</p>
+<p>​    复习规划：</p>
+<p>​        7-10月：</p>
+<p>​            《肖秀荣知识点精讲精练》+《肖秀荣1000题》，可以先不做真题，真题除了马原不会有考的题目。快速阅读《肖秀荣知识点精讲精练》有不错的知识印象，形成大概的知识点框架。一天一节，看完一节将1000题中的选择题做完，可以先不做大题，一天1-2小时。</p>
+<p>​        10-12月：</p>
+<p>​            《疾风劲草冲刺背诵核心考点》可以不加配套试题+《肖秀荣1000题》+《肖秀荣形势与政策》。需要专门背诵选择题的考点。每天先背诵一节《核心考点》然后凭借刚背诵的知识点做肖秀荣1000，核心考点看完开始看形势政策，形势政策可不不用看完，挑今年大事。一天2小时</p>
+<p>​        12月-考前：主攻政治大题，每天2-3小时</p>
+<p>​            《肖秀荣8套》+《肖秀荣4套》8套11月下旬卖，4套12月上旬卖。每天一张卷子，只做选择题部分，大题用来背，大题重点背加黑部分，同时也要写写，找找题感。肖4大题重中之重，马原大题部分可以独立做，锻炼自己思考能力，【马原找原理需要题量】，其他的分析题直接过答案，分析今年的出题角度。押题班压题课可以听听，不要全信。</p>
+<hr>
+<p>英语：</p>
+<p>​    英语1：（完形填空10分，阅读A40分，阅读B（新题型）10分，翻译10分，大作文20分，小作文10分）英语二：（完形填空10分，阅读A40分，阅读B（新题型）10分，翻译15分，大作文15分，小作文10分）                    </p>
+<hr>
+<p>数学：数1注重知识点的宽度，数2侧重知识点的深度。</p>
+<p>​    数1：高数60%，线代20%，概率20%<br>​        选择：6高数+2线代+1概率，一题5分；<br>​        填空：4高数+1线代+1概率，一题5分；<br>​        解答题：4高数+1线代+1概率，高数40分，线代15分，概率15分；<br>​    数2：高数80%，线代20%<br>​        选择：8高数+2线代，一题5分；<br>​        填空：5高数+1线代，一题5分；<br>​        解答：5高数+1线代，高数55分，线代15分；</p>
+<p>数2复习规划：多做题，相对少看视频</p>
+<p>​    7-10月：同济课本+数学二公式手册+李永乐数学历年真题权威解析（分章节）+汤家凤1800题<br>​        可以对照着公式手册画课本上的知识点，剔除掉书上不考的内容。每天复习每章节考察的知识点，复习完一章就去做李永乐数学历年真题权威解析。一天4-5小时。</p>
+<p>​            </p>
+<p>试考408，调剂能调自主命题的学校吗？</p>
 ]]></content>
   </entry>
 </search>
