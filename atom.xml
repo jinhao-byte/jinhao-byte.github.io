@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-15T12:03:45.609Z</updated>
+  <updated>2021-08-18T03:40:22.637Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,21 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>考研信息整理</title>
-    <link href="http://example.com/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/"/>
-    <id>http://example.com/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/</id>
-    <published>2021-08-15T08:01:45.028Z</published>
-    <updated>2021-08-15T12:03:45.609Z</updated>
+    <title>数学建模Lingo学习</title>
+    <link href="http://example.com/2021/08/18/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1Lingo%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2021/08/18/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1Lingo%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-08-18T02:45:23.998Z</published>
+    <updated>2021-08-18T03:40:22.637Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;初试时间：&lt;/p&gt;
-&lt;p&gt;​    每年12月份的最后一个星期左右&lt;/p&gt;
-&lt;p&gt;​    第一天：政治+英语    第二天：数学+专业课&lt;/p&gt;
-&lt;p&gt;​   </summary>
+    <summary type="html">&lt;p&gt;红色靶心运行程序&lt;/p&gt;
+&lt;p&gt;每一句语句以 “;‘’</summary>
         
       
     
@@ -41,12 +39,26 @@
   </entry>
   
   <entry>
-    <title>数学建模作业练习</title>
-    <link href="http://example.com/2021/08/08/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%BD%9C%E4%B8%9A%E7%BB%83%E4%B9%A0/"/>
-    <id>http://example.com/2021/08/08/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%BD%9C%E4%B8%9A%E7%BB%83%E4%B9%A0/</id>
-    <published>2021-08-08T03:32:07.952Z</published>
-    <updated>2021-08-08T03:32:07.952Z</updated>
+    <title>考研信息整理</title>
+    <link href="http://example.com/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/"/>
+    <id>http://example.com/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/</id>
+    <published>2021-08-15T08:01:45.028Z</published>
+    <updated>2021-08-17T14:12:47.314Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;初试时间：&lt;/p&gt;
+&lt;p&gt;​    每年12月份的最后一个星期左右&lt;/p&gt;
+&lt;p&gt;​    第一天：政治+英语    第二天：数学+专业课&lt;/p&gt;
+&lt;p&gt;​    上午8：30-11：30，下午14：00-17：00&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;时间节点：&lt;/p&gt;
+&lt;p&gt;​ </summary>
+        
+      
     
     
     

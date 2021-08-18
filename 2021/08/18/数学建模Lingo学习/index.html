@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>数学建模作业练习 |  Jinhao&#39;s blog</title>
+      <title>数学建模Lingo学习 |  Jinhao&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -49,7 +49,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-数学建模作业练习"
+  id="post-数学建模Lingo学习"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -60,7 +60,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  数学建模作业练习
+  数学建模Lingo学习
 </h1>
  
 
@@ -68,15 +68,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/08/08/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%BD%9C%E4%B8%9A%E7%BB%83%E4%B9%A0/" class="article-date">
-  <time datetime="2021-08-08T03:32:07.952Z" itemprop="datePublished">2021-08-08</time>
+      <a href="/2021/08/18/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1Lingo%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2021-08-18T02:45:23.998Z" itemprop="datePublished">2021-08-18</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">983</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -98,7 +98,44 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <p>红色靶心运行程序</p>
+<p>每一句语句以 “;‘’ 结尾</p>
+<p>Lingo默认所有变量大于等于0，所以非负的条件不需要多写。</p>
+<p>Lingo不区分大小写。</p>
+<p>变量均由字母数字下划线组成，字母放首位。</p>
+<p><strong>线性规划基础：</strong></p>
+<p>​    一个线性规划只有一个目标函数（两个以上的多目标函数规划，Lingo无法求解）<br>​    求解目标函数的最大值或者最小值分别用max = …  或者  min…来表示。<br>​    注释：！开头，；结尾。<br>​    线性规划和非线性规划的本质区别是 ：目标函数是否是线性的，其余一致。<br>​    非线性规划的求解非常困难，基本上找不到全局最优解。</p>
+<p>例题：<br>    某工厂有两条生产线，分别用来生产 M 和 P 两种型号的产品，利润分别为 200 元/个 和 300 元/个，生产线的最大生产能力分别为每日 100 和 120，生产线每生产一个 M 产品需要 1 个劳动日（1 个工人工作 8 小时称为 1 个劳动日）进行调试、检测等工作，而每个 P 产 品需要 2 个劳动日，该厂工人每天共计能提供 160 劳动日，假如原材料等其他条件不受限制，问应如何安排生产计划，才能使获得的利润最大？ </p>
+<p>​    求解：</p>
+<p>​        目标函数：max z = 200x1 +300x2<br>​        约束条件：x1&lt;=100 ; x2&lt;=120; x1+2*x2&lt;=160;  x1&gt;=0,i=1,2;<br>​    代码：<br>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">max &#x3D; 200*x1 + 300*x2; </span><br><span class="line">x1 &lt;&#x3D; 100; </span><br><span class="line">x2 &lt;&#x3D; 120; </span><br><span class="line">x1 + 2*x2 &lt;&#x3D; 160;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>集合和矩阵工厂：</strong></p>
+<p>​    矩阵工厂：生产一维矩阵</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set:</span><br><span class="line">factory &#x2F;1..6&#x2F; : a,b;!a和b没有联系，都是一行六列的矩阵;</span><br><span class="line">plant &#x2F;1..3&#x2F; : x,y;</span><br></pre></td></tr></table></figure>
+
+<p>程序知识点：</p>
+<p>以上程序对应知识点： </p>
+<p>① factory 和 plant 都是制造矩阵的工厂，但它们是两家不同的工厂。<br>② factory 工厂后面的 /1..6/ 说明它专门生产 1 x 6 的矩阵。<br>    factory 工厂最后面出现的 <em>a</em> 和 <em>b</em>，都是 1 x 6 的矩阵。<br>③ plant 工厂后面的 /1..3/ 说明它专门生产 1 x 3 的矩阵。<br>    plant 工厂最后面出现的 <em>x</em> 和 <em>y</em>，都是 1 x 3 的矩阵。<br>④ 矩阵工厂的名字 factory 是随便起的，工厂所生产行矩阵的名字 <em>a</em> 和 <em>b</em> 也是随便起的。<br>⑤ 以上这四句话，本质是定义了四个行矩阵的大小，矩阵工厂只是中介。<br>⑥ 生产完矩阵后，工厂和矩阵之间将脱开联系。<br>⑦ Lingo 不是一行一行读代码的，所以用 sets: 和 endsets 表示矩阵工厂生产流程的起止。 </p>
+<p><strong>矩阵的赋值</strong></p>
+<p>矩阵不能只生产矩阵，还要给矩阵赋初值。</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">factory &#x2F;1..6&#x2F; : a,b;</span><br><span class="line">plant &#x2F;1..3&#x2F; : c,x;</span><br><span class="line">endsets</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data:</span><br><span class="line">a &#x3D; 1, 2, 3, 4, 5, 6;</span><br><span class="line">b &#x3D; 6.0, 5.0, 4.0, 3.0, 2.0, 1.0;</span><br><span class="line">c &#x3D; 10, 20, 30;</span><br><span class="line">enddata</span><br></pre></td></tr></table></figure>
+
+<p>① 不是每个矩阵都要赋值，有些矩阵正是我们要求解的变量。<br>② 需要赋值的矩阵必须赋满，不能给 6 个元素的矩阵只赋 3 个数值。<br>③ Lingo 中可以给矩阵赋整数，也可以赋小数。<br>④ Lingo 不是一行一行读代码的，所以用 data:和 enddata 表示矩阵赋值的起止。</p>
+<p><strong>循环和求和</strong></p>
+<p>循环：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@for( gc(i) : a(i)*x(i) &#x3D; S );! gc表示矩阵工厂，a，x分别是矩阵。</span><br></pre></td></tr></table></figure>
+
+<p>① for 循环，括起整行语句，因为 S = a <sub>i</sub>  x<sub>i</sub> ，i = 1,2,3,4,5 相当于是五个约束条件。<br>② for 循环内部，先写工厂，以告诉 for 循环几次，之后再上接约束条件。<br>③ 此处的 <em>i</em> 可带可不带，甚至可以换成 <em>j</em>、<em>k</em> 或 <em>m</em> 等等。<br>④ 二维矩阵工厂出现后，同时会出现 <em>i</em> 和 <em>j</em>，那时必须带 <em>i</em> 和 <em>j</em>。</p>
+<p>求和：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@sum( gc(i) : x(i) ) &#x3D; 5000;</span><br></pre></td></tr></table></figure>
+
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -168,7 +205,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/08/08/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%BD%9C%E4%B8%9A%E7%BB%83%E4%B9%A0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/08/18/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1Lingo%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -179,19 +216,10 @@
    
   <nav class="article-nav">
     
+    
       <a href="/2021/08/15/%E8%80%83%E7%A0%94%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            考研信息整理
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/07/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">机器学习笔记</div>
+        <div class="article-nav-title">考研信息整理</div>
       </a>
     
   </nav>
