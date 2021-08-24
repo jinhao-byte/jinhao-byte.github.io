@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.2k</span>
+            <span class="post-count">2.2k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">4 min</span>
+            <span class="post-count">8 min</span>
         </span>
     </span>
 </div>
@@ -142,6 +142,219 @@
 <p>例题：<br>    max S；约束条件：S = ai*xi，i从1到5，x1 + x2 + x3 + x4 + sx5 = 5000</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">sets:</span><br><span class="line">gc &#x2F;1..5&#x2F; : a,x;</span><br><span class="line">endsets</span><br><span class="line">data:</span><br><span class="line">a &#x3D; 1,2,3,4,5;</span><br><span class="line">enddata</span><br><span class="line">max &#x3D; S;</span><br><span class="line">@for( gc(i) : a(i)*x(i) &#x3D; S );</span><br><span class="line">@sum( gc(i) : x(i) ) &#x3D; 5000;</span><br><span class="line">end</span><br><span class="line">!使用矩阵工厂创建矩阵后，整个程序需要 model: 和 ; 包起来。</span><br></pre></td></tr></table></figure>
 
+<hr>
+<p><strong>工厂合并：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">factory &#x2F;1..6&#x2F; : a;</span><br><span class="line">plant &#x2F;1..8&#x2F; d;</span><br><span class="line">Cooperation(factory,plant) : c,x;</span><br><span class="line">endsets</span><br></pre></td></tr></table></figure>
+
+<p>以上程序可以得到以下结论： </p>
+<p>① Cooperation 大工厂是由 factory 和 plant 两家小工厂合并而办，可生产 6x8 的矩阵。<br>② <em>a</em> 是 1 x 6的矩阵，<em>d</em> 是 1 x 8 的矩阵，<em>c</em> 和 <em>x</em> 都是 6 x 8 的矩阵。<br>③ 如果将 Cooperation(factory,plant)中的 factory 与 plant 调换位置，则生产 8 x 6 的矩阵。<br>④ 工厂合并的名字 Cooperation 是随便起的，矩阵的名字 <em>c</em> 和 <em>x</em> 也是随便起的。</p>
+<p><strong>算术运算符</strong></p>
+<p>加减乘数：+，-，*，/<br>关系运算符：等于=，大于等于&gt;=，小于等于&lt;=。</p>
+<p>tips:没有单独的“&lt;”和“&gt;”，如果出现，则视为小于等于和大于等于。<br>实现严格等于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">B &#x3D; 10;</span><br><span class="line">e &#x3D; 0.0001;</span><br><span class="line">A - e &gt; B;</span><br></pre></td></tr></table></figure>
+
+<p>逻辑运算符：</p>
+<table>
+<thead>
+<tr>
+<th align="center">分类</th>
+<th>运算符</th>
+<th>理解</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">两个数字之间</td>
+<td>#eq#</td>
+<td>equal</td>
+<td>两个运算对象为真</td>
+</tr>
+<tr>
+<td align="center">两个数字之间</td>
+<td>#ne#</td>
+<td>not equal</td>
+<td>两个运算对象不相等为真</td>
+</tr>
+<tr>
+<td align="center">两个数字之间</td>
+<td>#gt#</td>
+<td>greater than</td>
+<td>左边大于右为真</td>
+</tr>
+<tr>
+<td align="center">两个数字之间</td>
+<td>#ge#</td>
+<td>greater equal</td>
+<td>左边大于等于右边为真</td>
+</tr>
+<tr>
+<td align="center">两个数字之间</td>
+<td>#lt#</td>
+<td>less than</td>
+<td>左边小于右边为真</td>
+</tr>
+<tr>
+<td align="center">两个数字之间</td>
+<td>#le#</td>
+<td>less equal</td>
+<td>左边小于等于右边为真</td>
+</tr>
+<tr>
+<td align="center">两个逻辑表达式</td>
+<td>#not#</td>
+<td>非门</td>
+<td>单目运算符，表示取反</td>
+</tr>
+<tr>
+<td align="center">两个逻辑表达式</td>
+<td>#and#</td>
+<td>与门</td>
+<td>左右两边均为正确为真</td>
+</tr>
+<tr>
+<td align="center">两个逻辑表达式</td>
+<td>#or#</td>
+<td>或门</td>
+<td>左右两边均为错误为真</td>
+</tr>
+</tbody></table>
+<p>tips：逻辑运算符唯一出现的位置：<br>1）：for循环与sum求和。<br>2）：if判断中。</p>
+<p>例题：若矩阵 <em>a</em> =[6，5，4，3，2，1]，用集合的语言求解a(5)+a(6)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">sets:</span><br><span class="line">factory &#x2F; 1..6 &#x2F; : a;</span><br><span class="line">endsets</span><br><span class="line">data:</span><br><span class="line">a &#x3D; 6,5,4,3,2,1;</span><br><span class="line">enddata</span><br><span class="line">y &#x3D; @sum( factory(i) | i#ge#5 : a(i) );</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>若矩阵 <em>a</em> 由六个元素组成，且a(i)&gt;5,i=1,2,5,6 。求矩阵 <em>a</em> 各元素求和的最小值。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">sets:</span><br><span class="line">factory &#x2F; 1..6 &#x2F; : a;</span><br><span class="line">endsets</span><br><span class="line">min &#x3D; @sum(factory : a);</span><br><span class="line">@for( factory(i) | i#lt#3 #or# i#ge#5 : a(i) &gt; 5 );</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>Lingo内置函数</strong></p>
+<p>@if():</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 1500; ! 给 x 一个随机的初值</span><br><span class="line">!表达函数为：当0&lt;&#x3D;x&lt;&#x3D;500,y&#x3D;4x。当500&lt;&#x3D;x&lt;&#x3D;1000,y&#x3D;500+3x。当x&gt;1000,y&#x3D;1500+2x;</span><br><span class="line">y &#x3D; @if( x#le#500 , 4*x , @if( x#gt#1000 , 1500+2*x , 500+3*x ));</span><br></pre></td></tr></table></figure>
+
+<p>tips: if函数通常仅存在分段函数处，出现频率非常低；Lingo中的if函数，必须自带一个else。</p>
+<p><strong>变量定界函数</strong></p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@bin(x)</td>
+<td>限制 <em>x</em> 只能取 0 或 1,0,0-1规划特别有用</td>
+</tr>
+<tr>
+<td>@gin(<em>x</em>)</td>
+<td>限制 <em>x</em> 为整数，在整数规划中特别有用</td>
+</tr>
+<tr>
+<td>@bnd(a,x,b)</td>
+<td>限制 <em>a &lt;=x&lt;= b</em> 推荐直接替换两个约束条件</td>
+</tr>
+<tr>
+<td>@free(<em>x</em>)</td>
+<td>取消对变量 <em>x</em> 非负的限制，使其定义域自由</td>
+</tr>
+</tbody></table>
+<p><strong>数学函数</strong></p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>函数名</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>三角函数</td>
+<td>@sin(x)</td>
+<td>返回x的正弦值</td>
+</tr>
+<tr>
+<td>三角函数</td>
+<td>@cos(x)</td>
+<td>返回x的余弦值</td>
+</tr>
+<tr>
+<td>三角函数</td>
+<td>@tan(x)</td>
+<td>返回x的正切值</td>
+</tr>
+<tr>
+<td>指数函数</td>
+<td>@log(x)</td>
+<td>返回x的自然对数值，其他底数用换底公式</td>
+</tr>
+<tr>
+<td>指数函数</td>
+<td>@exp(x)</td>
+<td>返回e<sup>x</sup>的值</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>@abs(x)</td>
+<td>返回x的绝对值</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>@sigh(x)</td>
+<td>返回x的符号值，x&gt;=0为1，x&lt;0为-1</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>@floor(x)</td>
+<td>返回x的整数部分，向靠近0的方向取整</td>
+</tr>
+<tr>
+<td>比较大小</td>
+<td>@smax(x)</td>
+<td>返回其中的最大值</td>
+</tr>
+<tr>
+<td>比较大小</td>
+<td>@smin(x)</td>
+<td>返回其中的最小值</td>
+</tr>
+</tbody></table>
+<p><strong>集合操作函数</strong></p>
+<p>设factory工厂生产6个元素的矩阵：</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@for(factory:a&gt;0)</td>
+<td>循环</td>
+</tr>
+<tr>
+<td>@sum( factory : a )</td>
+<td>求和</td>
+</tr>
+<tr>
+<td>@prod( factory : a )</td>
+<td>求积</td>
+</tr>
+<tr>
+<td>@max( factory : a )</td>
+<td>求最大值</td>
+</tr>
+<tr>
+<td>@min( factory : a )</td>
+<td>求最小值</td>
+</tr>
+<tr>
+<td>@in( factory , c )</td>
+<td>判断常数c是否在集合中</td>
+</tr>
+<tr>
+<td>@size( factory )</td>
+<td>返回工厂可生产矩阵的长度</td>
+</tr>
+</tbody></table>
  
       <!-- reward -->
       
