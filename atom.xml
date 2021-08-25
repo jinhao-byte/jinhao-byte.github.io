@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-24T08:21:28.582Z</updated>
+  <updated>2021-08-25T12:08:23.550Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数学建模常用算法汇总</title>
+    <link href="http://example.com/2021/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/"/>
+    <id>http://example.com/2021/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</id>
+    <published>2021-08-25T08:57:41.960Z</published>
+    <updated>2021-08-25T12:08:23.550Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;建模步骤：模型准备–&amp;gt;模型准备–&amp;gt;模型建立–&amp;gt;模型求解–&amp;gt;模型分析–&amp;gt;对于模型假设进行检验–&amp;gt;模型应用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（1）数据处理问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;差值拟合：主要用于</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数学建模Lingo学习</title>
@@ -399,46 +422,6 @@
 &lt;p&gt;[6] |—|—test：存放测试程序,目录下存放测试相关的代码&lt;/p&gt;
 &lt;p&gt;[7] |—pop.xml：maven的核心配置文件&lt;/p&gt;
 &lt;p&gt;webapp下存放Web应用相关代码&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据库零碎知识点</title>
-    <link href="http://example.com/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    <id>http://example.com/2021/05/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
-    <published>2021-05-17T12:02:07.320Z</published>
-    <updated>2021-06-18T01:49:16.028Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt; 一些最重要的 SQL 命令&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;SELECT&lt;/strong&gt; - 从数据库中提取数据&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; - 更新数据库中的数据&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;DELETE&lt;/strong&gt; - 从数据库中删除数据&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;INSERT INTO&lt;/strong&gt; - 向数据库中插入新数据&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;CREATE DATABASE&lt;/strong&gt; - 创建新数据库&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;ALTER DATABASE&lt;/strong&gt; - 修改数据库&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;CREATE TABLE&lt;/strong&gt; - 创建新表&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;ALTER TABLE&lt;/strong&gt; - 变更（改变）数据库表&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;DROP TABLE&lt;/strong&gt; - 删除表&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;CREATE INDEX&lt;/strong&gt; - 创建索引（搜索键）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;DROP INDEX&lt;/strong&gt; - 删除索引&lt;/p&gt;
-&lt;p&gt;SELECT DISTINCT：&lt;br&gt;选取出来列中唯一不同的值（重复的值出现一次）&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
     
     
     
