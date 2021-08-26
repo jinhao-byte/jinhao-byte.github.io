@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-25T12:21:14.049Z</updated>
+  <updated>2021-08-26T05:55:35.180Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>插值拟合</title>
+    <link href="http://example.com/2021/08/26/%E6%8F%92%E5%80%BC%E6%8B%9F%E5%90%88/"/>
+    <id>http://example.com/2021/08/26/%E6%8F%92%E5%80%BC%E6%8B%9F%E5%90%88/</id>
+    <published>2021-08-26T01:48:56.259Z</published>
+    <updated>2021-08-26T05:55:35.180Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;插值与拟合&quot;&gt;&lt;a href=&quot;#插值与拟合&quot; class=&quot;headerlink&quot; title=&quot;插值与拟合&quot;&gt;&lt;/a&gt;插值与拟合&lt;/h1&gt;&lt;h2 id=&quot;一，概述&quot;&gt;&lt;a href=&quot;#一，概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>数学建模常用算法汇总</title>
     <link href="http://example.com/2021/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/"/>
     <id>http://example.com/2021/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</id>
     <published>2021-08-24T16:00:00.000Z</published>
-    <updated>2021-08-25T12:21:14.049Z</updated>
+    <updated>2021-08-26T01:08:58.518Z</updated>
     
     
       
@@ -29,8 +50,8 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;建模步骤：模型准备–&amp;gt;模型准备–&amp;gt;模型建立–&amp;gt;模型求解–&amp;gt;模型分析–&amp;gt;对于模型假设进行检验–&amp;gt;模型应用&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;（1）数据处理问题&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;差值拟合：主要用于</summary>
+&lt;p&gt;&lt;strong&gt;（1）数据处理问题&amp;amp;数据预处理&lt;/strong&gt;&lt;/p&gt;
+&lt;p</summary>
         
       
     
@@ -406,28 +427,6 @@
     
     <summary type="html">&lt;h1 id=&quot;path：&quot;&gt;&lt;a href=&quot;#path：&quot; class=&quot;headerlink&quot; title=&quot;path：&quot;&gt;&lt;/a&gt;path：&lt;/h1&gt;&lt;p&gt;主要为了检索文件方便，如果要执行某个文件，不用到文件所在目录去找，操作系统会在path路径下找。&lt;br&gt;Classpath：类路径，java运行查找类文件的路径&lt;/p&gt;
 &lt;h1 id=&quot;public-class-和class：&quot;&gt;&lt;a href=&quot;#public-class-和class：&quot; class=&quot;headerlink&quot; title=&quot;public class 和class：&quot;&gt;&lt;/a&gt;public class 和class：&lt;/h1&gt;&lt;p&gt;​    public class声明类，文件名和类名必须一致，class声明类，文件名任意，但生成的class文件名称和类名一样，不和原文件名一致。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>javaee</title>
-    <link href="http://example.com/2021/05/21/javaee/"/>
-    <id>http://example.com/2021/05/21/javaee/</id>
-    <published>2021-05-21T02:33:28.444Z</published>
-    <updated>2021-06-03T03:10:19.560Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;maven&quot;&gt;&lt;a href=&quot;#maven&quot; class=&quot;headerlink&quot; title=&quot;maven:&quot;&gt;&lt;/a&gt;maven:&lt;/h3&gt;&lt;p&gt;[1] 根目录：工程名&lt;/p&gt;
-&lt;p&gt;[2] |—src：源码&lt;/p&gt;
-&lt;p&gt;[3] |—|—main:存放主程序,目录下是项目的主要代码&lt;/p&gt;
-&lt;p&gt;[4] |—|—|—java：java源码文件&lt;/p&gt;
-&lt;p&gt;[5] |—|—|—resource：存放框架的配置文件&lt;/p&gt;
-&lt;p&gt;[6] |—|—test：存放测试程序,目录下存放测试相关的代码&lt;/p&gt;
-&lt;p&gt;[7] |—pop.xml：maven的核心配置文件&lt;/p&gt;
-&lt;p&gt;webapp下存放Web应用相关代码&lt;/p&gt;</summary>
     
     
     
