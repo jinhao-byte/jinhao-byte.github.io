@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-26T05:55:35.180Z</updated>
+  <updated>2021-08-30T01:22:57.724Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机组成原理笔记</title>
+    <link href="http://example.com/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-08-30T00:30:59.743Z</published>
+    <updated>2021-08-30T01:22:57.724Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;计算机组成原理&quot;&gt;&lt;a href=&quot;#计算机组成原理&quot; class=&quot;headerlink&quot; title=&quot;计算机组成原理&quot;&gt;&lt;/a&gt;计算机组成原理&lt;/h1&gt;&lt;h2 id=&quot;一，计算机系统概论&quot;&gt;&lt;a href=&quot;#一，计算机系统概论&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>插值拟合</title>
@@ -42,7 +63,7 @@
     <link href="http://example.com/2021/08/26/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%84%9F%E6%83%B3%EF%BC%8C%E8%BF%98%E6%9C%89%E4%BD%A0%E2%80%A6%E2%80%A6/"/>
     <id>http://example.com/2021/08/26/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%84%9F%E6%83%B3%EF%BC%8C%E8%BF%98%E6%9C%89%E4%BD%A0%E2%80%A6%E2%80%A6/</id>
     <published>2021-08-25T16:00:00.000Z</published>
-    <updated>2021-08-29T13:58:48.600Z</updated>
+    <updated>2021-08-30T13:35:41.116Z</updated>
     
     
     <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
@@ -406,28 +427,6 @@
     
     
     <summary type="html">&lt;p&gt;抽象类和接口以及抽象类和接口的区别：&lt;br&gt;    抽象类：&lt;br&gt;        抽象类的定义：在class前添加abstract关键字&lt;br&gt;        抽象类是无法实例化的，所以抽象类是用来被子类继承的&lt;br&gt;        final和abstract不能联合使用，这两个关键字是对立的&lt;br&gt;        抽象类的子类可以是抽象类，也可以是非抽象类&lt;br&gt;        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。&lt;br&gt;        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。&lt;br&gt;        抽象方法的定义：public abstract void doSome();&lt;br&gt;        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Git</title>
-    <link href="http://example.com/2021/05/26/Git/"/>
-    <id>http://example.com/2021/05/26/Git/</id>
-    <published>2021-05-26T06:23:49.816Z</published>
-    <updated>2021-06-18T01:49:42.786Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Git：目前最先进的分布式版本控制系统&lt;/p&gt;
-&lt;p&gt;Workspace：工作区&lt;br&gt;Index/Stage：暂存区&lt;br&gt;Repository：仓库区（本地仓库）&lt;br&gt;Remote：远程仓库&lt;/p&gt;
-&lt;p&gt;SVN/Git区别：&lt;br&gt;    SVN是集中式的版本控制系统，版本库是集中放在中央服务器的，自己弄的时候，都是在自己的电脑，首先要从中央服务器拿到最新的版本，做完自己的工作，再推送到中央服务器，集中式版本控制系统必须联网才能工作。如果局域网可以，带宽够大，速度够快，在互联网下网速慢的话，就不好了。&lt;br&gt;    Git是分布式的版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，所以工作的时候不需要联网，因为版本都在自己的电脑上，多人协作的时候，如果两个人都修改了文件A，两个人只需把各自的修改推送给对方，就可以互相看到对方的修改。&lt;/p&gt;
-&lt;p&gt;版本库repository：&lt;br&gt;    也叫仓库，可以简单理解为一个目录，这个目录所有的文件都可以被Git管理起来，每个文件的修改，删除，Git都能被跟踪，以便任何时刻都可以跟踪历史，或者在将来的某个时刻可以将文件‘还原’。&lt;/p&gt;
-&lt;p&gt;理解工作区和暂存区：&lt;br&gt;    工作区：自己电脑的目录，比如目录下testgit里的文件（.git隐藏目录版本库除外）。或者以后需要再建的目录文件等都属于工作区的范畴&lt;br&gt;    版本库（Repository）：工作区的隐藏目录.git,这个不属于工作区，这是版本库。其中版本库存了很多东西，其中最重要的就是st&lt;br&gt;    age（暂存区），还有Git为我们自动创建的第一个master，以及指向master的一个分支HEAD。&lt;/p&gt;
-&lt;p&gt;使用Git提交文件到版本库步骤：&lt;br&gt;    1：使用git add把文件添加进去，实际就是把文件添加到暂存区&lt;br&gt;    2：使用git commit提交更改，实际就是把暂存区的内容提交到当前分支。&lt;/p&gt;
-&lt;p&gt;暂存区：&lt;/p&gt;
-&lt;p&gt;远程仓库：&lt;br&gt;    首先注册github账号，本地Git和github仓库之间是通过SSH加密的，所以需要设置：&lt;br&gt;        1，&lt;/p&gt;</summary>
     
     
     
