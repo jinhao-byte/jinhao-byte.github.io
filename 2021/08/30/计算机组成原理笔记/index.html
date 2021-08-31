@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">22</span>
+            <span class="post-count">552</span>
         </span>
     </span>
 
@@ -92,15 +92,26 @@
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h2 id="一，计算机系统概论"><a href="#一，计算机系统概论" class="headerlink" title="一，计算机系统概论"></a>一，计算机系统概论</h2><p>1.1<strong>计算机分类</strong></p>
+  <p>吞吐量：<br>    表征一台计算机在某一时间间隔内能够处理的信息量，单位是字节/秒（B/S）。</p>
+<p>响应时间：<br>    表征从输入有效到系统产生响应之间的时间度量，用时间单位来度量，例如微秒（10-6S）、纳秒（10-9S）。</p>
+<p>利用率 ：<br>    表示在给定的时间间隔内，系统被实际使用的时间所占的比率，一般用百分比表示。</p>
+<p>处理机字长：<br>    指处理机运算器中一次能够完成二进制数运算的位数。当前处理机的字长有8位、16位、32位、64位，字长越长，表示计算的精度越高。</p>
+<p>总线宽度：<br>    一般指CPU中运算器与存储器之间进行互连的内部总线二进制位数。 </p>
+<p>存储器容量：<br>    存储器中所有存储单元的总数目，通常用KB、MB、GB、TB来表示。</p>
+<p>存储器带宽：<br>    存储器的速度指标，单位时间内从存储器读出的二进制数信息量，一般用字节数/秒表示。</p>
+<p>主频/时钟周期：<br>    CPU的工作节拍受主时钟控制，主时钟不断产生固定频率的时钟，主时钟的频率（f）叫CPU的主频。度量单位是 MHz（兆赫兹）、GHz（吉赫兹）。例如Pentium系列机为60MHz～266MHz，而Pentium 4升至3.6GHz。 </p>
+<p>CPU时钟周期（T）：<br>    主频的倒数，即 T = 1/f ，度量单位是微秒，纳秒。</p>
+<p>CPU执行时间：<br>    CPU执行一段程序所占用的CPU时间，CPU执行时间 ＝ CPU时钟周期数 × CPU时钟周期长。</p>
+<p>CPI（每条指令周期数）：<br>    表示每条指令周期数，即执行一条指令所需的平均时钟周期数。用下式计算：<br>    CPI = 执行某段程序所需的CPU时钟周期数 / 该程序包含的指令条数。</p>
+<p>MIPS（每秒百万次指令数）：单位时间内的执行指令数<br>     MIPS = 指令条数 / （程序执行时间x10<sup>6</sup>）= 时钟频数 / (CPI x 10<sup>6</sup>)</p>
+<p>程序执行时间 Te = 指令条数 /  (MIPSx10<sup>6</sup>)</p>
+<p>MFLOPS：每秒百万次浮点数操作次数<br>    MFLOPS = (程序中的浮点数操作次数) / (程序执行时间x10<sup>6</sup>)</p>
  
       <!-- reward -->
       
