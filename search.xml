@@ -126,6 +126,17 @@ https://img14.360buyimg.com/ddimg/jfs/t1/109323/26/20367/2420007/6155d627Ef810cf
       </tags>
   </entry>
   <entry>
+    <title>机器学习实训：手写体数字识别</title>
+    <url>/2021/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%AE%AD%EF%BC%9A%E6%89%8B%E5%86%99%E4%BD%93%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB/</url>
+    <content><![CDATA[<p>资料搜集：</p>
+<p>​    可使用MNIST数据集中的60000个自带样本进行深度学习模型训练，再利用另外的10000个样本进行模型精确度验证。<br>得到数字识别模型的参数，运用到用户真实手写数字的情景中去。</p>
+<p>需要运用的技术，知识点：TensorFlow，深度学习，机器学习，卷积，非线性分类函数softmax，CNN。</p>
+]]></content>
+      <tags>
+        <tag>ML</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机组成原理笔记</title>
     <url>/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>吞吐量：<br>    表征一台计算机在某一时间间隔内能够处理的信息量，单位是字节/秒（B/S）。</p>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-06T09:08:55.155Z</updated>
+  <updated>2021-10-02T08:38:56.774Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习实训：手写体数字识别</title>
+    <link href="http://example.com/2021/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%AE%AD%EF%BC%9A%E6%89%8B%E5%86%99%E4%BD%93%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB/"/>
+    <id>http://example.com/2021/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%AE%AD%EF%BC%9A%E6%89%8B%E5%86%99%E4%BD%93%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB/</id>
+    <published>2021-10-01T16:00:00.000Z</published>
+    <updated>2021-10-02T08:38:56.774Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;资料搜集：&lt;/p&gt;
+&lt;p&gt;​   </summary>
+        
+      
+    
+    
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机组成原理笔记</title>
@@ -65,7 +89,7 @@
     <link href="http://example.com/2021/08/26/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%84%9F%E6%83%B3%EF%BC%8C%E8%BF%98%E6%9C%89%E4%BD%A0%E2%80%A6%E2%80%A6/"/>
     <id>http://example.com/2021/08/26/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%84%9F%E6%83%B3%EF%BC%8C%E8%BF%98%E6%9C%89%E4%BD%A0%E2%80%A6%E2%80%A6/</id>
     <published>2021-08-25T16:00:00.000Z</published>
-    <updated>2021-10-01T01:30:44.301Z</updated>
+    <updated>2021-10-02T01:43:02.587Z</updated>
     
     
       
@@ -421,21 +445,6 @@
     <published>2021-06-02T13:39:58.941Z</published>
     <updated>2021-06-02T13:39:58.941Z</updated>
     
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaSE进阶</title>
-    <link href="http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/"/>
-    <id>http://example.com/2021/05/30/JavaSE%E8%BF%9B%E9%98%B6/</id>
-    <published>2021-05-30T06:28:16.000Z</published>
-    <updated>2021-06-18T01:49:00.956Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;抽象类和接口以及抽象类和接口的区别：&lt;br&gt;    抽象类：&lt;br&gt;        抽象类的定义：在class前添加abstract关键字&lt;br&gt;        抽象类是无法实例化的，所以抽象类是用来被子类继承的&lt;br&gt;        final和abstract不能联合使用，这两个关键字是对立的&lt;br&gt;        抽象类的子类可以是抽象类，也可以是非抽象类&lt;br&gt;        抽象类虽然无法实例化，但是抽象类有构造方法，构造方法是供子类使用的。&lt;br&gt;        抽象类中不一定有抽象方法，抽象方法必须在抽象类中。&lt;br&gt;        抽象方法的定义：public abstract void doSome();&lt;br&gt;        一个非抽象的类，继承抽象类，必须将抽象类中的抽象方法进行覆盖/重写/实现&lt;/p&gt;</summary>
     
     
     
