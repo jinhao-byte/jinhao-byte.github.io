@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">104</span>
+            <span class="post-count">343</span>
         </span>
     </span>
 
@@ -101,6 +101,14 @@
   <p>资料搜集：</p>
 <p>​    可使用MNIST数据集中的60000个自带样本进行深度学习模型训练，再利用另外的10000个样本进行模型精确度验证。<br>得到数字识别模型的参数，运用到用户真实手写数字的情景中去。</p>
 <p>需要运用的技术，知识点：TensorFlow，深度学习，机器学习，卷积，非线性分类函数softmax，CNN。</p>
+<p>神经网络进行多任务分类，使用softmax来实现的话，有几个分类，最后一层（输出层）就具有几个神经元。每个神经元表示属于特定类别的概率。最终的分类，就是概率值最大的那一个。</p>
+<p>DBRHD数据集获取：</p>
+<p>大概步骤：</p>
+<p>安装tensorflow<br>    Anaconda prompt命令行敲入：pip install tensorflow </p>
+<p>下载MINST和DBRHD图片数据集<br>    TensorFlow自带MINST数据，网络问题可能出现下载数据失败。</p>
+<p>训练集和验证集的数字标签 0-10 都用one_hot编码表示</p>
+<p>每一个图片是28x28的矩阵灰度图，把图像进行横向拉伸，拉伸成为一个784x1的矩阵，使得神经网络的输入层为184个神经元。</p>
+<p>输出层具有一共10个神经元，输入一个图像，就输出十个神经元结果，一个神经元对应一个数字，利用softmax函数可以求出</p>
  
       <!-- reward -->
       
@@ -183,6 +191,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2021/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            计算机网络
+          
+        </div>
+      </a>
     
     
       <a href="/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" class="article-nav-link">
