@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">4.7k</span>
+            <span class="post-count">5.1k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">16 min</span>
+            <span class="post-count">17 min</span>
         </span>
     </span>
 </div>
@@ -191,6 +191,23 @@
 
 <p><strong>定点数的加减运算</strong></p>
 <p>如果采用补码的加减运算的时候，符号位和数值位都是参与运算的。<br>在计算机中两数相减的时候，也会处理成相加操作，所以当相加时就要判断是否溢出的情况。<br>溢出分成两种情况，上溢出和下溢出，只要当 “正数+正数” 的时候才会出现上溢出—&gt; 正+正=负，当 “负数+负数”才会出现下溢出–&gt;负+负=正；</p>
+<p><strong>判断补码运算溢出的方法：</strong></p>
+<p>​    采用双符号位上的形式，00表示正数，11表示负数，如果两个补码进行相加之后符号位没有发生变化，还是00或者是11的话，说明没有发生溢出，如果是符号位变成了 10 或者是 01，则发生了下溢出和上溢出。</p>
+<p><strong>符号扩展</strong></p>
+<p>要注意补码的负整数和负小数的数值填充 。</p>
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/161307/19/22700/160609/61762ed1Ed943d417/6fe3a6999a22aa4c.jpg" alt="83ad51aa842f05791429a1e4636f12d.jpg" style="zoom:25%;">
+
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/128950/13/20892/168578/61764dabE10f29b3b/211617b6142cb785.jpg" alt="94538945bcca9f44a383bc27c8f08b1.jpg" style="zoom:25%;">
+
+<p><strong>乘法运算</strong>（好难理解o(╥﹏╥)o，等我理解了，再来盘你）</p>
+<p>原码的一位乘法</p>
+<p>补码的一位乘法</p>
+<p>原码的除法</p>
+<p>补码的除法</p>
+<p>C<strong>语言的强制类型转换</strong></p>
+<pre><code>c语言的定点整数是按照 “补码” 的形式存储的</code></pre><p><strong>大小端的多字节存储</strong></p>
+<p>多字节数据在内存中一定是占据连续的几个字节的，最高有效字节（MSB），最低有效字节（LSB）。大端模式的存储是最低高有效字节放在地址的最高位，最高有效字节放在内存地址的最低位；小端模式是最低有效字节放在了内存地址的较低位置；大端模式便于人类的阅读，小端模式便于机器处理。因为机器进行加减运算的时候，是从低位进行的，机器采用小端模式进行多字节数据的识别的时候就可以从识别最低位的数据最低位，然后就可以进行计算了。</p>
+<p><strong>浮点数的表示和运算</strong></p>
  
       <!-- reward -->
       
