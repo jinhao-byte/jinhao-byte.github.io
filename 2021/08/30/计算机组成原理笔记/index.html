@@ -208,7 +208,16 @@
 <pre><code>c语言的定点整数是按照 “补码” 的形式存储的</code></pre><p><strong>大小端的多字节存储</strong></p>
 <p>多字节数据在内存中一定是占据连续的几个字节的，最高有效字节（MSB），最低有效字节（LSB）。大端模式的存储是最低高有效字节放在地址的最高位，最高有效字节放在内存地址的最低位；小端模式是最低有效字节放在了内存地址的较低位置；大端模式便于人类的阅读，小端模式便于机器处理。因为机器进行加减运算的时候，是从低位进行的，机器采用小端模式进行多字节数据的识别的时候就可以从识别最低位的数据最低位，然后就可以进行计算了。</p>
 <p><strong>浮点数的表示和运算</strong></p>
- 
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/199043/26/14450/107850/617666f1Eb059ec70/12d76dd72000bede.jpg" alt="6b21c7dec2660079e0dd9e4cd6d2130.jpg" style="zoom:25%;">
+
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/212197/8/1921/142610/61766aeaEfd3d6359/07ce4e270bba9602.jpg" alt="a113bdb4680306068d3d200515ceeb7.jpg" style="zoom:25%;">
+
+<p>阶码 E 反映出了浮点数的边表示范围以及小数点的实际位置；尾数 M 的数值部分的位数n反映出浮点数的精度。<br>尾数给出一个小数，阶码指明了小数点要向前或者向后移动多少位。</p>
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/217614/11/1753/164653/61766ecfE6f241a13/3bd5102d344cbb8f.jpg" alt="c2e58dbc4f0d95f94f8247dc72b8e75.jpg" style="zoom:25%;">
+
+<img src="https://img11.360buyimg.com/ddimg/jfs/t1/213384/22/1899/188506/617670d1Ea05c80d3/be24c476bca0cdff.jpg" alt="968984b35ac7d374e11747eca950540.jpg" style="zoom:25%;">
+
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/199008/37/14621/176595/6176711fE424fd139/a610756e549f2803.jpg" alt="9446163f34cf47fb7b8293ba946cebc.jpg" style="zoom:25%;"> 
       <!-- reward -->
       
       <div id="reword-out">
