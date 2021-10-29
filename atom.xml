@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-17T13:20:00.286Z</updated>
+  <updated>2021-10-29T11:38:14.661Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>one_hot编码的意义</title>
+    <link href="http://example.com/2021/10/29/one_hot%E7%BC%96%E7%A0%81%E7%9A%84%E6%84%8F%E4%B9%89/"/>
+    <id>http://example.com/2021/10/29/one_hot%E7%BC%96%E7%A0%81%E7%9A%84%E6%84%8F%E4%B9%89/</id>
+    <published>2021-10-29T09:04:50.474Z</published>
+    <updated>2021-10-29T11:38:14.661Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考文章：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>计算机网络</title>
@@ -111,7 +132,7 @@
     <link href="http://example.com/2021/08/26/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%84%9F%E6%83%B3%EF%BC%8C%E8%BF%98%E6%9C%89%E4%BD%A0%E2%80%A6%E2%80%A6/"/>
     <id>http://example.com/2021/08/26/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%84%9F%E6%83%B3%EF%BC%8C%E8%BF%98%E6%9C%89%E4%BD%A0%E2%80%A6%E2%80%A6/</id>
     <published>2021-08-25T16:00:00.000Z</published>
-    <updated>2021-10-16T12:43:56.701Z</updated>
+    <updated>2021-10-26T11:33:18.853Z</updated>
     
     
     <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
@@ -379,18 +400,18 @@
   </entry>
   
   <entry>
-    <title>英语词汇</title>
-    <link href="http://example.com/2021/06/07/%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/"/>
-    <id>http://example.com/2021/06/07/%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</id>
+    <title>英语学习</title>
+    <link href="http://example.com/2021/06/07/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2021/06/07/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</id>
     <published>2021-06-07T00:23:19.096Z</published>
-    <updated>2021-10-26T01:48:27.394Z</updated>
+    <updated>2021-10-27T12:26:38.558Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;人人词典-六级乱序-必拿下！！！&quot;&gt;&lt;a href=&quot;#人人词典-六级乱序-必拿下！！！&quot; class=&quot;headerlink&quot; title=&quot;人人词典-  六级乱序,必拿下！！！&quot;&gt;&lt;/a&gt;人人词典- </summary>
+    <summary type="html">&lt;h1 id=&quot;人人词典-六级乱序-必拿下！！！&quot;&gt;&lt;a href=&quot;#人人词典-六级乱序-必拿下！！！&quot; class=&quot;headerlink&quot; title=&quot;人人词典-  六级乱序,必拿下！！！&quot;&gt;&lt;/a&gt;人人词典-  六级乱序,必拿下！！！&lt;/h1&gt;&lt;p&gt;​   </summary>
         
       
     
@@ -438,21 +459,6 @@
 &lt;p&gt;SQL（Structured Query Language)，标准SQL由ANSI标准委员会管理，从而称为ANSI SQL。各个DBMS都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
 &lt;p&gt;SQL不区分大小写，但数据库表名，列名和值是否区分依赖于具体的DBMS以及配置&lt;/p&gt;
 &lt;p&gt;SQL支持的注释：&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>学习资料链接</title>
-    <link href="http://example.com/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/"/>
-    <id>http://example.com/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/</id>
-    <published>2021-06-04T00:28:44.857Z</published>
-    <updated>2021-06-18T01:49:29.405Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;01 Java基础阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1IGjSH_y8oSthPP3DDzauKw&lt;/a&gt;  密码:koa9&lt;br&gt;02 数据库阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1tzAzYP5CbPbaPgTeQ1tqZw&lt;/a&gt;  密码:sbog&lt;br&gt;03 Web前端：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1uVWEaJ9Ie8xu7BQle_7peQ&lt;/a&gt;  密码:p0wy&lt;br&gt;04 Javaweb阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1haw_v4KEWwXPg4-wnM3-9w&lt;/a&gt;  密码:njpq&lt;br&gt;05 Web进阶：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1dAMOUJzqrMfX0Eg91k8m3g&lt;/a&gt;  密码:9w0s&lt;br&gt;06 Web项目实战：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1J-o7w-l_UT5InxM81raDkA&lt;/a&gt;  密码:ekn5&lt;br&gt;07 Java框架阶段：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/104vUkuyV4VQz_G9ExraJuQ&lt;/a&gt;  密码:2jqq&lt;br&gt;08 互联网分布式技术：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1cv8dng3Ht0p6LQmLFbvVwg&lt;/a&gt;  密码:6t3d&lt;br&gt;09 项目实战：&lt;br&gt;链接:&lt;a href=&quot;https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/1UNfGhadLOrAmdsmePaO7Dw&lt;/a&gt;  密码:gplw&lt;br&gt;10 Java开发工具：&lt;br&gt;链接：&lt;a href=&quot;https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pan.baidu.com/s/10bKNbe0Jx6wF1jx9TMhqZA&lt;/a&gt; 提取码：krpc&lt;/p&gt;</summary>
     
     
     
