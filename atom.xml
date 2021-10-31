@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-31T02:15:45.331Z</updated>
+  <updated>2021-10-31T09:16:11.914Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tf报错TypeError Value passed to parameter  indices has DataType float32 not in list of allowed values uint8, int32, int64</title>
+    <link href="http://example.com/2021/10/31/%7Ftf%E6%8A%A5%E9%94%99TypeError%20Value%20passed%20to%20parameter%20%20indices%20has%20DataType%20float32%20not%20in%20list%20of%20allowed%20values%20uint8,%20int32,%20int64/"/>
+    <id>http://example.com/2021/10/31/%7Ftf%E6%8A%A5%E9%94%99TypeError%20Value%20passed%20to%20parameter%20%20indices%20has%20DataType%20float32%20not%20in%20list%20of%20allowed%20values%20uint8,%20int32,%20int64/</id>
+    <published>2021-10-31T08:55:35.546Z</published>
+    <updated>2021-10-31T09:16:11.914Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;完整报错信息：&lt;/p&gt;
+&lt;p&gt;TypeError: Value passed to parameter ‘indices’ has DataType float32 not in list of allowed values: uint8, int32,</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tf没有placeholder属性</title>
+    <link href="http://example.com/2021/10/31/tf%E6%B2%A1%E6%9C%89placeholder%E5%B1%9E%E6%80%A7/"/>
+    <id>http://example.com/2021/10/31/tf%E6%B2%A1%E6%9C%89placeholder%E5%B1%9E%E6%80%A7/</id>
+    <published>2021-10-31T03:01:27.856Z</published>
+    <updated>2021-10-31T03:07:26.581Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当使用tf的占位符属性的时候报错。&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>tf的Session语句报错</title>
@@ -417,45 +461,6 @@
 &lt;p&gt;网络编程：&lt;br&gt;   </summary>
         
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>多线程</title>
-    <link href="http://example.com/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    <id>http://example.com/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
-    <published>2021-06-22T06:49:10.177Z</published>
-    <updated>2021-06-24T01:43:20.304Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;多线程：&lt;br&gt;    进程：正在运行的程序，是系统进行资源分配和调度的独立单位，每一个进程都有自己的内存空间和系统资源&lt;br&gt;    线程：在进程中的单个顺序控制流，是一条执行路径&lt;br&gt;        单线程：一个进程如果只有一条执行路径，则称为单线程程序&lt;br&gt;  </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java代码练习</title>
-    <link href="http://example.com/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
-    <id>http://example.com/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/</id>
-    <published>2021-06-12T11:53:50.957Z</published>
-    <updated>2021-06-21T12:42:34.572Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;2021-6-12&lt;br&gt;冒泡排序：&lt;br&gt;import java.util.Scanner;&lt;br&gt;public class bubbleSortTest {&lt;br&gt;    public static void main(String[] args) {&lt;br&gt;        Scanner input = new Scanner(System.in);&lt;br&gt;        int a[] = new int[10];&lt;br&gt;        for(int i = 0;i&amp;lt;a.length;i++){&lt;br&gt;            a[i] = input.nextInt();&lt;br&gt;        }&lt;br&gt;        System.out.println(“冒泡排序未排序前数组：”);&lt;br&gt;        //for each 循环&lt;br&gt;        for (int i:a) {&lt;br&gt;            System.out.print(i+”  “);&lt;br&gt;        }&lt;br&gt;        //冒泡排序：&lt;br&gt;        int d=0;&lt;br&gt;        for (int i=0; i&amp;lt;a.length-1;i++){&lt;br&gt;            for (int j=0;j&amp;lt;a.length-i-1;j++) {&lt;br&gt;                if (a[j] &amp;lt; a[j + 1]) {&lt;br&gt;                    d = a[j];&lt;br&gt;                    a[j] = a[j + 1];&lt;br&gt;                    a[j + 1] = d;&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;    }&lt;br&gt;        //冒泡排序后的结果&lt;br&gt;        System.out.println(“冒泡排序后”);&lt;br&gt;        for (int i=0;i&amp;lt;a.length;i++){&lt;br&gt;            System.out.print(a[i]+”   “);&lt;br&gt;        }&lt;br&gt;}}&lt;/p&gt;
-&lt;p&gt;选择排序：&lt;br&gt;public class selectionSortTest {&lt;br&gt;    public static void main(String[] args) {&lt;br&gt;        int []arr = new int[]{1,2,3,9,8,7,6,5,4,10};&lt;br&gt;        selectSort(arr);&lt;br&gt;        for (int i=0;i&amp;lt;arr.length;i++){&lt;br&gt;            System.out.println(arr[i]+”   “);&lt;br&gt;        }&lt;br&gt;    }&lt;br&gt;    public  static void selectSort(int[] a){&lt;br&gt;        //实现冒泡排序,从小到大排列&lt;br&gt;        //数组要遍历a.length遍&lt;br&gt;        int minIndex=0;&lt;br&gt;        for (int i=0;i&amp;lt;a.length;i++){&lt;br&gt;            minIndex = i;//记录一下最小值的索引&lt;br&gt;            for (int j=i+1;j&amp;lt;a.length;j++){&lt;br&gt;                if (a[minIndex]&amp;gt;a[j]){&lt;br&gt;                    minIndex=j;&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;            //将最小值和起始值进行交换&lt;br&gt;            int d=a[i];&lt;br&gt;            a[i]=a[minIndex];&lt;br&gt;            a[minIndex]=d;&lt;br&gt;        }&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;}
-}&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     

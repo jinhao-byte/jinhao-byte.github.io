@@ -85,6 +85,31 @@
       </tags>
   </entry>
   <entry>
+    <title>tf报错TypeError Value passed to parameter  indices has DataType float32 not in list of allowed values uint8, int32, int64</title>
+    <url>/2021/10/31/%7Ftf%E6%8A%A5%E9%94%99TypeError%20Value%20passed%20to%20parameter%20%20indices%20has%20DataType%20float32%20not%20in%20list%20of%20allowed%20values%20uint8,%20int32,%20int64/</url>
+    <content><![CDATA[<p>完整报错信息：</p>
+<p>TypeError: Value passed to parameter ‘indices’ has DataType float32 not in list of allowed values: uint8, int32, int64</p>
+<p>参考一些博客后，应该是这里的 indices 在uint8, int32, int64这几种类型的，但是被定义成了 float32  </p>
+<p>之前的代码是：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">y = tf.one_hot(y, depth=<span class="number">10</span>)</span><br><span class="line"><span class="keyword">with</span> tf.compat.v1.Session() <span class="keyword">as</span> sess:</span><br><span class="line">	    print(sess.run(y))</span><br></pre></td></tr></table></figure>
+
+<p>之后的代码是：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> tf.compat.v1.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    y = tf.one_hot(y.eval(), depth=<span class="number">10</span>)</span><br><span class="line">    print(sess.run(y))</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>tf没有placeholder属性</title>
+    <url>/2021/10/31/tf%E6%B2%A1%E6%9C%89placeholder%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<p>当使用tf的占位符属性的时候报错。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf </span><br><span class="line">X = tf.placeholder(<span class="string">"float"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>会出现：AttributeError: module ‘tensorflow’ has no attribute ‘placeholder’ 的错误。</p>
+<p>解决办法：</p>
+<p><a href="https://gimoonnam.github.io/machinelearning/tensorFlow_1/" target="_blank" rel="noopener">https://gimoonnam.github.io/machinelearning/tensorFlow_1/</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>tf的Session语句报错</title>
     <url>/2021/10/31/tf%E7%9A%84Session%E8%AF%AD%E5%8F%A5%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<p>参考文章：<a href="https://www.cnblogs.com/123456www/p/12584427.html" target="_blank" rel="noopener">https://www.cnblogs.com/123456www/p/12584427.html</a></p>
