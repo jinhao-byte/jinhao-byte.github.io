@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-29T11:38:14.661Z</updated>
+  <updated>2021-10-31T02:15:45.331Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tf的Session语句报错</title>
+    <link href="http://example.com/2021/10/31/tf%E7%9A%84Session%E8%AF%AD%E5%8F%A5%E6%8A%A5%E9%94%99/"/>
+    <id>http://example.com/2021/10/31/tf%E7%9A%84Session%E8%AF%AD%E5%8F%A5%E6%8A%A5%E9%94%99/</id>
+    <published>2021-10-31T02:07:12.348Z</published>
+    <updated>2021-10-31T02:15:45.331Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考文章：&lt;a href=&quot;https://www.cnblogs.com/123456www/p/12584427.html&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何查看tensor</title>
+    <link href="http://example.com/2021/10/31/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Btensor/"/>
+    <id>http://example.com/2021/10/31/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Btensor/</id>
+    <published>2021-10-31T01:50:23.392Z</published>
+    <updated>2021-10-31T02:05:35.710Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;原文地址：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tensorflow的onehot函数使用</title>
+    <link href="http://example.com/2021/10/29/tensorflow%E7%9A%84onehot%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/"/>
+    <id>http://example.com/2021/10/29/tensorflow%E7%9A%84onehot%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/</id>
+    <published>2021-10-29T11:53:35.261Z</published>
+    <updated>2021-10-29T12:56:42.631Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;原文地址：&lt;a href=&quot;https://blog.csdn.net/dally2/article/details/108007756&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>one_hot编码的意义</title>
@@ -393,72 +456,6 @@
 &lt;p&gt;选择排序：&lt;br&gt;public class selectionSortTest {&lt;br&gt;    public static void main(String[] args) {&lt;br&gt;        int []arr = new int[]{1,2,3,9,8,7,6,5,4,10};&lt;br&gt;        selectSort(arr);&lt;br&gt;        for (int i=0;i&amp;lt;arr.length;i++){&lt;br&gt;            System.out.println(arr[i]+”   “);&lt;br&gt;        }&lt;br&gt;    }&lt;br&gt;    public  static void selectSort(int[] a){&lt;br&gt;        //实现冒泡排序,从小到大排列&lt;br&gt;        //数组要遍历a.length遍&lt;br&gt;        int minIndex=0;&lt;br&gt;        for (int i=0;i&amp;lt;a.length;i++){&lt;br&gt;            minIndex = i;//记录一下最小值的索引&lt;br&gt;            for (int j=i+1;j&amp;lt;a.length;j++){&lt;br&gt;                if (a[minIndex]&amp;gt;a[j]){&lt;br&gt;                    minIndex=j;&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;            //将最小值和起始值进行交换&lt;br&gt;            int d=a[i];&lt;br&gt;            a[i]=a[minIndex];&lt;br&gt;            a[minIndex]=d;&lt;br&gt;        }&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;}
 }&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>英语学习</title>
-    <link href="http://example.com/2021/06/07/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://example.com/2021/06/07/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</id>
-    <published>2021-06-07T00:23:19.096Z</published>
-    <updated>2021-10-27T12:26:38.558Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;人人词典-六级乱序-必拿下！！！&quot;&gt;&lt;a href=&quot;#人人词典-六级乱序-必拿下！！！&quot; class=&quot;headerlink&quot; title=&quot;人人词典-  六级乱序,必拿下！！！&quot;&gt;&lt;/a&gt;人人词典-  六级乱序,必拿下！！！&lt;/h1&gt;&lt;p&gt;​   </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>中原工学院数据库系统概论试题</title>
-    <link href="http://example.com/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/"/>
-    <id>http://example.com/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/</id>
-    <published>2021-06-05T08:20:23.137Z</published>
-    <updated>2021-06-18T01:49:39.692Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;《数据库系统概论》期末考试卷&quot;&gt;&lt;a href=&quot;#《数据库系统概论》期末考试卷&quot; class=&quot;headerlink&quot; title=&quot;《数据库系统概论》期末考试卷&quot;&gt;&lt;/a&gt;《数据库系统概论》期末考试卷&lt;/h1&gt;&lt;h2 id=&quot;一，填空题&quot;&gt;&lt;a href=&quot;#一，填空题&quot; class=&quot;headerlink&quot; title=&quot;一，填空题&quot;&gt;&lt;/a&gt;一，填空题&lt;/h2&gt;&lt;p&gt;1.实体之间的联系按照联系方式的不同可分为  &lt;u&gt;一对一&lt;/u&gt; 、 &lt;u&gt;一对多&lt;/u&gt; 和 &lt;u&gt;多对多&lt;/u&gt;   。  &lt;/p&gt;
-&lt;p&gt;2.数据库系统的核心是  &lt;u&gt;数据库管理系统（DBMS）&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;3.在关系模型中，实体以及实体间的联系都是用  &lt;u&gt;关系&lt;/u&gt;  来表示的。&lt;/p&gt;
-&lt;p&gt;4.在关系代数中专门的关系运算包括   &lt;u&gt;选择   、投影、   连接    、除&lt;/u&gt;等运算。&lt;/p&gt;
-&lt;p&gt;5.1975年由IBM公司的M.Zloof提出的QBE语言是一个很有特色的 &lt;u&gt;域关系演算&lt;/u&gt;   语言。&lt;/p&gt;
-&lt;p&gt;6.SQL语言集&lt;u&gt;数据查询&lt;/u&gt;、  &lt;u&gt;数据操作&lt;/u&gt;    、  &lt;u&gt;数据定义&lt;/u&gt;和  &lt;u&gt;数据控制&lt;/u&gt;   功能于一体，充分体现了关系数据语言的特点和优点。&lt;/p&gt;
-&lt;p&gt;7.数据库管理系统保证数据安全的主要措施是进行  &lt;u&gt;存取控制&lt;/u&gt;     。&lt;/p&gt;
-&lt;p&gt;8.人们已经提出了许多种类型的数据依赖，其中最重要的是  &lt;u&gt;函数依赖&lt;/u&gt;    和 &lt;u&gt;多值依赖&lt;/u&gt;  。&lt;/p&gt;
-&lt;p&gt;9.关系模式由3NF转化为BCNF是消除了主属性对码的  &lt;u&gt;部分函数依赖&lt;/u&gt;   和 &lt;u&gt;传递函数依赖&lt;/u&gt;    。&lt;/p&gt;
-&lt;p&gt;10.数据库设计应包括两个方面的内容： &lt;u&gt;结构设计&lt;/u&gt;和   &lt;u&gt;行为设计&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;11.CGI规范允许Web服务器执行  &lt;u&gt;外部程序&lt;/u&gt;    ，并将它们的输出发送给浏览器。&lt;/p&gt;
-&lt;p&gt;12.数据库技术与  &lt;u&gt;面向对象&lt;/u&gt;    技术相结合，形成了面向对象数据库系统。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SQL语法</title>
-    <link href="http://example.com/2021/06/04/SQL%E8%AF%AD%E6%B3%95/"/>
-    <id>http://example.com/2021/06/04/SQL%E8%AF%AD%E6%B3%95/</id>
-    <published>2021-06-04T06:32:51.453Z</published>
-    <updated>2021-06-18T01:49:03.162Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;SQL语法&quot;&gt;&lt;a href=&quot;#SQL语法&quot; class=&quot;headerlink&quot; title=&quot;SQL语法&quot;&gt;&lt;/a&gt;SQL语法&lt;/h1&gt;&lt;h2 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h2&gt;&lt;p&gt;模式定义了数据如何存储，存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;
-&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋值给新数据行的主键）。&lt;/p&gt;
-&lt;p&gt;SQL（Structured Query Language)，标准SQL由ANSI标准委员会管理，从而称为ANSI SQL。各个DBMS都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
-&lt;p&gt;SQL不区分大小写，但数据库表名，列名和值是否区分依赖于具体的DBMS以及配置&lt;/p&gt;
-&lt;p&gt;SQL支持的注释：&lt;/p&gt;</summary>
     
     
     
