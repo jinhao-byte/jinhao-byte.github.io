@@ -85,6 +85,28 @@
       </tags>
   </entry>
   <entry>
+    <title>python错误 RuntimeError Attempted to use a closed Session</title>
+    <url>/2021/11/01/python%E9%94%99%E8%AF%AF%20RuntimeError%20Attempted%20to%20use%20a%20closed%20Session/</url>
+    <content><![CDATA[<p>参考博客：<a href="https://blog.csdn.net/weixin_39390732/article/details/76474294?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163575595316780274122772%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=163575595316780274122772&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-76474294.first_rank_v2_pc_rank_v29&amp;utm_term=RuntimeError%3A+Attempted+to+use+a+closed+Session.&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">https://blog.csdn.net/weixin_39390732/article/details/76474294?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163575595316780274122772%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=163575595316780274122772&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-76474294.first_rank_v2_pc_rank_v29&amp;utm_term=RuntimeError%3A+Attempted+to+use+a+closed+Session.&amp;spm=1018.2226.3001.4187</a></p>
+<p>自己出现这错误的原因是在开启一个session会话之前就使用了读写文件操作。</p>
+<p>网上的报错情况是在关闭一个会话之后又使用了读写操作，也是不行的，必须都是在with语句代码块之内进行这些操作的。</p>
+<p><img src="https://i.loli.net/2021/11/01/Qdsvj2pAMK3Zywa.png" alt="捕获.PNG"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>python错误,SyntaxError unexpected EOF while parsing</title>
+    <url>/2021/11/01/python%E9%94%99%E8%AF%AF,SyntaxError%20unexpected%20EOF%20while%20parsing/</url>
+    <content><![CDATA[<p> 原文地址：<a href="https://blog.csdn.net/huitinfeng/article/details/100051074" target="_blank" rel="noopener">https://blog.csdn.net/huitinfeng/article/details/100051074</a></p>
+<p><strong>错误信息：SyntaxError: unexpected EOF while parsing</strong> </p>
+<p>错误理解：循环结束不了。</p>
+<p>①  <strong>这个后边的错误是说解释器循环完了到最后也没能找到它要的条件或是其他程序需要的</strong> </p>
+<p>② <strong>有可能你哪个地方少了个括号或者中英文切换的时候输入了中文字符</strong></p>
+<p><strong>③ 或者你的for循环有问题，仔细检查一下</strong></p>
+<p><strong>④ 再有就是eval在处理空字符串时会返回EOF错误，然后一行一行的读下去就可以找到了</strong></p>
+<p>我的错误是，with会话下面的一个语句写错了，print语句少了一个括号，😂。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>tf报错TypeError Value passed to parameter  indices has DataType float32 not in list of allowed values uint8, int32, int64</title>
     <url>/2021/10/31/%7Ftf%E6%8A%A5%E9%94%99TypeError%20Value%20passed%20to%20parameter%20%20indices%20has%20DataType%20float32%20not%20in%20list%20of%20allowed%20values%20uint8,%20int32,%20int64/</url>
     <content><![CDATA[<p>完整报错信息：</p>
@@ -1112,7 +1134,14 @@ enum Result{
     <url>/2021/06/07/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="人人词典-六级乱序-必拿下！！！"><a href="#人人词典-六级乱序-必拿下！！！" class="headerlink" title="人人词典-  六级乱序,必拿下！！！"></a>人人词典-  六级乱序,必拿下！！！</h1><p>​    <strong>议论文</strong></p>
 <p>​    In the contemporary world ,the ability to meet challenges has become increasingly important. It is of great necessity for students to solve problems when facing difficulty .The following are my reasons and concrete evidence support my view point.</p>
-<p>​    </p>
+<p>​    <strong>翻译词汇：</strong></p>
+<p>​    socialist prosperity 社会主义财富</p>
+<p>universal common prosperity 全民共同富裕</p>
+<p>build a harmonious society 构建和谐社会</p>
+<p>livelihood 民生问题</p>
+<p>employment 就业</p>
+<p>pension 养老金</p>
+<p>people of all nationalities 各族人民</p>
 <table>
 <thead>
 <tr>

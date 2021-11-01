@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-31T09:16:11.914Z</updated>
+  <updated>2021-11-01T08:48:08.815Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python错误 RuntimeError Attempted to use a closed Session</title>
+    <link href="http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF%20RuntimeError%20Attempted%20to%20use%20a%20closed%20Session/"/>
+    <id>http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF%20RuntimeError%20Attempted%20to%20use%20a%20closed%20Session/</id>
+    <published>2021-11-01T08:41:14.038Z</published>
+    <updated>2021-11-01T08:48:08.815Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考博客：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python错误,SyntaxError unexpected EOF while parsing</title>
+    <link href="http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF,SyntaxError%20unexpected%20EOF%20while%20parsing/"/>
+    <id>http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF,SyntaxError%20unexpected%20EOF%20while%20parsing/</id>
+    <published>2021-11-01T08:34:21.866Z</published>
+    <updated>2021-11-01T08:38:01.005Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 原文地址：&lt;a href=&quot;https://blog.csdn.net/huitinfeng/article/details/100051074&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>tf报错TypeError Value passed to parameter  indices has DataType float32 not in list of allowed values uint8, int32, int64</title>
@@ -424,41 +466,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;绪论：&quot;&gt;&lt;a href=&quot;#绪论：&quot; class=&quot;headerlink&quot; title=&quot;绪论：&quot;&gt;&lt;/a&gt;绪论：&lt;/h2&gt;&lt;p&gt;马克思主义的直接理论来源是：德国古典哲学</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机基础知识</title>
-    <link href="http://example.com/2021/06/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>http://example.com/2021/06/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
-    <published>2021-06-26T07:43:18.184Z</published>
-    <updated>2021-06-26T07:43:18.184Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>网络编程</title>
-    <link href="http://example.com/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    <id>http://example.com/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
-    <published>2021-06-25T02:57:17.345Z</published>
-    <updated>2021-06-26T06:49:58.157Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;计算机网络：&lt;br&gt;    是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及其网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。&lt;/p&gt;
-&lt;p&gt;网络编程：&lt;br&gt;   </summary>
         
       
     
