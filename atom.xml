@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-01T08:48:08.815Z</updated>
+  <updated>2021-11-03T07:04:54.130Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python中的with用法</title>
+    <link href="http://example.com/2021/11/03/python%E4%B8%AD%E7%9A%84with%E7%94%A8%E6%B3%95/"/>
+    <id>http://example.com/2021/11/03/python%E4%B8%AD%E7%9A%84with%E7%94%A8%E6%B3%95/</id>
+    <published>2021-11-03T05:26:31.834Z</published>
+    <updated>2021-11-03T07:04:54.130Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自己是在用tensorflow的时候接触到的 with 语句，知其然不知其所以然。&lt;/p&gt;
+&lt;p&gt;参考文章：&lt;a href=&quot;https://blog.csdn.net/Ego_Bai/article/details/80873242&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>python错误 RuntimeError Attempted to use a closed Session</title>
@@ -445,27 +467,6 @@
     <summary type="html">&lt;p&gt;反射概念：程序能够访问，监测和修改自身状态和行为的一种能力&lt;/p&gt;
 &lt;p&gt;反射是一种强大工具，能够创建灵活代码，代码可以在运行时装配，无序在组件内进行源代码链接。&lt;br&gt;如果使用不当，成本很高&lt;/p&gt;
 </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>马原知识点</title>
-    <link href="http://example.com/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    <id>http://example.com/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
-    <published>2021-07-04T03:17:58.165Z</published>
-    <updated>2021-07-04T07:29:28.093Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;绪论：&quot;&gt;&lt;a href=&quot;#绪论：&quot; class=&quot;headerlink&quot; title=&quot;绪论：&quot;&gt;&lt;/a&gt;绪论：&lt;/h2&gt;&lt;p&gt;马克思主义的直接理论来源是：德国古典哲学</summary>
         
       
     

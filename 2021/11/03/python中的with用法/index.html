@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Archives: 2021 |  Jinhao&#39;s blog</title>
+      <title>python中的with用法 |  Jinhao&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -48,246 +48,219 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-python中的with用法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">2021</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2021" class="archive-year">2021</a>
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  python中的with用法
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/11/03/python%E4%B8%AD%E7%9A%84with%E7%94%A8%E6%B3%95/" class="article-date">
+  <time datetime="2021-11-03T05:26:31.834Z" itemprop="datePublished">2021-11-03</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">446</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  <time datetime="2021-07-04T03:17:58.165Z" itemprop="datePublished">07/04</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/07/04/%E9%A9%AC%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9/"
-    >马原知识点</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-  <time datetime="2021-06-26T07:43:18.184Z" itemprop="datePublished">06/26</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
-    >计算机基础知识</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-  <time datetime="2021-06-25T02:57:17.345Z" itemprop="datePublished">06/25</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"
-    >网络编程</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
-  <time datetime="2021-06-22T06:49:10.177Z" itemprop="datePublished">06/22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/22/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"
-    >多线程</a> 
-</h2>
- 
+  <p>自己是在用tensorflow的时候接触到的 with 语句，知其然不知其所以然。</p>
+<p>参考文章：<a href="https://blog.csdn.net/Ego_Bai/article/details/80873242" target="_blank" rel="noopener">https://blog.csdn.net/Ego_Bai/article/details/80873242</a></p>
+<p>在打开一些文件的时候，需要进行打开和关闭操作，有时候会忘记关闭，with语句有自动关闭的功能，还有错误处理功能，在遇到错误的时候不需要try catch操作，代码写的不臃肿。</p>
+<p>最普通写法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="string">"/tmp/foo.txt"</span>)</span><br><span class="line">data = file.read()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/" class="archive-article-date">
-  <time datetime="2021-06-12T11:53:50.957Z" itemprop="datePublished">06/12</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/12/Java%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"
-    >Java代码练习</a> 
-</h2>
- 
+<p>加强版-报错处理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="string">"/tmp/foo.txt"</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    data = file.read()</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    file.close()</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/07/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  <time datetime="2021-06-07T00:23:19.096Z" itemprop="datePublished">06/07</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/07/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"
-    >英语学习</a> 
-</h2>
- 
+<p>前者代码过于冗余，所以使用 with 语句：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"/tmp/foo.txt"</span>) <span class="keyword">as</span> file:</span><br><span class="line">    data = file.read()</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/" class="archive-article-date">
-  <time datetime="2021-06-05T08:20:23.137Z" itemprop="datePublished">06/05</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/05/%E4%B8%AD%E5%8E%9F%E5%B7%A5%E5%AD%A6%E9%99%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA%E8%AF%95%E9%A2%98/"
-    >中原工学院数据库系统概论试题</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/04/SQL%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-  <time datetime="2021-06-04T06:32:51.453Z" itemprop="datePublished">06/04</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/04/SQL%E8%AF%AD%E6%B3%95/"
-    >SQL语法</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/" class="archive-article-date">
-  <time datetime="2021-06-04T00:28:44.857Z" itemprop="datePublished">06/04</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5/"
-    >学习资料链接</a> 
-</h2>
- 
+<p>with 是如何工作的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class FileManager(Object):</span><br><span class="line">	def __init__(self,name,mode):</span><br><span class="line">		print(&quot;调用__init__方法&quot;)</span><br><span class="line">		self.name &#x3D; name</span><br><span class="line">		self.mode &#x3D; mode</span><br><span class="line">		self.file &#x3D; None</span><br><span class="line">		</span><br><span class="line">	def __enter__(self):</span><br><span class="line">		print(&quot;调用__enter__方法&quot;)</span><br><span class="line">		self.file &#x3D; open(self.name,self.mode)</span><br><span class="line">		erturn self.file</span><br><span class="line">		</span><br><span class="line">	def __exit__(self,exc_type,exc_val,exc_tb):</span><br><span class="line">		print(&quot;调用__exit__方法&quot;)</span><br><span class="line">		if self.file:</span><br><span class="line">			self.file.close()</span><br><span class="line">				</span><br><span class="line">#FileManager就是一个上下文管理器的一个类</span><br><span class="line">with FileManager(&#39;test.txt&#39;) as file:</span><br><span class="line">	print(&quot;准备读取文件&quot;)</span><br><span class="line">	content	&#x3D; file.read()</span><br><span class="line">    print(content)</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/06/02/python%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  <time datetime="2021-06-02T13:39:58.941Z" itemprop="datePublished">06/02</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/06/02/python%E5%9F%BA%E7%A1%80/"
-    >python基础</a> 
-</h2>
- 
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">调用__init__方法</span><br><span class="line">调用__enter__方法</span><br><span class="line">准备读取文件</span><br><span class="line">嗨，我是崔金浩</span><br><span class="line">调用__exit__方法</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
+<p>运行上面的程序的时候，首先会执行创建类的代码，然后执行所有python类的统一的 init() 方法，然后会执行上下文管理器类特有的方法 enter()，该方法会返回一个文件类，这样就可以不用写打开文件的open方法了，返回的这个文件类传递给我们定义的file，在with语句结束的时候，会自动调用上下文管理器 exit() 方法，进而关闭文件，不需要手动关闭了。</p>
+ 
+      <!-- reward -->
       
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
       
     </div>
-  </div>
-  
-  
-
-  
-  <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2021/page/2/">上一页</a><a class="page-number" href="/archives/2021/">1</a><a class="page-number" href="/archives/2021/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2021/page/4/">4</a><a class="page-number" href="/archives/2021/page/5/">5</a><a class="extend next" rel="next" href="/archives/2021/page/4/">下一页</a>
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/11/03/python%E4%B8%AD%E7%9A%84with%E7%94%A8%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/11/01/python%E9%94%99%E8%AF%AF%20RuntimeError%20Attempted%20to%20use%20a%20closed%20Session/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">python错误 RuntimeError Attempted to use a closed Session</div>
+      </a>
+    
   </nav>
-  
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -432,6 +405,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link
