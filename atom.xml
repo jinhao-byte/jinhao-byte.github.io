@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-03T07:04:54.130Z</updated>
+  <updated>2021-11-04T07:14:22.724Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件工程</title>
+    <link href="http://example.com/2021/11/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://example.com/2021/11/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</id>
+    <published>2021-11-04T06:41:14.556Z</published>
+    <updated>2021-11-04T07:14:22.724Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;https://img13.360buyimg.com/ddimg/jfs/t1/214893/24/3057/2863372/61838816E351a8b7e/7b95c5226f303848.jpg&quot; alt=&quot;第1章</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计网实验,IP报文的捕获与分析</title>
+    <link href="http://example.com/2021/11/04/%7F%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C,IP%E6%8A%A5%E6%96%87%E7%9A%84%E6%8D%95%E8%8E%B7%E4%B8%8E%E5%88%86%E6%9E%90/"/>
+    <id>http://example.com/2021/11/04/%7F%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C,IP%E6%8A%A5%E6%96%87%E7%9A%84%E6%8D%95%E8%8E%B7%E4%B8%8E%E5%88%86%E6%9E%90/</id>
+    <published>2021-11-04T03:29:38.196Z</published>
+    <updated>2021-11-04T06:02:30.622Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;实验-IP-报文的捕获与分析&quot;&gt;&lt;a href=&quot;#实验-IP-报文的捕获与分析&quot; class=&quot;headerlink&quot; title=&quot;实验 IP 报文的捕获与分析&quot;&gt;&lt;/a&gt;实验 IP 报文的捕获与分析&lt;/h1&gt;&lt;h2 id=&quot;一，实验目的&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>python中的with用法</title>
@@ -428,50 +470,6 @@
     <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MatLab学习</title>
-    <link href="http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://example.com/2021/07/11/MatLab%E5%AD%A6%E4%B9%A0/</id>
-    <published>2021-07-11T00:34:18.323Z</published>
-    <updated>2021-08-07T06:51:24.626Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;学习资料来自：公众号：二进制人工智能，回复matlab。&lt;br&gt;2021-7-10&lt;br&gt;Matlab操作界面了解，搜索路径&lt;br&gt;2021-7-11&lt;br&gt;clc：清空命令行窗口的数据&lt;br&gt;doc，with，help：可以了解matlab的使用和函数用法查找&lt;br&gt;矩阵</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>反射机制</title>
-    <link href="http://example.com/2021/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"/>
-    <id>http://example.com/2021/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/</id>
-    <published>2021-07-04T05:00:37.124Z</published>
-    <updated>2021-07-04T05:10:46.599Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;反射概念：程序能够访问，监测和修改自身状态和行为的一种能力&lt;/p&gt;
-&lt;p&gt;反射是一种强大工具，能够创建灵活代码，代码可以在运行时装配，无序在组件内进行源代码链接。&lt;br&gt;如果使用不当，成本很高&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
