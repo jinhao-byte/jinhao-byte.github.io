@@ -89,7 +89,20 @@
     <url>/2021/11/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</url>
     <content><![CDATA[<img src="https://img13.360buyimg.com/ddimg/jfs/t1/214893/24/3057/2863372/61838816E351a8b7e/7b95c5226f303848.jpg" alt="第1章 软件工程概述1-已转档_00.jpg" style="zoom:80%;">
 
-<img src="https://img10.360buyimg.com/ddimg/jfs/t1/201066/9/14367/1045792/6183880fEbc4a2be7/068b39c212a21c25.jpg" alt="第1章 软件工程概述1-已转档_01.jpg" style="zoom:80%;">]]></content>
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/201066/9/14367/1045792/6183880fEbc4a2be7/068b39c212a21c25.jpg" alt="第1章 软件工程概述1-已转档_01.jpg" style="zoom:80%;">
+
+<p><img src="https://img14.360buyimg.com/ddimg/jfs/t1/197396/31/23110/3109227/61887617E92a9f75f/f188ffde0b035d49.jpg" alt="第2章 软件需求工程_00.jpg"></p>
+<p><img src="https://img14.360buyimg.com/ddimg/jfs/t1/204507/23/14415/3184729/6188761eE31a99c77/ffc9b2d79014efad.jpg" alt="第2章 软件需求工程_01.jpg"></p>
+<p><img src="https://img10.360buyimg.com/ddimg/jfs/t1/215563/30/3595/439130/618875baEab2c8a20/bb69bdfce916c2db.jpg" alt="第2章 软件需求工程_02.jpg"></p>
+<p><img src="https://img14.360buyimg.com/ddimg/jfs/t1/139907/30/22372/3125060/61887783E95a99af1/bd8c75f2e749eaf3.jpg" alt="第3章 软件设计_00.jpg"></p>
+<p><img src="https://img14.360buyimg.com/ddimg/jfs/t1/143788/12/26133/2208411/61887773Eed1ce8af/1e380fd3adee0d23.jpg" alt="第3章 软件设计_01.jpg"></p>
+<p><img src="https://img10.360buyimg.com/ddimg/jfs/t1/212163/14/3643/3081589/61887a59Ef1c25884/6ffc234df92e5fd0.jpg" alt="第4章 面向对象的技术_00.jpg"></p>
+<p><img src="https://img14.360buyimg.com/ddimg/jfs/t1/174022/33/25953/2583875/61887a50Ee2332363/55cbf764a8e583fa.jpg" alt="第4章 面向对象的技术_01.jpg"></p>
+<p><img src="https://img11.360buyimg.com/ddimg/jfs/t1/169547/30/21107/3494020/61888099E450ad85b/6c5975be59ff1a93.jpg" alt="第5章UML建模语言_00.jpg"></p>
+<p><img src="https://img14.360buyimg.com/ddimg/jfs/t1/155912/34/22306/3536117/61887c52Ed67f349a/e951b273be878662.jpg" alt="第5章UML建模语言_01.jpg"></p>
+<p><img src="https://img11.360buyimg.com/ddimg/jfs/t1/209361/3/8578/3150210/61887c3dE500a9ed9/2da9856ba6abf066.jpg" alt="第5章UML建模语言_02.jpg"></p>
+<p><img src="https://img10.360buyimg.com/ddimg/jfs/t1/211283/20/8385/3025563/61888084E67fd621e/5a4b08b4b83243ec.jpg" alt="第5章UML建模语言_03.jpg"><br><img src="https://img14.360buyimg.com/ddimg/jfs/t1/207832/25/8618/3115548/6188819fEe5a74c94/6ef3b2985658c528.jpg" alt="第5章UML建模语言_04.jpg"><br><img src="https://img10.360buyimg.com/ddimg/jfs/t1/202474/1/14221/497619/61887b7cEc6d1012e/f49e1edf95373264.jpg" alt="第5章UML建模语言_05.jpg"></p>
+]]></content>
   </entry>
   <entry>
     <title>计网实验,IP报文的捕获与分析</title>
@@ -321,7 +334,8 @@
   <entry>
     <title>计算机组成原理笔记</title>
     <url>/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>吞吐量：<br>    表征一台计算机在某一时间间隔内能够处理的信息量，单位是字节/秒（B/S）。</p>
+    <content><![CDATA[<p>早期的计算机是以运算器为中心；现代计算机是以存储器为中心；</p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>吞吐量：<br>    表征一台计算机在某一时间间隔内能够处理的信息量，单位是字节/秒（B/S）。</p>
 <p>响应时间：<br>    表征从输入有效到系统产生响应之间的时间度量，用时间单位来度量，例如微秒（10-6S）、纳秒（10-9S）。</p>
 <p>利用率 ：<br>    表示在给定的时间间隔内，系统被实际使用的时间所占的比率，一般用百分比表示。</p>
 <p>处理机字长：<br>    指处理机运算器中一次能够完成二进制数运算的位数。当前处理机的字长有8位、16位、32位、64位，字长越长，表示计算的精度越高。</p>
