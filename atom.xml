@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-16T08:03:39.508Z</updated>
+  <updated>2021-11-18T14:30:00.892Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据分析作业：基于K-Means和GMM聚类算法的共享单车使用情况分析</title>
+    <link href="http://example.com/2021/11/18/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%9F%BA%E4%BA%8EK-Means%E5%92%8CGMM%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E7%9A%84%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90/"/>
+    <id>http://example.com/2021/11/18/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%9F%BA%E4%BA%8EK-Means%E5%92%8CGMM%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E7%9A%84%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90/</id>
+    <published>2021-11-18T11:48:20.390Z</published>
+    <updated>2021-11-18T14:30:00.892Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;基于K-Means和GMM聚类的共享单车使用情况分析&quot;&gt;&lt;a href=&quot;#基于K-Means和GMM聚类的共享单车使用情况分析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>文献阅读感悟：《中国特色社会主义道路初步探索的当代价值_刘灵光》</title>
@@ -418,35 +439,6 @@
     
     
     <category term="Life" scheme="http://example.com/tags/Life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数学建模常用算法汇总</title>
-    <link href="http://example.com/2021/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/"/>
-    <id>http://example.com/2021/08/25/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</id>
-    <published>2021-08-24T16:00:00.000Z</published>
-    <updated>2021-08-31T12:26:51.589Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;建模步骤：模型准备–&amp;gt;模型准备–&amp;gt;模型建立–&amp;gt;模型求解–&amp;gt;模型分析–&amp;gt;对于模型假设进行检验–&amp;gt;模型应用&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;（1）数据处理问题&amp;amp;数据预处理&lt;/strong&gt;&lt;/p&gt;
-&lt;p</summary>
-        
-      
-    
-    
-    
-    <category term="竞赛" scheme="http://example.com/categories/%E7%AB%9E%E8%B5%9B/"/>
-    
-    
-    <category term="数学建模" scheme="http://example.com/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
