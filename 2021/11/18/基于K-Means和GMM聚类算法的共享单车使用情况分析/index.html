@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>数据分析作业：基于K-Means和GMM聚类算法的共享单车使用情况分析 |  Jinhao&#39;s blog</title>
+      <title>基于K-Means和GMM聚类算法的共享单车使用情况分析 |  Jinhao&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -49,7 +49,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-数据分析作业：基于K-Means和GMM聚类算法的共享单车使用情况分析"
+  id="post-基于K-Means和GMM聚类算法的共享单车使用情况分析"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -60,7 +60,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  数据分析作业：基于K-Means和GMM聚类算法的共享单车使用情况分析
+  基于K-Means和GMM聚类算法的共享单车使用情况分析
 </h1>
  
 
@@ -68,7 +68,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/11/18/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%9F%BA%E4%BA%8EK-Means%E5%92%8CGMM%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E7%9A%84%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90/" class="article-date">
+      <a href="/2021/11/18/%E5%9F%BA%E4%BA%8EK-Means%E5%92%8CGMM%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E7%9A%84%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90/" class="article-date">
   <time datetime="2021-11-18T11:48:20.390Z" itemprop="datePublished">2021-11-18</time>
 </a>   
 <div class="word_count">
@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.4k</span>
+            <span class="post-count">2.3k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">5 min</span>
+            <span class="post-count">8 min</span>
         </span>
     </span>
 </div>
@@ -121,7 +121,49 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># isnull()判断的是每个数据是否是缺失值，是则返回True，否则返回False</span></span><br><span class="line"><span class="comment"># 在进行统计的时候，会把True看成1，False看成0，sum函数实现把所有的0和1相加</span></span><br><span class="line"><span class="comment"># sort_value是排序方法，ascending = False表示降序排列</span></span><br><span class="line">total = pivoted.isnull().sum().sort_values(ascending=<span class="literal">False</span>)<span class="comment"># 统计各列的缺失值个数并按照降序排序。</span></span><br><span class="line">missing_data = pd.DataFrame(&#123;<span class="string">"缺失值数量"</span>:total&#125;)<span class="comment"># 用一个DataFrame保存缺失值数量的情况</span></span><br><span class="line">missing_data.head(<span class="number">10</span>)<span class="comment"># 查看前十行的数据</span></span><br></pre></td></tr></table></figure>
 
 <p>用 0 来填补缺失值，并查看缺补后是否还有缺失值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Complete_data = pivoted.fillna(<span class="number">0</span>)<span class="comment"># 用 0 来填补缺失值</span></span><br><span class="line"></span><br><span class="line">total = Complete_data.isnull().sum().sort_values(ascending=<span class="literal">False</span>)<span class="comment"># 统计各个列的缺失值个数并</span></span><br><span class="line">missing_data = pd.DataFrame(&#123;<span class="string">"缺失值数量"</span>:total&#125;)</span><br><span class="line">missing_data.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Complete_data = pivoted.fillna(<span class="number">0</span>)<span class="comment"># 用 0 来填补缺失值</span></span><br><span class="line"></span><br><span class="line">total = Complete_data.isnull().sum().sort_values(ascending=<span class="literal">False</span>)<span class="comment"># 统计各个列的缺失值个数并按照降序排序</span></span><br><span class="line">missing_data = pd.DataFrame(&#123;<span class="string">"缺失值数量"</span>:total&#125;)<span class="comment">#用DataFrame保存缺失值数量的情况</span></span><br><span class="line">missing_data.head(<span class="number">10</span>)<span class="comment"># 查看前十行数据</span></span><br></pre></td></tr></table></figure>
+
+<p>运行上述代码之后，已经不存在缺失值的情况了。</p>
+<p><strong>在pivoted数据中，样本量为24，特征值为1763，样本数量太少，特征数过多，不适合分析所以要再对数据进行转置，处理后的数据集就是待聚类的数据集。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X &#x3D; Complete_data.T # 转置</span><br><span class="line">X</span><br></pre></td></tr></table></figure>
+
+<p>将每天的各个整点时刻的共享单车数进行可视化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt # 引入画图工具包</span><br><span class="line">%matplotlib inlne</span><br><span class="line"></span><br><span class="line">from matplotlib.font_manager import FontProperties # 设置绘图时的中文字体</span><br></pre></td></tr></table></figure>
+
+<p>首先定义一下 x 轴的刻度标签取值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 在外面加上 [ ] 可以直接将得到的数据转换为列表的形式</span><br><span class="line">x_ticks_labels &#x3D; [&#39;&#123;&#125;:00&#39;.format(i) for i in range(24)] </span><br><span class="line">x_ticks_labels</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">myfont&#x3D;FontProperties(fname&#x3D;r&#39;C:\Windows\Fonts\simhei.ttf&#39;)# 设置中文字体</span><br><span class="line"></span><br><span class="line">plt.figure(figsize&#x3D;(8, 3),dpi&#x3D;600)# 创建画布，并设置像素大小</span><br><span class="line"># 绘画，画图的时候会默认把数据中的每一列当做y轴，每一行当做x轴，这样不方便观察，所以画出X转置前的Complete_data</span><br><span class="line"># 图片</span><br><span class="line">plt.plot(Complete_data.values,alpha &#x3D;0.1)# 设置图中的每一条线的透明度为0.1</span><br><span class="line">plt.xticks(range(24), x_ticks_labels,rotation&#x3D;45)# 设置x轴的刻度值，每个刻度值的标签旋转45度。</span><br><span class="line">plt.xlabel(&quot;时间&quot;,fontproperties&#x3D;myfont)# x轴命名为时间</span><br><span class="line">plt.ylabel(&quot;数量&quot;,fontproperties&#x3D;myfont)# y轴命名为数量</span><br><span class="line">plt.show() # 将图形展示出来</span><br></pre></td></tr></table></figure>
+
+<p><strong>图像显示结果：</strong><br>    横轴代表的是一天中的24个时间点，纵轴代表共享单车的使用数量，图中的每一条线段代表的是每一天各整点时刻共享单车的使用情况。</p>
+<p><strong>将待聚类的数据集降维并可视化其分布特征</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.decomposition import PCA # 降维</span><br><span class="line"># n_components 也可以是整数，表示降到几维</span><br><span class="line">pca&#x3D;PCA(n_components&#x3D;0.95) # 指定降维后主成分的分差和占的最小比例阈值（即降维后的数据最低能保留的信息占比）</span><br><span class="line">X2 &#x3D; pca.fit_transform(X) # 用X来训练PCA模型，同时返回降维后的数据</span><br></pre></td></tr></table></figure>
+
+<p>查看降维后的各个成分的方差占比</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pca.explained_variance_ratio_)</span><br></pre></td></tr></table></figure>
+
+<p>查看降维后的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&#39;降维后的数据如下:\n&#39;,X2)</span><br><span class="line">print(X2.shape)</span><br></pre></td></tr></table></figure>
+
+<p>结果显示：数据被降维成2维，虽然每个维度的具体意义无法解释，但是可以将聚类后的数据映射到二维平面上方便观察</p>
+<p><strong>查看降维后的数据散点图情况</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize&#x3D;(7,3),dpi&#x3D;600) # 创建画布，设置像素大小</span><br><span class="line">plt.xticks(fontsize&#x3D;5) # 设置x轴刻度标签字体的大小</span><br><span class="line">plt.yticks(fontsize&#x3D;5) # 设置y轴刻度标签字体的大小</span><br><span class="line">plt.scatter(X2[:,0],X2[:,1]) # 横轴是X2[:,0],纵轴是X2[:,1]</span><br></pre></td></tr></table></figure>
+
+<p>结果显示：通过降维，X被降成2维数据。虽然每个维度的具体意义无法解释，但是降维后可以方便后续对聚类结果可视化操作。</p>
+<p><strong>接下来分别用K-Means方法和GMM方法对数据X进行聚类，为了更直观的记录聚类结果，分别把X赋值给X_kmeans和X_gmm</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_kmeans &#x3D; X.copy() # 用K-Means方法聚类的数据</span><br><span class="line">X_gmm &#x3D; X.copy() # 用GMM方法聚类的数据</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
 
  
       <!-- reward -->
@@ -193,7 +235,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/11/18/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%9F%BA%E4%BA%8EK-Means%E5%92%8CGMM%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E7%9A%84%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/11/18/%E5%9F%BA%E4%BA%8EK-Means%E5%92%8CGMM%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E7%9A%84%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90/" alt="微信分享二维码">
     </div>
 </div>
 
