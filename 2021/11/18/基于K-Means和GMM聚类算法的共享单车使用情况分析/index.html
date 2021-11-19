@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.3k</span>
+            <span class="post-count">4.9k</span>
         </span>
     </span>
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">19 min</span>
         </span>
     </span>
 </div>
@@ -153,18 +153,108 @@
 <p><strong>接下来分别用K-Means方法和GMM方法对数据X进行聚类，为了更直观的记录聚类结果，分别把X赋值给X_kmeans和X_gmm</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_kmeans &#x3D; X.copy() # 用K-Means方法聚类的数据</span><br><span class="line">X_gmm &#x3D; X.copy() # 用GMM方法聚类的数据</span><br></pre></td></tr></table></figure>
 
+<h3 id="K-Means聚类"><a href="#K-Means聚类" class="headerlink" title="K-Means聚类"></a>K-Means聚类</h3><p><strong>对降维前的数据进行聚类</strong></p>
+<p>对数据用k-Means方法进行聚类并查看聚类结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.cluster import KMeans # K-Means聚类</span><br><span class="line"></span><br><span class="line">kmeans &#x3D; KMeans(n_clusters&#x3D;2) # K-Means分为2个簇</span><br><span class="line">kmeans.fit(X_kmeans) # 执行建模过程</span><br><span class="line">y_kmeans &#x3D; kmeans.predict(X_kmeans) # 预测结果</span><br><span class="line">y_kmeans</span><br></pre></td></tr></table></figure>
 
+<p><strong>结果：</strong>数据通过K-Means方法分成两类，并且每条数据都有数据对应的类别，标签分别是 0 和1</p>
+<p><strong>将标签添加到X_kmeans数据中</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_kmeans.insert(0,&#39;标签&#39;,y_kmeans ) # 指定在第0列插入数据，并命名为“标签”</span><br><span class="line">X_kmeans</span><br></pre></td></tr></table></figure>
 
+<p><strong>查看通过K-Means聚类后标签为0的数据</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X_kmeans[&#39;标签&#39;] &#x3D;&#x3D; 0</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_kmeans_label0&#x3D;X_kmeans[X_kmeans[&#39;标签&#39;]&#x3D;&#x3D; 0] # 返回X_kmeans[&#39;标签&#39;] &#x3D;&#x3D; 0中结果是True的结果</span><br><span class="line">X_kmeans_label0</span><br></pre></td></tr></table></figure>
 
+<p><strong>查看通过K-Means聚类后标签为1的数据</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_kmeans_label1&#x3D;X_kmeans[X_kmeans[&#39;标签&#39;]&#x3D;&#x3D; 1]</span><br><span class="line">X_kmeans_label1</span><br></pre></td></tr></table></figure>
 
+<p>上述结果显示：通过K-Means聚类后，标签为0的数据共770条，标签为1的数据为993条</p>
+<p><strong>对降维结果与聚类结果进行可视化</strong></p>
+<p>将聚类结果在二维平面上的散点图画出来，并按照不同的类别分别以不同的颜色进行标记</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize&#x3D;(7,3),dpi&#x3D;600)# 创建画布，设置像素的大小</span><br><span class="line">plt.xticks(fontsize&#x3D;5) # 设置x轴刻度标签字体的大小</span><br><span class="line">plt.yticks(fontsize&#x3D;5) # 设置y轴刻度标签字体的大小</span><br><span class="line">plt.scatter(X2[:, 0], X2[:, 1], c&#x3D;y_kmeans) # 按照标签标出颜色</span><br></pre></td></tr></table></figure>
 
+<p>上述结果显示：通过K-Means方法聚类后，数据被分为2类，一类以紫色进行标记，另一类以黄色进行标记</p>
+<p><strong>查看K-means聚类后不同类别的分布图</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 在画分布图之前先把X_kmeans_label0,X_kmeans_label1数据中的标签列删除</span><br><span class="line">X_kmeans_label0&#x3D;X_kmeans_label0.drop(&#39;标签&#39;,axis&#x3D;1)</span><br><span class="line">X_kmeans_label1&#x3D;X_kmeans_label1.drop(&#39;标签&#39;,axis&#x3D;1)</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">myfont&#x3D;FontProperties(fname&#x3D;r&#39;C:\Windows\Fonts\simhei.ttf&#39;)#设置中文字体</span><br><span class="line"></span><br><span class="line"># 创建一个2行1列的图，sharex&#x3D;True两幅图共享x轴，再设置一下画布大小和像素大小</span><br><span class="line">fig,axes &#x3D; plt.subplots(2, 1,sharex&#x3D;True,figsize&#x3D;(8,6),dpi&#x3D;600)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 绘图，画图时会默认把数据中的每一列当做y轴，每一行当做x轴，这样不方便观察，所以转置一下再画图</span><br><span class="line">axes[0].plot(X_kmeans_label0.T.values,alpha &#x3D;0.1) # 绘制聚类后标签为0的分布图</span><br><span class="line">axes[1].plot(X_kmeans_label1.T.values,alpha &#x3D;0.1) # 绘制聚类后标签为1的分布图</span><br><span class="line"></span><br><span class="line"># 因为两幅图共享了x轴，所以在这里只设置了第二幅图的x轴信息</span><br><span class="line">axes[1].set_xticks(range(24)) # 设置x轴的取值为0到23</span><br><span class="line">axes[1].set_xticklabels(x_ticks_labels,rotation&#x3D;45) #设置x轴每一个刻度值的标签，并旋转45度</span><br><span class="line">axes[1].set_xlabel(&#39;时间&#39;,fontproperties&#x3D;myfont) # 设置x轴的标签名为：‘时间’</span><br><span class="line"></span><br><span class="line">axes[0].set_ylabel(&#39;数量&#39;,fontproperties&#x3D;myfont)# 设置第一幅图的y轴为‘数量’</span><br><span class="line">axes[1].set_ylabel(&#39;数量&#39;,fontproperties&#x3D;myfont)# 设置第二幅图的y轴为‘数量’</span><br><span class="line"></span><br><span class="line">axes[0].set_title (&#39;聚类后标签为0的数据&#39;,fontproperties&#x3D;myfont)# 设置第一个子图的标题</span><br><span class="line">axes[1].set_title (&#39;聚类后标签为1的数据&#39;,fontproperties&#x3D;myfont)# 设置第二个子图的标题</span><br><span class="line"></span><br><span class="line">plt.show() # 图片展示</span><br></pre></td></tr></table></figure>
 
+<p><strong>找出聚类后的不同类别与星期数（工作日与非工作日）的关系</strong></p>
+<p>将标签为0的数据的索引值转化为时间索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kmeans_label0_time&#x3D;pd.to_datetime(X_kmeans_label0.index) </span><br><span class="line">kmeans_label0_time # 转换后数据由index类型变成了Datatime类型</span><br></pre></td></tr></table></figure>
 
+<p>把每一天转化为与其对应的星期数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kmeans_week_label0&#x3D;kmeans_label0_time.strftime(&#39;%A&#39;)# strftime把日期转换为星期数（%A）</span><br><span class="line">kmeans_week_label0 # 将时间转化为星期数</span><br></pre></td></tr></table></figure>
 
+<p>为了统计星期几出现的次数，需要将其转换为list类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kmeans_week_label0_list&#x3D;kmeans_week_label0.tolist()# 转换为list类型</span><br><span class="line">kmeans_week_label0_list[0:10]# 查看转换为list后的情况。</span><br></pre></td></tr></table></figure>
 
+<p>查看K-Means聚类后标签为0的数据与星期数的关系</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(&#39;星期一有%3d天&#39;%(kmeans_week_label0_list.count(&#39;Monday&#39;)));</span><br><span class="line">print(&#39;星期二有%3d天&#39;%(kmeans_week_label0_list.count(&#39;Tuesday&#39;)));</span><br><span class="line">print(&#39;星期三有%3d天&#39;%(kmeans_week_label0_list.count(&#39;Wednesday&#39;)));</span><br><span class="line">print(&#39;星期四有%3d天&#39;%(kmeans_week_label0_list.count(&#39;Thursday&#39;)));</span><br><span class="line">print(&#39;星期五有%3d天&#39;%(kmeans_week_label0_list.count(&#39;Friday&#39;)));</span><br><span class="line">print(&#39;星期六有%3d天&#39;%(kmeans_week_label0_list.count(&#39;Saturday&#39;)));</span><br><span class="line">print(&#39;星期天有%3d天&#39;%(kmeans_week_label0_list.count(&#39;Sunday&#39;)))</span><br></pre></td></tr></table></figure>
 
+<p>同样的操作查看数据中标签为1的情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kmeans_label1_time&#x3D;pd.to_datetime(X_kmeans_label1.index) # 转换后数据由index类型变成了Datatime类型</span><br><span class="line">kmeans_label1_time</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kmeans_week_label1&#x3D;kmeans_label1_time.strftime(&#39;%A&#39;)</span><br><span class="line">kmeans_week_label1 # 将时间转换为星期数</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kmeans_week_label1_list&#x3D;kmeans_week_label1.tolist()# 转换为list类型</span><br><span class="line">kmeans_week_label1_list[0:10] # 查看转换为list后的结果</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(&#39;星期一有%3d天&#39;%(kmeans_week_label1_list.count(&#39;Monday&#39;)));</span><br><span class="line">print(&#39;星期二有%3d天&#39;%(kmeans_week_label1_list.count(&#39;Tuesday&#39;)));</span><br><span class="line">print(&#39;星期三有%3d天&#39;%(kmeans_week_label1_list.count(&#39;Wednesday&#39;)));</span><br><span class="line">print(&#39;星期四有%3d天&#39;%(kmeans_week_label1_list.count(&#39;Thursday&#39;)));</span><br><span class="line">print(&#39;星期五有%3d天&#39;%(kmeans_week_label1_list.count(&#39;Friday&#39;)));</span><br><span class="line">print(&#39;星期六有%3d天&#39;%(kmeans_week_label1_list.count(&#39;Saturday&#39;)));</span><br><span class="line">print(&#39;星期天有%3d天&#39;%(kmeans_week_label1_list.count(&#39;Sunday&#39;)))</span><br></pre></td></tr></table></figure>
+
+<p>上述结果解释：K-Means聚类后标签为0的都是工作日，而标签为1的数据中没有明显呈现出共享单车使用情况与星期数的关系。</p>
+<p><strong>GMM聚类</strong></p>
+<p>对降维前的数据进行聚类</p>
+<p>对数据用GMM方法进行聚类并查看聚类结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.mixture import GaussianMixture #GMM聚类</span><br><span class="line"></span><br><span class="line">gmm &#x3D;GaussianMixture(n_components&#x3D;2) #指定隐变量的个数（即几种不同高斯分布）</span><br><span class="line">gmm.fit(X_gmm)# 执行建模过程</span><br><span class="line">y_gmm &#x3D; gmm.predict(X_gmm) </span><br><span class="line">y_gmm</span><br></pre></td></tr></table></figure>
+
+<p>上述结果显示：数据通过GMM方法分成了2类，并且每条数据都有对应的类别，标签分别是0和1</p>
+<p>将标签添加到X_gmm数据中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_gmm.insert(0,&#39;标签&#39;,y_gmm )</span><br><span class="line">X_gmm</span><br></pre></td></tr></table></figure>
+
+<p> 查看通过GMM聚类后标签为0的和标签为1的数据 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X_gmm[&#39;标签&#39;]&#x3D;&#x3D; 0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_gmm_label0&#x3D;X_gmm[X_gmm[&#39;标签&#39;]&#x3D;&#x3D; 0]# 返回X_gmm[&#39;标签&#39;] &#x3D;&#x3D;0 中结果是True的数据</span><br><span class="line">X_gmm_label0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_gmm_label1&#x3D;X_gmm[X_gmm[&#39;标签&#39;]&#x3D;&#x3D; 1]</span><br><span class="line">X_gmm_label1</span><br></pre></td></tr></table></figure>
+
+<p>上述结果显示：通过GMM聚类后，标签为0的数据共546条，标签为1的数据共1217条</p>
+<p><strong>对降维结果与聚类结果进行可视化</strong></p>
+<p>将聚类结果的散点图画出来，并按照不同的类别分别以不同的颜色进行标记</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize&#x3D;(7,3),dpi&#x3D;600)# 创建画布</span><br><span class="line">plt.xticks(fontsize&#x3D;5)# 设置x轴刻度标签字体的大小</span><br><span class="line">plt.yticks(fontsize&#x3D;5) # 设置y轴刻度标签字体的大小</span><br><span class="line">plt.scatter(X2[:, 0], X2[:, 1], c&#x3D;y_gmm) # c &#x3D; y_gmm,按照标签出散点颜色</span><br></pre></td></tr></table></figure>
+
+<p>将聚类后的不同类别的分布画出来</p>
+<p>在画分布图之前先把X_gmm_label0,X_gmm_label1的数据中的标签列删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_gmm_label0&#x3D;X_gmm_label0.drop(&#39;标签&#39;,axis&#x3D;1)</span><br><span class="line">X_gmm_label1&#x3D;X_gmm_label1.drop(&#39;标签&#39;,axis&#x3D;1)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">myfont&#x3D;FontProperties(fname&#x3D;r&#39;C:\Windows\Fonts\simhei.ttf&#39;)# 设置中文字体</span><br><span class="line"></span><br><span class="line"># 创建一个2行1列的图；share &#x3D; True两幅图共享x轴；再设置一下画布大小和像素大小</span><br><span class="line">fig,axes &#x3D; plt.subplots(2, 1,sharex&#x3D;True,figsize&#x3D;(8,6),dpi&#x3D;600)</span><br><span class="line"></span><br><span class="line"># 绘图，画图时会默认把数据中的每一列当做y轴，每一行当做x轴，这样不方便观察，所以先进行转置，再进行画图</span><br><span class="line">axes[0].plot(X_gmm_label0.T.values,alpha &#x3D;0.1)# 绘制聚类后标签为0的分布图</span><br><span class="line">axes[1].plot(X_gmm_label1.T.values,alpha &#x3D;0.1)# 绘制聚类后标签为1的分布图</span><br><span class="line"></span><br><span class="line"># 因为两幅图共享x轴，所以在这里只设置第二幅图的x轴信息</span><br><span class="line">axes[1].set_xticks(range(24)) # 设置x轴的取值为0到23</span><br><span class="line">axes[1].set_xticklabels(x_ticks_labels,rotation&#x3D;45) # 设置x轴的每个刻度值的标签，并旋转45度</span><br><span class="line">axes[1].set_xlabel(&#39;时间&#39;,fontproperties&#x3D;myfont) # 设置x轴的标签名为“时间”</span><br><span class="line"></span><br><span class="line">axes[0].set_ylabel(&#39;数量&#39;,fontproperties&#x3D;myfont) # 第一幅图的y轴命名为“数量”</span><br><span class="line">axes[1].set_ylabel(&#39;数量&#39;,fontproperties&#x3D;myfont) # 第二幅图的y轴命名为“数量”</span><br><span class="line"></span><br><span class="line">axes[0].set_title (&#39;聚类后标签为0的数据&#39;,fontproperties&#x3D;myfont)# 设置第一个子图的标题</span><br><span class="line">axes[1].set_title (&#39;聚类后标签为1的数据&#39;,fontproperties&#x3D;myfont)# 设置第二个子图的标题</span><br><span class="line"></span><br><span class="line">plt.show()# 图形展示</span><br></pre></td></tr></table></figure>
+
+<p> 上述结果显示：通过GMM聚类算法，将数据中隐藏的两种分布完全分离了出来 </p>
+<p><strong>找出聚类后的不同类别与星期数（工作日与非工作日）的关系</strong></p>
+<p>将标签为0的数据的索引值转化为时间索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gmm_label0_time&#x3D;pd.to_datetime(X_gmm_label0.index) </span><br><span class="line">gmm_label0_time  # 转换后数据由index类型变成了Datatime类型</span><br></pre></td></tr></table></figure>
+
+<p> 把每一天转换为与其对应的星期数 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gmm_week_label0&#x3D;gmm_label0_time.strftime(&#39;%A&#39;)# strftime把日期转换为星期数（%A）</span><br><span class="line">gmm_week_label0 # 将时间转换为星期数</span><br></pre></td></tr></table></figure>
+
+<p>为了统计星期几出现的次数，需要将其转换为list类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gmm_week_label0_list&#x3D;gmm_week_label0.tolist()#转换为list类型</span><br><span class="line">gmm_week_label0_list[0:10] #查看转换为list后的情况</span><br></pre></td></tr></table></figure>
+
+<p> 查看聚类后标签为0的数据与星期数的关系 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(&#39;星期一有%3d天&#39;%(gmm_week_label0_list.count(&#39;Monday&#39;)));</span><br><span class="line">print(&#39;星期二有%3d天&#39;%(gmm_week_label0_list.count(&#39;Tuesday&#39;)));</span><br><span class="line">print(&#39;星期三有%3d天&#39;%(gmm_week_label0_list.count(&#39;Wednesday&#39;)));</span><br><span class="line">print(&#39;星期四有%3d天&#39;%(gmm_week_label0_list.count(&#39;Thursday&#39;)));</span><br><span class="line">print(&#39;星期五有%3d天&#39;%(gmm_week_label0_list.count(&#39;Friday&#39;)));</span><br><span class="line">print(&#39;星期六有%3d天&#39;%(gmm_week_label0_list.count(&#39;Saturday&#39;)));</span><br><span class="line">print(&#39;星期天有%3d天&#39;%(gmm_week_label0_list.count(&#39;Sunday&#39;)))</span><br></pre></td></tr></table></figure>
+
+<p>上述结果显示：GMM聚类后标签为0的基本都是非工作日，因为可能是节假日等原因，所以在工作日也有例外情况发生</p>
+<p>同样的的操作查看数据中标签为1的情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gmm_label1_time&#x3D;pd.to_datetime(X_gmm_label1.index) </span><br><span class="line">gmm_label1_time</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gmm_week_label1&#x3D;gmm_label1_time.strftime(&#39;%A&#39;)</span><br><span class="line">gmm_week_label1 # 将时间转换为星期数</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gmm_week_label1_list&#x3D;gmm_week_label1.tolist()</span><br><span class="line">gmm_week_label0_list[0:10]# 查看转换为list后的情况</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(&#39;星期一有%3d天&#39;%(gmm_week_label1_list.count(&#39;Monday&#39;)));</span><br><span class="line">print(&#39;星期二有%3d天&#39;%(gmm_week_label1_list.count(&#39;Tuesday&#39;)));</span><br><span class="line">print(&#39;星期三有%3d天&#39;%(gmm_week_label1_list.count(&#39;Wednesday&#39;)));</span><br><span class="line">print(&#39;星期四有%3d天&#39;%(gmm_week_label1_list.count(&#39;Thursday&#39;)));</span><br><span class="line">print(&#39;星期五有%3d天&#39;%(gmm_week_label1_list.count(&#39;Friday&#39;)));</span><br><span class="line">print(&#39;星期六有%3d天&#39;%(gmm_week_label1_list.count(&#39;Saturday&#39;)));</span><br><span class="line">print(&#39;星期天有%3d天&#39;%(gmm_week_label1_list.count(&#39;Sunday&#39;)))</span><br></pre></td></tr></table></figure>
+
+<p>上述结果显示：GMM聚类后标签为1的基本上都是工作日 即GMM聚类后的两类分别是工作日和非工作日的共享单车使用情况</p>
  
       <!-- reward -->
       
