@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-22T10:34:24.540Z</updated>
+  <updated>2021-11-22T11:58:01.007Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tensorflow：RuntimeError tfplaceholder() is not compatible with eager execution</title>
+    <link href="http://example.com/2021/11/22/tensorflow%EF%BC%9ARuntimeError%20tfplaceholder()%20is%20not%20compatible%20with%20eager%20execution/"/>
+    <id>http://example.com/2021/11/22/tensorflow%EF%BC%9ARuntimeError%20tfplaceholder()%20is%20not%20compatible%20with%20eager%20execution/</id>
+    <published>2021-11-22T11:53:27.757Z</published>
+    <updated>2021-11-22T11:58:01.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;安装tf2.0版本及其以上，在定义占位符的时候：&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>tensorflow报错： No module named ‘tensorflow.examples.tutorials</title>
@@ -422,28 +445,6 @@
     
     
     <category term="ML" scheme="http://example.com/tags/ML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机组成原理笔记</title>
-    <link href="http://example.com/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-08-30T00:30:59.743Z</published>
-    <updated>2021-11-06T07:13:26.420Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;早期的计算机是以运算器为中心；现代计算机是以存储器为中心；&lt;/p&gt;
-&lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot; title=&quot;第一章&quot;&gt;&lt;/a&gt;第一章&lt;/h2&gt;&lt;p&gt;吞吐量：&lt;br&gt;   </summary>
-        
-      
-    
-    
-    
     
   </entry>
   
