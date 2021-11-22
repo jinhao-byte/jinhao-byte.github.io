@@ -85,6 +85,34 @@
       </tags>
   </entry>
   <entry>
+    <title>tensorflow报错： No module named ‘tensorflow.examples.tutorials</title>
+    <url>/2021/11/22/tensorflow%E6%8A%A5%E9%94%99%EF%BC%9A%20No%20module%20named%20%E2%80%98tensorflow.examples.tutorials/</url>
+    <content><![CDATA[<p>一个bug困扰了半个学期，磨磨唧唧，终于搞定！！!</p>
+<p>参考文章：<a href="https://blog.csdn.net/wuyanne/article/details/115033677" target="_blank" rel="noopener">https://blog.csdn.net/wuyanne/article/details/115033677</a></p>
+<p>tensorflow的大版本是不兼容的，mnist数据集的位置有变化，所以在执行一下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from tensorflow.examples.tutorials.mnist import input_data</span><br></pre></td></tr></table></figure>
+
+<p>的时候会报错，参考了超级多的博客文章，都快放弃了。。。。</p>
+<p>报的错误信息：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">No module named ‘tensorflow.examples‘</span><br></pre></td></tr></table></figure>
+
+<p>我电脑的tf版本是’2.6.0’，自己运行的是1.0版本的代码，mnist数据集文件夹的位置发生了变化。</p>
+<p>所以如果是和我的tf版本一致的话，可以采取我采用的方法：</p>
+<p>下载缺少的数据集文件夹：</p>
+<p><strong>tutorials文件夹下载地址为</strong></p>
+<p>链接：<a href="https://pan.baidu.com/s/1YCIT7pwvcb_VxJioli8r1g" target="_blank" rel="noopener">https://pan.baidu.com/s/1YCIT7pwvcb_VxJioli8r1g</a><br> 提取码：5hli</p>
+<p><strong>然后：</strong></p>
+<p>查看自己的tf路径，本人的路径是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&#39;E:\\anaconda3\\lib\\site-packages\\keras\\api\\_v2&#39;,</span><br><span class="line"> &#39;E:\\anaconda3\\lib\\site-packages\\tensorflow_estimator\\python\\estimator\\api\\_v2&#39;,</span><br><span class="line"> &#39;E:\\anaconda3\\lib\\site-packages\\tensorboard\\summary\\_tf&#39;,</span><br><span class="line"> &#39;E:\\anaconda3\\lib\\site-packages\\tensorflow&#39;,</span><br><span class="line"> &#39;E:\\anaconda3\\lib\\site-packages\\tensorflow\\_api\\v2&#39;]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查看自己的tf路径</span><br><span class="line">import tensorflow as tf</span><br><span class="line">tf.__path__</span><br></pre></td></tr></table></figure>
+
+<p>把下载下来的 tutorials 文件夹放到</p>
+<p>E:\anaconda3\Lib\site-packages\tensorflow\examples</p>
+<p>再次运行上面一开始的代码，就完美运行了！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>数据分析：聚类和分类</title>
     <url>/2021/11/20/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9A%E8%81%9A%E7%B1%BB%E5%92%8C%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<p>参考文章：<a href="https://blog.csdn.net/YPP0229/article/details/90814268?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163740716216780271932629%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163740716216780271932629&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-90814268.pc_search_result_cache&amp;utm_term=%E8%81%9A%E7%B1%BB%E5%92%8C%E5%88%86%E7%B1%BB&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">https://blog.csdn.net/YPP0229/article/details/90814268?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163740716216780271932629%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163740716216780271932629&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-90814268.pc_search_result_cache&amp;utm_term=%E8%81%9A%E7%B1%BB%E5%92%8C%E5%88%86%E7%B1%BB&amp;spm=1018.2226.3001.4187</a></p>

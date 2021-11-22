@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-20T11:27:14.562Z</updated>
+  <updated>2021-11-22T10:34:24.540Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tensorflow报错： No module named ‘tensorflow.examples.tutorials</title>
+    <link href="http://example.com/2021/11/22/tensorflow%E6%8A%A5%E9%94%99%EF%BC%9A%20No%20module%20named%20%E2%80%98tensorflow.examples.tutorials/"/>
+    <id>http://example.com/2021/11/22/tensorflow%E6%8A%A5%E9%94%99%EF%BC%9A%20No%20module%20named%20%E2%80%98tensorflow.examples.tutorials/</id>
+    <published>2021-11-22T10:21:18.373Z</published>
+    <updated>2021-11-22T10:34:24.540Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一个bug困扰了半个学期，磨磨唧唧，终于搞定！！!&lt;/p&gt;
+&lt;p&gt;参考文章：&lt;a href=&quot;https://blog.csdn.net/wuyanne/article/details/115033677&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数据分析：聚类和分类</title>
@@ -417,27 +439,6 @@
         
     <summary type="html">&lt;p&gt;早期的计算机是以运算器为中心；现代计算机是以存储器为中心；&lt;/p&gt;
 &lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot; title=&quot;第一章&quot;&gt;&lt;/a&gt;第一章&lt;/h2&gt;&lt;p&gt;吞吐量：&lt;br&gt;   </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>插值拟合</title>
-    <link href="http://example.com/2021/08/26/%E6%8F%92%E5%80%BC%E6%8B%9F%E5%90%88/"/>
-    <id>http://example.com/2021/08/26/%E6%8F%92%E5%80%BC%E6%8B%9F%E5%90%88/</id>
-    <published>2021-08-26T01:48:56.259Z</published>
-    <updated>2021-08-26T05:55:35.180Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;插值与拟合&quot;&gt;&lt;a href=&quot;#插值与拟合&quot; class=&quot;headerlink&quot; title=&quot;插值与拟合&quot;&gt;&lt;/a&gt;插值与拟合&lt;/h1&gt;&lt;h2 id=&quot;一，概述&quot;&gt;&lt;a href=&quot;#一，概述&quot; class=&quot;headerlink&quot;</summary>
         
       
     
