@@ -85,6 +85,20 @@
       </tags>
   </entry>
   <entry>
+    <title>tensorflow：AttributeError module  tf  has no attribute ‘placeholder‘</title>
+    <url>/2021/11/22/tensorflow%EF%BC%9AAttributeError%20module%20%20tf%20%20has%20no%20attribute%20%E2%80%98placeholder%E2%80%98/</url>
+    <content><![CDATA[<h1 id="AttributeError-module-‘tensorflow‘-has-no-attribute-‘placeholder‘错误"><a href="#AttributeError-module-‘tensorflow‘-has-no-attribute-‘placeholder‘错误" class="headerlink" title="AttributeError: module ‘tensorflow‘ has no attribute ‘placeholder‘错误"></a>AttributeError: module ‘tensorflow‘ has no attribute ‘placeholder‘错误</h1><p>参考文章：</p>
+<p>报错原因：tf版本原因，原来的代码是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import tensorflow as tf</span><br></pre></td></tr></table></figure>
+
+<p>自己的机器是tf 2.6版本的，所以在写placeholder语句的时候，报错</p>
+<p>解决办法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import tensorflow.compat.v1 as tf</span><br><span class="line">tf.disable_v2_behavior()</span><br></pre></td></tr></table></figure>
+
+<p>问题解决！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>tensorflow：RuntimeError tfplaceholder() is not compatible with eager execution</title>
     <url>/2021/11/22/tensorflow%EF%BC%9ARuntimeError%20tfplaceholder()%20is%20not%20compatible%20with%20eager%20execution/</url>
     <content><![CDATA[<p>安装tf2.0版本及其以上，在定义占位符的时候：</p>
