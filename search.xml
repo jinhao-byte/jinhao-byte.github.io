@@ -85,6 +85,49 @@
       </tags>
   </entry>
   <entry>
+    <title>卷积神经网络</title>
+    <url>/2021/11/23/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<p>参考文章：<a href="https://easyai.tech/ai-definition/cnn/" target="_blank" rel="noopener">https://easyai.tech/ai-definition/cnn/</a></p>
+<p> 卷积神经网络 – CNN 擅长于处理图片，图片都是由一个一个像素点构成的，黑白图片每个像素点会有一个灰度值，表示该像素点的黑白程度；如果是彩色图片的话，每个像素点都有RGB三原色的三个数据，整个图片数据的所有像素数特别多，计算机处理起来较为复杂。</p>
+<p>CNN特点：</p>
+<p>1，将大数据量的图片降维成小数据量<br>2，能够有效的保留图片特征，符合图片处理的原则</p>
+<p>CNN的解决第一个问题:</p>
+<p>将大量的图片参数降维成少量参数，再进行处理。</p>
+<p><strong>在大部分情景下，将1000像素的图片缩小成200像素的图片，不影响机器识别和肉眼识别出物体</strong></p>
+<p>人类视觉原理：<br>    人类的视觉识别是逐层分级来进行认知的， 从原始信号摄入开始（瞳孔摄入像素 Pixels），接着做初步处理（大脑皮层某些细胞发现边缘和方向），然后抽象（大脑判定，眼前的物体的形状，是圆形的），然后进一步抽象（大脑进一步判定该物体是只气球）。 </p>
+<p>卷积神经网络-CNN基本原理：<br>    典型的CNN由3部分组成：1 卷积层 2 池化层 3 全连接层</p>
+<p>1️⃣卷积层负责提取图像中的局部特征；<br>2️⃣池化层用来大幅降低参数量级(降维)，防止过拟合；<br>3️⃣全连接层类似传统神经网络的部分，用来输出想要的结果。 </p>
+<p>卷积：</p>
+<p>卷积层的运算过程，用一个卷积核去扫完整个图片：</p>
+<p><img src="https://easy-ai.oss-cn-shanghai.aliyuncs.com/2019-06-19-juanji.gif" alt></p>
+<p>过程可以简单理解为：使用一个过滤器（卷积核）来过滤图片的各个小区域，从而得到这些小区域的特征值。<strong>卷积层通过卷积核的过滤提取出图片的局部特征，可以和人类的视觉提取特征相似</strong></p>
+<p>池化层（下采样）：数据降维，避免过拟合</p>
+<p><img src="https://easy-ai.oss-cn-shanghai.aliyuncs.com/2019-06-19-chihua.gif" alt="haha "></p>
+<p> 上图可以看到，原始图片是20×20的，我们对其进行下采样，采样窗口为10×10，最终将其下采样成为一个2×2大小的特征图。这么做的原因，是因为即使做完了卷积，图像仍然很大（因为卷积核比较小），所以为了降低数据维度，就进行下采样。 </p>
+<p> <strong>总结：池化层相比卷积层可以更有效的降低数据维度，这么做不但可以大大减少运算量，还可以有效的避免过拟合。</strong> </p>
+<p>全连接层：输出结果</p>
+<p>经过前面的卷积层和池化层的处理后，数据输入到全连接层，最终得到想要的结果</p>
+<p>经过卷积层和池化层降维过的数据，全连接层才能”跑得动”，不然数据量太大，计算成本高，效率低下。 </p>
+<p><img src="https://easy-ai.oss-cn-shanghai.aliyuncs.com/2019-06-19-quanlianjie.png" alt></p>
+<p>CNN不止有这样的三层结果，还有多层结构，例如： LeNet-5 </p>
+<p>CNN的实际应用：<br>    CNN适用于处理图像，视频是图片的叠加，所以CNN也适用于视频处理<br>    CNN的应用领域：图像分类，检索，目标定位监测，目标分割，人脸识别， 骨骼识别 </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>误差函数：交叉熵（Cross-entropy）和平方损失(MSE）</title>
+    <url>/2021/11/22/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0%EF%BC%9A%E4%BA%A4%E5%8F%89%E7%86%B5%EF%BC%88Cross-entropy%EF%BC%89%E5%92%8C%E5%B9%B3%E6%96%B9%E6%8D%9F%E5%A4%B1(MSE%EF%BC%89/</url>
+    <content><![CDATA[<p>熵的概念，自己的印象里出现在高中化学课本上，一个系统的熵值越大，就说明这个系统的体系越混乱，熵越大，就认为这个系统越不稳定。</p>
+<p>平方差误差函数一般用于连续值的</p>
+<p>交叉熵（Cross-entropy）和平方损失(MSE）</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>softmax函数的理解</title>
+    <url>/2021/11/22/softmax%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/</url>
+    <content><![CDATA[<p>参考文章：<a href="https://zhuanlan.zhihu.com/p/105722023" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/105722023</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>tensorflow：AttributeError module  tf  has no attribute ‘placeholder‘</title>
     <url>/2021/11/22/tensorflow%EF%BC%9AAttributeError%20module%20%20tf%20%20has%20no%20attribute%20%E2%80%98placeholder%E2%80%98/</url>
     <content><![CDATA[<h1 id="AttributeError-module-‘tensorflow‘-has-no-attribute-‘placeholder‘错误"><a href="#AttributeError-module-‘tensorflow‘-has-no-attribute-‘placeholder‘错误" class="headerlink" title="AttributeError: module ‘tensorflow‘ has no attribute ‘placeholder‘错误"></a>AttributeError: module ‘tensorflow‘ has no attribute ‘placeholder‘错误</h1><p>参考文章：</p>
