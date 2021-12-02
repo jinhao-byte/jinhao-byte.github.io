@@ -85,6 +85,57 @@
       </tags>
   </entry>
   <entry>
+    <title>卷积,卷积层</title>
+    <url>/2021/12/02/%E5%8D%B7%E7%A7%AF,%E5%8D%B7%E7%A7%AF%E5%B1%82/</url>
+    <content><![CDATA[<p>参考文章：<a href="https://zhuanlan.zhihu.com/p/259751387" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/259751387</a></p>
+<p><strong>图片也来自本文章👆；</strong></p>
+<p>卷积神经网络和其他神经网络的区别在于出现了卷积层（Convolution）和池化层（Pooling）</p>
+<p>所有相邻层的神经元之间都有连接指的是全连接（fully-connected）。</p>
+<p>卷积神经网络是在神经网络全连接网络中添加了卷积层和池化层。</p>
+<p><strong>卷积层</strong></p>
+<p>​    卷积层存在的意义就是弥补全连接层处理图像等数据的时候常常忽略数据的形状的缺点。全连接的神经网络在处理图像的时候，如果遇到多通道的图像数据的时候，会把图像数据拉伸成为一位数据，全连接层会忽视形状，无法利用与形状相关的信息。</p>
+<p>​    卷积层处理数据的时候，可以保持数据形状不变，当卷积层处理三通道的数据的时候，接收三维的数据，并且以三维的形状输出到下一层。</p>
+<p>​    CNN中卷积层的输入输出称为<strong>特征图</strong>（feature map）。其中，卷积层的输入数据称为<strong>输入特征图</strong>（input feature map），输出数据称为<strong>输出特征图</strong>（output feature map）。卷积层的处理叫做卷积运算，卷积运算也叫做“滤波器运算”。</p>
+<img src="https://pic4.zhimg.com/80/v2-2d17f0391ab1819044a4e0381f05e0d3_1440w.jpg" style="zoom: 50%;">
+
+<p>​    对于最左边的输入数据来说，卷积核（滤波器）通过一定的间隔在输入图像上进行滑动，对应位置相乘，然后相加求和，然后把结果保存到结果矩阵中。</p>
+<img src="https://pic4.zhimg.com/80/v2-f2eea7512899fddc7ddf24c7fc4a886f_1440w.jpg" style="zoom: 33%;">
+
+<p>​    整个图片通过卷积核卷积运算之后，会在卷积结果(每个位置)之后再添加一个偏置数，如下图👇：</p>
+<img src="https://pic3.zhimg.com/80/v2-6a2ef9dec685d5021dcf393ff67db40a_1440w.jpg" style="zoom: 50%;">
+
+<p>​    </p>
+<p><strong>填充</strong></p>
+<p>​    在进行上面的卷积操作之前，往往会做一个填充预处理。在图片的边缘部分填充上数字（通常为0），使得整个输入的图片数据的行列数变大。填充的意义在于：不会让卷积操作之后产生的卷积结果的行列数过于小，导致无法再次进行卷积运算。</p>
+<img src="https://pic3.zhimg.com/80/v2-0e2311a49a8a738275eb13959ae2dc06_1440w.jpg" style="zoom:50%;">
+
+
+
+<p><strong>步幅</strong></p>
+<p>​    卷积核（滤波器）滑动时的的滑动间隔叫做步频。看下图可理解：</p>
+<img src="https://pic1.zhimg.com/80/v2-2f76fb94d996492e979c0dbfe665e054_1440w.jpg" style="zoom: 50%;">
+
+<p>​    结论：<strong>增大步频，会让输出大小变小；增大填充，会让输出大小变小。</strong></p>
+<p><strong>三维数据的卷积运算</strong></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>tf的constant</title>
+    <url>/2021/12/02/tf%E7%9A%84constant/</url>
+    <content><![CDATA[<p>详情见：官方API： <a href="https://tensorflow.google.cn/api_docs/python/tf/constant?hl=zh-cn" target="_blank" rel="noopener">https://tensorflow.google.cn/api_docs/python/tf/constant?hl=zh-cn</a> </p>
+<p>参考文章：<a href="https://blog.csdn.net/qq_43636375/article/details/108669517" target="_blank" rel="noopener">https://blog.csdn.net/qq_43636375/article/details/108669517</a></p>
+<p>constant函数的作用主要是创建一个张量的常量tf.constant()用于声明一个常量<br>语法格式如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf </span><br><span class="line">tf.constant(</span><br><span class="line">	value,</span><br><span class="line">	dtype = <span class="literal">None</span>,</span><br><span class="line">	shape = <span class="literal">None</span>,</span><br><span class="line">	name = <span class="string">"Const"</span>,</span><br><span class="line">	verify_shape = <span class="literal">False</span></span><br><span class="line">	)</span><br></pre></td></tr></table></figure>
+
+<p>由tf.constant()的语法格式可知：</p>
+<p>1、第一个参数value是必需的，该参数可以的是数值，也可以是列表。</p>
+<p>2、第二个参数是数据类型，其一般可以是tf.float32, tf.float64，int32等。</p>
+<p>3、第三个参数是形状</p>
+<p>4、第四个参数用于定义名称</p>
+<p>5、第五个参数verify_shape默认为False，如果修改为True的话表示检查value的形状与shape是否相符，如果不符会报错。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>tf的truncated_normal函数</title>
     <url>/2021/12/02/tf%E7%9A%84truncated_normal%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p> 这个函数的功能主要是生成一个自己定义标准差，均值等一系列参数的截断分布函数</p>

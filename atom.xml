@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-02T07:51:38.666Z</updated>
+  <updated>2021-12-02T09:12:53.768Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>卷积,卷积层</title>
+    <link href="http://example.com/2021/12/02/%E5%8D%B7%E7%A7%AF,%E5%8D%B7%E7%A7%AF%E5%B1%82/"/>
+    <id>http://example.com/2021/12/02/%E5%8D%B7%E7%A7%AF,%E5%8D%B7%E7%A7%AF%E5%B1%82/</id>
+    <published>2021-12-02T08:09:28.020Z</published>
+    <updated>2021-12-02T09:12:53.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考文章：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/259751387&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tf的constant</title>
+    <link href="http://example.com/2021/12/02/tf%E7%9A%84constant/"/>
+    <id>http://example.com/2021/12/02/tf%E7%9A%84constant/</id>
+    <published>2021-12-02T07:53:47.375Z</published>
+    <updated>2021-12-02T08:04:04.317Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;详情见：官方API： &lt;a href=&quot;https://tensorflow.google.cn/api_docs/python/tf/constant?hl=zh-cn&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>tf的truncated_normal函数</title>
@@ -397,49 +439,6 @@
         
     <summary type="html">&lt;p&gt;完整报错信息：&lt;/p&gt;
 &lt;p&gt;TypeError: Value passed to parameter ‘indices’ has DataType float32 not in list of allowed values: uint8, int32,</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>tf没有placeholder属性</title>
-    <link href="http://example.com/2021/10/31/tf%E6%B2%A1%E6%9C%89placeholder%E5%B1%9E%E6%80%A7/"/>
-    <id>http://example.com/2021/10/31/tf%E6%B2%A1%E6%9C%89placeholder%E5%B1%9E%E6%80%A7/</id>
-    <published>2021-10-31T03:01:27.856Z</published>
-    <updated>2021-10-31T03:07:26.581Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;当使用tf的占位符属性的时候报错。&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>tf的Session语句报错</title>
-    <link href="http://example.com/2021/10/31/tf%E7%9A%84Session%E8%AF%AD%E5%8F%A5%E6%8A%A5%E9%94%99/"/>
-    <id>http://example.com/2021/10/31/tf%E7%9A%84Session%E8%AF%AD%E5%8F%A5%E6%8A%A5%E9%94%99/</id>
-    <published>2021-10-31T02:07:12.348Z</published>
-    <updated>2021-10-31T02:15:45.331Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考文章：&lt;a href=&quot;https://www.cnblogs.com/123456www/p/12584427.html&quot; target=&quot;_blank&quot;</summary>
         
       
     
