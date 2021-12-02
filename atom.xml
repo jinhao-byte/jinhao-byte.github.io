@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-02T09:12:53.768Z</updated>
+  <updated>2021-12-02T09:49:42.155Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>本地图片测试</title>
+    <link href="http://example.com/2021/12/02/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/"/>
+    <id>http://example.com/2021/12/02/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</id>
+    <published>2021-12-02T09:49:11.186Z</published>
+    <updated>2021-12-02T09:49:42.155Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>卷积,卷积层</title>
     <link href="http://example.com/2021/12/02/%E5%8D%B7%E7%A7%AF,%E5%8D%B7%E7%A7%AF%E5%B1%82/"/>
     <id>http://example.com/2021/12/02/%E5%8D%B7%E7%A7%AF,%E5%8D%B7%E7%A7%AF%E5%B1%82/</id>
     <published>2021-12-02T08:09:28.020Z</published>
-    <updated>2021-12-02T09:12:53.768Z</updated>
+    <updated>2021-12-02T09:48:29.933Z</updated>
     
     
       
@@ -417,28 +438,6 @@
         
         
     <summary type="html">&lt;p&gt; 原文地址：&lt;a href=&quot;https://blog.csdn.net/huitinfeng/article/details/100051074&quot; target=&quot;_blank&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>tf报错TypeError Value passed to parameter  indices has DataType float32 not in list of allowed values uint8, int32, int64</title>
-    <link href="http://example.com/2021/10/31/%7Ftf%E6%8A%A5%E9%94%99TypeError%20Value%20passed%20to%20parameter%20%20indices%20has%20DataType%20float32%20not%20in%20list%20of%20allowed%20values%20uint8,%20int32,%20int64/"/>
-    <id>http://example.com/2021/10/31/%7Ftf%E6%8A%A5%E9%94%99TypeError%20Value%20passed%20to%20parameter%20%20indices%20has%20DataType%20float32%20not%20in%20list%20of%20allowed%20values%20uint8,%20int32,%20int64/</id>
-    <published>2021-10-31T08:55:35.546Z</published>
-    <updated>2021-10-31T09:16:11.914Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;完整报错信息：&lt;/p&gt;
-&lt;p&gt;TypeError: Value passed to parameter ‘indices’ has DataType float32 not in list of allowed values: uint8, int32,</summary>
         
       
     
