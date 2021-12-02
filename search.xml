@@ -85,6 +85,21 @@
       </tags>
   </entry>
   <entry>
+    <title>tf的truncated_normal函数</title>
+    <url>/2021/12/02/tf%E7%9A%84truncated_normal%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p> 这个函数的功能主要是生成一个自己定义标准差，均值等一系列参数的截断分布函数</p>
+<p>函数的参数有</p>
+<p><strong>shape, mean=0.0, stddev=1.0, dtype=tf.float32, seed=None, name=None</strong></p>
+<p>shape: 一维整数张量或 Python 数组（输出张量的形状）比如3 * 3</p>
+<p>mean: 正态分布的均值</p>
+<p>stddev: 正态分布的标准差</p>
+<p>dtype: 输出的类型</p>
+<p>seed: 一个整数，当设置之后，每次生成的随机数都一样</p>
+<p>name: 操作的名字（可选）</p>
+<p> 在正态分布的曲线中：<br>横轴区间（μ-σ，μ+σ）内的面积为68.268949%<br>横轴区间（μ-2σ，μ+2σ）内的面积为95.449974%<br>横轴区间（μ-3σ，μ+3σ）内的面积为99.730020% </p>
+]]></content>
+  </entry>
+  <entry>
     <title>卷积神经网络</title>
     <url>/2021/11/23/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[<p>参考文章：<a href="https://easyai.tech/ai-definition/cnn/" target="_blank" rel="noopener">https://easyai.tech/ai-definition/cnn/</a></p>
