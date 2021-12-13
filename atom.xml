@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-02T09:49:42.155Z</updated>
+  <updated>2021-12-13T02:29:22.246Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计组期末复习</title>
+    <link href="http://example.com/2021/12/13/%E8%AE%A1%E7%BB%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://example.com/2021/12/13/%E8%AE%A1%E7%BB%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+    <published>2021-12-13T01:30:44.495Z</published>
+    <updated>2021-12-13T02:29:22.246Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;计算机组成原理期末总结&quot;&gt;&lt;a href=&quot;#计算机组成原理期末总结&quot; class=&quot;headerlink&quot; title=&quot;计算机组成原理期末总结&quot;&gt;&lt;/a&gt;&lt;strong&gt;计算机组成原理期末总结&lt;/strong&gt;&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络各层网络设备（中继器、集线器、网桥、交换机、路由器、网关）总结</title>
+    <link href="http://example.com/2021/12/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%90%84%E5%B1%82%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%EF%BC%88%E4%B8%AD%E7%BB%A7%E5%99%A8%E3%80%81%E9%9B%86%E7%BA%BF%E5%99%A8%E3%80%81%E7%BD%91%E6%A1%A5%E3%80%81%E4%BA%A4%E6%8D%A2%E6%9C%BA%E3%80%81%E8%B7%AF%E7%94%B1%E5%99%A8%E3%80%81%E7%BD%91%E5%85%B3%EF%BC%89%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2021/12/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%90%84%E5%B1%82%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%EF%BC%88%E4%B8%AD%E7%BB%A7%E5%99%A8%E3%80%81%E9%9B%86%E7%BA%BF%E5%99%A8%E3%80%81%E7%BD%91%E6%A1%A5%E3%80%81%E4%BA%A4%E6%8D%A2%E6%9C%BA%E3%80%81%E8%B7%AF%E7%94%B1%E5%99%A8%E3%80%81%E7%BD%91%E5%85%B3%EF%BC%89%E6%80%BB%E7%BB%93/</id>
+    <published>2021-12-09T05:31:34.589Z</published>
+    <updated>2021-12-09T05:32:30.278Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;总结的很全面：&lt;a href=&quot;https://blog.csdn.net/Alexhcf/article/details/107853652&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MAC地址</title>
+    <link href="http://example.com/2021/12/09/MAC%E5%9C%B0%E5%9D%80/"/>
+    <id>http://example.com/2021/12/09/MAC%E5%9C%B0%E5%9D%80/</id>
+    <published>2021-12-09T05:07:55.016Z</published>
+    <updated>2021-12-09T05:13:42.372Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;是什么？&lt;/p&gt;
+&lt;p&gt;1、</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>本地图片测试</title>
@@ -374,70 +438,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;实验-IP-报文的捕获与分析&quot;&gt;&lt;a href=&quot;#实验-IP-报文的捕获与分析&quot; class=&quot;headerlink&quot; title=&quot;实验 IP 报文的捕获与分析&quot;&gt;&lt;/a&gt;实验 IP 报文的捕获与分析&lt;/h1&gt;&lt;h2 id=&quot;一，实验目的&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>python中的with用法</title>
-    <link href="http://example.com/2021/11/03/python%E4%B8%AD%E7%9A%84with%E7%94%A8%E6%B3%95/"/>
-    <id>http://example.com/2021/11/03/python%E4%B8%AD%E7%9A%84with%E7%94%A8%E6%B3%95/</id>
-    <published>2021-11-03T05:26:31.834Z</published>
-    <updated>2021-11-03T07:04:54.130Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;自己是在用tensorflow的时候接触到的 with 语句，知其然不知其所以然。&lt;/p&gt;
-&lt;p&gt;参考文章：&lt;a href=&quot;https://blog.csdn.net/Ego_Bai/article/details/80873242&quot; target=&quot;_blank&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>python错误 RuntimeError Attempted to use a closed Session</title>
-    <link href="http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF%20RuntimeError%20Attempted%20to%20use%20a%20closed%20Session/"/>
-    <id>http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF%20RuntimeError%20Attempted%20to%20use%20a%20closed%20Session/</id>
-    <published>2021-11-01T08:41:14.038Z</published>
-    <updated>2021-11-01T08:48:08.815Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考博客：&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>python错误,SyntaxError unexpected EOF while parsing</title>
-    <link href="http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF,SyntaxError%20unexpected%20EOF%20while%20parsing/"/>
-    <id>http://example.com/2021/11/01/python%E9%94%99%E8%AF%AF,SyntaxError%20unexpected%20EOF%20while%20parsing/</id>
-    <published>2021-11-01T08:34:21.866Z</published>
-    <updated>2021-11-01T08:38:01.005Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 原文地址：&lt;a href=&quot;https://blog.csdn.net/huitinfeng/article/details/100051074&quot; target=&quot;_blank&quot;</summary>
         
       
     

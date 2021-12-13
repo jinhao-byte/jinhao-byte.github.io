@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="This is a blog in order to record my learning and growth." />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>计组期末复习 |  Jinhao&#39;s blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="Jinhao's blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-计组期末复习"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  计组期末复习
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/13/%E8%AE%A1%E7%BB%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="article-date">
+  <time datetime="2021-12-13T01:30:44.495Z" itemprop="datePublished">2021-12-13</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">15 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="计算机组成原理期末总结"><a href="#计算机组成原理期末总结" class="headerlink" title="计算机组成原理期末总结"></a><strong>计算机组成原理期末总结</strong></h1><h2 id="第一章-计算机系统概论"><a href="#第一章-计算机系统概论" class="headerlink" title="第一章 计算机系统概论"></a>第一章 计算机系统概论</h2><p><strong>计算机的发展简史：</strong></p>
+<p>第一代为1946—1957，<strong>电子管</strong>计算机，数据处理机开始得到应用；</p>
+<p>第二代为1958—1964，<strong>晶体管</strong>计算机，工业控制机开始得到应用；</p>
+<p>第三代，1965—1971，<strong>中小规模</strong>集成电路计算机，小型计算机开始出现；</p>
+<p>第四代为1972—1990，<strong>大规模和超大规模</strong>集成电路计算机，由几篇大规模集成电路组成的微型计算机开始出现；</p>
+<p>第五代为19991年开始的巨大规模集成电路计算机，由一片巨大规模集成电路实现的单片计算机开始出现。</p>
+<p><strong>计算机的性能指标</strong></p>
+<p>吞吐量：表征一台计算机某一时间间隔内能够处理的信息量。</p>
+<p>响应时间：表征从输入有效到系统产生响应之间的时间度量，用时间单位来度量。</p>
+<p>利用率：在给定的时间间隔内系统被实际使用的时间所占的比率，用百分比表示。</p>
+<p>处理机字长：指处理机运算器中一次能够完成=进制数运算的位数如32位64位</p>
+<p>总线宽度：一般指CPU中运算器与存储器之间进行互联的内部总线二进制位数</p>
+<p>主频／时钟周期：CPU的工作节拍受主时钟控制，主时钟不断产生固定频率的时钟</p>
+<p>主时钟的频率（f）叫CPU的主频。度量单位是MHZ（兆赫兹）GHz（吉赫兹）</p>
+<p>主频的倒数称为CPU时钟周期（T），T=1/f度量单位是微妙、纳秒</p>
+<p>存储器容量，存储器带宽，CPU执行时间 CPI  MIPS  MFLOPS 概念详见【P5】</p>
+<p>（冯诺依曼型计算机的主要设计思想和体系结构是：<strong>存储程序并按地址顺序执行</strong>）</p>
+<p>计算机软件一般分为：系统程序 应用程序 </p>
+<p>系统程序包括四类：1.各种服务性程序，如诊断程序 排错程序 联系程序等2.语言程序</p>
+<p>如汇编程序 编译程序 解释程序 3. 操作系统 4.数据库管理系统</p>
+<h2 id="第二章-运算方法和运算器"><a href="#第二章-运算方法和运算器" class="headerlink" title="第二章 运算方法和运算器"></a>第二章 运算方法和运算器</h2><p>1️⃣机器码分为原码 补码 反码 移码；补码要会运算；定点纯小数表示范围；定点纯整数取值范围；【<strong>详见P22</strong>】</p>
+<p>2️⃣定点加法减法运算；在定点整数机器中，数的表示范围︱x︱&lt;（2n-1）。在运算过程中如出现大于字长绝对值的现象，称为“溢出”。为了判断“溢出”是否发生，可采用两种检测方法。第一种方法是采用双符号位法，这称为“变形补码”，从而可使模2n+1补码所能表示的数的范围扩大一倍。第二种溢出检测方法是采用单符号位法。</p>
+<p>3️⃣列阵乘法器分为带符号和不带符号的，其中在不带符号的列阵乘法器里，要实现n位×n位时，需要n（n-1）个全加器和n<sup>2</sup>个“与”门；在带符号的列阵乘法器中求补的乘法运算要会，参见【<strong>例20</strong>】和【<strong>例21</strong>】</p>
+<p>4️⃣定点运算器的构造：包括ALU\阵列乘除器\寄存器\多路开关\三态缓冲器\数据总线等逻辑部件。</p>
+<p>5️⃣浮点加法减法运算过程：（1）0操作数检查（2）比较阶码大小并完成对阶（3）尾数求和运算（4）结果规格化（5）舍入处理；其中注意：对阶时小阶向大阶看齐，规格化时当数据最高位与符号位相同时向左规格化，不相同时向右规格化。详见【<strong>例28</strong>】</p>
+<h2 id="第三章-内部存储器"><a href="#第三章-内部存储器" class="headerlink" title="第三章 内部存储器"></a>第三章 内部存储器</h2><p>1️⃣存储器的分级：</p>
+<p><strong>1.高速缓冲存储器</strong>，简称cache，是计算机系统中的一个<strong>高速小容量半导体存储器</strong>。为了提高计算机的处理速度，利用它来高速存取指令和数据。与主存储器相比它的存取速度快，但存储容量小；<br><strong>2.主存储器简称主存</strong>：是计算机系统的主要存储器，用来存放计算机运行期间的大量程序和数据。它能和cache交换数据和指令。它由<strong>MOS半导体存储器组成</strong>；<br><strong>3.外存储器简称外存</strong>，是大容量辅助存储器。目前主要使用<em>磁盘存储器、磁带存储器和光盘存储器</em>。外存的特点是存储容量大，位成本低，通常用来存放系统程序和大型数据文件及数据库。</p>
+<p>三者的区别：高速缓冲存储器主要强调快速存取，以便使存取速度和CPU的运算速度相匹配，外存储器主要强调大的存储容量，以满足计算机的大容量存储要求，主存储器介于cache与外存储器之间，要求选取适当的存储容量和存取周期。</p>
+<p>2️⃣主存储器的性能指标主要是：存储容量、存取时间、存储周期和存储器带宽。</p>
+<p>存储容量常用字数或字节数（B）来表示，一个字的字长通常是8的倍数。</p>
+<p>W表示字，B表示字节。 存取时间：通常取写操作时间等于读操作时间。</p>
+<p>存储周期：指连续启动两次读操作所需间隔的最小时间，单位为ns</p>
+<p>存储量=字长×字数</p>
+<p>3️⃣任何一个静态读写存储器SRAM，都有三组信号线与外部打交道：</p>
+<p>（1）地址线，它指定了存储器的容量是26=64个存储单元，它决定字数。</p>
+<p>（2）数据线，它指定了存储器的字长是4位，存储位数的总数是64×4=256，决定字长。</p>
+<p>（3）控制线，指定了对存储器进行读还是进行写。注意读写操作不会同时发生。</p>
+<p>4️⃣字存数容量扩展：存储器容量的扩充：1.字长位数扩展（位扩展） 2.字存储容量扩展（字扩展） 3.存储器模块条。</p>
+<p><strong>片选</strong>，很多芯片挂在同一总线上的时候，有一个信号来区别总线上的数据和地址由哪个芯片来处理，这个信号就叫做片选信号CS（chip select）。片选这个词即由此而来，指通过设置跳线，利用与门、或门、非门的组合来决定到底是哪几部分进入工作状态。</p>
+<p>5️⃣双端口存储器的优点：双端口存储器由于同一个存储器具有两组相互独立的读写控制电路而得名。（1）由于进行并行的独立操作，因而是一种高速工作的存储器。（2）当两个端口的地址不相同时，在两个端口上进行读写操作，一定不会发生冲突。（3）有冲突的读写控制。</p>
+<p>6️⃣多模块交叉存储器是一种<strong>并行存储器结构</strong>。</p>
+<p>地址在各模块中安排有两种方式：一种是顺序方式，一种是交叉方式。</p>
+<p>顺序方式优缺点：在顺序方式中某个模块进行存取时，其他模块不工作，而某一模块出现故障时，其他模块可以照常工作，另外通过增添模块来扩充存储器容量也比较方便。<strong>缺点是各模块是一个接一个串行工作，因此存储器的带宽受到了限制。</strong></p>
+<p>交叉方式优缺点：从定性分析，对连续字的成块传送，交叉方式的存储器可以实现多模块流水式并行存取，大大提高存储器的带宽。【<strong>P91例5</strong>】会计算带宽</p>
+<p>7️⃣cache存储器的命中率h与程序的行为、cache的容量、组织方式、快的大小有关。</p>
+<p>替换策略自己回去看</p>
+<p>8️⃣当CPU访问存储器时，它所给出的一个字的内存地址会自动变成cache的地址，由于采用硬件，这个地址变换过程很快，软件人员丝毫感觉不到cache的存在，这种特性称为cache的透明性</p>
+<p>地址映射方式有：<u>全相联映射方式，直接映射方式和组相联映射方式。</u></p>
+<p>（1）全相联映射方式的特点：灵活，在全相联cache中，全部标记用一个相联存储器来实现，全部数据用一个普通RAM来实现。缺点是比较器电路难于设计和实现，只适合于小容量cache采用。<br>（2）直接映射方式：优点是硬件简单，成本低。缺点是每个主存块只有一个固定的行位置可存放。<br>（3）组相联映射方式：存放位置的灵活性和命中率高，使冲突减少，比较器电路简单，硬件投资低。</p>
+<h2 id="第四章-指令系统"><a href="#第四章-指令系统" class="headerlink" title="第四章 指令系统"></a>第四章 指令系统</h2><p>1️⃣CISC：70年代末期，计算机硬件结构随着VLSI技术的飞速发展而越来越复杂化，大多数计算机的指令系统多达几百条，称这些计算机为复杂指令系统计算机。简称CISC。</p>
+<p>RISC：便于VLSI技术实现的精简指令系统计算机，简称RISC。</p>
+<p>2️⃣ 表示一条指令的机器字，称为指令字，简称指令。指令格式是指令字用二进制代码表示的结构形式，通常由操作码字段和地址码字段组成。操作码字段表征指令的操作特性与功能，而地址码字段指定参与操作的操作数的地址。</p>
+<p>一条指令的结构表示为：操作码字段OP  地址码字段A。【<strong>P105</strong>】</p>
+<p>一般来说，一个包含n位的操作码最多能够表示2的n次方条指令</p>
+<p>3️⃣在二地址指令格式中，从操作数的物理位置来说，可分为三种类型：</p>
+<p> （1）是访问内存的指令格式的存储器—存储器（SS）型指令。</p>
+<p> （2）是访问寄存器的指令格式的寄存器—寄存器（RR）型指令。速度最快。</p>
+<p> （3）寄存器-存储器（RS）型指令，执行此类指令时，既要访问内存单元又要访问寄存器</p>
+<p>4️⃣大家会判断操作数基本寻址方式</p>
+<h2 id="第五章-中央处理器"><a href="#第五章-中央处理器" class="headerlink" title="第五章 中央处理器"></a>第五章 中央处理器</h2><p>1️⃣CPU的四大基本功能：指令控制，操作控制，时间控制，数据加工</p>
+<p>2️⃣CPU的基本组成：运算器，cache，控制器。</p>
+<p>3️⃣CPU中的主要寄存器及其各自功能：</p>
+<p>1.指令寄存器（IR） 保存当前正在执行的一条指令</p>
+<p>2.程序计数器（PC） 确定下一条指令的地址</p>
+<p>3.数据地址寄存器（AR） 保存当前CPU所访问的数据cache存储器中单元的地址</p>
+<p>4（数据）.缓冲寄存器（DR） 用来暂时存放一些数据结构</p>
+<p>5.通用寄存器（R0~R3） 当算术逻辑单元（ALU）执行算术或逻辑运算时，为ALU提供一个工作区  </p>
+<p>6.状态字寄存器（PSW） </p>
+<p>4️⃣指令周期是取出一条指令并执行这条指令的时间</p>
+<p>一条指令的取出阶段（即取指）需要一个CPU周期时间，而一个CPU周期时间包含有若干个时钟周期。取出和执行任何一条指令所需的最短时间为两个CPU周期</p>
+<p>提高存储器性能的方式：1.用高性能的存储芯片 2.用高速缓冲寄存器作为中间过度 3.采用双端口或交叉编址寄存器。</p>
+<p>5️⃣【<strong>P139例1</strong>】详看</p>
+<p>6️⃣微程序控制原理：仿照通常的解题程序的方法，把操作控制信号编成所谓的“微指令”存放到一个只读存储器里。当机器运行时，一条又一条地读出这些微指令，从而产生全机所需要的各种操作控制信号，使相应部件执行所规定的操作。</p>
+<p>微操作在执行部件中是最基本的操作，可分为相容性和相斥性两种。相容性的微操作是指在同时或同一个CPU周期内可以并行执行的微操作。相斥性的微操作是指不能在同时或不能在同一个CPU周期内并执行的微操作。</p>
+<p>微指令：在机器的一个CPU周期中，一组实现一定操作功能的微命令的组合，构成一条微指令  微程序：一条机器指令的功能是许多条微指令组成的序列来实现的，这个微指令序列通常叫微程序  微程序控制器原理主要由控制存储器，微指令寄存器和地址转移逻辑组成</p>
+<p>7️⃣微命令编码是对微指令中的微操作控制字段采用的表示方法。通常由以下三种方法1直接表示法，2编码表示法3混合表示法【<strong>P182 课后习题八</strong>】</p>
+<p>微指令的格式大体上分为两大类：水平型微指令和垂直型微指令。水平型微指令又分为：全水平型微指令，字段译码法水平型微指令，直接和译码相混合的水平型微指令</p>
+<h2 id="第六章-总线系统"><a href="#第六章-总线系统" class="headerlink" title="第六章 总线系统"></a>第六章 总线系统</h2><p>1️⃣按照总线仲裁电路的位置不同，仲裁方式分为：集中式仲裁，分布式仲裁</p>
+<p>集中式仲裁3种：<br>1链式查询方式：其特点是总线授权信号BG串行地从一个I／O借接口传送到下一个I／O接口。优点是只用很少几根线就能按一定优先次序实现总线仲裁，并且这种链式结构很容易扩充设备。缺点是对询问链的电路故障很敏感，优先级是固定的<br>2计数器定时查询方式：可方便的改变优先次序，显然这种灵活性是以增加线数为代价的。<br>3独立请求方式：优点是响应时间快，对优先次序的控制相当灵活，可以预先固定。</p>
+<h2 id="第七章-外围设备"><a href="#第七章-外围设备" class="headerlink" title="第七章 外围设备"></a>第七章 外围设备</h2><p>1️⃣除了CPU和主存外，计算机系统的每一部分都可以作为一个外围设备来看待。</p>
+<p>一般来说，外围设备有三个基本部分组成：</p>
+<p>（1）存储介质，它具有保存信息的物理特征</p>
+<p>（2）驱动装置，它用于移动存储介质</p>
+<p>（3）控制电路，它向存储介质发送数据或从存储介质接收数据。</p>
+<p>2️⃣磁盘的记录面是一系列同心圆为磁道，每个磁道又分若干扇区。外面扇区比里面面积大</p>
+<p>磁盘地址是由记录面（也成磁头号）、磁道号和扇区号三部分组成。磁盘存储器额每个扇区记录定长的数据，因此读/写操作是以扇区为单位一位一位串行进行的。</p>
+<p>3️⃣磁盘存储器的主要技术指标包括存储密度，存储容量，存储时间，数据传输率。</p>
+<p>存储密度分为 1道密度是沿磁盘半径方向单位长度上的磁道数  2位密度是磁道单位长度上能记录的二进制代码位数  3面密度是位密度和道密度的乘积  </p>
+<p>存储容量是一个磁盘存储器多能存储的字节总数，有格式化容量和非格式化容量之分。</p>
+<p>平均存取时间包括平均找道时间和平均等待时间，它由三个因素决定：1是将磁头定位至所要求的磁道上所需要的时间，称为找道时间2是找道完成后至磁道上所需要访问的信息到达磁头下的时间称为等待时间3是数据传送时间</p>
+<p>  P217页【<strong>例1</strong>】数据传输率的运算要会</p>
+<h2 id="第八章-输入输出系统"><a href="#第八章-输入输出系统" class="headerlink" title="第八章 输入输出系统"></a>第八章 输入输出系统</h2><p>1️⃣程序查询方式，咱不说了自己看看</p>
+<p>2️⃣程序中断方式优先级的顺序，详见【<strong>P269 课后习题8</strong>】</p>
+<p>3️⃣DMA传送方式有三种：1停止CPU访问内存  2周期挪动   3DMA与CPU交替访问。</p>
+<p>三种方式的优缺点：1停止CPU访问内存伏点是控制简单，它适用于数据传输率很高的是被进行组成传送。缺点是在DMA控制器访问阶段，内存的效能没有充分发挥，相当一部分的内存工作周期是空闲的。2周期挪用优点即实现了I／O传送，又较好的发挥了内存和CPU的效率，缺点是传送一个字对内存来说要占用一个周期3优点是一种高效率的工作方式，缺点是硬件逻辑也就更加复杂</p>
+<p>4️⃣通道分为选择通道，多路通道两种类型。一个系统可兼有两种类型的通道也可只有一种。</p>
+<p>多路通道又分为数组多路通道和字节多路通道</p>
+<p>四个画图：微程序【<strong>P147图5.23</strong>】，掌握工作原理</p>
+<p>方框图【<strong>P140</strong> 】  中断  【<strong>P269</strong>】  存储器扩展 【<strong>P73P74</strong>】</p>
+<p><strong>第二次重点： 第一章课后习题5，6，9，P36例20；第三章课后习题 1，3，8，9，10，P91例5，P98替换；第四章  P125寻址方式，课后习题6；第五章 P128CPU主要寄存器，P140图5.15  P131指令周期，P181课后习题1，2，6，8；第六章 P193 集中式仲裁的三种方式及其各自特点，P208课后习题9；第七章P217 例1数据传输率的运算，计算容量，课后习题1，7；第八章课后习题8；第九章例2,；</strong></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/12/13/%E8%AE%A1%E7%BB%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/12/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%90%84%E5%B1%82%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%EF%BC%88%E4%B8%AD%E7%BB%A7%E5%99%A8%E3%80%81%E9%9B%86%E7%BA%BF%E5%99%A8%E3%80%81%E7%BD%91%E6%A1%A5%E3%80%81%E4%BA%A4%E6%8D%A2%E6%9C%BA%E3%80%81%E8%B7%AF%E7%94%B1%E5%99%A8%E3%80%81%E7%BD%91%E5%85%B3%EF%BC%89%E6%80%BB%E7%BB%93/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">计算机网络各层网络设备（中继器、集线器、网桥、交换机、路由器、网关）总结</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2019-2021
+        <i class="ri-heart-fill heart_icon"></i> jinhao-byte
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Jinhao&#39;s blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/null">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=1826228778&auto=0&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haruto.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.9},"log":false});</script></body>
+
+</html>
