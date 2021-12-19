@@ -85,6 +85,15 @@
       </tags>
   </entry>
   <entry>
+    <title>tf的strides</title>
+    <url>/2021/12/19/tf%E7%9A%84strides/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 卷积层</span><br><span class="line">def conv2d(x,W):</span><br><span class="line">    #strides 定义了图像每一维的步长</span><br><span class="line">    #padding进行考虑边缘的边缘填充</span><br><span class="line">    #padding参数的作用是决定在进行卷积或池化操作时，是否对输入的图像矩阵边缘补0，&#39;SAME&#39; 为补零，&#39;VALID&#39; 则不补，</span><br><span class="line">    return tf.nn.conv2d(x,W,strides&#x3D;[1,1,1,1],padding&#x3D;&#39;SAME&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>文档里面也没有具体说明。strides在官方定义中是一个一维具有四个元素的张量，其规定前后必须为1，所以我们可以改的是中间两个数，中间两个数分别代表了水平滑动和垂直滑动步长值。</p>
+<p>  在卷积核移动逐渐扫描整体图时候，因为步长的设置问题，可能导致剩下未扫描的空间不足以提供给卷积核的，大小扫描 比如有图大小为5<em>5,卷积核为2</em>2,步长为2,卷积核扫描了两次后，剩下一个元素，不够卷积核扫描了，这个时候就在后面补零，补完后满足卷积核的扫描，这种方式就是same。如果说把刚才不足以扫描的元素位置抛弃掉，就是valid方式。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>tf.nn.dropout()</title>
     <url>/2021/12/19/tf.nn.dropout()/</url>
     <content><![CDATA[<p>tf.nn.dropout()是tensorflow里面为了防止或减轻过拟合而使用的函数，它一般用在全连接层</p>

@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Archives: 2021 |  Jinhao&#39;s blog</title>
+      <title>tf的strides |  Jinhao&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -48,120 +48,202 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-tf的strides"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">2021</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2021" class="archive-year">2021</a>
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  tf的strides
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/19/tf%E7%9A%84strides/" class="article-date">
+  <time datetime="2021-12-19T07:21:16.612Z" itemprop="datePublished">2021-12-19</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">314</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/05/12/vue%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  <time datetime="2021-05-12T03:32:04.361Z" itemprop="datePublished">05/12</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/05/12/vue%E5%AD%A6%E4%B9%A0/"
-    >vue学习</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/" class="archive-article-date">
-  <time datetime="2021-05-11T14:58:05.795Z" itemprop="datePublished">05/11</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/05/11/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%AF%94%E8%B5%9B/"
-    >数学建模比赛</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/" class="archive-article-date">
-  <time datetime="2021-05-04T01:18:17.910Z" itemprop="datePublished">05/04</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/05/04/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"
-    >学习资源链接</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  <time datetime="2021-05-04T01:18:17.899Z" itemprop="datePublished">05/04</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/05/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-    >MySQL学习笔记</a> 
-</h2>
- 
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 卷积层</span><br><span class="line">def conv2d(x,W):</span><br><span class="line">    #strides 定义了图像每一维的步长</span><br><span class="line">    #padding进行考虑边缘的边缘填充</span><br><span class="line">    #padding参数的作用是决定在进行卷积或池化操作时，是否对输入的图像矩阵边缘补0，&#39;SAME&#39; 为补零，&#39;VALID&#39; 则不补，</span><br><span class="line">    return tf.nn.conv2d(x,W,strides&#x3D;[1,1,1,1],padding&#x3D;&#39;SAME&#39;)</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
+<p>文档里面也没有具体说明。strides在官方定义中是一个一维具有四个元素的张量，其规定前后必须为1，所以我们可以改的是中间两个数，中间两个数分别代表了水平滑动和垂直滑动步长值。</p>
+<p>  在卷积核移动逐渐扫描整体图时候，因为步长的设置问题，可能导致剩下未扫描的空间不足以提供给卷积核的，大小扫描 比如有图大小为5<em>5,卷积核为2</em>2,步长为2,卷积核扫描了两次后，剩下一个元素，不够卷积核扫描了，这个时候就在后面补零，补完后满足卷积核的扫描，这种方式就是same。如果说把刚才不足以扫描的元素位置抛弃掉，就是valid方式。</p>
+ 
+      <!-- reward -->
       
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
       
     </div>
-  </div>
-  
-  
-
-  
-  <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2021/page/6/">上一页</a><a class="page-number" href="/archives/2021/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/5/">5</a><a class="page-number" href="/archives/2021/page/6/">6</a><span class="page-number current">7</span>
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/12/19/tf%E7%9A%84strides/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/12/19/tf.nn.dropout()/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">tf.nn.dropout()</div>
+      </a>
+    
   </nav>
-  
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -306,6 +388,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link
