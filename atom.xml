@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-13T02:29:22.246Z</updated>
+  <updated>2021-12-19T03:34:44.156Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tf.nn.dropout()</title>
+    <link href="http://example.com/2021/12/19/tf.nn.dropout()/"/>
+    <id>http://example.com/2021/12/19/tf.nn.dropout()/</id>
+    <published>2021-12-19T03:31:39.109Z</published>
+    <updated>2021-12-19T03:34:44.156Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;tf.nn.dropout()是tensorflow里面为了防止或减轻过拟合而使用的函数，它一般用在全连接层&lt;/p&gt;
+&lt;p&gt;Dropout就是在不同的训练过程中随机扔掉一部分神经元。也就是让某个神经元的激活值以一定的概率p，让其停止工作，这次训练过程中不更新权值，也不参加神</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tf.matmul(）</title>
+    <link href="http://example.com/2021/12/19/tf.matmul(%EF%BC%89/"/>
+    <id>http://example.com/2021/12/19/tf.matmul(%EF%BC%89/</id>
+    <published>2021-12-19T03:12:54.828Z</published>
+    <updated>2021-12-19T03:14:43.736Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;tf-matmul函数用法&quot;&gt;&lt;a href=&quot;#tf-matmul函数用法&quot; class=&quot;headerlink&quot; title=&quot;tf.matmul函数用法&quot;&gt;&lt;/a&gt;tf.matmul函数用法&lt;/h3&gt;&lt;p&gt; 函数：tf.matmul&lt;br&gt;表示：将矩阵 a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>计组期末复习</title>
@@ -396,48 +439,6 @@
         
         
     <summary type="html">&lt;p&gt;参考文章：微信公众号</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>软件工程</title>
-    <link href="http://example.com/2021/11/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-    <id>http://example.com/2021/11/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</id>
-    <published>2021-11-04T06:41:14.556Z</published>
-    <updated>2021-11-08T01:47:50.515Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;https://img13.360buyimg.com/ddimg/jfs/t1/214893/24/3057/2863372/61838816E351a8b7e/7b95c5226f303848.jpg&quot; alt=&quot;第1章</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计网实验,IP报文的捕获与分析</title>
-    <link href="http://example.com/2021/11/04/%7F%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C,IP%E6%8A%A5%E6%96%87%E7%9A%84%E6%8D%95%E8%8E%B7%E4%B8%8E%E5%88%86%E6%9E%90/"/>
-    <id>http://example.com/2021/11/04/%7F%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C,IP%E6%8A%A5%E6%96%87%E7%9A%84%E6%8D%95%E8%8E%B7%E4%B8%8E%E5%88%86%E6%9E%90/</id>
-    <published>2021-11-04T03:29:38.196Z</published>
-    <updated>2021-11-04T06:02:30.622Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;实验-IP-报文的捕获与分析&quot;&gt;&lt;a href=&quot;#实验-IP-报文的捕获与分析&quot; class=&quot;headerlink&quot; title=&quot;实验 IP 报文的捕获与分析&quot;&gt;&lt;/a&gt;实验 IP 报文的捕获与分析&lt;/h1&gt;&lt;h2 id=&quot;一，实验目的&quot;&gt;&lt;a</summary>
         
       
     
