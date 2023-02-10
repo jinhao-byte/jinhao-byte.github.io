@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-06T09:39:57.958Z</updated>
+  <updated>2023-02-10T12:09:37.889Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自己在遍历栈时犯的错误</title>
+    <link href="http://example.com/2023/02/10/%E8%87%AA%E5%B7%B1%E5%9C%A8%E9%81%8D%E5%8E%86%E6%A0%88%E6%97%B6%E7%8A%AF%E7%9A%84%E9%94%99%E8%AF%AF/"/>
+    <id>http://example.com/2023/02/10/%E8%87%AA%E5%B7%B1%E5%9C%A8%E9%81%8D%E5%8E%86%E6%A0%88%E6%97%B6%E7%8A%AF%E7%9A%84%E9%94%99%E8%AF%AF/</id>
+    <published>2023-02-10T12:05:57.226Z</published>
+    <updated>2023-02-10T12:09:37.889Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自己用for循环，遍历栈结构的时候，用测试用例测试的时候，发现输出的结果不对，但是代码逻辑没有错，最后发现自己犯的错误是在遍历的地方&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>复试机试练习</title>
     <link href="http://example.com/2023/02/06/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E7%BB%83%E4%B9%A0/"/>
     <id>http://example.com/2023/02/06/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E7%BB%83%E4%B9%A0/</id>
     <published>2023-02-06T08:50:16.217Z</published>
-    <updated>2023-02-06T09:39:57.958Z</updated>
+    <updated>2023-02-09T13:43:40.649Z</updated>
     
     
       
@@ -420,27 +442,6 @@
         
         
     <summary type="html">&lt;p&gt;参考文章：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/105722023&quot; target=&quot;_blank&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>tensorflow：AttributeError module  tf  has no attribute ‘placeholder‘</title>
-    <link href="http://example.com/2021/11/22/tensorflow%EF%BC%9AAttributeError%20module%20%20tf%20%20has%20no%20attribute%20%E2%80%98placeholder%E2%80%98/"/>
-    <id>http://example.com/2021/11/22/tensorflow%EF%BC%9AAttributeError%20module%20%20tf%20%20has%20no%20attribute%20%E2%80%98placeholder%E2%80%98/</id>
-    <published>2021-11-22T12:02:37.986Z</published>
-    <updated>2021-11-22T12:05:48.015Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;AttributeError-module-‘tensorflow‘-has-no-attribute-‘placeholder‘错误&quot;&gt;&lt;a</summary>
         
       
     
