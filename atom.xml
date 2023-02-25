@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-10T12:09:37.889Z</updated>
+  <updated>2023-02-21T01:33:56.057Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CQL语句学习</title>
+    <link href="http://example.com/2023/02/21/CQL%E8%AF%AD%E5%8F%A5%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/02/21/CQL%E8%AF%AD%E5%8F%A5%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-02-21T00:51:08.548Z</published>
+    <updated>2023-02-21T01:33:56.057Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>自己在遍历栈时犯的错误</title>
@@ -43,7 +64,7 @@
     <link href="http://example.com/2023/02/06/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E7%BB%83%E4%B9%A0/"/>
     <id>http://example.com/2023/02/06/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E7%BB%83%E4%B9%A0/</id>
     <published>2023-02-06T08:50:16.217Z</published>
-    <updated>2023-02-20T12:07:02.832Z</updated>
+    <updated>2023-02-25T12:42:57.375Z</updated>
     
     
       
@@ -421,27 +442,6 @@
 &lt;p&gt;平方差误差函数一般用于连续值的&lt;/p&gt;
 &lt;p&gt;交叉熵（Cross-entropy）和平方损失(MSE）&lt;/p&gt;
 </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>softmax函数的理解</title>
-    <link href="http://example.com/2021/11/22/softmax%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/"/>
-    <id>http://example.com/2021/11/22/softmax%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/</id>
-    <published>2021-11-22T12:46:29.407Z</published>
-    <updated>2021-11-22T12:48:44.767Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考文章：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/105722023&quot; target=&quot;_blank&quot;</summary>
         
       
     
