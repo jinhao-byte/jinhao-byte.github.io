@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-03T02:37:32.438Z</updated>
+  <updated>2023-03-14T03:26:33.727Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++清除cin的键盘缓冲区</title>
+    <link href="http://example.com/2023/03/14/C++%E6%B8%85%E9%99%A4cin%E7%9A%84%E9%94%AE%E7%9B%98%E7%BC%93%E5%86%B2%E5%8C%BA/"/>
+    <id>http://example.com/2023/03/14/C++%E6%B8%85%E9%99%A4cin%E7%9A%84%E9%94%AE%E7%9B%98%E7%BC%93%E5%86%B2%E5%8C%BA/</id>
+    <published>2023-03-14T03:22:23.067Z</published>
+    <updated>2023-03-14T03:26:33.727Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自己在刷题过程中过程中，在输入一个测试整数n之后，再次换行利用getline函数输入一个字符串数据时，始终接收不到字符串数据，debug一个多小时，觉得可能是因为键盘的输入缓冲区可能还有个换行符，直接让字符串变量接收了，然后就直接终止后面的输入数据了&lt;/p&gt;
+&lt;p&gt;解决办法</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C++istringstream的用法</title>
+    <link href="http://example.com/2023/03/13/C++istringstream%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://example.com/2023/03/13/C++istringstream%E7%9A%84%E7%94%A8%E6%B3%95/</id>
+    <published>2023-03-13T11:41:36.376Z</published>
+    <updated>2023-03-13T11:43:25.557Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;istringstream 是将字符串变成字符串迭代器一样，将字符串流在依次拿出，比较好的是，它不会将空格作为流。这样就实现了字符串的空格切割。&lt;/p&gt;
+&lt;p&gt;#include&lt;iostream&gt;&lt;br&gt;#include&lt;set&gt;&lt;br&gt;#include&lt;sstream&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>复试英语</title>
+    <link href="http://example.com/2023/03/13/%E5%A4%8D%E8%AF%95%E8%8B%B1%E8%AF%AD/"/>
+    <id>http://example.com/2023/03/13/%E5%A4%8D%E8%AF%95%E8%8B%B1%E8%AF%AD/</id>
+    <published>2023-03-13T09:08:21.681Z</published>
+    <updated>2023-03-13T09:08:21.681Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>C++Map</title>
@@ -151,14 +208,14 @@
     <link href="http://example.com/2023/02/06/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E7%BB%83%E4%B9%A0/"/>
     <id>http://example.com/2023/02/06/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E7%BB%83%E4%B9%A0/</id>
     <published>2023-02-06T08:50:16.217Z</published>
-    <updated>2023-03-07T13:38:45.164Z</updated>
+    <updated>2023-03-15T01:03:23.142Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;C++输入带空格的字符串，使用getline函数：&lt;/p&gt;
+    <summary type="html">&lt;p&gt;取模：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
@@ -374,70 +431,6 @@
         
         
     <summary type="html">&lt;p&gt;总结的很全面：&lt;a href=&quot;https://blog.csdn.net/Alexhcf/article/details/107853652&quot; target=&quot;_blank&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MAC地址</title>
-    <link href="http://example.com/2021/12/09/MAC%E5%9C%B0%E5%9D%80/"/>
-    <id>http://example.com/2021/12/09/MAC%E5%9C%B0%E5%9D%80/</id>
-    <published>2021-12-09T05:07:55.016Z</published>
-    <updated>2021-12-09T05:13:42.372Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;是什么？&lt;/p&gt;
-&lt;p&gt;1、</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>本地图片测试</title>
-    <link href="http://example.com/2021/12/02/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/"/>
-    <id>http://example.com/2021/12/02/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</id>
-    <published>2021-12-02T09:49:11.186Z</published>
-    <updated>2021-12-02T09:49:42.155Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>卷积,卷积层</title>
-    <link href="http://example.com/2021/12/02/%E5%8D%B7%E7%A7%AF,%E5%8D%B7%E7%A7%AF%E5%B1%82/"/>
-    <id>http://example.com/2021/12/02/%E5%8D%B7%E7%A7%AF,%E5%8D%B7%E7%A7%AF%E5%B1%82/</id>
-    <published>2021-12-02T08:09:28.020Z</published>
-    <updated>2021-12-02T09:48:29.933Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考文章：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/259751387&quot; target=&quot;_blank&quot;</summary>
         
       
     
